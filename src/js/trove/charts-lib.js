@@ -300,7 +300,7 @@
         { name: 'collapseThreshold', update: `${collapseThreshold}` },
         {
           name: 'hoveredId',
-          value: 'null',
+          update: 'null',
           on: [
             {
               events: [
@@ -319,7 +319,8 @@
               update: 'null'
             },
           ]
-        }
+        },
+        { name: 'staggerXAxisLabels', update: false },
       );
 
       const dataTable = {
@@ -916,7 +917,29 @@
           }
         }
       );
-    }      
+    }
+
+    function prepareAxisForOffsets(dir, axis, scales, data, signals) {
+      axis.encode = {
+        labels: {
+          name: `${dir}AxisLabels`,
+          update: {
+            dy: { scale: 'xAxisYOffsets', signal: 'datum.index' }
+          }
+        }
+      };
+      scales.push({
+        name: 'xAxisYOffsets',
+        type: 'ordinal',
+        domain: { data: 'xAxisLabelOffsets', field: 'index' },
+        range: { data: 'xAxisLabelOffsets', field: 'offset' },
+      });
+      data.push({
+        name: 'xAxisLabelOffsets',
+        values: []
+      });
+      signals.push({name: 'staggerXAxisLabels', value: false});
+    }
     
     function barChart(globalOptions, rawData) {
       // Variables and constants 
@@ -1004,6 +1027,9 @@
           grid: true, ticks: false, labels: false }
       ];
 
+      // TODO: change this to affect the horizontal axis even if it's a horizontal bar chart?
+      prepareAxisForOffsets(axesConfig.primary.dir, axes[0], scales, data, signals);
+      
       if (axis) {
         axes[1].values = axis.domainRaw;
         axes[1].encode = {
@@ -1122,7 +1148,7 @@
       const signals = [
         {
           name: 'hoveredSeries',
-          value: 'null',
+          update: 'null',
           on: [
             {
               events: [
@@ -1197,6 +1223,9 @@
       ];
       // set the axis with the ticks to have the title, so they don't overlap
       axes[isNotFullStacked ? 1 : 2].title = axisLabels[axesConfig.secondary.dir];
+
+      // TODO: change this to affect the horizontal axis even if it's a horizontal bar chart?
+      prepareAxisForOffsets(axesConfig.primary.dir, axes[0], scales, data, signals);
       
       if (axis) {
         axes[1].values = axis.domainRaw;
@@ -1393,7 +1422,8 @@
         { name: 'minValue',
           update: 'extent(pluck(data("table"), "minVal"))[0]' },
         { name: 'maxValue',
-          update: 'extent(pluck(data("table"), "maxVal"))[1]' }
+          update: 'extent(pluck(data("table"), "maxVal"))[1]' },
+        { name: 'staggerXAxisLabels', update: false },
       ];
       const outlierTooltip = `, 'bottom whisker': datum.lowWhisker, 'top whisker': datum.highWhisker`;
       const tooltip = `{
@@ -1788,7 +1818,8 @@
         { orient: 'left', scale: 'countScale', grid: true, title: yAxisLabel }
       ];
       
-
+      prepareAxisForOffsets('x', axes[0], scales, data, signals);
+      
       return {
         "$schema": "https://vega.github.io/schema/vega/v6.json",
         description: title,
@@ -1879,6 +1910,7 @@
         { name: 'wrapMaxY', update: 'floor(domain("dotScale")[1] * (1 - headspace))' },
         { name: 'xMinValue', value: xMinValue },
         { name: 'xMaxValue', value: xMaxValue },
+        { name: 'staggerXAxisLabels', update: false },
       ];
       const scales = [
         {
@@ -2452,11 +2484,7 @@
             y: { scale: `yscale`, field: 'y', offset: { signal: `${imageScaleFactorY} * datum.imageOffsetY` } },
             stroke: { signal: `hoveredLegend === '${prefix}' ? 'white' : '${color}'` },
             strokeWidth: { signal: `(hoveredLegend === '${prefix}' ? 1 : 0)` },
-            zindex: { signal: `hoveredLegend === '${prefix}' ? 1 : null` }
           },
-          hover: {
-            zindex: { value: 1 }
-          }
         }
       });
       if (pointshapeType === 'circle') {
@@ -2476,11 +2504,9 @@
               y: { scale: `yscale`, field: 'y' },
               fill: { value: color },
               stroke: { signal: `hoveredLegend === '${prefix}' ? 'white' : '${color}'` },
-              zindex: { signal: `hoveredLegend === '${prefix}' ? 1 : null` }
             },
             hover: {
               stroke: { value: color },
-              zindex: { value: 1 }
             }
           }
         });
@@ -2576,11 +2602,9 @@
             x: { scale: `xscale`, field: 'x' },
             y: { scale: `yscale`, field: 'y' },
             strokeWidth: { signal: `(hoveredLegend === '${prefix}' ? 2 : 1) * ${lineWidth}` },
-            zindex: { signal: `hoveredLegend === '${prefix}' ? 1 : null` }
           },
           hover: {
             strokeWidth: { value: 2 * lineWidth },
-            zindex: { value: 1 }
           }
         }
       });
@@ -2694,11 +2718,7 @@
               y: { scale: `yscale`, field: 'y', offset: { signal: `${-pointSize} * datum.imageOffsetY` } },
               stroke: { signal: `hoveredLegend === '${prefix}' ? 'white' : '${dataColor}'` },
               strokeWidth: { signal: `(hoveredLegend === '${prefix}' ? 1 : 0)` },
-              zindex: { signal: `hoveredLegend === '${prefix}' ? 1 : null` }
             },
-            hover: {
-              zindex: { value: 1 }
-            }
           }
         },
         {
@@ -2717,11 +2737,7 @@
               yc: { scale: `yscale`, field: 'y' },
               fill: { value: dataColor },
               stroke: { signal: `hoveredLegend === '${prefix}' ? 'white' : '${dataColor}'` },
-              zindex: { signal: `hoveredLegend === '${prefix}' ? 1 : null` }
             },
-            hover: {
-              zindex: { value: 1 }
-            }
           }
         },
         {
@@ -2755,10 +2771,6 @@
               xc: { scale: `xscale`, field: 'x' },
               yc: { scale: `yscale`, field: 'yprime' },
               stroke: { signal: `hoveredLegend === '${prefix}' ? 'white' : '${intervalColor}'` },
-              zindex: { signal: `hoveredLegend === '${prefix}' ? 1 : null` }
-            },
-            hover: {
-              zindex: { value: 1 }
             }
           }
         },
@@ -2854,10 +2866,6 @@
               yc: { scale: `yscale`, field: 'y' },
               stroke: { signal: `hoveredLegend === '${prefix}' ? 'white' : '${pointColor}'` },
               strokeWidth: { signal: `(hoveredLegend === '${prefix}' ? 1 : 0)` },
-              zindex: { signal: `hoveredLegend === '${prefix}' ? 1 : null` }
-            },
-            hover: {
-              zindex: { value: 1 }
             }
           }
         }
@@ -2936,6 +2944,7 @@
       const gridlines = getGridlines({}, globalOptions);
       const scales = charts.flatMap((c) => c.scales || []);
       const signals = charts.flatMap((c) => c.signals || []);
+      const data = charts.flatMap((c) => c.data || []);
       // NOTE: must compute these before updating the scales array...or else the new scales will
       // become part of the signal definition, which is incorrect!
       signals.push(
@@ -2980,6 +2989,8 @@
         },
       ];
 
+      prepareAxisForOffsets('x', axes[2], scales, data, signals);
+      
       const marks = [
         {
           type: 'group',
@@ -3038,7 +3049,7 @@
         });
         signals.push({
           name: 'hoveredLegend',
-          value: 'null',
+          update: 'null',
           on: [
             {
               events: [
@@ -3061,7 +3072,7 @@
       } else {
         signals.push({
           name: 'hoveredLegend',
-          value: 'null'
+          update: 'null'
         });
       }
 
@@ -3141,7 +3152,7 @@
         padding: 0,
         autosize: 'fit',
         background,
-        data: charts.flatMap((c) => c.data || []),
+        data,
         signals,
         scales,
         axes,
@@ -3266,6 +3277,7 @@
       const externalContext = canvas.getContext('2d');
       view.width(width).height(height).signal('titleText', 'spacer').resize()
       return view.runAsync()
+        .then(() => rebuildAxisLabels(view))
         .then(() => view.signal('titleText', view.description()).toCanvas(1, { externalContext }))
         .then(() => externalContext.getImageData(0, 0, width, height));
     }
@@ -3292,6 +3304,7 @@
         return canvasLib && canvasLib.Canvas && v instanceof canvasLib.Canvas;
       }
       const isVegaString = isTrue(globalOptions['vega']);
+      const staggerXAxisLabels = isTrue(globalOptions['x-axis-stagger-labels']);
       return RUNTIME.pauseStack(restarter => {
         try {
           if (isVegaString) {
@@ -3300,6 +3313,7 @@
           const width = toFixnum(globalOptions['width']);
           const height = toFixnum(globalOptions['height']);
           const view = new vega.View(vega.parse(processed));
+          view.signal('staggerXAxisLabels', staggerXAxisLabels);
           return renderToCanvas(view, width, height).then((data) => imageDataReturn(data, restarter));
         } catch(e) {
           return restarter.error(e);
@@ -3307,6 +3321,18 @@
       });
     }
 
+    function rebuildAxisLabels(view) {
+      // const { data: { xAxisLabels } } = view.getState({data: (name) => name === "xAxisLabels"});
+      try {
+        if (!view.signal('staggerXAxisLabels')) return view;
+        const xAxisLabels = view.data("xAxisLabels");
+        const offsets = xAxisLabels.map((mark, i) => ({ index: mark.datum.index, offset: (i % 2) * 25 }));
+        return view.data('xAxisLabelOffsets', offsets).runAsync();
+      } catch(e) {
+        return view;
+      }
+    }
+    
     function renderInteractiveChart(processed, globalOptions, rawData) {
       return RUNTIME.pauseStack(restarter => {
         const root = $('<div/>');
@@ -3336,13 +3362,18 @@
             return ans;
           }
         });
+        const staggerXAxisLabels = isTrue(globalOptions['x-axis-stagger-labels']);
         const view = new vega.View(vega.parse(processed), {
           container: chart[0],
           renderer: 'svg',
           hover: true,
           tooltip: vegaTooltipHandler.call
         });
-        view.width(width).height(height).signal('titleText', view.description()).resize();
+        view.width(width)
+          .height(height)
+          .signal('staggerXAxisLabels', staggerXAxisLabels)
+          .signal('titleText', view.description())
+          .resize();
 
         var tmp = processed;
         tmp.view = view;
@@ -3360,6 +3391,7 @@
         const result = tmp;
         try {
           view.runAsync()
+            .then(() => rebuildAxisLabels(view))
             .then(() => {
               if (processed.addControls) {
                 processed.addControls(view, overlay);
@@ -3429,7 +3461,6 @@
             return RUNTIME.safeCall(() => f(globalOptions, rawData), (chart) => {
               return renderInteractiveChart(chart, globalOptions, rawData);
             }, 'render-interactive-chart');
-            return renderInteractiveChart(f(globalOptions, rawData), globalOptions, rawData);
           } else {
             return RUNTIME.ffi.throwMessageException('Cannot display interactive charts headlessly');
           }
