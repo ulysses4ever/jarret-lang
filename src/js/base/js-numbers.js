@@ -4121,12 +4121,172 @@ define("pyret-base/js/js-numbers", function() {
       nthRoot: nthRoot,
       sign: sign,
       zfill: zfill,
-      errbacks: errbacks
+      getErrbacks: function() { return errbacks; },
+      setErrbacks: function(newErrbacks) {
+        errbacks = newErrbacks;
+      }
     };
 
     return Numbers;
   }
+
+  var INITIAL_ERRBACKS = (function() {
+    function makeThrower(tag) {
+      return function(msg, ...extras) {
+        var suffix = extras.length
+          ? ' [' + extras.map(function(x) {
+              try { return String(x); } catch (_) { return '<unprintable>'; }
+            }).join(', ') + ']'
+          : '';
+        throw new Error('js-numbers ' + tag + ': ' + msg + suffix);
+      };
+    }
+    return {
+      throwDivByZero:         makeThrower('division-by-zero'),
+      throwDomainError:       makeThrower('domain-error'),
+      throwGeneralError:      makeThrower('general-error'),
+      throwIncomparableValues:makeThrower('incomparable-values'),
+      throwInternalError:     makeThrower('internal-error'),
+      throwLogNonPositive:    makeThrower('log-non-positive'),
+      throwRelToleranceError: makeThrower('relative-tolerance-error'),
+      throwSqrtNegative:      makeThrower('sqrt-negative'),
+      throwToleranceError:    makeThrower('tolerance-error'),
+      throwUndefinedValue:    makeThrower('undefined-value'),
+    };
+  })();
+
+  // A single library instance. We can't regenerate this per call — the
+  // class identities (Rational/Roughnum/BigInteger) have to be stable
+  // across the module's lifetime or instanceof checks start failing.
+  var DEFAULT_LIBRARY = MakeNumberLibrary(INITIAL_ERRBACKS);
+  var getErrbacks = DEFAULT_LIBRARY._innards.getErrbacks;
+  var setErrbacks = DEFAULT_LIBRARY._innards.setErrbacks;
+
+  // Parameterize-style wrappers: for one call, swap the library's current
+  // errbacks in for whatever the caller supplied (or INITIAL_ERRBACKS if they
+  // didn't), then restore on exit — including on throw via finally.
+
+  function wrapErrbacks1(f) {
+    return function(a, errbacks) {
+      var saved = getErrbacks();
+      try {
+        setErrbacks(errbacks ?? INITIAL_ERRBACKS);
+        return f(a);
+      } finally {
+        setErrbacks(saved);
+      }
+    };
+  }
+
+  function wrapErrbacks2(f) {
+    return function(a, b, errbacks) {
+      var saved = getErrbacks();
+      try {
+        setErrbacks(errbacks ?? INITIAL_ERRBACKS);
+        return f(a, b);
+      } finally {
+        setErrbacks(saved);
+      }
+    };
+  }
+
+  function wrapErrbacks3(f) {
+    return function(a, b, c, errbacks) {
+      var saved = getErrbacks();
+      try {
+        setErrbacks(errbacks ?? INITIAL_ERRBACKS);
+        return f(a, b, c);
+      } finally {
+        setErrbacks(saved);
+      }
+    };
+  }
+
+  // For exports with no fixed arity. A trailing errbacks argument is detected
+  // by duck-typing on one of the throw* methods — pyretnums don't carry those,
+  // so the ambiguity is only theoretical.
+  function wrapErrbacksVariadic(f) {
+    return function(...args) {
+      var errbacks;
+      var last = args.length > 0 ? args[args.length - 1] : undefined;
+      if (last !== null && typeof last === 'object' &&
+          typeof last.throwDomainError === 'function') {
+        errbacks = args.pop();
+      }
+      var saved = getErrbacks();
+      try {
+        setErrbacks(errbacks ?? INITIAL_ERRBACKS);
+        return f.apply(null, args);
+      } finally {
+        setErrbacks(saved);
+      }
+    };
+  }
+
   return {
-    MakeNumberLibrary
+    MakeNumberLibrary,
+
+    fromFixnum: wrapErrbacks1(DEFAULT_LIBRARY.fromFixnum),
+    fromString: wrapErrbacks1(DEFAULT_LIBRARY.fromString),
+    fromSchemeString: wrapErrbacks2(DEFAULT_LIBRARY.fromSchemeString),
+    makeBignum: wrapErrbacks1(DEFAULT_LIBRARY.makeBignum),
+
+    isPyretNumber: wrapErrbacks1(DEFAULT_LIBRARY.isPyretNumber),
+    isRational: wrapErrbacks1(DEFAULT_LIBRARY.isRational),
+    isReal: wrapErrbacks1(DEFAULT_LIBRARY.isReal),
+    isExact: wrapErrbacks1(DEFAULT_LIBRARY.isExact),
+    isInteger: wrapErrbacks1(DEFAULT_LIBRARY.isInteger),
+    isRoughnum: wrapErrbacks1(DEFAULT_LIBRARY.isRoughnum),
+    isPositive: wrapErrbacks1(DEFAULT_LIBRARY.isPositive),
+    isNegative: wrapErrbacks1(DEFAULT_LIBRARY.isNegative),
+    isNonPositive: wrapErrbacks1(DEFAULT_LIBRARY.isNonPositive),
+    isNonNegative: wrapErrbacks1(DEFAULT_LIBRARY.isNonNegative),
+
+    toFixnum: wrapErrbacks1(DEFAULT_LIBRARY.toFixnum),
+    toExact: wrapErrbacks1(DEFAULT_LIBRARY.toExact),
+    toRational: wrapErrbacks1(DEFAULT_LIBRARY.toRational),
+    toRoughnum: wrapErrbacks1(DEFAULT_LIBRARY.toRoughnum),
+
+    add: wrapErrbacks2(DEFAULT_LIBRARY.add),
+    subtract: wrapErrbacks2(DEFAULT_LIBRARY.subtract),
+    multiply: wrapErrbacks2(DEFAULT_LIBRARY.multiply),
+    divide: wrapErrbacks2(DEFAULT_LIBRARY.divide),
+    equals: wrapErrbacks2(DEFAULT_LIBRARY.equals),
+    equalsAnyZero: wrapErrbacks1(DEFAULT_LIBRARY.equalsAnyZero),
+    eqv: wrapErrbacks2(DEFAULT_LIBRARY.eqv),
+    roughlyEquals: wrapErrbacks3(DEFAULT_LIBRARY.roughlyEquals),
+    roughlyEqualsRel: wrapErrbacksVariadic(DEFAULT_LIBRARY.roughlyEqualsRel),
+    greaterThanOrEqual: wrapErrbacks2(DEFAULT_LIBRARY.greaterThanOrEqual),
+    lessThanOrEqual: wrapErrbacks2(DEFAULT_LIBRARY.lessThanOrEqual),
+    greaterThan: wrapErrbacks2(DEFAULT_LIBRARY.greaterThan),
+    lessThan: wrapErrbacks2(DEFAULT_LIBRARY.lessThan),
+    expt: wrapErrbacks2(DEFAULT_LIBRARY.expt),
+    exp: wrapErrbacks1(DEFAULT_LIBRARY.exp),
+    modulo: wrapErrbacks2(DEFAULT_LIBRARY.modulo),
+    numerator: wrapErrbacks1(DEFAULT_LIBRARY.numerator),
+    denominator: wrapErrbacks1(DEFAULT_LIBRARY.denominator),
+    integerSqrt: wrapErrbacks1(DEFAULT_LIBRARY.integerSqrt),
+    sqrt: wrapErrbacks1(DEFAULT_LIBRARY.sqrt),
+    abs: wrapErrbacks1(DEFAULT_LIBRARY.abs),
+    quotient: wrapErrbacks2(DEFAULT_LIBRARY.quotient),
+    remainder: wrapErrbacks2(DEFAULT_LIBRARY.remainder),
+    floor: wrapErrbacks1(DEFAULT_LIBRARY.floor),
+    ceiling: wrapErrbacks1(DEFAULT_LIBRARY.ceiling),
+    round: wrapErrbacks1(DEFAULT_LIBRARY.round),
+    roundEven: wrapErrbacks1(DEFAULT_LIBRARY.roundEven),
+    log: wrapErrbacks1(DEFAULT_LIBRARY.log),
+    tan: wrapErrbacks1(DEFAULT_LIBRARY.tan),
+    atan: wrapErrbacks1(DEFAULT_LIBRARY.atan),
+    atan2: wrapErrbacks2(DEFAULT_LIBRARY.atan2),
+    cos: wrapErrbacks1(DEFAULT_LIBRARY.cos),
+    sin: wrapErrbacks1(DEFAULT_LIBRARY.sin),
+    acos: wrapErrbacks1(DEFAULT_LIBRARY.acos),
+    asin: wrapErrbacks1(DEFAULT_LIBRARY.asin),
+    sqr: wrapErrbacks1(DEFAULT_LIBRARY.sqr),
+    gcd: wrapErrbacks2(DEFAULT_LIBRARY.gcd),
+    lcm: wrapErrbacks2(DEFAULT_LIBRARY.lcm),
+
+    toRepeatingDecimal: wrapErrbacks3(DEFAULT_LIBRARY.toRepeatingDecimal),
+    toStringDigits: wrapErrbacks2(DEFAULT_LIBRARY.toStringDigits),
   }
 });
