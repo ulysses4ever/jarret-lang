@@ -22,7 +22,7 @@
   theModule: function (RUNTIME, NAMESPACE, uri, IMAGELIB, CHARTSUTILLIB, vega, canvasLib) {
     'use strict';
 
-    var jsnums = RUNTIME.jsnums;
+    const jsnums = RUNTIME.jsnums;
     
     // Default Google Chart Colors for sequential series (Like Multi Bar Charts and Pie Charts) from 
     // https://stackoverflow.com/a/75264589
@@ -146,14 +146,14 @@
           ret[rawVal] = num;
         }
       }
-      if (jsnums.greaterThanOrEqual(ret.xMinValue, ret.xMaxValue)) {
+      if (jsnums.greaterThanOrEqual(ret.xMinValue, ret.xMaxValue, RUNTIME.NumberErrbacks)) {
         raw.xMinValue.addClass('error-bg');
         raw.xMaxValue.addClass('error-bg');
         raw.xMinValue.removeClass('ok-bg');
         raw.xMaxValue.removeClass('ok-bg');
         return null;
       }
-      if (jsnums.greaterThanOrEqual(ret.yMinValue, ret.yMaxValue)) {
+      if (jsnums.greaterThanOrEqual(ret.yMinValue, ret.yMaxValue, RUNTIME.NumberErrbacks)) {
         raw.yMinValue.addClass('error-bg');
         raw.yMaxValue.addClass('error-bg');
         raw.yMinValue.removeClass('ok-bg');
@@ -161,7 +161,7 @@
         return null;
       }
       if (!isTrue(RUNTIME.num_is_integer(ret.numSamples)) ||
-          jsnums.lessThanOrEqual(ret.numSamples, 1)) {
+          jsnums.lessThanOrEqual(ret.numSamples, 1, RUNTIME.NumberErrbacks)) {
         raw.numSamples.addClass('error-bg');
         raw.numSamples.removeClass('ok-bg');
         return null;
@@ -2013,6 +2013,7 @@
       const defaultColor = default_colors[0];
       const color = getColorOrDefault(get(rawData, 'color'), defaultColor);
       const legend = get(rawData, 'legend') || '';
+      const autosizeImage = isTrue(get(rawData, 'useImageSizes'));
 
       const points = RUNTIME.ffi.toArray(get(rawData, 'ps'));
 
@@ -2026,49 +2027,131 @@
 
 
 
+      const rawCounts = new Map();
+      for (const p of points) {
+        const c = get(p, 'category')
+        rawCounts.set(c, (rawCounts.get(c) ?? 0) + 1);
+      }
       const fixedPoints = points.map((p) => ({
         label: get(p, 'label'),
-        count: toFixnum(get(p, 'count'))
+        category: get(p, 'category'),
+        value: toFixnum(get(p, 'value')),
+        count: rawCounts.get(get(p, 'category')),
+        image: cases(RUNTIME.ffi.isOption, 'Option', get(p, 'image'), {
+          none: () => undefined,
+          some: (opaqueImg) => imageToCanvas(opaqueImg.val)
+        }),
+        imageOffsetX: cases(RUNTIME.ffi.isOption, 'Option', get(p, 'image'), {
+          none: () => undefined,
+          some: (opaqueImg) => opaqueImg.val.getPinholeX() / opaqueImg.val.getWidth()
+        }),
+        imageOffsetY: cases(RUNTIME.ffi.isOption, 'Option', get(p, 'image'), {
+          none: () => undefined,
+          some: (opaqueImg) => opaqueImg.val.getPinholeY() / opaqueImg.val.getHeight()
+        }),
       }));
+      const counts = [...rawCounts.entries().map((kv) => ({ category: kv[0], count: kv[1] }))];
+      debugger
       const data = [
         {
-          name: 'bars',
-          values: fixedPoints
+          name: 'rawDotsData',
+          values: fixedPoints,
+          transform: [ { type: 'extent', field: 'value', signal: 'rawDotExtent' } ]
         },
         {
-          name: 'dotsData',
-          values: fixedPoints.flatMap((p) =>
-            Array.from({length: p.count}).map((_, i) => ({ label: p.label, value: i }))
-          )
+          name: `dotsData`,
+          source: `rawDotsData`,
+          transform: [ { type: 'filter', expr: '!isValid(datum.image)' } ]
         },
+        {
+          name: `imagesData`,
+          source: `rawDotsData`,
+          transform: [ { type: 'filter', expr: 'isValid(datum.image)' } ]
+        },
+        {
+          name: 'bars',
+          values: counts
+        }
       ];
       const signals = [
-        { name: 'dotSize', update: "scale('secondary', 1) - scale('secondary', 0)" },
+        { name: 'dotSize', update: "0.8 * (scale('secondary', 1) - scale('secondary', 0))" },
+        { name: 'staggerXAxisLabels', update: false },
+        { name: 'hoveredCategory', update: false,
+          on: [
+            {
+              events: [
+                { markname: 'blocks', type: 'mouseover' },
+                { markname: 'DotMarks', type: 'mouseover' },
+                { markname: 'ImageMarks', type: 'mouseover' }
+              ],
+              force: true,
+              update: 'datum.category'
+            },
+            {
+              events: [
+                { markname: 'blocks', type: 'mouseout' },
+                { markname: 'DotMarks', type: 'mouseout' },
+                { markname: 'ImageMarks', type: 'mouseout' }
+              ],
+              force: true,
+              update: 'null'
+            },            
+          ]},
       ];
       const scales = [
         {
           name: 'primary',
           type: 'band',
           range: 'width',
-          domain: { data: 'bars', field: 'label' }
+          domain: { data: 'rawDotsData', field: 'category' }
         },
         {
           name: 'secondary',
           range: 'height',
           ...yAxisType,
           nice: true, zero: true,
-          domain: { data: 'bars', field: 'count' }
-        }
+          domain: { signal: '[0, rawDotExtent[1] + 1]' },
+        },
       ];
       const axes = [
         { orient: 'bottom', scale: 'primary', zindex: 1, title: xAxisLabel },
         { orient: 'bottom', scale: 'primary', zindex: 0, grid: true, ticks: false, labels: false },
         { orient: 'left', scale: 'secondary', grid: true, ticks: true, labels: true, title: yAxisLabel, zindex: 1 }
       ];
+      const markTooltip = [
+        {
+          test: '!!datum.label',
+          signal: `{ title: datum.label }`
+        },
+        { signal: `{ title: datum.category, Count: datum.count }` }
+      ];
       const marks = [
         {
+          type: 'rect',
+          name: 'blocks',
+          from: { data: 'bars' },
+          encode: {
+            enter: {
+              x: { scale: 'primary', field: 'category', offset: { scale: 'primary', band: 0.25 } },
+              x2: { scale: 'primary', field: 'category', offset: { scale: 'primary', band: 0.75 } },
+              y: { scale: 'secondary', value: 0 },
+              y2: { scale: 'secondary', field: 'count' },
+              tooltip: { signal: `{ title: datum.category, Count: datum.count }`},
+              stroke: { value: 'gray' },
+              strokeWidth: { value: 2 },
+              fill: { value: 'transparent' },
+            },
+            update: {
+              opacity: { signal: 'hoveredCategory == datum.category ? 1 : 0' },
+            },
+            hover: {
+              opacity: { value: 1 }
+            }
+          }
+        },
+        {
           type: 'symbol',
-          name: 'dots',
+          name: 'DotMarks',
           from: { data: 'dotsData' },
           encode: {
             enter: {
@@ -2077,34 +2160,33 @@
               fill: { value: color },
               stroke: { value: 'white' },
               strokeWidth: { value: 0.25 },
-              tooltip: { signal: '{ title: datum.label, Value: datum.value }' },
-              xc: { scale: 'primary', field: 'label', offset: { scale: 'primary', band: 0.5 } },
-              yc: { scale: 'secondary', field: 'value', offset: { signal: '0.5 * dotSize' } },
-              size: { signal: '0.8 * 0.8 * dotSize * dotSize' },
+              tooltip: markTooltip,
+              xc: { scale: 'primary', field: 'category', offset: { scale: 'primary', band: 0.5 } },
+              yc: { scale: 'secondary', field: 'value',
+                    offset: { signal: "scale('secondary', 0.5) - scale('secondary', 0)" } },
+              size: { signal: 'dotSize * dotSize' },
             }
           }
         },
         {
-          type: 'rect',
-          name: 'blocks',
-          from: { data: 'bars' },
+          type: 'image',
+          from: { data: `imagesData` },
+          name: `ImageMarks`,
           encode: {
             enter: {
-              x: { scale: 'primary', field: 'label', offset: { scale: 'primary', band: 0.25 } },
-              x2: { scale: 'primary', field: 'label', offset: { scale: 'primary', band: 0.75 } },
-              y: { scale: 'secondary', value: 0 },
-              y2: { scale: 'secondary', field: 'count' },
-              tooltip: { signal: `{ title: datum.label, Count: datum.count }`},
-              stroke: { value: 'gray' },
-              strokeWidth: { value: 2 },
-              fill: { value: 'transparent' },
+              width: autosizeImage ? undefined : { update: "dotSize" },
+              height: autosizeImage ? undefined : { update: "dotsize" },
+              image: { field: 'image' },
+              tooltip: markTooltip,
             },
             update: {
-              opacity: { value: 0 },
+              xc: { scale: 'primary', field: 'category',
+                    offset: { scale: 'primary', band: 0.5 } },
+              yc: { scale: 'secondary', signal: 'datum.value',
+                    offset: { signal: "scale('secondary', 0.5) - scale('secondary', 0)" } },
+              align: { value: 'center' },
+              baseline: { value: 'middle' }
             },
-            hover: {
-              opacity: { value: 1 }
-            }
           }
         },
       ];
