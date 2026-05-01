@@ -2077,7 +2077,7 @@
         }
       ];
       const signals = [
-        { name: 'dotSize', update: "0.8 * (scale('secondary', 1) - scale('secondary', 0))" },
+        { name: 'dotSize', update: "0.8 * abs(scale('secondary', 1) - scale('secondary', 0))" },
         { name: 'staggerXAxisLabels', update: false },
         { name: 'hoveredCategory', update: false,
           on: [
@@ -2177,8 +2177,8 @@
           name: `ImageMarks`,
           encode: {
             enter: {
-              width: autosizeImage ? undefined : { update: "dotSize" },
-              height: autosizeImage ? undefined : { update: "dotsize" },
+              width: autosizeImage ? undefined : { signal: "dotSize" },
+              height: autosizeImage ? undefined : { signal: "dotSize" },
               image: { field: 'image' },
               tooltip: markTooltip,
             },
@@ -2187,8 +2187,8 @@
                     offset: { scale: 'primary', band: 0.5 } },
               yc: { scale: 'secondary', signal: 'datum.value',
                     offset: { signal: "scale('secondary', 0.5) - scale('secondary', 0)" } },
-              align: { value: 'center' },
-              baseline: { value: 'middle' }
+              align: autosizeImage ? { value: 'center' } : undefined,
+              baseline: autosizeImage ? { value: 'middle' } : undefined
             },
           }
         },
