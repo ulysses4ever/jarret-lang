@@ -2028,14 +2028,10 @@
 
 
       const rawCounts = new Map();
-      for (const p of points) {
-        const c = get(p, 'category')
-        rawCounts.set(c, (rawCounts.get(c) ?? 0) + 1);
-      }
       const fixedPoints = points.map((p) => ({
         label: get(p, 'label'),
         category: get(p, 'category'),
-        value: toFixnum(get(p, 'value')),
+        value: 0, // PLACEHOLDER, updated below
         count: rawCounts.get(get(p, 'category')),
         image: cases(RUNTIME.ffi.isOption, 'Option', get(p, 'image'), {
           none: () => undefined,
@@ -2050,13 +2046,20 @@
           some: (opaqueImg) => opaqueImg.val.getPinholeY() / opaqueImg.val.getHeight()
         }),
       }));
+      for (const p of fixedPoints) {
+        const countForCat = rawCounts.get(p.category) ?? 0;
+        p.value = countForCat;
+        rawCounts.set(p.category, countForCat + 1);
+      }
       const counts = [...rawCounts.entries().map((kv) => ({ category: kv[0], count: kv[1] }))];
-      debugger
       const data = [
         {
           name: 'rawDotsData',
           values: fixedPoints,
-          transform: [ { type: 'extent', field: 'value', signal: 'rawDotExtent' } ]
+          transform: [
+            { type: 'collect', sort: { field: 'category' } },
+            { type: 'extent', field: 'value', signal: 'rawDotExtent' }
+          ]
         },
         {
           name: `dotsData`,

@@ -1246,7 +1246,6 @@ default-dot-plot-series = {
 type CategoricalDotPoint ={
   label :: String,
   category :: String,
-  value :: Number,
   image :: Option<IM.Image>
 }
 
@@ -2152,8 +2151,8 @@ fun labeled-num-dot-chart-from-list(labels :: CL.LoS, x-values :: CL.LoN) -> Dat
   num-dot-chart-from-list(x-values).labels(labels)
 end
 
-fun get-cat-dot-point(value :: Number, label :: String, category :: String, optimg :: Option<IM.Image>) -> CategoricalDotPoint:
-  { value: value, label: label, category: category, image: optimg }
+fun get-cat-dot-point(label :: String, category :: String, optimg :: Option<IM.Image>) -> CategoricalDotPoint:
+  { label: label, category: category, image: optimg }
 end
 fun dot-chart-from-list(categories :: CL.LoS) -> DataSeries block:
   doc: ```
@@ -2165,15 +2164,8 @@ fun dot-chart-from-list(categories :: CL.LoS) -> DataSeries block:
     raise(ERR.message-exception("dot-chart: can't have empty data"))
   end
 
-  # Walk through the (sorted) values, creating lists of labels and counts
-  unique-counts = for fold(acc from [SD.mutable-string-dict: ], label from categories) block:
-    acc.set-now(label, acc.get-now(label).or-else(0) + 1)
-    acc
-  end
-
-  cats = unique-counts.keys-list-now().sort()
   default-categorical-dot-plot-series.{
-    ps: cats.map({(c): build-list(get-cat-dot-point(_, '', c, none), unique-counts.get-value-now(c))}).foldr(_ + _, empty)
+    ps: categories.map(get-cat-dot-point('', _, none))
   } ^ categorical-dot-plot-series
 end
 
