@@ -65,3 +65,18 @@ check "image-dot-chart-from-list ordering invariant":
 
   images-equal(scrambled, pre-sorted) is true
 end
+
+check "image-dot-chart-from-list use-image-sizes(false) actually changes rendering":
+  # use-image-sizes(true) renders images at their natural dimensions;
+  # use-image-sizes(false) is supposed to size them via the chart's dotSize
+  # signal. The two settings must therefore produce visibly different charts.
+  # If they render byte-identically, the use-image-sizes(false) branch is a
+  # no-op (e.g. its width/height encoding form is silently ignored by Vega).
+  ant-img = text("ant", 24, red)
+  data-fn = lam(): from-list.image-dot-chart([list: ant-img], [list: "ant"]) end
+
+  natural = render-chart(data-fn().use-image-sizes(true)).get-image()
+  sized = render-chart(data-fn().use-image-sizes(false)).get-image()
+
+  images-equal(natural, sized) is false
+end
