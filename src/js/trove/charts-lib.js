@@ -2958,7 +2958,7 @@
 
       addCrosshairs(prefix, ['Dots'], signals, marks, pointColor);
 
-      const samplePoints = [...Array(numSamples).keys().map((i) => (xMinValue + (fraction * i)))];
+      const samplePoints = [...Array(numSamples).keys().map((i) => jsnums.fromFixnum(xMinValue + (fraction * i)))];
 
       return recomputePoints(func, samplePoints, (dataValues) => {
         data[0].values = dataValues;
@@ -2976,7 +2976,7 @@
             const xMinValue = globalOptions.xMinValue;
             const xMaxValue = globalOptions.xMaxValue;
             const fraction = (xMaxValue - xMinValue) / (numSamples - 1);
-            const samplePoints = [...Array(numSamples).keys().map((i) => (xMinValue + (fraction * i)))];
+            const samplePoints = [...Array(numSamples).keys().map((i) => jsnums.fromFixnum(xMinValue + (fraction * i)))];
             RUNTIME.runThunk(() => {
               // NOTE(Ben): We can use view.data(`${prefix}rawTable`, ...newData...)
               // to replace the existing data points in the _current_ view, so that
@@ -3316,8 +3316,8 @@
               }
               // Reflect the updated values back into the globalOptions,
               // so that they'll be picked up by the initial computation of function plots
-              globalOptions['x-min'] = RUNTIME.ffi.makeSome(clippedDomain[0]);
-              globalOptions['x-max'] = RUNTIME.ffi.makeSome(clippedDomain[1]);
+              globalOptions['x-min'] = RUNTIME.ffi.makeSome(jsnums.fromFixnum(clippedDomain[0]));
+              globalOptions['x-max'] = RUNTIME.ffi.makeSome(jsnums.fromFixnum(clippedDomain[1]));
               return RUNTIME.safeCall(
                 () => makeFunctionPlots(clippedDomain),
                 (functionPlots) => composeCharts(globalOptions, clippedDomain, {
