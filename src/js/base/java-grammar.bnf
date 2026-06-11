@@ -172,6 +172,15 @@ prim-expr: NUMBER
          | new-expr
          | ask-expr
          | table-expr
+         | record-expr
+
+# Record / object literal: `{name: "Joe", age: 30}`. Anonymous, structurally
+# typed -- the same shape as Pyret's `{name: "Joe", age: 30}`. Use DOT to
+# read fields: `person.name`. Field order is preserved but not significant.
+record-expr: LBRACE record-field (COMMA record-field)* RBRACE
+           | LBRACE RBRACE
+
+record-field: NAME COLON full-expr
 
 # Table literal: headers (typed column names) followed by rows (value
 # tuples introduced by `row:`). Mirrors Pyret's `table: cols ... row: vals

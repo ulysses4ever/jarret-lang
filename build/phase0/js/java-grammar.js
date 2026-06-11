@@ -266,6 +266,13 @@ R(['fs', 'jglr/jglr'], function(fs, E) {
   g.addRule("prim-expr", [new Nonterm("new-expr")])
   g.addRule("prim-expr", [new Nonterm("ask-expr")])
   g.addRule("prim-expr", [new Nonterm("table-expr")])
+  g.addRule("prim-expr", [new Nonterm("record-expr")])
+  g.addRule("record-expr", [new Token("LBRACE"), new Nonterm("record-field"), new Nonterm("record-expr_A0_I2*"), new Token("RBRACE")])
+  g.addRule("record-expr_A0_I2*", [], E.Rule.Inline);
+  g.addRule("record-expr_A0_I2*", [new Nonterm("record-expr_A0_I2*"), new Nonterm("record-expr_A0_I2")], E.Rule.ListSnoc("record-expr_A0_I2*", "record-expr_A0_I2", true));
+  g.addRule("record-expr_A0_I2", [new Token("COMMA"), new Nonterm("record-field")], E.Rule.Inline)
+  g.addRule("record-expr", [new Token("LBRACE"), new Token("RBRACE")])
+  g.addRule("record-field", [new Token("NAME"), new Token("COLON"), new Nonterm("full-expr")])
   g.addRule("table-expr", [new Token("TABLE"), new Token("LBRACE"), new Nonterm("table-header"), new Nonterm("table-expr_I3*"), new Token("SEMI"), new Nonterm("table-expr_I5*"), new Token("RBRACE")])
   g.addRule("table-expr_I3*", [], E.Rule.Inline);
   g.addRule("table-expr_I3*", [new Nonterm("table-expr_I3*"), new Nonterm("table-expr_I3")], E.Rule.ListSnoc("table-expr_I3*", "table-expr_I3", true));

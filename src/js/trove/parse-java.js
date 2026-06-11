@@ -678,6 +678,26 @@
           }
         },
 
+        'record-expr': function(node) {
+          // {name: expr, name: expr} → s-obj(loc, [s-data-field(loc, name, expr), ...])
+          // {} → s-obj(loc, [])
+          var k = node.kids;
+          var p = pos(node.pos);
+          var fields = [];
+          for (var i = 0; i < k.length; i++) {
+            var kid = k[i];
+            if (kid.name === 'record-field') {
+              // kids: [NAME, COLON, full-expr]
+              var fp    = pos(kid.pos);
+              var fname = kid.kids[0].value;
+              var fval  = tr(kid.kids[2]);
+              fields.push(RUNTIME.getField(ast, 's-data-field')
+                .app(fp, RUNTIME.makeString(fname), fval));
+            }
+          }
+          return RUNTIME.getField(ast, 's-obj').app(p, makeList(fields));
+        },
+
         'table-expr': function(node) {
           // table { type1 col1, type2 col2 ; row: v1, v2 ; row: v1, v2 ; }
           //   → s-table(loc, [s-field-name(loc, col, ann), ...],

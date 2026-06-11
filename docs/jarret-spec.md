@@ -249,6 +249,24 @@ myObj.method(arg)     // myObj.method(arg)
 [list: 1, 2, 3]       // Pyret list literal syntax (unchanged)
 ```
 
+### Record literals
+
+Anonymous, structurally-typed records written with the same `{key: value, ...}`
+syntax as Pyret. No class declaration is required; the type is inferred from the
+fields. Fields are read with the usual dot access; records are immutable.
+
+```java
+Object alice = {name: "Alice", age: 30};
+String n = alice.name;             // "Alice"
+Object p = {x: 3, y: 4};           // record-returning expression
+Object nested = {p: p, color: "red"};
+nested.p.x                         // 3
+```
+
+Equivalent Pyret: `{name: "Alice", age: 30}` and `nested.p.x`. The empty
+record `{}` is allowed and useful as a placeholder. Updating a field
+(`{...r, age: 31}`) is deferred.
+
 ---
 
 ## 8. Conditionals

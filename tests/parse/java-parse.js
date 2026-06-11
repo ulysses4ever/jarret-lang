@@ -205,6 +205,27 @@ R(["pyret-base/js/java-tokenizer", "pyret-base/js/java-parser"], function(T, G) 
       });
     });
 
+    describe("records", function() {
+      it("should parse a single-field record", function() {
+        parsesOk("void f() { Object o = {x: 1}; }");
+      });
+      it("should parse a multi-field record", function() {
+        parsesOk("void f() { Object o = {name: \"Joe\", age: 30}; }");
+      });
+      it("should parse the empty record", function() {
+        parsesOk("void f() { Object o = {}; }");
+      });
+      it("should parse field access on a record literal", function() {
+        parsesOk("void f() { int n = {x: 5}.x; }");
+      });
+      it("should parse a nested record", function() {
+        parsesOk("void f() { Object o = {p: {x: 1, y: 2}, c: \"red\"}; }");
+      });
+      it("should reject a record-style binding with =", function() {
+        parseFails("void f() { Object o = {x = 1}; }");
+      });
+    });
+
     describe("tables", function() {
       it("should parse a table with one column and one row", function() {
         parsesOk("void f() { Table t = table { String name; row: \"x\"; }; }");

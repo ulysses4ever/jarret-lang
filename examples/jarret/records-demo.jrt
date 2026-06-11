@@ -1,0 +1,56 @@
+// records-demo.jrt - anonymous record / object literals.
+//
+// `{name: "Joe", age: 30}` creates a structurally-typed record. There's
+// no class declaration; the type is inferred from the fields. Read a
+// field with the usual dot access: `person.name`. Records are immutable
+// (no field reassignment).
+
+// Build a record directly.
+Object alice = {name: "Alice", age: 30};
+Object bob = {name: "Bob", age: 25};
+
+String greet(Object person) {
+    return "Hello, " + person.name;
+}
+
+int yearsBetween(Object a, Object b) {
+    return a.age - b.age;
+}
+
+// Records can be returned from functions; the shape is inferred.
+Object makePoint(int x, int y) {
+    return {x: x, y: y};
+}
+
+// Records can be nested arbitrarily.
+Object describe(Object person) {
+    return {
+        greeting: greet(person),
+        profile: {name: person.name, age: person.age}
+    };
+}
+
+@Check void testBasic() {
+    assertEquals(alice.name, "Alice");
+    assertEquals(bob.age, 25);
+    assertEquals(greet(alice), "Hello, Alice");
+    assertEquals(yearsBetween(alice, bob), 5);
+}
+
+@Check void testReturn() {
+    assertEquals(makePoint(3, 4).x, 3);
+    assertEquals(makePoint(3, 4).y, 4);
+}
+
+@Check void testNested() {
+    Object d = describe(alice);
+    assertEquals(d.greeting, "Hello, Alice");
+    assertEquals(d.profile.name, "Alice");
+    assertEquals(d.profile.age, 30);
+}
+
+@Check void testEmpty() {
+    Object e = {};
+    // The empty record has no fields; just verify it's a value we can pass around.
+    assertEquals(e, {});
+}
