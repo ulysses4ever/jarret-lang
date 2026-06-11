@@ -173,8 +173,8 @@ prim-expr: NUMBER
          | FALSE
          | NULL
          | NAME
-         | PARENSPACE binop-expr RPAREN
-         | PARENAFTERBRACE binop-expr RPAREN
+         | PARENSPACE full-expr RPAREN
+         | PARENAFTERBRACE full-expr RPAREN
          | switch-expr
          | construct-expr
          | map-for-expr

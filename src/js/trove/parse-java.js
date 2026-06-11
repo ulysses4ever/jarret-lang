@@ -142,7 +142,11 @@
         return params;
       }
       function trParam(node) {
-        // param: type-ann NAME
+        // param: type-ann NAME             (fun-decl + typed lambda-param)
+        // lambda-param: NAME               (bare lambda-param, no annotation)
+        if (node.kids.length === 1) {
+          return sbind(pos(node.pos), node.kids[0], sblank());
+        }
         return sbind(pos(node.pos), node.kids[1], trTypeAnn(node.kids[0]));
       }
 

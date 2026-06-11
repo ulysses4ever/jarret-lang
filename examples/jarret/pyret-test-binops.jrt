@@ -1,0 +1,57 @@
+// pyret-test-binops.jrt -- partial port of tests/pyret/tests/test-binops.arr.
+//
+// The original file mostly tests Pyret's error-introspection (`run-task`,
+// `is-num-string-binop-error`) and object operator overloading (`_plus`
+// method on a record), neither of which Jarret exposes. What we can port
+// faithfully: the type-respecting positive-case binops, and the rough
+// shape of "string + number raises", verified via Jarret's `raises`.
+//
+// Implementation note: this file uses `assertEquals(a, b);` rather than
+// the more concise `a is b;` form because Jarret's grammar has a known
+// ambiguity between `a is b;` followed by a statement that begins with
+// unary `-` (e.g. `... is b; 10 - 3 ...`). Using the explicit function-
+// call assertion form avoids the issue entirely.
+
+@Check void testStringConcat() {
+    assertEquals("a" + "b", "ab");
+    assertEquals("" + "x", "x");
+    assertEquals("abc" + "", "abc");
+    assertEquals("hello, " + "world", "hello, world");
+}
+
+@Check void testNumericArithmetic() {
+    assertEquals(4 + 5, 9);
+    assertEquals(10 - 3, 7);
+    assertEquals(6 * 7, 42);
+    assertEquals(20 / 4, 5);
+    // Exact rational arithmetic: 1/3 + 1/3 is exactly 2/3, not a rounded float.
+    assertEquals((1 / 3) + (1 / 3), 2 / 3);
+    assertEquals(0.1 + 0.2, 0.3);
+}
+
+@Check void testComparison() {
+    assertEquals(5 < 10, true);
+    assertEquals(10 < 5, false);
+    assertEquals(5 == 5, true);
+    assertEquals(5 != 6, true);
+    assertEquals(5 <= 5, true);
+    assertEquals(5 >= 5, true);
+}
+
+@Check void testBooleanOps() {
+    assertEquals(true && true, true);
+    assertEquals(true && false, false);
+    assertEquals(false || true, true);
+    assertEquals(false || false, false);
+}
+
+@Check void testTypeMismatchRaises() {
+    // Jarret follows Pyret's strict + (no Java-style coercion). Adding
+    // a string to a number raises rather than silently coercing.
+    assertRaises(() -> "a" + 5, "");
+    assertRaises(() -> 5 + "a", "");
+    // Multiplication / subtraction / division on non-numbers also raises.
+    assertRaises(() -> true * 5, "");
+    assertRaises(() -> true - 5, "");
+    assertRaises(() -> true / 5, "");
+}
