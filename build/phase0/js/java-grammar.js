@@ -273,6 +273,11 @@ R(['fs', 'jglr/jglr'], function(fs, E) {
   g.addRule("prim-expr", [new Nonterm("ask-expr")])
   g.addRule("prim-expr", [new Nonterm("table-expr")])
   g.addRule("prim-expr", [new Nonterm("record-expr")])
+  g.addRule("prim-expr", [new Nonterm("block-expr")])
+  g.addRule("block-expr", [new Token("BLOCK"), new Token("LBRACE"), new Nonterm("block-expr_I2*"), new Token("RBRACE")])
+  g.addRule("block-expr_I2*", [], E.Rule.Inline);
+  g.addRule("block-expr_I2*", [new Nonterm("block-expr_I2*"), new Nonterm("block-expr_I2")], E.Rule.ListSnoc("block-expr_I2*", "block-expr_I2", true));
+  g.addRule("block-expr_I2", [new Nonterm("block-stmt")], E.Rule.Inline)
   g.addRule("record-expr", [new Token("LBRACE"), new Nonterm("record-field"), new Nonterm("record-expr_A0_I2*"), new Token("RBRACE")])
   g.addRule("record-expr_A0_I2*", [], E.Rule.Inline);
   g.addRule("record-expr_A0_I2*", [new Nonterm("record-expr_A0_I2*"), new Nonterm("record-expr_A0_I2")], E.Rule.ListSnoc("record-expr_A0_I2*", "record-expr_A0_I2", true));

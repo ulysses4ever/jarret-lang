@@ -220,6 +220,24 @@ R(["pyret-base/js/java-tokenizer", "pyret-base/js/java-parser"], function(T, G) 
       });
     });
 
+    describe("block expression", function() {
+      it("should parse an empty block", function() {
+        parsesOk("void f() { Object o = block {}; }");
+      });
+      it("should parse a single-statement block", function() {
+        parsesOk("void f() { int n = block { 1 + 2; }; }");
+      });
+      it("should parse a block with multiple bindings", function() {
+        parsesOk("void f() { int n = block { int a = 1; int b = 2; a + b; }; }");
+      });
+      it("should parse a nested block", function() {
+        parsesOk("void f() { int n = block { int a = block { 1; }; a + 1; }; }");
+      });
+      it("should parse a block as a function-call argument", function() {
+        parsesOk("void f() { print(block { int x = 1; x + 1; }); }");
+      });
+    });
+
     describe("records", function() {
       it("should parse a single-field record", function() {
         parsesOk("void f() { Object o = {x: 1}; }");

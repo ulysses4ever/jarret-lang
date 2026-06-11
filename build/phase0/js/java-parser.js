@@ -1746,6 +1746,38 @@ function(E) {
         ]
       },
       "264": {
+        "name": "prim-expr",
+        "symbols": [
+          "@block-expr"
+        ]
+      },
+      "265": {
+        "name": "block-expr",
+        "symbols": [
+          "'BLOCK",
+          "'LBRACE",
+          "@block-expr_I2*",
+          "'RBRACE"
+        ]
+      },
+      "266": {
+        "name": "block-expr_I2*",
+        "symbols": []
+      },
+      "267": {
+        "name": "block-expr_I2*",
+        "symbols": [
+          "@block-expr_I2*",
+          "@block-expr_I2"
+        ]
+      },
+      "268": {
+        "name": "block-expr_I2",
+        "symbols": [
+          "@block-stmt"
+        ]
+      },
+      "269": {
         "name": "record-expr",
         "symbols": [
           "'LBRACE",
@@ -1754,32 +1786,32 @@ function(E) {
           "'RBRACE"
         ]
       },
-      "265": {
+      "270": {
         "name": "record-expr_A0_I2*",
         "symbols": []
       },
-      "266": {
+      "271": {
         "name": "record-expr_A0_I2*",
         "symbols": [
           "@record-expr_A0_I2*",
           "@record-expr_A0_I2"
         ]
       },
-      "267": {
+      "272": {
         "name": "record-expr_A0_I2",
         "symbols": [
           "'COMMA",
           "@record-field"
         ]
       },
-      "268": {
+      "273": {
         "name": "record-expr",
         "symbols": [
           "'LBRACE",
           "'RBRACE"
         ]
       },
-      "269": {
+      "274": {
         "name": "record-field",
         "symbols": [
           "'NAME",
@@ -1787,7 +1819,7 @@ function(E) {
           "@full-expr"
         ]
       },
-      "270": {
+      "275": {
         "name": "table-expr",
         "symbols": [
           "'TABLE",
@@ -1799,50 +1831,50 @@ function(E) {
           "'RBRACE"
         ]
       },
-      "271": {
+      "276": {
         "name": "table-expr_I3*",
         "symbols": []
       },
-      "272": {
+      "277": {
         "name": "table-expr_I3*",
         "symbols": [
           "@table-expr_I3*",
           "@table-expr_I3"
         ]
       },
-      "273": {
+      "278": {
         "name": "table-expr_I3",
         "symbols": [
           "'COMMA",
           "@table-header"
         ]
       },
-      "274": {
+      "279": {
         "name": "table-expr_I5*",
         "symbols": []
       },
-      "275": {
+      "280": {
         "name": "table-expr_I5*",
         "symbols": [
           "@table-expr_I5*",
           "@table-expr_I5"
         ]
       },
-      "276": {
+      "281": {
         "name": "table-expr_I5",
         "symbols": [
           "@table-row",
           "'SEMI"
         ]
       },
-      "277": {
+      "282": {
         "name": "table-header",
         "symbols": [
           "@type-ann",
           "'NAME"
         ]
       },
-      "278": {
+      "283": {
         "name": "table-row",
         "symbols": [
           "'ROW",
@@ -1851,25 +1883,25 @@ function(E) {
           "@table-row_I3*"
         ]
       },
-      "279": {
+      "284": {
         "name": "table-row_I3*",
         "symbols": []
       },
-      "280": {
+      "285": {
         "name": "table-row_I3*",
         "symbols": [
           "@table-row_I3*",
           "@table-row_I3"
         ]
       },
-      "281": {
+      "286": {
         "name": "table-row_I3",
         "symbols": [
           "'COMMA",
           "@full-expr"
         ]
       },
-      "282": {
+      "287": {
         "name": "ask-expr",
         "symbols": [
           "'ASK",
@@ -1880,25 +1912,25 @@ function(E) {
           "'RBRACE"
         ]
       },
-      "283": {
+      "288": {
         "name": "ask-expr_A0_I4*",
         "symbols": []
       },
-      "284": {
+      "289": {
         "name": "ask-expr_A0_I4*",
         "symbols": [
           "@ask-expr_A0_I4*",
           "@ask-expr_A0_I4"
         ]
       },
-      "285": {
+      "290": {
         "name": "ask-expr_A0_I4",
         "symbols": [
           "@ask-branch",
           "'SEMI"
         ]
       },
-      "286": {
+      "291": {
         "name": "ask-expr",
         "symbols": [
           "'ASK",
@@ -1911,25 +1943,25 @@ function(E) {
           "'RBRACE"
         ]
       },
-      "287": {
+      "292": {
         "name": "ask-expr_A1_I4*",
         "symbols": []
       },
-      "288": {
+      "293": {
         "name": "ask-expr_A1_I4*",
         "symbols": [
           "@ask-expr_A1_I4*",
           "@ask-expr_A1_I4"
         ]
       },
-      "289": {
+      "294": {
         "name": "ask-expr_A1_I4",
         "symbols": [
           "@ask-branch",
           "'SEMI"
         ]
       },
-      "290": {
+      "295": {
         "name": "ask-branch",
         "symbols": [
           "@binop-expr",
@@ -1937,7 +1969,7 @@ function(E) {
           "@full-expr"
         ]
       },
-      "291": {
+      "296": {
         "name": "otherwise-branch",
         "symbols": [
           "'OTHERWISE",
@@ -1945,7 +1977,7 @@ function(E) {
           "@full-expr"
         ]
       },
-      "292": {
+      "297": {
         "name": "new-expr",
         "symbols": [
           "'NEW",
@@ -1955,42 +1987,42 @@ function(E) {
           "'RPAREN"
         ]
       },
-      "293": {
+      "298": {
         "name": "new-expr_I3?",
         "symbols": []
       },
-      "294": {
+      "299": {
         "name": "new-expr_I3?",
         "symbols": [
           "@new-expr_I3"
         ]
       },
-      "295": {
+      "300": {
         "name": "new-expr_I3",
         "symbols": [
           "@full-expr",
           "@new-expr_I3_I1*"
         ]
       },
-      "296": {
+      "301": {
         "name": "new-expr_I3_I1*",
         "symbols": []
       },
-      "297": {
+      "302": {
         "name": "new-expr_I3_I1*",
         "symbols": [
           "@new-expr_I3_I1*",
           "@new-expr_I3_I1"
         ]
       },
-      "298": {
+      "303": {
         "name": "new-expr_I3_I1",
         "symbols": [
           "'COMMA",
           "@full-expr"
         ]
       },
-      "299": {
+      "304": {
         "name": "construct-expr",
         "symbols": [
           "'LBRACK",
@@ -2000,49 +2032,49 @@ function(E) {
           "'RBRACK"
         ]
       },
-      "300": {
+      "305": {
         "name": "construct-expr_A0_I3?",
         "symbols": []
       },
-      "301": {
+      "306": {
         "name": "construct-expr_A0_I3?",
         "symbols": [
           "@construct-expr_A0_I3"
         ]
       },
-      "302": {
+      "307": {
         "name": "construct-expr_A0_I3",
         "symbols": [
           "@full-expr",
           "@construct-expr_A0_I3_I1*"
         ]
       },
-      "303": {
+      "308": {
         "name": "construct-expr_A0_I3_I1*",
         "symbols": []
       },
-      "304": {
+      "309": {
         "name": "construct-expr_A0_I3_I1*",
         "symbols": [
           "@construct-expr_A0_I3_I1*",
           "@construct-expr_A0_I3_I1"
         ]
       },
-      "305": {
+      "310": {
         "name": "construct-expr_A0_I3_I1",
         "symbols": [
           "'COMMA",
           "@full-expr"
         ]
       },
-      "306": {
+      "311": {
         "name": "construct-expr",
         "symbols": [
           "'LBRACK",
           "'RBRACK"
         ]
       },
-      "307": {
+      "312": {
         "name": "map-for-expr",
         "symbols": [
           "'LBRACK",
@@ -2057,1137 +2089,1153 @@ function(E) {
           "'RBRACK"
         ]
       },
-      "308": {
+      "313": {
         "name": "START",
         "symbols": [
           "@program"
         ]
       },
-      "401": {
+      "409": {
         "position": 1,
         "like": 0
       },
-      "460": {
+      "470": {
         "position": 1,
         "like": 1
       },
-      "760": {
+      "780": {
         "position": 2,
         "like": 0
       },
-      "762": {
+      "782": {
         "position": 1,
         "like": 12
       },
-      "2791": {
+      "2953": {
         "position": 2,
         "like": 3
       },
-      "2822": {
+      "2985": {
         "position": 1,
         "like": 4
       },
-      "3071": {
+      "3242": {
         "position": 1,
         "like": 67
       },
-      "3072": {
+      "3243": {
         "position": 1,
         "like": 254
       },
-      "3184": {
+      "3358": {
         "position": 1,
         "like": 250
       },
-      "3227": {
+      "3402": {
         "position": 2,
         "like": 14
       },
-      "3256": {
+      "3432": {
         "position": 1,
         "like": 15
       },
-      "3285": {
+      "3462": {
         "position": 1,
         "like": 16
       },
-      "3314": {
+      "3492": {
         "position": 1,
         "like": 17
       },
-      "3343": {
+      "3522": {
         "position": 1,
         "like": 18
       },
-      "3372": {
+      "3552": {
         "position": 1,
         "like": 19
       },
-      "3401": {
+      "3582": {
         "position": 1,
         "like": 20
       },
-      "3430": {
+      "3612": {
         "position": 1,
         "like": 21
       },
-      "3459": {
+      "3642": {
         "position": 1,
         "like": 22
       },
-      "3488": {
+      "3672": {
         "position": 1,
         "like": 23
       },
-      "3797": {
+      "3990": {
         "position": 1,
         "like": 61
       },
-      "3799": {
+      "3992": {
         "position": 1,
         "like": 62
       },
-      "3801": {
+      "3994": {
         "position": 1,
         "like": 63
       },
-      "3803": {
+      "3996": {
         "position": 1,
         "like": 64
       },
-      "3805": {
+      "3998": {
         "position": 1,
         "like": 65
       },
-      "3807": {
+      "4000": {
         "position": 1,
         "like": 66
       },
-      "3838": {
+      "4032": {
         "position": 1,
         "like": 123
       },
-      "4067": {
+      "4269": {
         "position": 1,
         "like": 257
       },
-      "4153": {
+      "4357": {
         "position": 1,
         "like": 217
       },
-      "4183": {
+      "4388": {
         "position": 1,
         "like": 218
       },
-      "4213": {
+      "4419": {
         "position": 1,
         "like": 219
       },
-      "4409": {
+      "4620": {
         "position": 1,
         "like": 238
       },
-      "4709": {
+      "4927": {
         "position": 1,
         "like": 248
       },
-      "4752": {
+      "4971": {
         "position": 1,
         "like": 249
       },
-      "4795": {
+      "5015": {
         "position": 1,
         "like": 251
       },
-      "4838": {
+      "5059": {
         "position": 1,
         "like": 252
       },
-      "4881": {
+      "5103": {
         "position": 1,
         "like": 253
       },
-      "4967": {
+      "5191": {
         "position": 1,
         "like": 258
       },
-      "5010": {
+      "5235": {
         "position": 1,
         "like": 259
       },
-      "5053": {
+      "5279": {
         "position": 1,
         "like": 260
       },
-      "5096": {
+      "5323": {
         "position": 1,
         "like": 261
       },
-      "5139": {
+      "5367": {
         "position": 1,
         "like": 262
       },
-      "5182": {
+      "5411": {
         "position": 1,
         "like": 263
       },
-      "5614": {
+      "5455": {
+        "position": 1,
+        "like": 264
+      },
+      "5943": {
         "position": 2,
         "like": 67
       },
-      "5616": {
+      "5945": {
         "position": 1,
         "like": 69
       },
-      "5657": {
+      "5987": {
         "position": 1,
         "like": 216
       },
-      "5663": {
+      "5993": {
         "position": 1,
         "like": 211
       },
-      "5699": {
+      "6030": {
         "position": 1,
         "like": 210
       },
-      "5704": {
-        "position": 2,
-        "like": 268
-      },
-      "5811": {
-        "position": 1,
-        "like": 77
-      },
-      "5831": {
-        "position": 1,
-        "like": 76
-      },
-      "5909": {
-        "position": 1,
-        "like": 203
-      },
-      "5911": {
-        "position": 1,
-        "like": 204
-      },
-      "6033": {
-        "position": 1,
-        "like": 126
-      },
-      "6062": {
-        "position": 2,
-        "like": 123
-      },
-      "6091": {
-        "position": 1,
-        "like": 125
-      },
-      "6357": {
-        "position": 2,
-        "like": 219
-      },
-      "6678": {
-        "position": 2,
-        "like": 237
-      },
-      "6720": {
-        "position": 2,
-        "like": 236
-      },
-      "7050": {
-        "position": 2,
-        "like": 306
-      },
-      "7344": {
-        "position": 3,
-        "like": 5
-      },
-      "7468": {
-        "position": 3,
-        "like": 9
-      },
-      "7578": {
-        "position": 3,
-        "like": 119
-      },
-      "7691": {
-        "position": 2,
-        "like": 215
-      },
-      "7694": {
-        "position": 2,
-        "like": 211
-      },
-      "7825": {
-        "position": 2,
-        "like": 77
-      },
-      "7842": {
-        "position": 3,
-        "like": 255
-      },
-      "7915": {
-        "position": 2,
-        "like": 204
-      },
-      "10089": {
-        "position": 1,
-        "like": 232
-      },
-      "10106": {
-        "position": 1,
-        "like": 233
-      },
-      "10123": {
-        "position": 2,
-        "like": 221
-      },
-      "10207": {
-        "position": 1,
-        "like": 223
-      },
-      "10224": {
-        "position": 1,
-        "like": 224
-      },
-      "10241": {
-        "position": 1,
-        "like": 225
-      },
-      "10258": {
-        "position": 1,
-        "like": 226
-      },
-      "10275": {
-        "position": 1,
-        "like": 227
-      },
-      "10292": {
-        "position": 1,
-        "like": 228
-      },
-      "10309": {
-        "position": 1,
-        "like": 229
-      },
-      "10326": {
-        "position": 1,
-        "like": 230
-      },
-      "10343": {
-        "position": 1,
-        "like": 231
-      },
-      "10360": {
-        "position": 1,
-        "like": 234
-      },
-      "10377": {
-        "position": 1,
-        "like": 235
-      },
-      "10401": {
-        "position": 1,
-        "like": 242
-      },
-      "10463": {
-        "position": 1,
-        "like": 241
-      },
-      "10484": {
-        "position": 3,
-        "like": 246
-      },
-      "10700": {
-        "position": 3,
-        "like": 256
-      },
-      "11124": {
-        "position": 1,
-        "like": 122
-      },
-      "11153": {
-        "position": 4,
-        "like": 119
-      },
-      "11182": {
-        "position": 1,
-        "like": 121
-      },
-      "11214": {
-        "position": 2,
-        "like": 213
-      },
-      "11254": {
-        "position": 3,
-        "like": 269
-      },
-      "11289": {
-        "position": 4,
-        "like": 264
-      },
-      "11335": {
-        "position": 2,
-        "like": 266
-      },
-      "11341": {
-        "position": 2,
-        "like": 79
-      },
-      "11390": {
-        "position": 2,
-        "like": 206
-      },
-      "11425": {
-        "position": 1,
-        "like": 47
-      },
-      "11427": {
-        "position": 1,
-        "like": 48
-      },
-      "11433": {
-        "position": 4,
-        "like": 107
-      },
-      "11547": {
-        "position": 1,
-        "like": 95
-      },
-      "11700": {
-        "position": 1,
-        "like": 28
-      },
-      "11740": {
-        "position": 1,
-        "like": 29
-      },
-      "11780": {
-        "position": 1,
-        "like": 32
-      },
-      "11820": {
-        "position": 1,
-        "like": 34
-      },
-      "11860": {
-        "position": 1,
-        "like": 35
-      },
-      "11900": {
-        "position": 1,
-        "like": 36
-      },
-      "11940": {
-        "position": 1,
-        "like": 37
-      },
-      "11980": {
-        "position": 1,
-        "like": 40
-      },
-      "12050": {
-        "position": 4,
-        "like": 132
-      },
-      "12079": {
-        "position": 1,
-        "like": 135
-      },
-      "12119": {
-        "position": 1,
-        "like": 30
-      },
-      "12159": {
-        "position": 1,
-        "like": 31
-      },
-      "12199": {
-        "position": 1,
-        "like": 33
-      },
-      "12239": {
-        "position": 1,
-        "like": 38
-      },
-      "12279": {
-        "position": 1,
-        "like": 39
-      },
-      "12413": {
-        "position": 1,
-        "like": 136
-      },
-      "12881": {
-        "position": 2,
-        "like": 134
-      },
-      "13753": {
-        "position": 2,
-        "like": 222
-      },
-      "13795": {
-        "position": 2,
-        "like": 242
-      },
-      "13802": {
-        "position": 4,
-        "like": 239
-      },
-      "13845": {
-        "position": 4,
-        "like": 247
-      },
-      "13890": {
-        "position": 1,
-        "like": 302
-      },
-      "13941": {
-        "position": 1,
-        "like": 301
-      },
-      "13986": {
-        "position": 2,
-        "like": 277
-      },
-      "14193": {
-        "position": 1,
-        "like": 295
-      },
-      "14242": {
-        "position": 1,
-        "like": 294
-      },
-      "14244": {
-        "position": 5,
-        "like": 6
-      },
-      "14337": {
-        "position": 5,
-        "like": 10
-      },
-      "14402": {
-        "position": 4,
-        "like": 70
-      },
-      "14404": {
-        "position": 2,
-        "like": 72
-      },
-      "14407": {
-        "position": 2,
-        "like": 214
-      },
-      "14410": {
-        "position": 5,
-        "like": 208
-      },
-      "14440": {
-        "position": 2,
-        "like": 267
-      },
-      "14443": {
-        "position": 2,
-        "like": 80
-      },
-      "14446": {
-        "position": 5,
-        "like": 74
-      },
-      "14448": {
-        "position": 5,
-        "like": 201
-      },
-      "14478": {
-        "position": 2,
-        "like": 207
-      },
-      "14481": {
-        "position": 2,
-        "like": 55
-      },
-      "14542": {
-        "position": 2,
-        "like": 48
-      },
-      "14549": {
-        "position": 1,
-        "like": 110
-      },
-      "14578": {
-        "position": 5,
-        "like": 107
-      },
-      "14607": {
-        "position": 1,
-        "like": 109
-      },
-      "14681": {
-        "position": 5,
-        "like": 111
-      },
-      "14794": {
-        "position": 5,
-        "like": 115
-      },
-      "15223": {
-        "position": 2,
-        "like": 106
-      },
-      "15543": {
-        "position": 2,
-        "like": 197
-      },
-      "15781": {
-        "position": 2,
-        "like": 244
-      },
-      "15784": {
-        "position": 2,
-        "like": 302
-      },
-      "15791": {
-        "position": 5,
-        "like": 299
-      },
-      "15927": {
-        "position": 2,
-        "like": 272
-      },
-      "15930": {
-        "position": 3,
-        "like": 290
-      },
-      "16089": {
-        "position": 2,
-        "like": 295
-      },
-      "16096": {
-        "position": 5,
-        "like": 292
-      },
-      "16139": {
-        "position": 6,
-        "like": 7
-      },
-      "16201": {
-        "position": 6,
-        "like": 11
-      },
-      "16232": {
-        "position": 2,
-        "like": 73
-      },
-      "16235": {
-        "position": 6,
-        "like": 45
-      },
-      "16475": {
-        "position": 2,
-        "like": 50
-      },
-      "16484": {
-        "position": 1,
-        "like": 90
-      },
-      "16486": {
-        "position": 1,
-        "like": 91
-      },
-      "16493": {
-        "position": 1,
-        "like": 87
-      },
-      "16526": {
-        "position": 2,
-        "like": 83
-      },
-      "16529": {
-        "position": 1,
-        "like": 86
-      },
-      "16531": {
-        "position": 1,
-        "like": 114
-      },
-      "16560": {
-        "position": 6,
-        "like": 111
-      },
-      "16589": {
-        "position": 1,
-        "like": 113
-      },
-      "16618": {
-        "position": 1,
-        "like": 118
-      },
-      "16647": {
-        "position": 6,
-        "like": 115
-      },
-      "16676": {
-        "position": 1,
-        "like": 117
-      },
-      "16789": {
-        "position": 3,
-        "like": 161
-      },
-      "16946": {
-        "position": 3,
-        "like": 165
-      },
-      "17103": {
-        "position": 3,
-        "like": 169
-      },
-      "17260": {
-        "position": 3,
-        "like": 173
-      },
-      "17457": {
-        "position": 3,
-        "like": 105
-      },
-      "17737": {
-        "position": 1,
-        "like": 200
-      },
-      "17777": {
-        "position": 3,
-        "like": 197
-      },
-      "17817": {
-        "position": 1,
-        "like": 199
-      },
-      "18024": {
-        "position": 2,
-        "like": 245
-      },
-      "18030": {
-        "position": 2,
-        "like": 304
-      },
-      "18125": {
+      "6035": {
         "position": 2,
         "like": 273
       },
-      "18128": {
-        "position": 6,
+      "6144": {
+        "position": 1,
+        "like": 77
+      },
+      "6164": {
+        "position": 1,
+        "like": 76
+      },
+      "6244": {
+        "position": 1,
+        "like": 203
+      },
+      "6246": {
+        "position": 1,
+        "like": 204
+      },
+      "6373": {
+        "position": 1,
+        "like": 126
+      },
+      "6403": {
+        "position": 2,
+        "like": 123
+      },
+      "6433": {
+        "position": 1,
+        "like": 125
+      },
+      "6707": {
+        "position": 2,
+        "like": 219
+      },
+      "7044": {
+        "position": 2,
+        "like": 237
+      },
+      "7087": {
+        "position": 2,
+        "like": 236
+      },
+      "7427": {
+        "position": 2,
+        "like": 311
+      },
+      "7841": {
+        "position": 3,
+        "like": 5
+      },
+      "7969": {
+        "position": 3,
+        "like": 9
+      },
+      "8082": {
+        "position": 3,
+        "like": 119
+      },
+      "8199": {
+        "position": 2,
+        "like": 215
+      },
+      "8202": {
+        "position": 2,
+        "like": 211
+      },
+      "8337": {
+        "position": 2,
+        "like": 77
+      },
+      "8354": {
+        "position": 3,
+        "like": 255
+      },
+      "8429": {
+        "position": 2,
+        "like": 204
+      },
+      "10673": {
+        "position": 1,
+        "like": 232
+      },
+      "10691": {
+        "position": 1,
+        "like": 233
+      },
+      "10709": {
+        "position": 2,
+        "like": 221
+      },
+      "10795": {
+        "position": 1,
+        "like": 223
+      },
+      "10813": {
+        "position": 1,
+        "like": 224
+      },
+      "10831": {
+        "position": 1,
+        "like": 225
+      },
+      "10849": {
+        "position": 1,
+        "like": 226
+      },
+      "10867": {
+        "position": 1,
+        "like": 227
+      },
+      "10885": {
+        "position": 1,
+        "like": 228
+      },
+      "10903": {
+        "position": 1,
+        "like": 229
+      },
+      "10921": {
+        "position": 1,
+        "like": 230
+      },
+      "10939": {
+        "position": 1,
+        "like": 231
+      },
+      "10957": {
+        "position": 1,
+        "like": 234
+      },
+      "10975": {
+        "position": 1,
+        "like": 235
+      },
+      "11000": {
+        "position": 1,
+        "like": 242
+      },
+      "11063": {
+        "position": 1,
+        "like": 241
+      },
+      "11086": {
+        "position": 3,
+        "like": 246
+      },
+      "11308": {
+        "position": 3,
+        "like": 256
+      },
+      "11857": {
+        "position": 1,
+        "like": 122
+      },
+      "11887": {
+        "position": 4,
+        "like": 119
+      },
+      "11917": {
+        "position": 1,
+        "like": 121
+      },
+      "11950": {
+        "position": 2,
+        "like": 213
+      },
+      "11991": {
+        "position": 3,
+        "like": 274
+      },
+      "12028": {
+        "position": 4,
+        "like": 269
+      },
+      "12075": {
+        "position": 2,
+        "like": 271
+      },
+      "12081": {
+        "position": 2,
+        "like": 79
+      },
+      "12131": {
+        "position": 2,
+        "like": 206
+      },
+      "12167": {
+        "position": 1,
+        "like": 47
+      },
+      "12169": {
+        "position": 1,
+        "like": 48
+      },
+      "12175": {
+        "position": 4,
+        "like": 107
+      },
+      "12293": {
+        "position": 1,
+        "like": 95
+      },
+      "12449": {
+        "position": 1,
+        "like": 28
+      },
+      "12490": {
+        "position": 1,
+        "like": 29
+      },
+      "12531": {
+        "position": 1,
+        "like": 32
+      },
+      "12572": {
+        "position": 1,
+        "like": 34
+      },
+      "12613": {
+        "position": 1,
+        "like": 35
+      },
+      "12654": {
+        "position": 1,
+        "like": 36
+      },
+      "12695": {
+        "position": 1,
+        "like": 37
+      },
+      "12736": {
+        "position": 1,
+        "like": 40
+      },
+      "12807": {
+        "position": 4,
+        "like": 132
+      },
+      "12837": {
+        "position": 1,
+        "like": 135
+      },
+      "12878": {
+        "position": 1,
+        "like": 30
+      },
+      "12919": {
+        "position": 1,
+        "like": 31
+      },
+      "12960": {
+        "position": 1,
+        "like": 33
+      },
+      "13001": {
+        "position": 1,
+        "like": 38
+      },
+      "13042": {
+        "position": 1,
+        "like": 39
+      },
+      "13178": {
+        "position": 1,
+        "like": 136
+      },
+      "13655": {
+        "position": 2,
+        "like": 134
+      },
+      "14567": {
+        "position": 2,
+        "like": 222
+      },
+      "14610": {
+        "position": 2,
+        "like": 242
+      },
+      "14617": {
+        "position": 4,
+        "like": 239
+      },
+      "14661": {
+        "position": 4,
+        "like": 247
+      },
+      "14707": {
+        "position": 1,
+        "like": 307
+      },
+      "14759": {
+        "position": 1,
+        "like": 306
+      },
+      "14805": {
+        "position": 4,
+        "like": 265
+      },
+      "14849": {
+        "position": 1,
+        "like": 268
+      },
+      "14884": {
+        "position": 2,
+        "like": 267
+      },
+      "14919": {
+        "position": 2,
         "like": 282
       },
-      "18189": {
-        "position": 2,
-        "like": 284
+      "15133": {
+        "position": 1,
+        "like": 300
       },
-      "18268": {
-        "position": 2,
-        "like": 288
+      "15183": {
+        "position": 1,
+        "like": 299
       },
-      "18291": {
+      "15185": {
+        "position": 5,
+        "like": 6
+      },
+      "15281": {
+        "position": 5,
+        "like": 10
+      },
+      "15348": {
+        "position": 4,
+        "like": 70
+      },
+      "15350": {
         "position": 2,
+        "like": 72
+      },
+      "15353": {
+        "position": 2,
+        "like": 214
+      },
+      "15356": {
+        "position": 5,
+        "like": 208
+      },
+      "15387": {
+        "position": 2,
+        "like": 272
+      },
+      "15390": {
+        "position": 2,
+        "like": 80
+      },
+      "15393": {
+        "position": 5,
+        "like": 74
+      },
+      "15395": {
+        "position": 5,
+        "like": 201
+      },
+      "15426": {
+        "position": 2,
+        "like": 207
+      },
+      "15429": {
+        "position": 2,
+        "like": 55
+      },
+      "15492": {
+        "position": 2,
+        "like": 48
+      },
+      "15499": {
+        "position": 1,
+        "like": 110
+      },
+      "15529": {
+        "position": 5,
+        "like": 107
+      },
+      "15559": {
+        "position": 1,
+        "like": 109
+      },
+      "15635": {
+        "position": 5,
+        "like": 111
+      },
+      "15752": {
+        "position": 5,
+        "like": 115
+      },
+      "16192": {
+        "position": 2,
+        "like": 106
+      },
+      "16520": {
+        "position": 2,
+        "like": 197
+      },
+      "16764": {
+        "position": 2,
+        "like": 244
+      },
+      "16767": {
+        "position": 2,
+        "like": 307
+      },
+      "16774": {
+        "position": 5,
+        "like": 304
+      },
+      "16913": {
+        "position": 2,
+        "like": 277
+      },
+      "16916": {
+        "position": 3,
+        "like": 295
+      },
+      "17081": {
+        "position": 2,
+        "like": 300
+      },
+      "17088": {
+        "position": 5,
         "like": 297
       },
-      "18325": {
-        "position": 7,
+      "17132": {
+        "position": 6,
+        "like": 7
+      },
+      "17196": {
+        "position": 6,
+        "like": 11
+      },
+      "17228": {
+        "position": 2,
+        "like": 73
+      },
+      "17231": {
+        "position": 6,
         "like": 45
       },
-      "18354": {
+      "17479": {
+        "position": 2,
+        "like": 50
+      },
+      "17488": {
         "position": 1,
-        "like": 53
+        "like": 90
       },
-      "18383": {
+      "17490": {
         "position": 1,
-        "like": 54
-      },
-      "18538": {
-        "position": 2,
-        "like": 51
-      },
-      "18541": {
-        "position": 2,
-        "like": 96
-      },
-      "18544": {
-        "position": 4,
-        "like": 88
-      },
-      "18547": {
-        "position": 2,
         "like": 91
       },
-      "18554": {
-        "position": 2,
-        "like": 84
-      },
-      "18557": {
-        "position": 7,
-        "like": 81
-      },
-      "18684": {
+      "17497": {
         "position": 1,
-        "like": 164
+        "like": 87
       },
-      "18724": {
-        "position": 4,
+      "17531": {
+        "position": 2,
+        "like": 83
+      },
+      "17534": {
+        "position": 1,
+        "like": 86
+      },
+      "17536": {
+        "position": 1,
+        "like": 114
+      },
+      "17566": {
+        "position": 6,
+        "like": 111
+      },
+      "17596": {
+        "position": 1,
+        "like": 113
+      },
+      "17626": {
+        "position": 1,
+        "like": 118
+      },
+      "17656": {
+        "position": 6,
+        "like": 115
+      },
+      "17686": {
+        "position": 1,
+        "like": 117
+      },
+      "17802": {
+        "position": 3,
         "like": 161
       },
-      "18764": {
-        "position": 1,
-        "like": 163
-      },
-      "18804": {
-        "position": 1,
-        "like": 168
-      },
-      "18844": {
-        "position": 4,
+      "17963": {
+        "position": 3,
         "like": 165
       },
-      "18884": {
-        "position": 1,
-        "like": 167
-      },
-      "18924": {
-        "position": 1,
-        "like": 172
-      },
-      "18964": {
-        "position": 4,
+      "18124": {
+        "position": 3,
         "like": 169
       },
-      "19004": {
-        "position": 1,
-        "like": 171
-      },
-      "19044": {
-        "position": 1,
-        "like": 176
-      },
-      "19084": {
-        "position": 4,
+      "18285": {
+        "position": 3,
         "like": 173
       },
-      "19124": {
+      "18487": {
+        "position": 3,
+        "like": 105
+      },
+      "18774": {
         "position": 1,
-        "like": 175
+        "like": 200
       },
-      "19284": {
-        "position": 4,
-        "like": 145
+      "18815": {
+        "position": 3,
+        "like": 197
       },
-      "19441": {
-        "position": 4,
-        "like": 149
-      },
-      "19868": {
-        "position": 2,
-        "like": 179
-      },
-      "19872": {
+      "18856": {
         "position": 1,
-        "like": 180
+        "like": 199
       },
-      "19876": {
-        "position": 1,
-        "like": 182
-      },
-      "19878": {
-        "position": 1,
-        "like": 183
-      },
-      "19890": {
+      "19068": {
         "position": 2,
-        "like": 305
+        "like": 245
       },
-      "19936": {
-        "position": 7,
-        "like": 270
-      },
-      "19979": {
+      "19074": {
         "position": 2,
-        "like": 275
+        "like": 309
       },
-      "19987": {
+      "19171": {
         "position": 2,
-        "like": 285
+        "like": 278
       },
-      "20005": {
+      "19174": {
+        "position": 6,
+        "like": 287
+      },
+      "19237": {
         "position": 2,
         "like": 289
       },
-      "20068": {
+      "19319": {
         "position": 2,
-        "like": 298
+        "like": 293
       },
-      "20071": {
-        "position": 8,
-        "like": 8
-      },
-      "20209": {
-        "position": 3,
-        "like": 24
-      },
-      "20239": {
+      "19343": {
         "position": 2,
-        "like": 26
+        "like": 302
       },
-      "20273": {
+      "19378": {
+        "position": 7,
+        "like": 45
+      },
+      "19408": {
         "position": 1,
-        "like": 27
+        "like": 53
       },
-      "20310": {
-        "position": 2,
-        "like": 93
-      },
-      "20353": {
-        "position": 2,
-        "like": 43
-      },
-      "20359": {
-        "position": 5,
-        "like": 97
-      },
-      "20612": {
+      "19438": {
         "position": 1,
-        "like": 148
+        "like": 54
       },
-      "20652": {
-        "position": 5,
+      "19598": {
+        "position": 2,
+        "like": 51
+      },
+      "19601": {
+        "position": 2,
+        "like": 96
+      },
+      "19604": {
+        "position": 4,
+        "like": 88
+      },
+      "19607": {
+        "position": 2,
+        "like": 91
+      },
+      "19614": {
+        "position": 2,
+        "like": 84
+      },
+      "19617": {
+        "position": 7,
+        "like": 81
+      },
+      "19747": {
+        "position": 1,
+        "like": 164
+      },
+      "19788": {
+        "position": 4,
+        "like": 161
+      },
+      "19829": {
+        "position": 1,
+        "like": 163
+      },
+      "19870": {
+        "position": 1,
+        "like": 168
+      },
+      "19911": {
+        "position": 4,
+        "like": 165
+      },
+      "19952": {
+        "position": 1,
+        "like": 167
+      },
+      "19993": {
+        "position": 1,
+        "like": 172
+      },
+      "20034": {
+        "position": 4,
+        "like": 169
+      },
+      "20075": {
+        "position": 1,
+        "like": 171
+      },
+      "20116": {
+        "position": 1,
+        "like": 176
+      },
+      "20157": {
+        "position": 4,
+        "like": 173
+      },
+      "20198": {
+        "position": 1,
+        "like": 175
+      },
+      "20362": {
+        "position": 4,
         "like": 145
       },
-      "20692": {
-        "position": 1,
-        "like": 147
-      },
-      "20732": {
-        "position": 1,
-        "like": 152
-      },
-      "20772": {
-        "position": 5,
+      "20523": {
+        "position": 4,
         "like": 149
       },
-      "20812": {
-        "position": 1,
-        "like": 151
-      },
-      "20932": {
-        "position": 8,
-        "like": 127
-      },
       "20961": {
+        "position": 2,
+        "like": 179
+      },
+      "20965": {
         "position": 1,
-        "like": 130
+        "like": 180
       },
-      "21001": {
+      "20969": {
         "position": 1,
-        "like": 131
+        "like": 182
       },
-      "21041": {
-        "position": 2,
-        "like": 129
-      },
-      "21081": {
-        "position": 8,
-        "like": 177
-      },
-      "21243": {
-        "position": 2,
-        "like": 276
-      },
-      "21248": {
-        "position": 8,
-        "like": 286
-      },
-      "21291": {
-        "position": 3,
-        "like": 291
-      },
-      "21440": {
-        "position": 2,
-        "like": 94
-      },
-      "21443": {
-        "position": 6,
-        "like": 41
-      },
-      "21483": {
-        "position": 2,
-        "like": 44
-      },
-      "21486": {
-        "position": 6,
-        "like": 97
-      },
-      "21764": {
-        "position": 6,
-        "like": 137
-      },
-      "21921": {
-        "position": 6,
-        "like": 141
-      },
-      "22078": {
-        "position": 6,
-        "like": 153
-      },
-      "22235": {
-        "position": 6,
-        "like": 157
-      },
-      "22405": {
-        "position": 3,
-        "like": 192
-      },
-      "22518": {
-        "position": 3,
-        "like": 278
-      },
-      "22524": {
-        "position": 4,
-        "like": 56
-      },
-      "22553": {
+      "20971": {
         "position": 1,
-        "like": 59
+        "like": 183
       },
-      "22593": {
+      "20983": {
         "position": 2,
-        "like": 58
+        "like": 310
       },
-      "22633": {
-        "position": 1,
-        "like": 60
-      },
-      "22673": {
+      "21030": {
         "position": 7,
-        "like": 97
+        "like": 275
       },
-      "22713": {
-        "position": 2,
-        "like": 99
-      },
-      "22835": {
-        "position": 1,
-        "like": 102
-      },
-      "22915": {
-        "position": 1,
-        "like": 140
-      },
-      "22955": {
-        "position": 7,
-        "like": 137
-      },
-      "22995": {
-        "position": 1,
-        "like": 139
-      },
-      "23035": {
-        "position": 1,
-        "like": 144
-      },
-      "23075": {
-        "position": 7,
-        "like": 141
-      },
-      "23115": {
-        "position": 1,
-        "like": 143
-      },
-      "23155": {
-        "position": 1,
-        "like": 156
-      },
-      "23195": {
-        "position": 7,
-        "like": 153
-      },
-      "23235": {
-        "position": 1,
-        "like": 155
-      },
-      "23275": {
-        "position": 1,
-        "like": 160
-      },
-      "23315": {
-        "position": 7,
-        "like": 157
-      },
-      "23355": {
-        "position": 1,
-        "like": 159
-      },
-      "23395": {
-        "position": 1,
-        "like": 187
-      },
-      "23405": {
-        "position": 1,
-        "like": 186
-      },
-      "23407": {
-        "position": 4,
-        "like": 191
-      },
-      "23415": {
-        "position": 1,
-        "like": 196
-      },
-      "23448": {
-        "position": 2,
-        "like": 193
-      },
-      "23450": {
-        "position": 2,
-        "like": 195
-      },
-      "23483": {
-        "position": 10,
-        "like": 307
-      },
-      "23526": {
-        "position": 4,
-        "like": 278
-      },
-      "23533": {
-        "position": 2,
-        "like": 103
-      },
-      "23614": {
-        "position": 8,
-        "like": 104
-      },
-      "23654": {
-        "position": 2,
-        "like": 187
-      },
-      "23668": {
+      "21074": {
         "position": 2,
         "like": 280
       },
-      "23715": {
+      "21082": {
         "position": 2,
-        "like": 189
+        "like": 290
       },
-      "23722": {
+      "21101": {
+        "position": 2,
+        "like": 294
+      },
+      "21166": {
+        "position": 2,
+        "like": 303
+      },
+      "21169": {
+        "position": 8,
+        "like": 8
+      },
+      "21311": {
+        "position": 3,
+        "like": 24
+      },
+      "21342": {
+        "position": 2,
+        "like": 26
+      },
+      "21377": {
+        "position": 1,
+        "like": 27
+      },
+      "21415": {
+        "position": 2,
+        "like": 93
+      },
+      "21459": {
+        "position": 2,
+        "like": 43
+      },
+      "21465": {
+        "position": 5,
+        "like": 97
+      },
+      "21724": {
+        "position": 1,
+        "like": 148
+      },
+      "21765": {
+        "position": 5,
+        "like": 145
+      },
+      "21806": {
+        "position": 1,
+        "like": 147
+      },
+      "21847": {
+        "position": 1,
+        "like": 152
+      },
+      "21888": {
+        "position": 5,
+        "like": 149
+      },
+      "21929": {
+        "position": 1,
+        "like": 151
+      },
+      "22052": {
+        "position": 8,
+        "like": 127
+      },
+      "22082": {
+        "position": 1,
+        "like": 130
+      },
+      "22123": {
+        "position": 1,
+        "like": 131
+      },
+      "22164": {
+        "position": 2,
+        "like": 129
+      },
+      "22205": {
+        "position": 8,
+        "like": 177
+      },
+      "22371": {
         "position": 2,
         "like": 281
       },
-      "23766": {
+      "22376": {
+        "position": 8,
+        "like": 291
+      },
+      "22420": {
+        "position": 3,
+        "like": 296
+      },
+      "22573": {
+        "position": 2,
+        "like": 94
+      },
+      "22576": {
+        "position": 6,
+        "like": 41
+      },
+      "22617": {
+        "position": 2,
+        "like": 44
+      },
+      "22620": {
+        "position": 6,
+        "like": 97
+      },
+      "22905": {
+        "position": 6,
+        "like": 137
+      },
+      "23066": {
+        "position": 6,
+        "like": 141
+      },
+      "23227": {
+        "position": 6,
+        "like": 153
+      },
+      "23388": {
+        "position": 6,
+        "like": 157
+      },
+      "23562": {
+        "position": 3,
+        "like": 192
+      },
+      "23678": {
+        "position": 3,
+        "like": 283
+      },
+      "23684": {
+        "position": 4,
+        "like": 56
+      },
+      "23714": {
+        "position": 1,
+        "like": 59
+      },
+      "23755": {
+        "position": 2,
+        "like": 58
+      },
+      "23796": {
+        "position": 1,
+        "like": 60
+      },
+      "23837": {
+        "position": 7,
+        "like": 97
+      },
+      "23878": {
+        "position": 2,
+        "like": 99
+      },
+      "24003": {
+        "position": 1,
+        "like": 102
+      },
+      "24085": {
+        "position": 1,
+        "like": 140
+      },
+      "24126": {
+        "position": 7,
+        "like": 137
+      },
+      "24167": {
+        "position": 1,
+        "like": 139
+      },
+      "24208": {
+        "position": 1,
+        "like": 144
+      },
+      "24249": {
+        "position": 7,
+        "like": 141
+      },
+      "24290": {
+        "position": 1,
+        "like": 143
+      },
+      "24331": {
+        "position": 1,
+        "like": 156
+      },
+      "24372": {
+        "position": 7,
+        "like": 153
+      },
+      "24413": {
+        "position": 1,
+        "like": 155
+      },
+      "24454": {
+        "position": 1,
+        "like": 160
+      },
+      "24495": {
+        "position": 7,
+        "like": 157
+      },
+      "24536": {
+        "position": 1,
+        "like": 159
+      },
+      "24577": {
+        "position": 1,
+        "like": 187
+      },
+      "24587": {
+        "position": 1,
+        "like": 186
+      },
+      "24589": {
+        "position": 4,
+        "like": 191
+      },
+      "24597": {
+        "position": 1,
+        "like": 196
+      },
+      "24631": {
+        "position": 2,
+        "like": 193
+      },
+      "24633": {
+        "position": 2,
+        "like": 195
+      },
+      "24667": {
+        "position": 10,
+        "like": 312
+      },
+      "24711": {
+        "position": 4,
+        "like": 283
+      },
+      "24718": {
+        "position": 2,
+        "like": 103
+      },
+      "24801": {
+        "position": 8,
+        "like": 104
+      },
+      "24842": {
+        "position": 2,
+        "like": 187
+      },
+      "24856": {
+        "position": 2,
+        "like": 285
+      },
+      "24904": {
+        "position": 2,
+        "like": 189
+      },
+      "24911": {
+        "position": 2,
+        "like": 286
+      },
+      "24956": {
         "position": 2,
         "like": 190
       },
-      "23769": {
+      "24959": {
         "position": 7,
         "like": 184
       },
-      "23814": {
+      "25005": {
         "position": 6,
         "like": 100
       }
@@ -3558,90 +3606,100 @@ function(E) {
       "262": "dA",
       "263": "dA",
       "264": "dA",
-      "265": "Inline",
-      "266": [
+      "265": "dA",
+      "266": "Inline",
+      "267": [
+        "ListSnoc",
+        "block-expr_I2*",
+        "block-expr_I2",
+        true
+      ],
+      "268": "Inline",
+      "269": "dA",
+      "270": "Inline",
+      "271": [
         "ListSnoc",
         "record-expr_A0_I2*",
         "record-expr_A0_I2",
         true
       ],
-      "267": "Inline",
-      "268": "dA",
-      "269": "dA",
-      "270": "dA",
-      "271": "Inline",
-      "272": [
+      "272": "Inline",
+      "273": "dA",
+      "274": "dA",
+      "275": "dA",
+      "276": "Inline",
+      "277": [
         "ListSnoc",
         "table-expr_I3*",
         "table-expr_I3",
         true
       ],
-      "273": "Inline",
-      "274": "Inline",
-      "275": [
+      "278": "Inline",
+      "279": "Inline",
+      "280": [
         "ListSnoc",
         "table-expr_I5*",
         "table-expr_I5",
         true
       ],
-      "276": "Inline",
-      "277": "dA",
-      "278": "dA",
-      "279": "Inline",
-      "280": [
+      "281": "Inline",
+      "282": "dA",
+      "283": "dA",
+      "284": "Inline",
+      "285": [
         "ListSnoc",
         "table-row_I3*",
         "table-row_I3",
         true
       ],
-      "281": "Inline",
-      "282": "dA",
-      "283": "Inline",
-      "284": [
+      "286": "Inline",
+      "287": "dA",
+      "288": "Inline",
+      "289": [
         "ListSnoc",
         "ask-expr_A0_I4*",
         "ask-expr_A0_I4",
         true
       ],
-      "285": "Inline",
-      "286": "dA",
-      "287": "Inline",
-      "288": [
+      "290": "Inline",
+      "291": "dA",
+      "292": "Inline",
+      "293": [
         "ListSnoc",
         "ask-expr_A1_I4*",
         "ask-expr_A1_I4",
         true
       ],
-      "289": "Inline",
-      "290": "dA",
-      "291": "dA",
-      "292": "dA",
-      "293": "Inline",
       "294": "Inline",
-      "295": "Inline",
-      "296": "Inline",
-      "297": [
+      "295": "dA",
+      "296": "dA",
+      "297": "dA",
+      "298": "Inline",
+      "299": "Inline",
+      "300": "Inline",
+      "301": "Inline",
+      "302": [
         "ListSnoc",
         "new-expr_I3_I1*",
         "new-expr_I3_I1",
         true
       ],
-      "298": "Inline",
-      "299": "dA",
-      "300": "Inline",
-      "301": "Inline",
-      "302": "Inline",
       "303": "Inline",
-      "304": [
+      "304": "dA",
+      "305": "Inline",
+      "306": "Inline",
+      "307": "Inline",
+      "308": "Inline",
+      "309": [
         "ListSnoc",
         "construct-expr_A0_I3_I1*",
         "construct-expr_A0_I3_I1",
         true
       ],
-      "305": "Inline",
-      "306": "dA",
-      "307": "dA",
-      "308": "dA"
+      "310": "Inline",
+      "311": "dA",
+      "312": "dA",
+      "313": "dA"
     },
     "flagsByOldId": {},
     "rules": [
@@ -3910,15 +3968,15 @@ function(E) {
       262,
       263,
       264,
-      268,
       265,
       266,
       267,
+      268,
       269,
+      273,
       270,
       271,
       272,
-      273,
       274,
       275,
       276,
@@ -3928,15 +3986,15 @@ function(E) {
       280,
       281,
       282,
-      286,
       283,
       284,
       285,
+      286,
       287,
+      291,
       288,
       289,
       290,
-      291,
       292,
       293,
       294,
@@ -3945,15 +4003,20 @@ function(E) {
       297,
       298,
       299,
-      306,
       300,
       301,
       302,
       303,
       304,
+      311,
       305,
+      306,
       307,
-      308
+      308,
+      309,
+      310,
+      312,
+      313
     ],
     "reduceActions": [
       0,
@@ -3962,685 +4025,695 @@ function(E) {
       2,
       2,
       3,
-      401,
+      409,
       4,
       12,
       4,
       13,
       5,
-      460,
+      470,
       0,
-      760,
+      780,
       0,
-      762,
+      782,
       0,
-      2791,
+      2953,
       0,
-      2822,
+      2985,
       0,
-      3072,
+      3243,
       0,
-      3071,
+      3242,
       12,
       68,
       12,
       209,
       47,
-      3184,
+      3358,
       0,
-      3227,
+      3402,
       0,
-      3256,
+      3432,
       0,
-      3285,
+      3462,
       0,
-      3314,
+      3492,
       0,
-      3343,
+      3522,
       0,
-      3372,
+      3552,
       0,
-      3401,
+      3582,
       0,
-      3430,
+      3612,
       0,
-      3459,
+      3642,
       0,
-      3488,
+      3672,
       0,
       202,
       45,
       75,
       14,
-      3797,
+      3990,
       0,
-      3799,
+      3992,
       0,
-      3801,
+      3994,
       0,
-      3803,
+      3996,
       0,
-      3805,
+      3998,
       0,
-      3807,
+      4000,
       0,
-      3838,
+      4032,
       26,
       124,
       26,
-      4067,
+      4269,
       0,
-      4153,
+      4357,
       0,
-      4183,
+      4388,
       0,
-      4213,
+      4419,
       49,
       220,
       49,
-      4409,
+      4620,
       0,
-      4709,
+      4927,
       0,
-      4752,
+      4971,
       0,
-      4795,
+      5015,
       0,
-      4838,
+      5059,
       0,
-      4881,
+      5103,
       0,
-      4967,
+      5191,
       0,
-      5010,
+      5235,
       0,
-      5053,
+      5279,
       0,
-      5096,
+      5323,
       0,
-      5139,
+      5367,
       0,
-      5182,
+      5411,
       0,
-      5614,
+      5455,
       0,
-      5616,
+      5943,
       0,
-      5657,
+      5945,
       0,
-      5663,
+      5987,
+      0,
+      5993,
       48,
       212,
       48,
-      5699,
+      6030,
       0,
-      5704,
+      6035,
       0,
-      265,
-      52,
+      270,
+      53,
       78,
       15,
-      5811,
+      6144,
       15,
-      5831,
+      6164,
       0,
-      5909,
+      6244,
       0,
-      5911,
+      6246,
       46,
       205,
       46,
-      6033,
+      6373,
       0,
-      6062,
+      6403,
       0,
-      6091,
+      6433,
       0,
       133,
       28,
-      6357,
+      6707,
       0,
-      6678,
+      7044,
       0,
-      6720,
+      7087,
       0,
       240,
       50,
-      7050,
+      7427,
       0,
-      7344,
+      266,
+      52,
+      7841,
       0,
-      7468,
+      7969,
       0,
       71,
       13,
-      7578,
+      8082,
       25,
       120,
       25,
-      7691,
+      8199,
       0,
-      7694,
+      8202,
       0,
-      7825,
+      8337,
       0,
-      7842,
+      8354,
       0,
-      7915,
+      8429,
       0,
       46,
       8,
-      10089,
+      10673,
       0,
-      10106,
+      10691,
       0,
-      10123,
+      10709,
       0,
-      10207,
+      10795,
       0,
-      10224,
+      10813,
       0,
-      10241,
+      10831,
       0,
-      10258,
+      10849,
       0,
-      10275,
+      10867,
       0,
-      10292,
+      10885,
       0,
-      10309,
+      10903,
       0,
-      10326,
+      10921,
       0,
-      10343,
+      10939,
       0,
-      10360,
+      10957,
       0,
-      10377,
+      10975,
       0,
-      10401,
+      11000,
       51,
       243,
       51,
-      10463,
+      11063,
       0,
-      10484,
+      11086,
       0,
-      300,
-      60,
-      10700,
+      305,
+      61,
+      11308,
       0,
-      271,
-      53,
-      293,
-      58,
-      11124,
+      276,
+      54,
+      298,
+      59,
+      11857,
       0,
-      11153,
+      11887,
       0,
-      11182,
+      11917,
       0,
-      11214,
+      11950,
       0,
-      11254,
+      11991,
       0,
-      11289,
+      12028,
       0,
-      11335,
+      12075,
       0,
-      11341,
+      12081,
       0,
-      11390,
+      12131,
       0,
-      11425,
+      12167,
       0,
-      11427,
+      12169,
       9,
       49,
       9,
-      11433,
+      12175,
       22,
       108,
       22,
-      11547,
+      12293,
       0,
       82,
       16,
-      11700,
+      12449,
       0,
-      11740,
+      12490,
       0,
-      11780,
+      12531,
       0,
-      11820,
+      12572,
       0,
-      11860,
+      12613,
       0,
-      11900,
+      12654,
       0,
-      11940,
+      12695,
       0,
-      11980,
+      12736,
       0,
-      12050,
+      12807,
       0,
-      12079,
+      12837,
       0,
-      12119,
+      12878,
       0,
-      12159,
+      12919,
       0,
-      12199,
+      12960,
       0,
-      12239,
+      13001,
       0,
-      12279,
+      13042,
       0,
-      12413,
+      13178,
       0,
-      12881,
+      13655,
       0,
-      13753,
+      14567,
       0,
-      13795,
+      14610,
       0,
-      13802,
+      14617,
       0,
-      13845,
+      14661,
       0,
-      303,
-      61,
-      13890,
-      61,
-      13941,
+      308,
+      62,
+      14707,
+      62,
+      14759,
       0,
-      13986,
+      14805,
       0,
-      283,
-      56,
-      287,
+      14849,
+      0,
+      14884,
+      0,
+      14919,
+      0,
+      288,
       57,
-      14193,
-      59,
-      296,
-      59,
-      14242,
+      292,
+      58,
+      15133,
+      60,
+      301,
+      60,
+      15183,
       0,
-      14244,
+      15185,
       0,
-      14337,
+      15281,
       0,
-      14402,
+      15348,
       0,
-      14404,
+      15350,
       0,
-      14407,
+      15353,
       0,
-      14410,
+      15356,
       0,
-      14440,
+      15387,
       0,
-      14443,
+      15390,
       0,
-      14446,
+      15393,
       0,
-      14448,
+      15395,
       0,
-      14478,
+      15426,
       0,
-      14481,
+      15429,
       0,
-      14542,
+      15492,
       0,
-      14549,
+      15499,
       0,
-      14578,
+      15529,
       0,
-      14607,
+      15559,
       0,
       89,
       18,
       85,
       17,
-      14681,
+      15635,
       23,
       112,
       23,
-      14794,
+      15752,
       24,
       116,
       24,
-      15223,
+      16192,
       0,
-      15543,
+      16520,
       44,
       198,
       44,
       178,
       39,
-      15781,
+      16764,
       0,
-      15784,
+      16767,
       0,
-      15791,
+      16774,
       0,
-      274,
-      54,
-      15927,
+      279,
+      55,
+      16913,
       0,
-      15930,
+      16916,
       0,
-      16089,
+      17081,
       0,
-      16096,
+      17088,
       0,
-      16139,
+      17132,
       0,
-      16201,
+      17196,
       0,
-      16232,
+      17228,
       0,
-      16235,
+      17231,
       10,
       52,
       10,
       25,
       6,
-      16475,
+      17479,
       0,
-      16484,
+      17488,
       0,
-      16486,
+      17490,
       19,
       92,
       19,
-      16493,
+      17497,
       0,
-      16526,
+      17531,
       0,
-      16529,
+      17534,
       0,
-      16531,
+      17536,
       0,
-      16560,
+      17566,
       0,
-      16589,
+      17596,
       0,
-      16618,
+      17626,
       0,
-      16647,
+      17656,
       0,
-      16676,
+      17686,
       0,
       42,
       7,
-      16789,
+      17802,
       35,
       162,
       35,
-      16946,
+      17963,
       36,
       166,
       36,
-      17103,
+      18124,
       37,
       170,
       37,
-      17260,
+      18285,
       38,
       174,
       38,
-      17457,
+      18487,
       0,
-      17737,
+      18774,
       0,
-      17777,
+      18815,
       0,
-      17817,
+      18856,
       0,
       128,
       27,
       181,
       40,
-      18024,
+      19068,
       0,
-      18030,
+      19074,
       0,
-      18125,
+      19171,
       0,
-      18128,
+      19174,
       0,
-      18189,
+      19237,
       0,
-      18268,
+      19319,
       0,
-      18291,
+      19343,
       0,
-      18325,
+      19378,
       0,
-      18354,
+      19408,
       0,
-      18383,
+      19438,
       0,
-      18538,
+      19598,
       0,
-      18541,
+      19601,
       0,
-      18544,
+      19604,
       0,
-      18547,
+      19607,
       0,
-      18554,
+      19614,
       0,
-      18557,
+      19617,
       0,
-      18684,
+      19747,
       0,
-      18724,
+      19788,
       0,
-      18764,
+      19829,
       0,
-      18804,
+      19870,
       0,
-      18844,
+      19911,
       0,
-      18884,
+      19952,
       0,
-      18924,
+      19993,
       0,
-      18964,
+      20034,
       0,
-      19004,
+      20075,
       0,
-      19044,
+      20116,
       0,
-      19084,
+      20157,
       0,
-      19124,
+      20198,
       0,
-      19284,
+      20362,
       31,
       146,
       31,
-      19441,
+      20523,
       32,
       150,
       32,
-      19868,
+      20961,
       0,
-      19872,
+      20965,
       0,
-      19876,
+      20969,
       0,
-      19878,
+      20971,
       0,
-      19890,
+      20983,
       0,
-      19936,
+      21030,
       0,
-      19979,
+      21074,
       0,
-      19987,
+      21082,
       0,
-      20005,
+      21101,
       0,
-      20068,
+      21166,
       0,
-      20071,
+      21169,
       0,
       57,
       11,
-      20209,
+      21311,
       0,
-      20239,
+      21342,
       0,
-      20273,
+      21377,
       0,
-      20310,
+      21415,
       0,
-      20353,
+      21459,
       0,
-      20359,
-      63,
+      21465,
+      64,
       98,
       20,
-      20612,
+      21724,
       0,
-      20652,
+      21765,
       0,
-      20692,
+      21806,
       0,
-      20732,
+      21847,
       0,
-      20772,
+      21888,
       0,
-      20812,
+      21929,
       0,
-      20932,
+      22052,
       0,
-      20961,
+      22082,
       0,
-      21001,
+      22123,
       0,
-      21041,
+      22164,
       0,
-      21081,
+      22205,
       0,
       194,
       43,
-      21243,
+      22371,
       0,
-      21248,
+      22376,
       0,
-      21291,
+      22420,
       0,
-      21440,
+      22573,
       0,
-      21443,
+      22576,
       0,
-      21483,
+      22617,
       0,
-      21486,
+      22620,
       21,
       101,
       21,
-      21764,
+      22905,
       29,
       138,
       29,
-      21921,
+      23066,
       30,
       142,
       30,
-      22078,
+      23227,
       33,
       154,
       33,
-      22235,
+      23388,
       34,
       158,
       34,
       185,
       41,
-      22405,
+      23562,
       0,
-      22518,
-      55,
-      279,
-      55,
-      22524,
+      23678,
+      56,
+      284,
+      56,
+      23684,
       0,
-      22553,
+      23714,
       0,
-      22593,
+      23755,
       0,
-      22633,
+      23796,
       0,
-      22673,
+      23837,
       0,
-      22713,
+      23878,
       0,
-      22835,
+      24003,
       0,
-      22915,
+      24085,
       0,
-      22955,
+      24126,
       0,
-      22995,
+      24167,
       0,
-      23035,
+      24208,
       0,
-      23075,
+      24249,
       0,
-      23115,
+      24290,
       0,
-      23155,
+      24331,
       0,
-      23195,
+      24372,
       0,
-      23235,
+      24413,
       0,
-      23275,
+      24454,
       0,
-      23315,
+      24495,
       0,
-      23355,
+      24536,
       0,
-      23395,
+      24577,
       42,
       188,
       42,
-      23405,
+      24587,
       0,
-      23407,
+      24589,
       0,
-      23415,
+      24597,
       0,
-      23448,
+      24631,
       0,
-      23450,
+      24633,
       0,
-      23483,
+      24667,
       0,
-      23526,
+      24711,
       0,
-      23533,
+      24718,
       0,
-      23614,
+      24801,
       0,
-      23654,
+      24842,
       0,
-      23668,
+      24856,
       0,
-      23715,
+      24904,
       0,
-      23722,
+      24911,
       0,
-      23766,
+      24956,
       0,
-      23769,
+      24959,
       0,
-      23814,
+      25005,
       0
     ],
     "rnTable": [
@@ -4788,6 +4861,11 @@ function(E) {
           2,
           4
         ],
+        "'BLOCK": [
+          -1,
+          2,
+          4
+        ],
         "'TABLE": [
           -1,
           2,
@@ -4919,6 +4997,10 @@ function(E) {
           -1,
           10
         ],
+        "'BLOCK": [
+          -1,
+          10
+        ],
         "'TABLE": [
           -1,
           10
@@ -5042,6 +5124,10 @@ function(E) {
           12
         ],
         "'PARENAFTERBRACE": [
+          -1,
+          12
+        ],
+        "'BLOCK": [
           -1,
           12
         ],
@@ -5209,14 +5295,20 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ],
         "$": [
           -1,
@@ -5332,6 +5424,10 @@ function(E) {
           -1,
           18
         ],
+        "'BLOCK": [
+          -1,
+          18
+        ],
         "'TABLE": [
           -1,
           18
@@ -5454,6 +5550,10 @@ function(E) {
           -1,
           20
         ],
+        "'BLOCK": [
+          -1,
+          20
+        ],
         "'TABLE": [
           -1,
           20
@@ -5469,27 +5569,27 @@ function(E) {
       },
       {
         "'NAME": [
-          61
+          63
         ]
       },
       {
         "'NAME": [
-          62
+          64
         ]
       },
       {
         "type-ann_A6_I1?": [
-          63
+          65
         ],
         "type-ann_A6_I1": [
-          64
+          66
         ],
         "'LT": [
-          65,
+          67,
           22
         ],
         "'COLONEQUALS": [
-          66
+          68
         ],
         "$": [
           -1,
@@ -5709,6 +5809,10 @@ function(E) {
           -1,
           22
         ],
+        "'BLOCK": [
+          -1,
+          22
+        ],
         "'TABLE": [
           -1,
           22
@@ -5724,13 +5828,13 @@ function(E) {
       },
       {
         "'NAME": [
-          67
+          69
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          69
+          71
         ],
         "'INT": [
           26
@@ -5751,13 +5855,13 @@ function(E) {
           31
         ],
         "lambda-param": [
-          70
+          72
         ],
         "lambda-expr_A1_I1?": [
-          71
+          73
         ],
         "lambda-expr_A1_I1": [
-          72
+          74
         ],
         "'RPAREN": [
           -1,
@@ -6009,6 +6113,10 @@ function(E) {
           -1,
           30
         ],
+        "'BLOCK": [
+          -1,
+          30
+        ],
         "'TABLE": [
           -1,
           30
@@ -6123,6 +6231,10 @@ function(E) {
           -1,
           32
         ],
+        "'BLOCK": [
+          -1,
+          32
+        ],
         "'TABLE": [
           -1,
           32
@@ -6237,6 +6349,10 @@ function(E) {
           -1,
           34
         ],
+        "'BLOCK": [
+          -1,
+          34
+        ],
         "'TABLE": [
           -1,
           34
@@ -6351,6 +6467,10 @@ function(E) {
           -1,
           36
         ],
+        "'BLOCK": [
+          -1,
+          36
+        ],
         "'TABLE": [
           -1,
           36
@@ -6465,6 +6585,10 @@ function(E) {
           -1,
           38
         ],
+        "'BLOCK": [
+          -1,
+          38
+        ],
         "'TABLE": [
           -1,
           38
@@ -6579,6 +6703,10 @@ function(E) {
           -1,
           40
         ],
+        "'BLOCK": [
+          -1,
+          40
+        ],
         "'TABLE": [
           -1,
           40
@@ -6693,6 +6821,10 @@ function(E) {
           -1,
           42
         ],
+        "'BLOCK": [
+          -1,
+          42
+        ],
         "'TABLE": [
           -1,
           42
@@ -6807,6 +6939,10 @@ function(E) {
           -1,
           44
         ],
+        "'BLOCK": [
+          -1,
+          44
+        ],
         "'TABLE": [
           -1,
           44
@@ -6921,6 +7057,10 @@ function(E) {
           -1,
           46
         ],
+        "'BLOCK": [
+          -1,
+          46
+        ],
         "'TABLE": [
           -1,
           46
@@ -7035,6 +7175,10 @@ function(E) {
           -1,
           48
         ],
+        "'BLOCK": [
+          -1,
+          48
+        ],
         "'TABLE": [
           -1,
           48
@@ -7149,6 +7293,10 @@ function(E) {
           -1,
           50
         ],
+        "'BLOCK": [
+          -1,
+          50
+        ],
         "'TABLE": [
           -1,
           50
@@ -7164,18 +7312,18 @@ function(E) {
       },
       {
         "'NAME": [
-          73
+          75
         ],
         "'RBRACE": [
-          74
+          76
         ],
         "record-field": [
-          75
+          77
         ]
       },
       {
         "'NAME": [
-          76
+          78
         ],
         "'PARENNOSPACE": [
           11
@@ -7190,7 +7338,7 @@ function(E) {
           24
         ],
         "type-ann": [
-          77
+          79
         ],
         "'INT": [
           26
@@ -7211,13 +7359,13 @@ function(E) {
           31
         ],
         "type-ann_A7_I1?": [
-          78
+          80
         ],
         "type-ann_A7_I1": [
-          79
+          81
         ],
         "full-expr": [
-          80
+          82
         ],
         "switch-expr": [
           37
@@ -7229,13 +7377,13 @@ function(E) {
           39
         ],
         "lambda-expr_A0_I1?": [
-          81
+          83
         ],
         "lambda-expr_A0_I1": [
-          82
+          84
         ],
         "lambda-param": [
-          83
+          85
         ],
         "binop-expr": [
           40
@@ -7291,14 +7439,20 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ],
         "'RPAREN": [
           -1,
@@ -7311,7 +7465,7 @@ function(E) {
       },
       {
         "'NAME": [
-          84
+          86
         ]
       },
       {
@@ -7448,18 +7602,18 @@ function(E) {
       },
       {
         "'NAME": [
-          85
+          87
         ]
       },
       {
         "'SEMI": [
-          86
+          88
         ],
         "expr-stmt_I1?": [
-          87
+          89
         ],
         "expr-stmt_I1": [
-          88
+          90
         ],
         "$": [
           -1,
@@ -7616,6 +7770,11 @@ function(E) {
           68,
           70
         ],
+        "'BLOCK": [
+          -1,
+          68,
+          70
+        ],
         "'TABLE": [
           -1,
           68,
@@ -7634,13 +7793,13 @@ function(E) {
       },
       {
         "'NAME": [
-          89
+          91
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          90
+          92
         ],
         "'INT": [
           26
@@ -7663,13 +7822,13 @@ function(E) {
       },
       {
         "'NAME": [
-          89
+          91
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          91
+          93
         ],
         "'INT": [
           26
@@ -7692,10 +7851,10 @@ function(E) {
       },
       {
         "'LBRACE": [
-          92
+          94
         ],
         "'VOID": [
-          93
+          95
         ]
       },
       {
@@ -7943,6 +8102,10 @@ function(E) {
           -1,
           72
         ],
+        "'BLOCK": [
+          -1,
+          72
+        ],
         "'TABLE": [
           -1,
           72
@@ -7958,7 +8121,7 @@ function(E) {
       },
       {
         "'PARENSPACE": [
-          94
+          96
         ]
       },
       {
@@ -8150,6 +8313,10 @@ function(E) {
           -1,
           74
         ],
+        "'BLOCK": [
+          -1,
+          74
+        ],
         "'TABLE": [
           -1,
           74
@@ -8349,6 +8516,10 @@ function(E) {
           76
         ],
         "'PARENAFTERBRACE": [
+          -1,
+          76
+        ],
+        "'BLOCK": [
           -1,
           76
         ],
@@ -8367,7 +8538,7 @@ function(E) {
       },
       {
         "binop-expr_I1*": [
-          95
+          97
         ],
         "$": [
           -1,
@@ -8657,6 +8828,11 @@ function(E) {
           78,
           80
         ],
+        "'BLOCK": [
+          -1,
+          78,
+          80
+        ],
         "'TABLE": [
           -1,
           78,
@@ -8675,88 +8851,8 @@ function(E) {
       },
       {
         "'NAME": [
-          96
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          97
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "unop-expr": [
           98
         ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
         "'STRING": [
           12
         ],
@@ -8764,7 +8860,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          97
+          99
         ],
         "switch-expr": [
           37
@@ -8773,7 +8869,7 @@ function(E) {
           38
         ],
         "unop-expr": [
-          99
+          100
         ],
         "'DASH": [
           42
@@ -8823,282 +8919,378 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          99
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "unop-expr": [
+          101
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'PARENNOSPACE": [
-          100,
-          82
-        ],
-        "'DOT": [
-          101
-        ],
-        "'LBRACK": [
           102,
           82
         ],
-        "$": [
-          -1,
-          82
-        ],
-        "'NAME": [
-          -1,
-          82
-        ],
-        "'SEMI": [
-          -1,
-          82
-        ],
-        "'STRING": [
-          -1,
-          82
-        ],
-        "'RPAREN": [
-          -1,
-          82
-        ],
-        "'LBRACE": [
-          -1,
-          82
-        ],
-        "'RBRACE": [
-          -1,
-          82
-        ],
-        "'SPY": [
-          -1,
-          82
-        ],
-        "'PARENSPACE": [
-          -1,
-          82
-        ],
-        "'COMMA": [
-          -1,
-          82
-        ],
-        "'INT": [
-          -1,
-          82
-        ],
-        "'LONG": [
-          -1,
-          82
-        ],
-        "'DOUBLE": [
-          -1,
-          82
-        ],
-        "'FLOAT": [
-          -1,
-          82
-        ],
-        "'BOOLEAN": [
-          -1,
-          82
-        ],
-        "'VOID": [
-          -1,
-          82
-        ],
-        "'LT": [
-          -1,
-          82
-        ],
-        "'GT": [
-          -1,
-          82
-        ],
-        "'THINARROW": [
-          -1,
-          82
-        ],
-        "'DATA": [
-          -1,
-          82
-        ],
-        "'IF": [
-          -1,
-          82
-        ],
-        "'FOR": [
-          -1,
-          82
-        ],
-        "'RETURN": [
-          -1,
-          82
-        ],
-        "'VAR": [
-          -1,
-          82
-        ],
-        "'REC": [
-          -1,
-          82
-        ],
-        "'ATCHECK": [
-          -1,
-          82
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          82
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          82
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          82
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          82
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          82
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          82
-        ],
-        "'IS": [
-          -1,
-          82
-        ],
-        "'ISNOT": [
-          -1,
-          82
-        ],
-        "'SATISFIES": [
-          -1,
-          82
-        ],
-        "'RAISES": [
-          -1,
-          82
-        ],
-        "'SWITCH": [
-          -1,
-          82
-        ],
-        "'CASE": [
-          -1,
-          82
-        ],
-        "'DEFAULT": [
-          -1,
-          82
-        ],
-        "'YIELD": [
-          -1,
-          82
-        ],
-        "'PLUS": [
-          -1,
-          82
-        ],
-        "'DASH": [
-          -1,
-          82
-        ],
-        "'TIMES": [
-          -1,
-          82
-        ],
-        "'SLASH": [
-          -1,
-          82
-        ],
-        "'PERCENT": [
-          -1,
-          82
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          82
-        ],
-        "'NEQ": [
-          -1,
-          82
-        ],
-        "'LEQ": [
-          -1,
-          82
-        ],
-        "'GEQ": [
-          -1,
-          82
-        ],
-        "'AND": [
-          -1,
-          82
-        ],
-        "'OR": [
-          -1,
-          82
-        ],
-        "'BANG": [
-          -1,
-          82
-        ],
-        "'RBRACK": [
-          -1,
-          82
-        ],
-        "'NUMBER": [
-          -1,
-          82
-        ],
-        "'TRUE": [
-          -1,
-          82
-        ],
-        "'FALSE": [
-          -1,
-          82
-        ],
-        "'NULL": [
-          -1,
-          82
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          82
-        ],
-        "'TABLE": [
-          -1,
-          82
-        ],
-        "'ASK": [
-          -1,
-          82
-        ],
-        "'NEW": [
-          -1,
-          82
-        ]
-      },
-      {
-        "'NAME": [
+        "'DOT": [
           103
         ],
+        "'LBRACK": [
+          104,
+          82
+        ],
+        "$": [
+          -1,
+          82
+        ],
+        "'NAME": [
+          -1,
+          82
+        ],
+        "'SEMI": [
+          -1,
+          82
+        ],
+        "'STRING": [
+          -1,
+          82
+        ],
+        "'RPAREN": [
+          -1,
+          82
+        ],
+        "'LBRACE": [
+          -1,
+          82
+        ],
+        "'RBRACE": [
+          -1,
+          82
+        ],
+        "'SPY": [
+          -1,
+          82
+        ],
+        "'PARENSPACE": [
+          -1,
+          82
+        ],
+        "'COMMA": [
+          -1,
+          82
+        ],
+        "'INT": [
+          -1,
+          82
+        ],
+        "'LONG": [
+          -1,
+          82
+        ],
+        "'DOUBLE": [
+          -1,
+          82
+        ],
+        "'FLOAT": [
+          -1,
+          82
+        ],
+        "'BOOLEAN": [
+          -1,
+          82
+        ],
+        "'VOID": [
+          -1,
+          82
+        ],
+        "'LT": [
+          -1,
+          82
+        ],
+        "'GT": [
+          -1,
+          82
+        ],
+        "'THINARROW": [
+          -1,
+          82
+        ],
+        "'DATA": [
+          -1,
+          82
+        ],
+        "'IF": [
+          -1,
+          82
+        ],
         "'FOR": [
-          104
+          -1,
+          82
+        ],
+        "'RETURN": [
+          -1,
+          82
+        ],
+        "'VAR": [
+          -1,
+          82
+        ],
+        "'REC": [
+          -1,
+          82
+        ],
+        "'ATCHECK": [
+          -1,
+          82
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          82
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          82
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          82
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          82
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          82
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          82
+        ],
+        "'IS": [
+          -1,
+          82
+        ],
+        "'ISNOT": [
+          -1,
+          82
+        ],
+        "'SATISFIES": [
+          -1,
+          82
+        ],
+        "'RAISES": [
+          -1,
+          82
+        ],
+        "'SWITCH": [
+          -1,
+          82
+        ],
+        "'CASE": [
+          -1,
+          82
+        ],
+        "'DEFAULT": [
+          -1,
+          82
+        ],
+        "'YIELD": [
+          -1,
+          82
+        ],
+        "'PLUS": [
+          -1,
+          82
+        ],
+        "'DASH": [
+          -1,
+          82
+        ],
+        "'TIMES": [
+          -1,
+          82
+        ],
+        "'SLASH": [
+          -1,
+          82
+        ],
+        "'PERCENT": [
+          -1,
+          82
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          82
+        ],
+        "'NEQ": [
+          -1,
+          82
+        ],
+        "'LEQ": [
+          -1,
+          82
+        ],
+        "'GEQ": [
+          -1,
+          82
+        ],
+        "'AND": [
+          -1,
+          82
+        ],
+        "'OR": [
+          -1,
+          82
+        ],
+        "'BANG": [
+          -1,
+          82
         ],
         "'RBRACK": [
+          -1,
+          82
+        ],
+        "'NUMBER": [
+          -1,
+          82
+        ],
+        "'TRUE": [
+          -1,
+          82
+        ],
+        "'FALSE": [
+          -1,
+          82
+        ],
+        "'NULL": [
+          -1,
+          82
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          82
+        ],
+        "'BLOCK": [
+          -1,
+          82
+        ],
+        "'TABLE": [
+          -1,
+          82
+        ],
+        "'ASK": [
+          -1,
+          82
+        ],
+        "'NEW": [
+          -1,
+          82
+        ]
+      },
+      {
+        "'NAME": [
           105
+        ],
+        "'FOR": [
+          106
+        ],
+        "'RBRACK": [
+          107
         ]
       },
       {
@@ -9343,6 +9535,10 @@ function(E) {
           84
         ],
         "'PARENAFTERBRACE": [
+          -1,
+          84
+        ],
+        "'BLOCK": [
           -1,
           84
         ],
@@ -9604,6 +9800,10 @@ function(E) {
           -1,
           86
         ],
+        "'BLOCK": [
+          -1,
+          86
+        ],
         "'TABLE": [
           -1,
           86
@@ -9862,6 +10062,10 @@ function(E) {
           -1,
           88
         ],
+        "'BLOCK": [
+          -1,
+          88
+        ],
         "'TABLE": [
           -1,
           88
@@ -10120,6 +10324,10 @@ function(E) {
           -1,
           90
         ],
+        "'BLOCK": [
+          -1,
+          90
+        ],
         "'TABLE": [
           -1,
           90
@@ -10378,6 +10586,10 @@ function(E) {
           -1,
           92
         ],
+        "'BLOCK": [
+          -1,
+          92
+        ],
         "'TABLE": [
           -1,
           92
@@ -10393,7 +10605,7 @@ function(E) {
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -10405,10 +10617,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          107
+          109
         ],
         "switch-expr": [
           37
@@ -10473,14 +10685,20 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
@@ -10725,6 +10943,10 @@ function(E) {
           94
         ],
         "'PARENAFTERBRACE": [
+          -1,
+          94
+        ],
+        "'BLOCK": [
           -1,
           94
         ],
@@ -10986,6 +11208,10 @@ function(E) {
           -1,
           96
         ],
+        "'BLOCK": [
+          -1,
+          96
+        ],
         "'TABLE": [
           -1,
           96
@@ -11244,6 +11470,10 @@ function(E) {
           -1,
           98
         ],
+        "'BLOCK": [
+          -1,
+          98
+        ],
         "'TABLE": [
           -1,
           98
@@ -11502,6 +11732,10 @@ function(E) {
           -1,
           100
         ],
+        "'BLOCK": [
+          -1,
+          100
+        ],
         "'TABLE": [
           -1,
           100
@@ -11760,6 +11994,10 @@ function(E) {
           -1,
           102
         ],
+        "'BLOCK": [
+          -1,
+          102
+        ],
         "'TABLE": [
           -1,
           102
@@ -12018,6 +12256,10 @@ function(E) {
           -1,
           104
         ],
+        "'BLOCK": [
+          -1,
+          104
+        ],
         "'TABLE": [
           -1,
           104
@@ -12032,28 +12274,284 @@ function(E) {
         ]
       },
       {
-        "'LBRACE": [
-          108
-        ]
-      },
-      {
-        "'LBRACE": [
-          109
-        ]
-      },
-      {
+        "$": [
+          -1,
+          106
+        ],
         "'NAME": [
+          -1,
+          106
+        ],
+        "'SEMI": [
+          -1,
+          106
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          106
+        ],
+        "'STRING": [
+          -1,
+          106
+        ],
+        "'RPAREN": [
+          -1,
+          106
+        ],
+        "'LBRACE": [
+          -1,
+          106
+        ],
+        "'RBRACE": [
+          -1,
+          106
+        ],
+        "'SPY": [
+          -1,
+          106
+        ],
+        "'PARENSPACE": [
+          -1,
+          106
+        ],
+        "'COMMA": [
+          -1,
+          106
+        ],
+        "'INT": [
+          -1,
+          106
+        ],
+        "'LONG": [
+          -1,
+          106
+        ],
+        "'DOUBLE": [
+          -1,
+          106
+        ],
+        "'FLOAT": [
+          -1,
+          106
+        ],
+        "'BOOLEAN": [
+          -1,
+          106
+        ],
+        "'VOID": [
+          -1,
+          106
+        ],
+        "'LT": [
+          -1,
+          106
+        ],
+        "'GT": [
+          -1,
+          106
+        ],
+        "'THINARROW": [
+          -1,
+          106
+        ],
+        "'DATA": [
+          -1,
+          106
+        ],
+        "'IF": [
+          -1,
+          106
+        ],
+        "'FOR": [
+          -1,
+          106
+        ],
+        "'RETURN": [
+          -1,
+          106
+        ],
+        "'VAR": [
+          -1,
+          106
+        ],
+        "'REC": [
+          -1,
+          106
+        ],
+        "'ATCHECK": [
+          -1,
+          106
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          106
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          106
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          106
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          106
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          106
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          106
+        ],
+        "'IS": [
+          -1,
+          106
+        ],
+        "'ISNOT": [
+          -1,
+          106
+        ],
+        "'SATISFIES": [
+          -1,
+          106
+        ],
+        "'RAISES": [
+          -1,
+          106
+        ],
+        "'SWITCH": [
+          -1,
+          106
+        ],
+        "'CASE": [
+          -1,
+          106
+        ],
+        "'DEFAULT": [
+          -1,
+          106
+        ],
+        "'YIELD": [
+          -1,
+          106
+        ],
+        "'PLUS": [
+          -1,
+          106
+        ],
+        "'DASH": [
+          -1,
+          106
+        ],
+        "'TIMES": [
+          -1,
+          106
+        ],
+        "'SLASH": [
+          -1,
+          106
+        ],
+        "'PERCENT": [
+          -1,
+          106
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          106
+        ],
+        "'NEQ": [
+          -1,
+          106
+        ],
+        "'LEQ": [
+          -1,
+          106
+        ],
+        "'GEQ": [
+          -1,
+          106
+        ],
+        "'AND": [
+          -1,
+          106
+        ],
+        "'OR": [
+          -1,
+          106
+        ],
+        "'BANG": [
+          -1,
+          106
+        ],
+        "'DOT": [
+          -1,
+          106
+        ],
+        "'LBRACK": [
+          -1,
+          106
+        ],
+        "'RBRACK": [
+          -1,
+          106
+        ],
+        "'NUMBER": [
+          -1,
+          106
+        ],
+        "'TRUE": [
+          -1,
+          106
+        ],
+        "'FALSE": [
+          -1,
+          106
+        ],
+        "'NULL": [
+          -1,
+          106
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          106
+        ],
+        "'BLOCK": [
+          -1,
+          106
+        ],
+        "'TABLE": [
+          -1,
+          106
+        ],
+        "'ASK": [
+          -1,
+          106
+        ],
+        "'NEW": [
+          -1,
+          106
+        ]
+      },
+      {
+        "'LBRACE": [
           110
         ]
       },
       {
-        "'SEMI": [
+        "'LBRACE": [
           111
-        ],
-        "'AS": [
+        ]
+      },
+      {
+        "'LBRACE": [
           112
-        ],
-        "'PARENNOSPACE": [
+        ]
+      },
+      {
+        "'NAME": [
           113
         ]
       },
@@ -12069,25 +12567,14 @@ function(E) {
         ]
       },
       {
-        "'NAME": [
-          -1,
-          106
+        "'SEMI": [
+          117
         ],
-        "'RPAREN": [
-          -1,
-          106
+        "'AS": [
+          118
         ],
-        "'COMMA": [
-          -1,
-          106
-        ],
-        "'GT": [
-          -1,
-          106
-        ],
-        "'THINARROW": [
-          -1,
-          106
+        "'PARENNOSPACE": [
+          119
         ]
       },
       {
@@ -12114,13 +12601,35 @@ function(E) {
       },
       {
         "'NAME": [
-          89
+          -1,
+          110
+        ],
+        "'RPAREN": [
+          -1,
+          110
+        ],
+        "'COMMA": [
+          -1,
+          110
+        ],
+        "'GT": [
+          -1,
+          110
+        ],
+        "'THINARROW": [
+          -1,
+          110
+        ]
+      },
+      {
+        "'NAME": [
+          91
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          117
+          120
         ],
         "'INT": [
           26
@@ -12143,7 +12652,7 @@ function(E) {
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -12155,10 +12664,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          118
+          121
         ],
         "switch-expr": [
           37
@@ -12223,25 +12732,31 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "type-ann_A6_I1?": [
-          63
+          65
         ],
         "type-ann_A6_I1": [
-          64
+          66
         ],
         "'LT": [
-          65
+          67
         ],
         "'NAME": [
           -1,
@@ -12250,22 +12765,22 @@ function(E) {
         ],
         "'RPAREN": [
           -1,
-          110
+          112
         ],
         "'COMMA": [
           -1,
-          110
+          112
         ]
       },
       {
         "'NAME": [
-          89
+          91
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          119
+          122
         ],
         "'INT": [
           26
@@ -12286,10 +12801,10 @@ function(E) {
           31
         ],
         "type-ann_A7_I1?": [
-          78
+          80
         ],
         "type-ann_A7_I1": [
-          79
+          81
         ],
         "'THINARROW": [
           -1,
@@ -12298,319 +12813,323 @@ function(E) {
       },
       {
         "'NAME": [
-          120
+          123
         ]
       },
       {
         "lambda-expr_A1_I1_I1*": [
-          121
+          124
         ],
         "'RPAREN": [
           -1,
-          112,
-          114
+          114,
+          116
         ],
         "'COMMA": [
-          -1,
-          114
-        ]
-      },
-      {
-        "'RPAREN": [
-          122
-        ]
-      },
-      {
-        "'RPAREN": [
           -1,
           116
         ]
       },
       {
+        "'RPAREN": [
+          125
+        ]
+      },
+      {
+        "'RPAREN": [
+          -1,
+          118
+        ]
+      },
+      {
         "'COLON": [
-          123
+          126
         ]
       },
       {
         "$": [
           -1,
-          118
+          120
         ],
         "'NAME": [
           -1,
-          118
+          120
         ],
         "'SEMI": [
           -1,
-          118
+          120
         ],
         "'PARENNOSPACE": [
           -1,
-          118
+          120
         ],
         "'STRING": [
           -1,
-          118
+          120
         ],
         "'RPAREN": [
           -1,
-          118
+          120
         ],
         "'LBRACE": [
           -1,
-          118
+          120
         ],
         "'RBRACE": [
           -1,
-          118
+          120
         ],
         "'SPY": [
           -1,
-          118
+          120
         ],
         "'PARENSPACE": [
           -1,
-          118
+          120
         ],
         "'COMMA": [
           -1,
-          118
+          120
         ],
         "'INT": [
           -1,
-          118
+          120
         ],
         "'LONG": [
           -1,
-          118
+          120
         ],
         "'DOUBLE": [
           -1,
-          118
+          120
         ],
         "'FLOAT": [
           -1,
-          118
+          120
         ],
         "'BOOLEAN": [
           -1,
-          118
+          120
         ],
         "'VOID": [
           -1,
-          118
+          120
         ],
         "'LT": [
           -1,
-          118
+          120
         ],
         "'GT": [
           -1,
-          118
+          120
         ],
         "'THINARROW": [
           -1,
-          118
+          120
         ],
         "'DATA": [
           -1,
-          118
+          120
         ],
         "'IF": [
           -1,
-          118
+          120
         ],
         "'FOR": [
           -1,
-          118
+          120
         ],
         "'RETURN": [
           -1,
-          118
+          120
         ],
         "'VAR": [
           -1,
-          118
+          120
         ],
         "'REC": [
           -1,
-          118
+          120
         ],
         "'ATCHECK": [
           -1,
-          118
+          120
         ],
         "'ASSERTEQUALS": [
           -1,
-          118
+          120
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          118
+          120
         ],
         "'ASSERTTRUE": [
           -1,
-          118
+          120
         ],
         "'ASSERTFALSE": [
           -1,
-          118
+          120
         ],
         "'ASSERTSATISFIES": [
           -1,
-          118
+          120
         ],
         "'ASSERTRAISES": [
           -1,
-          118
+          120
         ],
         "'IS": [
           -1,
-          118
+          120
         ],
         "'ISNOT": [
           -1,
-          118
+          120
         ],
         "'SATISFIES": [
           -1,
-          118
+          120
         ],
         "'RAISES": [
           -1,
-          118
+          120
         ],
         "'SWITCH": [
           -1,
-          118
+          120
         ],
         "'CASE": [
           -1,
-          118
+          120
         ],
         "'DEFAULT": [
           -1,
-          118
+          120
         ],
         "'YIELD": [
           -1,
-          118
+          120
         ],
         "'PLUS": [
           -1,
-          118
+          120
         ],
         "'DASH": [
           -1,
-          118
+          120
         ],
         "'TIMES": [
           -1,
-          118
+          120
         ],
         "'SLASH": [
           -1,
-          118
+          120
         ],
         "'PERCENT": [
           -1,
-          118
+          120
         ],
         "'EQUALEQUAL": [
           -1,
-          118
+          120
         ],
         "'NEQ": [
           -1,
-          118
+          120
         ],
         "'LEQ": [
           -1,
-          118
+          120
         ],
         "'GEQ": [
           -1,
-          118
+          120
         ],
         "'AND": [
           -1,
-          118
+          120
         ],
         "'OR": [
           -1,
-          118
+          120
         ],
         "'BANG": [
           -1,
-          118
+          120
         ],
         "'DOT": [
           -1,
-          118
+          120
         ],
         "'LBRACK": [
           -1,
-          118
+          120
         ],
         "'RBRACK": [
           -1,
-          118
+          120
         ],
         "'NUMBER": [
           -1,
-          118
+          120
         ],
         "'TRUE": [
           -1,
-          118
+          120
         ],
         "'FALSE": [
           -1,
-          118
+          120
         ],
         "'NULL": [
           -1,
-          118
+          120
         ],
         "'PARENAFTERBRACE": [
           -1,
-          118
+          120
+        ],
+        "'BLOCK": [
+          -1,
+          120
         ],
         "'TABLE": [
           -1,
-          118
+          120
         ],
         "'ASK": [
           -1,
-          118
+          120
         ],
         "'NEW": [
           -1,
-          118
+          120
         ]
       },
       {
         "record-expr_A0_I2*": [
-          124
+          127
         ],
         "'RBRACE": [
           -1,
-          120
+          122
         ],
         "'COMMA": [
           -1,
-          120
+          122
         ]
       },
       {
         "type-ann_A6_I1?": [
-          63
+          65
         ],
         "type-ann_A6_I1": [
-          64
+          66
         ],
         "'LT": [
-          65,
+          67,
           22
         ],
         "'NAME": [
@@ -12624,13 +13143,13 @@ function(E) {
         ],
         "'RPAREN": [
           -1,
-          110,
+          112,
           22
         ],
         "'COMMA": [
           -1,
           24,
-          110,
+          112,
           26
         ],
         "'GT": [
@@ -12697,235 +13216,73 @@ function(E) {
       },
       {
         "'NAME": [
-          120
+          123
         ],
         "type-ann_A7_I1_I1*": [
-          125
+          128
         ],
         "'COMMA": [
           -1,
-          122
+          124
         ],
         "'THINARROW": [
           -1,
-          124,
-          122
+          126,
+          124
         ]
       },
       {
         "'THINARROW": [
-          126
-        ]
-      },
-      {
-        "'THINARROW": [
-          -1,
-          126
-        ]
-      },
-      {
-        "'RPAREN": [
-          127
-        ]
-      },
-      {
-        "'RPAREN": [
-          128
-        ]
-      },
-      {
-        "'RPAREN": [
-          -1,
-          128
-        ]
-      },
-      {
-        "lambda-expr_A0_I1_I1*": [
           129
-        ],
-        "'RPAREN": [
-          -1,
-          130,
-          132
-        ],
-        "'COMMA": [
-          -1,
-          132
         ]
       },
       {
-        "'PARENNOSPACE": [
+        "'THINARROW": [
+          -1,
+          128
+        ]
+      },
+      {
+        "'RPAREN": [
           130
-        ],
-        "'EQUALS": [
+        ]
+      },
+      {
+        "'RPAREN": [
           131
         ]
       },
       {
-        "'LBRACE": [
+        "'RPAREN": [
+          -1,
+          130
+        ]
+      },
+      {
+        "lambda-expr_A0_I1_I1*": [
           132
+        ],
+        "'RPAREN": [
+          -1,
+          132,
+          134
+        ],
+        "'COMMA": [
+          -1,
+          134
         ]
       },
       {
-        "$": [
-          -1,
-          134
-        ],
-        "'NAME": [
-          -1,
-          134
-        ],
         "'PARENNOSPACE": [
-          -1,
-          134
+          133
         ],
-        "'STRING": [
-          -1,
+        "'EQUALS": [
           134
-        ],
+        ]
+      },
+      {
         "'LBRACE": [
-          -1,
-          134
-        ],
-        "'RBRACE": [
-          -1,
-          134
-        ],
-        "'SPY": [
-          -1,
-          134
-        ],
-        "'PARENSPACE": [
-          -1,
-          134
-        ],
-        "'INT": [
-          -1,
-          134
-        ],
-        "'LONG": [
-          -1,
-          134
-        ],
-        "'DOUBLE": [
-          -1,
-          134
-        ],
-        "'FLOAT": [
-          -1,
-          134
-        ],
-        "'BOOLEAN": [
-          -1,
-          134
-        ],
-        "'VOID": [
-          -1,
-          134
-        ],
-        "'DATA": [
-          -1,
-          134
-        ],
-        "'IF": [
-          -1,
-          134
-        ],
-        "'FOR": [
-          -1,
-          134
-        ],
-        "'RETURN": [
-          -1,
-          134
-        ],
-        "'VAR": [
-          -1,
-          134
-        ],
-        "'REC": [
-          -1,
-          134
-        ],
-        "'ATCHECK": [
-          -1,
-          134
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          134
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          134
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          134
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          134
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          134
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          134
-        ],
-        "'SWITCH": [
-          -1,
-          134
-        ],
-        "'YIELD": [
-          -1,
-          134
-        ],
-        "'DASH": [
-          -1,
-          134
-        ],
-        "'BANG": [
-          -1,
-          134
-        ],
-        "'LBRACK": [
-          -1,
-          134
-        ],
-        "'NUMBER": [
-          -1,
-          134
-        ],
-        "'TRUE": [
-          -1,
-          134
-        ],
-        "'FALSE": [
-          -1,
-          134
-        ],
-        "'NULL": [
-          -1,
-          134
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          134
-        ],
-        "'TABLE": [
-          -1,
-          134
-        ],
-        "'ASK": [
-          -1,
-          134
-        ],
-        "'NEW": [
-          -1,
-          134
+          135
         ]
       },
       {
@@ -13074,6 +13431,10 @@ function(E) {
           136
         ],
         "'PARENAFTERBRACE": [
+          -1,
+          136
+        ],
+        "'BLOCK": [
           -1,
           136
         ],
@@ -13239,6 +13600,10 @@ function(E) {
           -1,
           138
         ],
+        "'BLOCK": [
+          -1,
+          138
+        ],
         "'TABLE": [
           -1,
           138
@@ -13250,17 +13615,183 @@ function(E) {
         "'NEW": [
           -1,
           138
+        ]
+      },
+      {
+        "$": [
+          -1,
+          140
+        ],
+        "'NAME": [
+          -1,
+          140
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          140
+        ],
+        "'STRING": [
+          -1,
+          140
+        ],
+        "'LBRACE": [
+          -1,
+          140
+        ],
+        "'RBRACE": [
+          -1,
+          140
+        ],
+        "'SPY": [
+          -1,
+          140
+        ],
+        "'PARENSPACE": [
+          -1,
+          140
+        ],
+        "'INT": [
+          -1,
+          140
+        ],
+        "'LONG": [
+          -1,
+          140
+        ],
+        "'DOUBLE": [
+          -1,
+          140
+        ],
+        "'FLOAT": [
+          -1,
+          140
+        ],
+        "'BOOLEAN": [
+          -1,
+          140
+        ],
+        "'VOID": [
+          -1,
+          140
+        ],
+        "'DATA": [
+          -1,
+          140
+        ],
+        "'IF": [
+          -1,
+          140
+        ],
+        "'FOR": [
+          -1,
+          140
+        ],
+        "'RETURN": [
+          -1,
+          140
+        ],
+        "'VAR": [
+          -1,
+          140
+        ],
+        "'REC": [
+          -1,
+          140
+        ],
+        "'ATCHECK": [
+          -1,
+          140
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          140
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          140
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          140
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          140
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          140
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          140
+        ],
+        "'SWITCH": [
+          -1,
+          140
+        ],
+        "'YIELD": [
+          -1,
+          140
+        ],
+        "'DASH": [
+          -1,
+          140
+        ],
+        "'BANG": [
+          -1,
+          140
+        ],
+        "'LBRACK": [
+          -1,
+          140
+        ],
+        "'NUMBER": [
+          -1,
+          140
+        ],
+        "'TRUE": [
+          -1,
+          140
+        ],
+        "'FALSE": [
+          -1,
+          140
+        ],
+        "'NULL": [
+          -1,
+          140
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          140
+        ],
+        "'BLOCK": [
+          -1,
+          140
+        ],
+        "'TABLE": [
+          -1,
+          140
+        ],
+        "'ASK": [
+          -1,
+          140
+        ],
+        "'NEW": [
+          -1,
+          140
         ]
       },
       {
         "type-ann_A6_I1?": [
-          63
+          65
         ],
         "type-ann_A6_I1": [
-          64
+          66
         ],
         "'LT": [
-          65
+          67
         ],
         "'NAME": [
           -1,
@@ -13290,183 +13821,187 @@ function(E) {
       },
       {
         "'NAME": [
-          133
-        ]
-      },
-      {
-        "'NAME": [
-          134
-        ]
-      },
-      {
-        "check-block_A1_I2*": [
-          135
-        ],
-        "'NAME": [
-          -1,
-          140
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          140
-        ],
-        "'STRING": [
-          -1,
-          140
-        ],
-        "'LBRACE": [
-          -1,
-          140
-        ],
-        "'RBRACE": [
-          -1,
-          140
-        ],
-        "'SPY": [
-          -1,
-          140
-        ],
-        "'PARENSPACE": [
-          -1,
-          140
-        ],
-        "'INT": [
-          -1,
-          140
-        ],
-        "'LONG": [
-          -1,
-          140
-        ],
-        "'DOUBLE": [
-          -1,
-          140
-        ],
-        "'FLOAT": [
-          -1,
-          140
-        ],
-        "'BOOLEAN": [
-          -1,
-          140
-        ],
-        "'VOID": [
-          -1,
-          140
-        ],
-        "'DATA": [
-          -1,
-          140
-        ],
-        "'IF": [
-          -1,
-          140
-        ],
-        "'FOR": [
-          -1,
-          140
-        ],
-        "'RETURN": [
-          -1,
-          140
-        ],
-        "'VAR": [
-          -1,
-          140
-        ],
-        "'REC": [
-          -1,
-          140
-        ],
-        "'ATCHECK": [
-          -1,
-          140
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          140
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          140
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          140
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          140
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          140
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          140
-        ],
-        "'SWITCH": [
-          -1,
-          140
-        ],
-        "'YIELD": [
-          -1,
-          140
-        ],
-        "'DASH": [
-          -1,
-          140
-        ],
-        "'BANG": [
-          -1,
-          140
-        ],
-        "'LBRACK": [
-          -1,
-          140
-        ],
-        "'NUMBER": [
-          -1,
-          140
-        ],
-        "'TRUE": [
-          -1,
-          140
-        ],
-        "'FALSE": [
-          -1,
-          140
-        ],
-        "'NULL": [
-          -1,
-          140
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          140
-        ],
-        "'TABLE": [
-          -1,
-          140
-        ],
-        "'ASK": [
-          -1,
-          140
-        ],
-        "'NEW": [
-          -1,
-          140
-        ]
-      },
-      {
-        "'NAME": [
           136
         ]
       },
       {
         "'NAME": [
-          96
+          137
+        ]
+      },
+      {
+        "check-block_A1_I2*": [
+          138
+        ],
+        "'NAME": [
+          -1,
+          142
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          142
+        ],
+        "'STRING": [
+          -1,
+          142
+        ],
+        "'LBRACE": [
+          -1,
+          142
+        ],
+        "'RBRACE": [
+          -1,
+          142
+        ],
+        "'SPY": [
+          -1,
+          142
+        ],
+        "'PARENSPACE": [
+          -1,
+          142
+        ],
+        "'INT": [
+          -1,
+          142
+        ],
+        "'LONG": [
+          -1,
+          142
+        ],
+        "'DOUBLE": [
+          -1,
+          142
+        ],
+        "'FLOAT": [
+          -1,
+          142
+        ],
+        "'BOOLEAN": [
+          -1,
+          142
+        ],
+        "'VOID": [
+          -1,
+          142
+        ],
+        "'DATA": [
+          -1,
+          142
+        ],
+        "'IF": [
+          -1,
+          142
+        ],
+        "'FOR": [
+          -1,
+          142
+        ],
+        "'RETURN": [
+          -1,
+          142
+        ],
+        "'VAR": [
+          -1,
+          142
+        ],
+        "'REC": [
+          -1,
+          142
+        ],
+        "'ATCHECK": [
+          -1,
+          142
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          142
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          142
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          142
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          142
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          142
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          142
+        ],
+        "'SWITCH": [
+          -1,
+          142
+        ],
+        "'YIELD": [
+          -1,
+          142
+        ],
+        "'DASH": [
+          -1,
+          142
+        ],
+        "'BANG": [
+          -1,
+          142
+        ],
+        "'LBRACK": [
+          -1,
+          142
+        ],
+        "'NUMBER": [
+          -1,
+          142
+        ],
+        "'TRUE": [
+          -1,
+          142
+        ],
+        "'FALSE": [
+          -1,
+          142
+        ],
+        "'NULL": [
+          -1,
+          142
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          142
+        ],
+        "'BLOCK": [
+          -1,
+          142
+        ],
+        "'TABLE": [
+          -1,
+          142
+        ],
+        "'ASK": [
+          -1,
+          142
+        ],
+        "'NEW": [
+          -1,
+          142
+        ]
+      },
+      {
+        "'NAME": [
+          139
+        ]
+      },
+      {
+        "'NAME": [
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -13478,10 +14013,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          137
+          140
         ],
         "switch-expr": [
           37
@@ -13546,262 +14081,272 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'LT": [
-          138
-        ],
-        "'GT": [
-          139
-        ],
-        "binop-expr_I1": [
-          140
-        ],
-        "binop": [
           141
         ],
-        "'PLUS": [
+        "'GT": [
           142
         ],
-        "'DASH": [
-          143,
-          142
+        "binop-expr_I1": [
+          143
         ],
-        "'TIMES": [
+        "binop": [
           144
         ],
-        "'SLASH": [
+        "'PLUS": [
           145
         ],
-        "'PERCENT": [
-          146
+        "'DASH": [
+          146,
+          144
         ],
-        "'EQUALEQUAL": [
+        "'TIMES": [
           147
         ],
-        "'NEQ": [
+        "'SLASH": [
           148
         ],
-        "'LEQ": [
+        "'PERCENT": [
           149
         ],
-        "'GEQ": [
+        "'EQUALEQUAL": [
           150
         ],
-        "'AND": [
+        "'NEQ": [
           151
         ],
-        "'OR": [
+        "'LEQ": [
           152
+        ],
+        "'GEQ": [
+          153
+        ],
+        "'AND": [
+          154
+        ],
+        "'OR": [
+          155
         ],
         "$": [
           -1,
-          142
+          144
         ],
         "'NAME": [
           -1,
-          142
+          144
         ],
         "'SEMI": [
           -1,
-          142
+          144
         ],
         "'PARENNOSPACE": [
           -1,
-          142
+          144
         ],
         "'STRING": [
           -1,
-          142
+          144
         ],
         "'RPAREN": [
           -1,
-          142
+          144
         ],
         "'LBRACE": [
           -1,
-          142
+          144
         ],
         "'RBRACE": [
           -1,
-          142
+          144
         ],
         "'SPY": [
           -1,
-          142
+          144
         ],
         "'PARENSPACE": [
           -1,
-          142
+          144
         ],
         "'COMMA": [
           -1,
-          142
+          144
         ],
         "'INT": [
           -1,
-          142
+          144
         ],
         "'LONG": [
           -1,
-          142
+          144
         ],
         "'DOUBLE": [
           -1,
-          142
+          144
         ],
         "'FLOAT": [
           -1,
-          142
+          144
         ],
         "'BOOLEAN": [
           -1,
-          142
+          144
         ],
         "'VOID": [
           -1,
-          142
+          144
         ],
         "'THINARROW": [
           -1,
-          142
+          144
         ],
         "'DATA": [
           -1,
-          142
+          144
         ],
         "'IF": [
           -1,
-          142
+          144
         ],
         "'FOR": [
           -1,
-          142
+          144
         ],
         "'RETURN": [
           -1,
-          142
+          144
         ],
         "'VAR": [
           -1,
-          142
+          144
         ],
         "'REC": [
           -1,
-          142
+          144
         ],
         "'ATCHECK": [
           -1,
-          142
+          144
         ],
         "'ASSERTEQUALS": [
           -1,
-          142
+          144
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          142
+          144
         ],
         "'ASSERTTRUE": [
           -1,
-          142
+          144
         ],
         "'ASSERTFALSE": [
           -1,
-          142
+          144
         ],
         "'ASSERTSATISFIES": [
           -1,
-          142
+          144
         ],
         "'ASSERTRAISES": [
           -1,
-          142
+          144
         ],
         "'IS": [
           -1,
-          142
+          144
         ],
         "'ISNOT": [
           -1,
-          142
+          144
         ],
         "'SATISFIES": [
           -1,
-          142
+          144
         ],
         "'RAISES": [
           -1,
-          142
+          144
         ],
         "'SWITCH": [
           -1,
-          142
+          144
         ],
         "'CASE": [
           -1,
-          142
+          144
         ],
         "'DEFAULT": [
           -1,
-          142
+          144
         ],
         "'YIELD": [
           -1,
-          142
+          144
         ],
         "'BANG": [
           -1,
-          142
+          144
         ],
         "'LBRACK": [
           -1,
-          142
+          144
         ],
         "'RBRACK": [
           -1,
-          142
+          144
         ],
         "'NUMBER": [
           -1,
-          142
+          144
         ],
         "'TRUE": [
           -1,
-          142
+          144
         ],
         "'FALSE": [
           -1,
-          142
+          144
         ],
         "'NULL": [
           -1,
-          142
+          144
         ],
         "'PARENAFTERBRACE": [
           -1,
-          142
+          144
+        ],
+        "'BLOCK": [
+          -1,
+          144
         ],
         "'TABLE": [
           -1,
-          142
+          144
         ],
         "'ASK": [
           -1,
-          142
+          144
         ],
         "'NEW": [
           -1,
-          142
+          144
         ]
       },
       {
@@ -14049,6 +14594,10 @@ function(E) {
           -1,
           22
         ],
+        "'BLOCK": [
+          -1,
+          22
+        ],
         "'TABLE": [
           -1,
           22
@@ -14064,7 +14613,7 @@ function(E) {
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -14076,10 +14625,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          80
+          82
         ],
         "switch-expr": [
           37
@@ -14144,268 +14693,20 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
-        ]
-      },
-      {
-        "$": [
-          -1,
-          144
-        ],
-        "'NAME": [
-          -1,
-          144
-        ],
-        "'SEMI": [
-          -1,
-          144
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          144
-        ],
-        "'STRING": [
-          -1,
-          144
-        ],
-        "'RPAREN": [
-          -1,
-          144
-        ],
-        "'LBRACE": [
-          -1,
-          144
-        ],
-        "'RBRACE": [
-          -1,
-          144
-        ],
-        "'SPY": [
-          -1,
-          144
-        ],
-        "'PARENSPACE": [
-          -1,
-          144
-        ],
-        "'COMMA": [
-          -1,
-          144
-        ],
-        "'INT": [
-          -1,
-          144
-        ],
-        "'LONG": [
-          -1,
-          144
-        ],
-        "'DOUBLE": [
-          -1,
-          144
-        ],
-        "'FLOAT": [
-          -1,
-          144
-        ],
-        "'BOOLEAN": [
-          -1,
-          144
-        ],
-        "'VOID": [
-          -1,
-          144
-        ],
-        "'LT": [
-          -1,
-          144
-        ],
-        "'GT": [
-          -1,
-          144
-        ],
-        "'THINARROW": [
-          -1,
-          144
-        ],
-        "'DATA": [
-          -1,
-          144
-        ],
-        "'IF": [
-          -1,
-          144
-        ],
-        "'FOR": [
-          -1,
-          144
-        ],
-        "'RETURN": [
-          -1,
-          144
-        ],
-        "'VAR": [
-          -1,
-          144
-        ],
-        "'REC": [
-          -1,
-          144
-        ],
-        "'ATCHECK": [
-          -1,
-          144
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          144
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          144
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          144
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          144
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          144
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          144
-        ],
-        "'IS": [
-          -1,
-          144
-        ],
-        "'ISNOT": [
-          -1,
-          144
-        ],
-        "'SATISFIES": [
-          -1,
-          144
-        ],
-        "'RAISES": [
-          -1,
-          144
-        ],
-        "'SWITCH": [
-          -1,
-          144
-        ],
-        "'CASE": [
-          -1,
-          144
-        ],
-        "'DEFAULT": [
-          -1,
-          144
-        ],
-        "'YIELD": [
-          -1,
-          144
-        ],
-        "'PLUS": [
-          -1,
-          144
-        ],
-        "'DASH": [
-          -1,
-          144
-        ],
-        "'TIMES": [
-          -1,
-          144
-        ],
-        "'SLASH": [
-          -1,
-          144
-        ],
-        "'PERCENT": [
-          -1,
-          144
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          144
-        ],
-        "'NEQ": [
-          -1,
-          144
-        ],
-        "'LEQ": [
-          -1,
-          144
-        ],
-        "'GEQ": [
-          -1,
-          144
-        ],
-        "'AND": [
-          -1,
-          144
-        ],
-        "'OR": [
-          -1,
-          144
-        ],
-        "'BANG": [
-          -1,
-          144
-        ],
-        "'LBRACK": [
-          -1,
-          144
-        ],
-        "'RBRACK": [
-          -1,
-          144
-        ],
-        "'NUMBER": [
-          -1,
-          144
-        ],
-        "'TRUE": [
-          -1,
-          144
-        ],
-        "'FALSE": [
-          -1,
-          144
-        ],
-        "'NULL": [
-          -1,
-          144
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          144
-        ],
-        "'TABLE": [
-          -1,
-          144
         ],
         "'ASK": [
-          -1,
-          144
+          61
         ],
         "'NEW": [
-          -1,
-          144
+          62
         ]
       },
       {
@@ -14649,6 +14950,10 @@ function(E) {
           -1,
           146
         ],
+        "'BLOCK": [
+          -1,
+          146
+        ],
         "'TABLE": [
           -1,
           146
@@ -14663,8 +14968,266 @@ function(E) {
         ]
       },
       {
+        "$": [
+          -1,
+          148
+        ],
         "'NAME": [
-          96
+          -1,
+          148
+        ],
+        "'SEMI": [
+          -1,
+          148
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          148
+        ],
+        "'STRING": [
+          -1,
+          148
+        ],
+        "'RPAREN": [
+          -1,
+          148
+        ],
+        "'LBRACE": [
+          -1,
+          148
+        ],
+        "'RBRACE": [
+          -1,
+          148
+        ],
+        "'SPY": [
+          -1,
+          148
+        ],
+        "'PARENSPACE": [
+          -1,
+          148
+        ],
+        "'COMMA": [
+          -1,
+          148
+        ],
+        "'INT": [
+          -1,
+          148
+        ],
+        "'LONG": [
+          -1,
+          148
+        ],
+        "'DOUBLE": [
+          -1,
+          148
+        ],
+        "'FLOAT": [
+          -1,
+          148
+        ],
+        "'BOOLEAN": [
+          -1,
+          148
+        ],
+        "'VOID": [
+          -1,
+          148
+        ],
+        "'LT": [
+          -1,
+          148
+        ],
+        "'GT": [
+          -1,
+          148
+        ],
+        "'THINARROW": [
+          -1,
+          148
+        ],
+        "'DATA": [
+          -1,
+          148
+        ],
+        "'IF": [
+          -1,
+          148
+        ],
+        "'FOR": [
+          -1,
+          148
+        ],
+        "'RETURN": [
+          -1,
+          148
+        ],
+        "'VAR": [
+          -1,
+          148
+        ],
+        "'REC": [
+          -1,
+          148
+        ],
+        "'ATCHECK": [
+          -1,
+          148
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          148
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          148
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          148
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          148
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          148
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          148
+        ],
+        "'IS": [
+          -1,
+          148
+        ],
+        "'ISNOT": [
+          -1,
+          148
+        ],
+        "'SATISFIES": [
+          -1,
+          148
+        ],
+        "'RAISES": [
+          -1,
+          148
+        ],
+        "'SWITCH": [
+          -1,
+          148
+        ],
+        "'CASE": [
+          -1,
+          148
+        ],
+        "'DEFAULT": [
+          -1,
+          148
+        ],
+        "'YIELD": [
+          -1,
+          148
+        ],
+        "'PLUS": [
+          -1,
+          148
+        ],
+        "'DASH": [
+          -1,
+          148
+        ],
+        "'TIMES": [
+          -1,
+          148
+        ],
+        "'SLASH": [
+          -1,
+          148
+        ],
+        "'PERCENT": [
+          -1,
+          148
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          148
+        ],
+        "'NEQ": [
+          -1,
+          148
+        ],
+        "'LEQ": [
+          -1,
+          148
+        ],
+        "'GEQ": [
+          -1,
+          148
+        ],
+        "'AND": [
+          -1,
+          148
+        ],
+        "'OR": [
+          -1,
+          148
+        ],
+        "'BANG": [
+          -1,
+          148
+        ],
+        "'LBRACK": [
+          -1,
+          148
+        ],
+        "'RBRACK": [
+          -1,
+          148
+        ],
+        "'NUMBER": [
+          -1,
+          148
+        ],
+        "'TRUE": [
+          -1,
+          148
+        ],
+        "'FALSE": [
+          -1,
+          148
+        ],
+        "'NULL": [
+          -1,
+          148
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          148
+        ],
+        "'BLOCK": [
+          -1,
+          148
+        ],
+        "'TABLE": [
+          -1,
+          148
+        ],
+        "'ASK": [
+          -1,
+          148
+        ],
+        "'NEW": [
+          -1,
+          148
+        ]
+      },
+      {
+        "'NAME": [
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -14676,10 +15239,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          153
+          156
         ],
         "switch-expr": [
           37
@@ -14706,10 +15269,10 @@ function(E) {
           44
         ],
         "app-or-access_A0_I2?": [
-          154
+          157
         ],
         "app-or-access_A0_I2": [
-          155
+          158
         ],
         "'LBRACK": [
           45
@@ -14750,28 +15313,34 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ],
         "'RPAREN": [
           -1,
-          148
+          150
         ]
       },
       {
         "'NAME": [
-          156
+          159
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'STRING": [
           12
@@ -14780,7 +15349,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          97
+          99
         ],
         "switch-expr": [
           37
@@ -14789,7 +15358,7 @@ function(E) {
           38
         ],
         "binop-expr": [
-          157
+          160
         ],
         "unop-expr": [
           41
@@ -14842,287 +15411,297 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'COLON": [
-          158
+          161
         ]
       },
       {
         "'PARENSPACE": [
-          159
+          162
         ]
       },
       {
         "$": [
           -1,
-          150
+          152
         ],
         "'NAME": [
           -1,
-          150
+          152
         ],
         "'SEMI": [
           -1,
-          150
+          152
         ],
         "'PARENNOSPACE": [
           -1,
-          150
+          152
         ],
         "'STRING": [
           -1,
-          150
+          152
         ],
         "'RPAREN": [
           -1,
-          150
+          152
         ],
         "'LBRACE": [
           -1,
-          150
+          152
         ],
         "'RBRACE": [
           -1,
-          150
+          152
         ],
         "'SPY": [
           -1,
-          150
+          152
         ],
         "'PARENSPACE": [
           -1,
-          150
+          152
         ],
         "'COMMA": [
           -1,
-          150
+          152
         ],
         "'INT": [
           -1,
-          150
+          152
         ],
         "'LONG": [
           -1,
-          150
+          152
         ],
         "'DOUBLE": [
           -1,
-          150
+          152
         ],
         "'FLOAT": [
           -1,
-          150
+          152
         ],
         "'BOOLEAN": [
           -1,
-          150
+          152
         ],
         "'VOID": [
           -1,
-          150
+          152
         ],
         "'LT": [
           -1,
-          150
+          152
         ],
         "'GT": [
           -1,
-          150
+          152
         ],
         "'THINARROW": [
           -1,
-          150
+          152
         ],
         "'DATA": [
           -1,
-          150
+          152
         ],
         "'IF": [
           -1,
-          150
+          152
         ],
         "'FOR": [
           -1,
-          150
+          152
         ],
         "'RETURN": [
           -1,
-          150
+          152
         ],
         "'VAR": [
           -1,
-          150
+          152
         ],
         "'REC": [
           -1,
-          150
+          152
         ],
         "'ATCHECK": [
           -1,
-          150
+          152
         ],
         "'ASSERTEQUALS": [
           -1,
-          150
+          152
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          150
+          152
         ],
         "'ASSERTTRUE": [
           -1,
-          150
+          152
         ],
         "'ASSERTFALSE": [
           -1,
-          150
+          152
         ],
         "'ASSERTSATISFIES": [
           -1,
-          150
+          152
         ],
         "'ASSERTRAISES": [
           -1,
-          150
+          152
         ],
         "'IS": [
           -1,
-          150
+          152
         ],
         "'ISNOT": [
           -1,
-          150
+          152
         ],
         "'SATISFIES": [
           -1,
-          150
+          152
         ],
         "'RAISES": [
           -1,
-          150
+          152
         ],
         "'SWITCH": [
           -1,
-          150
+          152
         ],
         "'CASE": [
           -1,
-          150
+          152
         ],
         "'DEFAULT": [
           -1,
-          150
+          152
         ],
         "'YIELD": [
           -1,
-          150
+          152
         ],
         "'PLUS": [
           -1,
-          150
+          152
         ],
         "'DASH": [
           -1,
-          150
+          152
         ],
         "'TIMES": [
           -1,
-          150
+          152
         ],
         "'SLASH": [
           -1,
-          150
+          152
         ],
         "'PERCENT": [
           -1,
-          150
+          152
         ],
         "'EQUALEQUAL": [
           -1,
-          150
+          152
         ],
         "'NEQ": [
           -1,
-          150
+          152
         ],
         "'LEQ": [
           -1,
-          150
+          152
         ],
         "'GEQ": [
           -1,
-          150
+          152
         ],
         "'AND": [
           -1,
-          150
+          152
         ],
         "'OR": [
           -1,
-          150
+          152
         ],
         "'BANG": [
           -1,
-          150
+          152
         ],
         "'DOT": [
           -1,
-          150
+          152
         ],
         "'LBRACK": [
           -1,
-          150
+          152
         ],
         "'RBRACK": [
           -1,
-          150
+          152
         ],
         "'NUMBER": [
           -1,
-          150
+          152
         ],
         "'TRUE": [
           -1,
-          150
+          152
         ],
         "'FALSE": [
           -1,
-          150
+          152
         ],
         "'NULL": [
           -1,
-          150
+          152
         ],
         "'PARENAFTERBRACE": [
           -1,
-          150
+          152
+        ],
+        "'BLOCK": [
+          -1,
+          152
         ],
         "'TABLE": [
           -1,
-          150
+          152
         ],
         "'ASK": [
           -1,
-          150
+          152
         ],
         "'NEW": [
           -1,
-          150
+          152
         ]
       },
       {
         "'NAME": [
-          76
+          78
         ],
         "'PARENNOSPACE": [
           11
@@ -15137,7 +15716,7 @@ function(E) {
           24
         ],
         "type-ann": [
-          69
+          71
         ],
         "'INT": [
           26
@@ -15158,7 +15737,7 @@ function(E) {
           31
         ],
         "full-expr": [
-          80
+          82
         ],
         "switch-expr": [
           37
@@ -15170,13 +15749,13 @@ function(E) {
           39
         ],
         "lambda-expr_A0_I1?": [
-          81
+          83
         ],
         "lambda-expr_A0_I1": [
-          82
+          84
         ],
         "lambda-param": [
-          83
+          85
         ],
         "binop-expr": [
           40
@@ -15232,14 +15811,20 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ],
         "'RPAREN": [
           -1,
@@ -15248,18 +15833,159 @@ function(E) {
       },
       {
         "'RPAREN": [
-          160
+          163
+        ]
+      },
+      {
+        "block-expr_I2*": [
+          164
+        ],
+        "'NAME": [
+          -1,
+          154
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          154
+        ],
+        "'STRING": [
+          -1,
+          154
+        ],
+        "'LBRACE": [
+          -1,
+          154
+        ],
+        "'RBRACE": [
+          -1,
+          154
+        ],
+        "'SPY": [
+          -1,
+          154
+        ],
+        "'PARENSPACE": [
+          -1,
+          154
+        ],
+        "'INT": [
+          -1,
+          154
+        ],
+        "'LONG": [
+          -1,
+          154
+        ],
+        "'DOUBLE": [
+          -1,
+          154
+        ],
+        "'FLOAT": [
+          -1,
+          154
+        ],
+        "'BOOLEAN": [
+          -1,
+          154
+        ],
+        "'VOID": [
+          -1,
+          154
+        ],
+        "'DATA": [
+          -1,
+          154
+        ],
+        "'IF": [
+          -1,
+          154
+        ],
+        "'FOR": [
+          -1,
+          154
+        ],
+        "'RETURN": [
+          -1,
+          154
+        ],
+        "'VAR": [
+          -1,
+          154
+        ],
+        "'REC": [
+          -1,
+          154
+        ],
+        "'ATCHECK": [
+          -1,
+          154
+        ],
+        "'SWITCH": [
+          -1,
+          154
+        ],
+        "'YIELD": [
+          -1,
+          154
+        ],
+        "'DASH": [
+          -1,
+          154
+        ],
+        "'BANG": [
+          -1,
+          154
+        ],
+        "'LBRACK": [
+          -1,
+          154
+        ],
+        "'NUMBER": [
+          -1,
+          154
+        ],
+        "'TRUE": [
+          -1,
+          154
+        ],
+        "'FALSE": [
+          -1,
+          154
+        ],
+        "'NULL": [
+          -1,
+          154
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          154
+        ],
+        "'BLOCK": [
+          -1,
+          154
+        ],
+        "'TABLE": [
+          -1,
+          154
+        ],
+        "'ASK": [
+          -1,
+          154
+        ],
+        "'NEW": [
+          -1,
+          154
         ]
       },
       {
         "'NAME": [
-          89
+          91
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          161
+          165
         ],
         "'INT": [
           26
@@ -15280,12 +16006,12 @@ function(E) {
           31
         ],
         "table-header": [
-          162
+          166
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'STRING": [
           12
@@ -15294,7 +16020,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          97
+          99
         ],
         "switch-expr": [
           37
@@ -15303,7 +16029,7 @@ function(E) {
           38
         ],
         "binop-expr": [
-          163
+          167
         ],
         "unop-expr": [
           41
@@ -15356,556 +16082,575 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "ask-branch": [
-          164
-        ],
-        "'NEW": [
+        "'TABLE": [
           60
-        ]
-      },
-      {
-        "'PARENNOSPACE": [
-          165
-        ]
-      },
-      {
-        "$": [
-          -1,
-          152
-        ],
-        "'IMPORT": [
-          -1,
-          152
-        ],
-        "'NAME": [
-          -1,
-          152
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          152
-        ],
-        "'STRING": [
-          -1,
-          152
-        ],
-        "'INCLUDE": [
-          -1,
-          152
-        ],
-        "'LBRACE": [
-          -1,
-          152
-        ],
-        "'PARENSPACE": [
-          -1,
-          152
-        ],
-        "'INT": [
-          -1,
-          152
-        ],
-        "'LONG": [
-          -1,
-          152
-        ],
-        "'DOUBLE": [
-          -1,
-          152
-        ],
-        "'FLOAT": [
-          -1,
-          152
-        ],
-        "'BOOLEAN": [
-          -1,
-          152
-        ],
-        "'VOID": [
-          -1,
-          152
-        ],
-        "'DATA": [
-          -1,
-          152
-        ],
-        "'VAR": [
-          -1,
-          152
-        ],
-        "'REC": [
-          -1,
-          152
-        ],
-        "'ATCHECK": [
-          -1,
-          152
-        ],
-        "'SWITCH": [
-          -1,
-          152
-        ],
-        "'DASH": [
-          -1,
-          152
-        ],
-        "'BANG": [
-          -1,
-          152
-        ],
-        "'LBRACK": [
-          -1,
-          152
-        ],
-        "'NUMBER": [
-          -1,
-          152
-        ],
-        "'TRUE": [
-          -1,
-          152
-        ],
-        "'FALSE": [
-          -1,
-          152
-        ],
-        "'NULL": [
-          -1,
-          152
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          152
-        ],
-        "'TABLE": [
-          -1,
-          152
         ],
         "'ASK": [
-          -1,
-          152
+          61
         ],
-        "'NEW": [
-          -1,
-          152
-        ]
-      },
-      {
-        "'NAME": [
-          166
-        ]
-      },
-      {
-        "'STRING": [
-          167
-        ]
-      },
-      {
-        "$": [
-          -1,
-          154
-        ],
-        "'IMPORT": [
-          -1,
-          154
-        ],
-        "'NAME": [
-          -1,
-          154
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          154
-        ],
-        "'STRING": [
-          -1,
-          154
-        ],
-        "'INCLUDE": [
-          -1,
-          154
-        ],
-        "'LBRACE": [
-          -1,
-          154
-        ],
-        "'PARENSPACE": [
-          -1,
-          154
-        ],
-        "'INT": [
-          -1,
-          154
-        ],
-        "'LONG": [
-          -1,
-          154
-        ],
-        "'DOUBLE": [
-          -1,
-          154
-        ],
-        "'FLOAT": [
-          -1,
-          154
-        ],
-        "'BOOLEAN": [
-          -1,
-          154
-        ],
-        "'VOID": [
-          -1,
-          154
-        ],
-        "'DATA": [
-          -1,
-          154
-        ],
-        "'VAR": [
-          -1,
-          154
-        ],
-        "'REC": [
-          -1,
-          154
-        ],
-        "'ATCHECK": [
-          -1,
-          154
-        ],
-        "'SWITCH": [
-          -1,
-          154
-        ],
-        "'DASH": [
-          -1,
-          154
-        ],
-        "'BANG": [
-          -1,
-          154
-        ],
-        "'LBRACK": [
-          -1,
-          154
-        ],
-        "'NUMBER": [
-          -1,
-          154
-        ],
-        "'TRUE": [
-          -1,
-          154
-        ],
-        "'FALSE": [
-          -1,
-          154
-        ],
-        "'NULL": [
-          -1,
-          154
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          154
-        ],
-        "'TABLE": [
-          -1,
-          154
-        ],
-        "'ASK": [
-          -1,
-          154
-        ],
-        "'NEW": [
-          -1,
-          154
-        ]
-      },
-      {
-        "'NAME": [
+        "ask-branch": [
           168
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
-        "'STRING": [
+        "'PARENNOSPACE": [
           169
         ]
       },
       {
-        "type-ann_A6_I1_I2*": [
+        "$": [
+          -1,
+          156
+        ],
+        "'IMPORT": [
+          -1,
+          156
+        ],
+        "'NAME": [
+          -1,
+          156
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          156
+        ],
+        "'STRING": [
+          -1,
+          156
+        ],
+        "'INCLUDE": [
+          -1,
+          156
+        ],
+        "'LBRACE": [
+          -1,
+          156
+        ],
+        "'PARENSPACE": [
+          -1,
+          156
+        ],
+        "'INT": [
+          -1,
+          156
+        ],
+        "'LONG": [
+          -1,
+          156
+        ],
+        "'DOUBLE": [
+          -1,
+          156
+        ],
+        "'FLOAT": [
+          -1,
+          156
+        ],
+        "'BOOLEAN": [
+          -1,
+          156
+        ],
+        "'VOID": [
+          -1,
+          156
+        ],
+        "'DATA": [
+          -1,
+          156
+        ],
+        "'VAR": [
+          -1,
+          156
+        ],
+        "'REC": [
+          -1,
+          156
+        ],
+        "'ATCHECK": [
+          -1,
+          156
+        ],
+        "'SWITCH": [
+          -1,
+          156
+        ],
+        "'DASH": [
+          -1,
+          156
+        ],
+        "'BANG": [
+          -1,
+          156
+        ],
+        "'LBRACK": [
+          -1,
+          156
+        ],
+        "'NUMBER": [
+          -1,
+          156
+        ],
+        "'TRUE": [
+          -1,
+          156
+        ],
+        "'FALSE": [
+          -1,
+          156
+        ],
+        "'NULL": [
+          -1,
+          156
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          156
+        ],
+        "'BLOCK": [
+          -1,
+          156
+        ],
+        "'TABLE": [
+          -1,
+          156
+        ],
+        "'ASK": [
+          -1,
+          156
+        ],
+        "'NEW": [
+          -1,
+          156
+        ]
+      },
+      {
+        "'NAME": [
           170
+        ]
+      },
+      {
+        "'STRING": [
+          171
+        ]
+      },
+      {
+        "$": [
+          -1,
+          158
+        ],
+        "'IMPORT": [
+          -1,
+          158
+        ],
+        "'NAME": [
+          -1,
+          158
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          158
+        ],
+        "'STRING": [
+          -1,
+          158
+        ],
+        "'INCLUDE": [
+          -1,
+          158
+        ],
+        "'LBRACE": [
+          -1,
+          158
+        ],
+        "'PARENSPACE": [
+          -1,
+          158
+        ],
+        "'INT": [
+          -1,
+          158
+        ],
+        "'LONG": [
+          -1,
+          158
+        ],
+        "'DOUBLE": [
+          -1,
+          158
+        ],
+        "'FLOAT": [
+          -1,
+          158
+        ],
+        "'BOOLEAN": [
+          -1,
+          158
+        ],
+        "'VOID": [
+          -1,
+          158
+        ],
+        "'DATA": [
+          -1,
+          158
+        ],
+        "'VAR": [
+          -1,
+          158
+        ],
+        "'REC": [
+          -1,
+          158
+        ],
+        "'ATCHECK": [
+          -1,
+          158
+        ],
+        "'SWITCH": [
+          -1,
+          158
+        ],
+        "'DASH": [
+          -1,
+          158
+        ],
+        "'BANG": [
+          -1,
+          158
+        ],
+        "'LBRACK": [
+          -1,
+          158
+        ],
+        "'NUMBER": [
+          -1,
+          158
+        ],
+        "'TRUE": [
+          -1,
+          158
+        ],
+        "'FALSE": [
+          -1,
+          158
+        ],
+        "'NULL": [
+          -1,
+          158
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          158
+        ],
+        "'BLOCK": [
+          -1,
+          158
+        ],
+        "'TABLE": [
+          -1,
+          158
+        ],
+        "'ASK": [
+          -1,
+          158
+        ],
+        "'NEW": [
+          -1,
+          158
+        ]
+      },
+      {
+        "'NAME": [
+          172
+        ]
+      },
+      {
+        "'STRING": [
+          173
+        ]
+      },
+      {
+        "type-ann_A6_I1_I2*": [
+          174
         ],
         "'COMMA": [
           -1,
-          156
+          160
         ],
         "'GT": [
           -1,
-          156
+          160
         ]
       },
       {
         "'SEMI": [
-          171
+          175
         ],
         "assign-stmt_I3?": [
-          172
+          176
         ],
         "assign-stmt_I3": [
-          173
+          177
         ],
         "$": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'NAME": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'PARENNOSPACE": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'STRING": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'LBRACE": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'RBRACE": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'SPY": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'PARENSPACE": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'INT": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'LONG": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'DOUBLE": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'FLOAT": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'BOOLEAN": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'VOID": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'DATA": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'IF": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'FOR": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'RETURN": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'VAR": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'REC": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'ATCHECK": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'ASSERTEQUALS": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'ASSERTTRUE": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'ASSERTFALSE": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'ASSERTSATISFIES": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'ASSERTRAISES": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'SWITCH": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'YIELD": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'DASH": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'BANG": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'LBRACK": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'NUMBER": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'TRUE": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'FALSE": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'NULL": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'PARENAFTERBRACE": [
           -1,
-          158,
-          160
+          162,
+          164
+        ],
+        "'BLOCK": [
+          -1,
+          162,
+          164
         ],
         "'TABLE": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'ASK": [
           -1,
-          158,
-          160
+          162,
+          164
         ],
         "'NEW": [
           -1,
-          158,
-          160
-        ]
-      },
-      {
-        "type-ann_A7_I1_I1*": [
-          125
-        ],
-        "'COMMA": [
-          -1,
-          122
-        ],
-        "'THINARROW": [
-          -1,
-          124,
-          122
-        ]
-      },
-      {
-        "'RPAREN": [
-          -1,
-          162
-        ],
-        "'COMMA": [
-          -1,
-          162
-        ]
-      },
-      {
-        "'COMMA": [
-          174
-        ],
-        "lambda-expr_A1_I1_I1": [
-          175
-        ],
-        "'RPAREN": [
-          -1,
+          162,
           164
         ]
       },
       {
+        "type-ann_A7_I1_I1*": [
+          128
+        ],
+        "'COMMA": [
+          -1,
+          124
+        ],
         "'THINARROW": [
-          176
+          -1,
+          126,
+          124
+        ]
+      },
+      {
+        "'RPAREN": [
+          -1,
+          166
+        ],
+        "'COMMA": [
+          -1,
+          166
+        ]
+      },
+      {
+        "'COMMA": [
+          178
+        ],
+        "lambda-expr_A1_I1_I1": [
+          179
+        ],
+        "'RPAREN": [
+          -1,
+          168
+        ]
+      },
+      {
+        "'THINARROW": [
+          180
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -15917,10 +16662,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          177
+          181
         ],
         "switch-expr": [
           37
@@ -15985,328 +16730,30 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'RBRACE": [
-          178
-        ],
-        "'COMMA": [
-          179
-        ],
-        "record-expr_A0_I2": [
-          180
-        ]
-      },
-      {
-        "'COMMA": [
-          181
-        ],
-        "type-ann_A7_I1_I1": [
-          182
-        ],
-        "'THINARROW": [
-          -1,
-          166
-        ]
-      },
-      {
-        "'NAME": [
-          89
-        ],
-        "'PARENSPACE": [
-          68
-        ],
-        "type-ann": [
-          183
-        ],
-        "'INT": [
-          26
-        ],
-        "'LONG": [
-          27
-        ],
-        "'DOUBLE": [
-          28
-        ],
-        "'FLOAT": [
-          29
-        ],
-        "'BOOLEAN": [
-          30
-        ],
-        "'VOID": [
-          31
-        ]
-      },
-      {
-        "$": [
-          -1,
-          168
-        ],
-        "'NAME": [
-          -1,
-          168
-        ],
-        "'SEMI": [
-          -1,
-          168
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          168
-        ],
-        "'STRING": [
-          -1,
-          168
-        ],
-        "'RPAREN": [
-          -1,
-          168
-        ],
-        "'LBRACE": [
-          -1,
-          168
-        ],
-        "'RBRACE": [
-          -1,
-          168
-        ],
-        "'SPY": [
-          -1,
-          168
-        ],
-        "'PARENSPACE": [
-          -1,
-          168
-        ],
-        "'COMMA": [
-          -1,
-          168
-        ],
-        "'INT": [
-          -1,
-          168
-        ],
-        "'LONG": [
-          -1,
-          168
-        ],
-        "'DOUBLE": [
-          -1,
-          168
-        ],
-        "'FLOAT": [
-          -1,
-          168
-        ],
-        "'BOOLEAN": [
-          -1,
-          168
-        ],
-        "'VOID": [
-          -1,
-          168
-        ],
-        "'LT": [
-          -1,
-          168
-        ],
-        "'GT": [
-          -1,
-          168
-        ],
-        "'THINARROW": [
-          -1,
-          168
-        ],
-        "'DATA": [
-          -1,
-          168
-        ],
-        "'IF": [
-          -1,
-          168
-        ],
-        "'FOR": [
-          -1,
-          168
-        ],
-        "'RETURN": [
-          -1,
-          168
-        ],
-        "'VAR": [
-          -1,
-          168
-        ],
-        "'REC": [
-          -1,
-          168
-        ],
-        "'ATCHECK": [
-          -1,
-          168
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          168
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          168
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          168
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          168
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          168
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          168
-        ],
-        "'IS": [
-          -1,
-          168
-        ],
-        "'ISNOT": [
-          -1,
-          168
-        ],
-        "'SATISFIES": [
-          -1,
-          168
-        ],
-        "'RAISES": [
-          -1,
-          168
-        ],
-        "'SWITCH": [
-          -1,
-          168
-        ],
-        "'CASE": [
-          -1,
-          168
-        ],
-        "'DEFAULT": [
-          -1,
-          168
-        ],
-        "'YIELD": [
-          -1,
-          168
-        ],
-        "'PLUS": [
-          -1,
-          168
-        ],
-        "'DASH": [
-          -1,
-          168
-        ],
-        "'TIMES": [
-          -1,
-          168
-        ],
-        "'SLASH": [
-          -1,
-          168
-        ],
-        "'PERCENT": [
-          -1,
-          168
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          168
-        ],
-        "'NEQ": [
-          -1,
-          168
-        ],
-        "'LEQ": [
-          -1,
-          168
-        ],
-        "'GEQ": [
-          -1,
-          168
-        ],
-        "'AND": [
-          -1,
-          168
-        ],
-        "'OR": [
-          -1,
-          168
-        ],
-        "'BANG": [
-          -1,
-          168
-        ],
-        "'DOT": [
-          -1,
-          168
-        ],
-        "'LBRACK": [
-          -1,
-          168
-        ],
-        "'RBRACK": [
-          -1,
-          168
-        ],
-        "'NUMBER": [
-          -1,
-          168
-        ],
-        "'TRUE": [
-          -1,
-          168
-        ],
-        "'FALSE": [
-          -1,
-          168
-        ],
-        "'NULL": [
-          -1,
-          168
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          168
-        ],
         "'TABLE": [
-          -1,
-          168
+          60
         ],
         "'ASK": [
-          -1,
-          168
+          61
         ],
         "'NEW": [
-          -1,
-          168
+          62
         ]
       },
       {
-        "'THINARROW": [
+        "'RBRACE": [
+          182
+        ],
+        "'COMMA": [
+          183
+        ],
+        "record-expr_A0_I2": [
           184
         ]
       },
@@ -16314,32 +16761,340 @@ function(E) {
         "'COMMA": [
           185
         ],
-        "lambda-expr_A0_I1_I1": [
+        "type-ann_A7_I1_I1": [
           186
         ],
-        "'RPAREN": [
+        "'THINARROW": [
           -1,
           170
         ]
       },
       {
         "'NAME": [
-          89
+          91
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
           187
         ],
-        "fun-decl_I3?": [
-          188
+        "'INT": [
+          26
         ],
-        "fun-decl_I3": [
+        "'LONG": [
+          27
+        ],
+        "'DOUBLE": [
+          28
+        ],
+        "'FLOAT": [
+          29
+        ],
+        "'BOOLEAN": [
+          30
+        ],
+        "'VOID": [
+          31
+        ]
+      },
+      {
+        "$": [
+          -1,
+          172
+        ],
+        "'NAME": [
+          -1,
+          172
+        ],
+        "'SEMI": [
+          -1,
+          172
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          172
+        ],
+        "'STRING": [
+          -1,
+          172
+        ],
+        "'RPAREN": [
+          -1,
+          172
+        ],
+        "'LBRACE": [
+          -1,
+          172
+        ],
+        "'RBRACE": [
+          -1,
+          172
+        ],
+        "'SPY": [
+          -1,
+          172
+        ],
+        "'PARENSPACE": [
+          -1,
+          172
+        ],
+        "'COMMA": [
+          -1,
+          172
+        ],
+        "'INT": [
+          -1,
+          172
+        ],
+        "'LONG": [
+          -1,
+          172
+        ],
+        "'DOUBLE": [
+          -1,
+          172
+        ],
+        "'FLOAT": [
+          -1,
+          172
+        ],
+        "'BOOLEAN": [
+          -1,
+          172
+        ],
+        "'VOID": [
+          -1,
+          172
+        ],
+        "'LT": [
+          -1,
+          172
+        ],
+        "'GT": [
+          -1,
+          172
+        ],
+        "'THINARROW": [
+          -1,
+          172
+        ],
+        "'DATA": [
+          -1,
+          172
+        ],
+        "'IF": [
+          -1,
+          172
+        ],
+        "'FOR": [
+          -1,
+          172
+        ],
+        "'RETURN": [
+          -1,
+          172
+        ],
+        "'VAR": [
+          -1,
+          172
+        ],
+        "'REC": [
+          -1,
+          172
+        ],
+        "'ATCHECK": [
+          -1,
+          172
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          172
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          172
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          172
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          172
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          172
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          172
+        ],
+        "'IS": [
+          -1,
+          172
+        ],
+        "'ISNOT": [
+          -1,
+          172
+        ],
+        "'SATISFIES": [
+          -1,
+          172
+        ],
+        "'RAISES": [
+          -1,
+          172
+        ],
+        "'SWITCH": [
+          -1,
+          172
+        ],
+        "'CASE": [
+          -1,
+          172
+        ],
+        "'DEFAULT": [
+          -1,
+          172
+        ],
+        "'YIELD": [
+          -1,
+          172
+        ],
+        "'PLUS": [
+          -1,
+          172
+        ],
+        "'DASH": [
+          -1,
+          172
+        ],
+        "'TIMES": [
+          -1,
+          172
+        ],
+        "'SLASH": [
+          -1,
+          172
+        ],
+        "'PERCENT": [
+          -1,
+          172
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          172
+        ],
+        "'NEQ": [
+          -1,
+          172
+        ],
+        "'LEQ": [
+          -1,
+          172
+        ],
+        "'GEQ": [
+          -1,
+          172
+        ],
+        "'AND": [
+          -1,
+          172
+        ],
+        "'OR": [
+          -1,
+          172
+        ],
+        "'BANG": [
+          -1,
+          172
+        ],
+        "'DOT": [
+          -1,
+          172
+        ],
+        "'LBRACK": [
+          -1,
+          172
+        ],
+        "'RBRACK": [
+          -1,
+          172
+        ],
+        "'NUMBER": [
+          -1,
+          172
+        ],
+        "'TRUE": [
+          -1,
+          172
+        ],
+        "'FALSE": [
+          -1,
+          172
+        ],
+        "'NULL": [
+          -1,
+          172
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          172
+        ],
+        "'BLOCK": [
+          -1,
+          172
+        ],
+        "'TABLE": [
+          -1,
+          172
+        ],
+        "'ASK": [
+          -1,
+          172
+        ],
+        "'NEW": [
+          -1,
+          172
+        ]
+      },
+      {
+        "'THINARROW": [
+          188
+        ]
+      },
+      {
+        "'COMMA": [
           189
         ],
-        "param": [
+        "lambda-expr_A0_I1_I1": [
           190
+        ],
+        "'RPAREN": [
+          -1,
+          174
+        ]
+      },
+      {
+        "'NAME": [
+          91
+        ],
+        "'PARENSPACE": [
+          70
+        ],
+        "type-ann": [
+          191
+        ],
+        "fun-decl_I3?": [
+          192
+        ],
+        "fun-decl_I3": [
+          193
+        ],
+        "param": [
+          194
         ],
         "'INT": [
           26
@@ -16361,12 +17116,12 @@ function(E) {
         ],
         "'RPAREN": [
           -1,
-          172
+          176
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -16378,10 +17133,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          191
+          195
         ],
         "switch-expr": [
           37
@@ -16446,32 +17201,38 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'NAME": [
-          192
+          196
         ],
         "variant-decl": [
-          193
+          197
         ]
       },
       {
         "'EQUALS": [
-          194
+          198
         ]
       },
       {
         "'EQUALS": [
-          195
+          199
         ]
       },
       {
@@ -16485,55 +17246,55 @@ function(E) {
           12
         ],
         "fun-decl": [
-          196
-        ],
-        "data-decl": [
-          197
-        ],
-        "check-block": [
-          198
-        ],
-        "let-stmt": [
-          199
-        ],
-        "var-stmt": [
           200
         ],
-        "rec-stmt": [
+        "data-decl": [
           201
         ],
-        "assign-stmt": [
+        "check-block": [
           202
         ],
-        "expr-stmt": [
+        "let-stmt": [
           203
+        ],
+        "var-stmt": [
+          204
+        ],
+        "rec-stmt": [
+          205
+        ],
+        "assign-stmt": [
+          206
+        ],
+        "expr-stmt": [
+          207
         ],
         "'LBRACE": [
           23
         ],
         "'RBRACE": [
-          204
-        ],
-        "block-stmt": [
-          205
-        ],
-        "if-stmt": [
-          206
-        ],
-        "for-stmt": [
-          207
-        ],
-        "return-stmt": [
           208
         ],
-        "yield-stmt": [
+        "block-stmt": [
           209
         ],
-        "spy-stmt": [
+        "if-stmt": [
           210
         ],
-        "'SPY": [
+        "for-stmt": [
           211
+        ],
+        "return-stmt": [
+          212
+        ],
+        "yield-stmt": [
+          213
+        ],
+        "spy-stmt": [
+          214
+        ],
+        "'SPY": [
+          215
         ],
         "'PARENSPACE": [
           24
@@ -16542,7 +17303,7 @@ function(E) {
           25
         ],
         "assert-stmt": [
-          212
+          216
         ],
         "'INT": [
           26
@@ -16566,16 +17327,16 @@ function(E) {
           32
         ],
         "'IF": [
-          213
+          217
         ],
         "full-expr": [
-          214
+          218
         ],
         "'FOR": [
-          215
+          219
         ],
         "'RETURN": [
-          216
+          220
         ],
         "'VAR": [
           34
@@ -16587,25 +17348,25 @@ function(E) {
           36
         ],
         "check-block_A1_I2": [
-          217
-        ],
-        "'ASSERTEQUALS": [
-          218
-        ],
-        "'ASSERTNOTEQUALS": [
-          219
-        ],
-        "'ASSERTTRUE": [
-          220
-        ],
-        "'ASSERTFALSE": [
           221
         ],
-        "'ASSERTSATISFIES": [
+        "'ASSERTEQUALS": [
           222
         ],
-        "'ASSERTRAISES": [
+        "'ASSERTNOTEQUALS": [
           223
+        ],
+        "'ASSERTTRUE": [
+          224
+        ],
+        "'ASSERTFALSE": [
+          225
+        ],
+        "'ASSERTSATISFIES": [
+          226
+        ],
+        "'ASSERTRAISES": [
+          227
         ],
         "switch-expr": [
           37
@@ -16614,7 +17375,7 @@ function(E) {
           38
         ],
         "'YIELD": [
-          224
+          228
         ],
         "lambda-expr": [
           39
@@ -16673,1512 +17434,433 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'PARENNOSPACE": [
-          225
-        ]
-      },
-      {
-        "'RPAREN": [
-          226
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          174
-        ],
-        "'STRING": [
-          -1,
-          174
-        ],
-        "'LBRACE": [
-          -1,
-          174
-        ],
-        "'PARENSPACE": [
-          -1,
-          174
-        ],
-        "'SWITCH": [
-          -1,
-          174
-        ],
-        "'DASH": [
-          -1,
-          174
-        ],
-        "'BANG": [
-          -1,
-          174
-        ],
-        "'LBRACK": [
-          -1,
-          174
-        ],
-        "'NUMBER": [
-          -1,
-          174
-        ],
-        "'TRUE": [
-          -1,
-          174
-        ],
-        "'FALSE": [
-          -1,
-          174
-        ],
-        "'NULL": [
-          -1,
-          174
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          174
-        ],
-        "'TABLE": [
-          -1,
-          174
-        ],
-        "'ASK": [
-          -1,
-          174
-        ],
-        "'NEW": [
-          -1,
-          174
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          176
-        ],
-        "'STRING": [
-          -1,
-          176
-        ],
-        "'LBRACE": [
-          -1,
-          176
-        ],
-        "'PARENSPACE": [
-          -1,
-          176
-        ],
-        "'SWITCH": [
-          -1,
-          176
-        ],
-        "'DASH": [
-          -1,
-          176
-        ],
-        "'BANG": [
-          -1,
-          176
-        ],
-        "'LBRACK": [
-          -1,
-          176
-        ],
-        "'NUMBER": [
-          -1,
-          176
-        ],
-        "'TRUE": [
-          -1,
-          176
-        ],
-        "'FALSE": [
-          -1,
-          176
-        ],
-        "'NULL": [
-          -1,
-          176
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          176
-        ],
-        "'TABLE": [
-          -1,
-          176
-        ],
-        "'ASK": [
-          -1,
-          176
-        ],
-        "'NEW": [
-          -1,
-          176
-        ]
-      },
-      {
-        "$": [
-          -1,
-          178
-        ],
-        "'NAME": [
-          -1,
-          178
-        ],
-        "'SEMI": [
-          -1,
-          178
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          178
-        ],
-        "'STRING": [
-          -1,
-          178
-        ],
-        "'RPAREN": [
-          -1,
-          178
-        ],
-        "'LBRACE": [
-          -1,
-          178
-        ],
-        "'RBRACE": [
-          -1,
-          178
-        ],
-        "'SPY": [
-          -1,
-          178
-        ],
-        "'PARENSPACE": [
-          -1,
-          178
-        ],
-        "'COMMA": [
-          -1,
-          178
-        ],
-        "'INT": [
-          -1,
-          178
-        ],
-        "'LONG": [
-          -1,
-          178
-        ],
-        "'DOUBLE": [
-          -1,
-          178
-        ],
-        "'FLOAT": [
-          -1,
-          178
-        ],
-        "'BOOLEAN": [
-          -1,
-          178
-        ],
-        "'VOID": [
-          -1,
-          178
-        ],
-        "'LT": [
-          -1,
-          178
-        ],
-        "'GT": [
-          -1,
-          178
-        ],
-        "'THINARROW": [
-          -1,
-          178
-        ],
-        "'DATA": [
-          -1,
-          178
-        ],
-        "'IF": [
-          -1,
-          178
-        ],
-        "'FOR": [
-          -1,
-          178
-        ],
-        "'RETURN": [
-          -1,
-          178
-        ],
-        "'VAR": [
-          -1,
-          178
-        ],
-        "'REC": [
-          -1,
-          178
-        ],
-        "'ATCHECK": [
-          -1,
-          178
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          178
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          178
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          178
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          178
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          178
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          178
-        ],
-        "'IS": [
-          -1,
-          178
-        ],
-        "'ISNOT": [
-          -1,
-          178
-        ],
-        "'SATISFIES": [
-          -1,
-          178
-        ],
-        "'RAISES": [
-          -1,
-          178
-        ],
-        "'SWITCH": [
-          -1,
-          178
-        ],
-        "'CASE": [
-          -1,
-          178
-        ],
-        "'DEFAULT": [
-          -1,
-          178
-        ],
-        "'YIELD": [
-          -1,
-          178
-        ],
-        "'PLUS": [
-          -1,
-          178
-        ],
-        "'DASH": [
-          -1,
-          178
-        ],
-        "'TIMES": [
-          -1,
-          178
-        ],
-        "'SLASH": [
-          -1,
-          178
-        ],
-        "'PERCENT": [
-          -1,
-          178
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          178
-        ],
-        "'NEQ": [
-          -1,
-          178
-        ],
-        "'LEQ": [
-          -1,
-          178
-        ],
-        "'GEQ": [
-          -1,
-          178
-        ],
-        "'AND": [
-          -1,
-          178
-        ],
-        "'OR": [
-          -1,
-          178
-        ],
-        "'BANG": [
-          -1,
-          178
-        ],
-        "'LBRACK": [
-          -1,
-          178
-        ],
-        "'RBRACK": [
-          -1,
-          178
-        ],
-        "'NUMBER": [
-          -1,
-          178
-        ],
-        "'TRUE": [
-          -1,
-          178
-        ],
-        "'FALSE": [
-          -1,
-          178
-        ],
-        "'NULL": [
-          -1,
-          178
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          178
-        ],
-        "'TABLE": [
-          -1,
-          178
-        ],
-        "'ASK": [
-          -1,
-          178
-        ],
-        "'NEW": [
-          -1,
-          178
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          97
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "unop-expr": [
-          227
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          180
-        ],
-        "'STRING": [
-          -1,
-          180
-        ],
-        "'LBRACE": [
-          -1,
-          180
-        ],
-        "'PARENSPACE": [
-          -1,
-          180
-        ],
-        "'SWITCH": [
-          -1,
-          180
-        ],
-        "'DASH": [
-          -1,
-          180
-        ],
-        "'BANG": [
-          -1,
-          180
-        ],
-        "'LBRACK": [
-          -1,
-          180
-        ],
-        "'NUMBER": [
-          -1,
-          180
-        ],
-        "'TRUE": [
-          -1,
-          180
-        ],
-        "'FALSE": [
-          -1,
-          180
-        ],
-        "'NULL": [
-          -1,
-          180
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          180
-        ],
-        "'TABLE": [
-          -1,
-          180
-        ],
-        "'ASK": [
-          -1,
-          180
-        ],
-        "'NEW": [
-          -1,
-          180
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          182
-        ],
-        "'STRING": [
-          -1,
-          182
-        ],
-        "'LBRACE": [
-          -1,
-          182
-        ],
-        "'PARENSPACE": [
-          -1,
-          182
-        ],
-        "'SWITCH": [
-          -1,
-          182
-        ],
-        "'DASH": [
-          -1,
-          182
-        ],
-        "'BANG": [
-          -1,
-          182
-        ],
-        "'LBRACK": [
-          -1,
-          182
-        ],
-        "'NUMBER": [
-          -1,
-          182
-        ],
-        "'TRUE": [
-          -1,
-          182
-        ],
-        "'FALSE": [
-          -1,
-          182
-        ],
-        "'NULL": [
-          -1,
-          182
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          182
-        ],
-        "'TABLE": [
-          -1,
-          182
-        ],
-        "'ASK": [
-          -1,
-          182
-        ],
-        "'NEW": [
-          -1,
-          182
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          184
-        ],
-        "'STRING": [
-          -1,
-          184
-        ],
-        "'LBRACE": [
-          -1,
-          184
-        ],
-        "'PARENSPACE": [
-          -1,
-          184
-        ],
-        "'SWITCH": [
-          -1,
-          184
-        ],
-        "'DASH": [
-          -1,
-          184
-        ],
-        "'BANG": [
-          -1,
-          184
-        ],
-        "'LBRACK": [
-          -1,
-          184
-        ],
-        "'NUMBER": [
-          -1,
-          184
-        ],
-        "'TRUE": [
-          -1,
-          184
-        ],
-        "'FALSE": [
-          -1,
-          184
-        ],
-        "'NULL": [
-          -1,
-          184
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          184
-        ],
-        "'TABLE": [
-          -1,
-          184
-        ],
-        "'ASK": [
-          -1,
-          184
-        ],
-        "'NEW": [
-          -1,
-          184
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          186
-        ],
-        "'STRING": [
-          -1,
-          186
-        ],
-        "'LBRACE": [
-          -1,
-          186
-        ],
-        "'PARENSPACE": [
-          -1,
-          186
-        ],
-        "'SWITCH": [
-          -1,
-          186
-        ],
-        "'DASH": [
-          -1,
-          186
-        ],
-        "'BANG": [
-          -1,
-          186
-        ],
-        "'LBRACK": [
-          -1,
-          186
-        ],
-        "'NUMBER": [
-          -1,
-          186
-        ],
-        "'TRUE": [
-          -1,
-          186
-        ],
-        "'FALSE": [
-          -1,
-          186
-        ],
-        "'NULL": [
-          -1,
-          186
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          186
-        ],
-        "'TABLE": [
-          -1,
-          186
-        ],
-        "'ASK": [
-          -1,
-          186
-        ],
-        "'NEW": [
-          -1,
-          186
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          188
-        ],
-        "'STRING": [
-          -1,
-          188
-        ],
-        "'LBRACE": [
-          -1,
-          188
-        ],
-        "'PARENSPACE": [
-          -1,
-          188
-        ],
-        "'SWITCH": [
-          -1,
-          188
-        ],
-        "'DASH": [
-          -1,
-          188
-        ],
-        "'BANG": [
-          -1,
-          188
-        ],
-        "'LBRACK": [
-          -1,
-          188
-        ],
-        "'NUMBER": [
-          -1,
-          188
-        ],
-        "'TRUE": [
-          -1,
-          188
-        ],
-        "'FALSE": [
-          -1,
-          188
-        ],
-        "'NULL": [
-          -1,
-          188
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          188
-        ],
-        "'TABLE": [
-          -1,
-          188
-        ],
-        "'ASK": [
-          -1,
-          188
-        ],
-        "'NEW": [
-          -1,
-          188
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          190
-        ],
-        "'STRING": [
-          -1,
-          190
-        ],
-        "'LBRACE": [
-          -1,
-          190
-        ],
-        "'PARENSPACE": [
-          -1,
-          190
-        ],
-        "'SWITCH": [
-          -1,
-          190
-        ],
-        "'DASH": [
-          -1,
-          190
-        ],
-        "'BANG": [
-          -1,
-          190
-        ],
-        "'LBRACK": [
-          -1,
-          190
-        ],
-        "'NUMBER": [
-          -1,
-          190
-        ],
-        "'TRUE": [
-          -1,
-          190
-        ],
-        "'FALSE": [
-          -1,
-          190
-        ],
-        "'NULL": [
-          -1,
-          190
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          190
-        ],
-        "'TABLE": [
-          -1,
-          190
-        ],
-        "'ASK": [
-          -1,
-          190
-        ],
-        "'NEW": [
-          -1,
-          190
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          192
-        ],
-        "'STRING": [
-          -1,
-          192
-        ],
-        "'LBRACE": [
-          -1,
-          192
-        ],
-        "'PARENSPACE": [
-          -1,
-          192
-        ],
-        "'SWITCH": [
-          -1,
-          192
-        ],
-        "'DASH": [
-          -1,
-          192
-        ],
-        "'BANG": [
-          -1,
-          192
-        ],
-        "'LBRACK": [
-          -1,
-          192
-        ],
-        "'NUMBER": [
-          -1,
-          192
-        ],
-        "'TRUE": [
-          -1,
-          192
-        ],
-        "'FALSE": [
-          -1,
-          192
-        ],
-        "'NULL": [
-          -1,
-          192
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          192
-        ],
-        "'TABLE": [
-          -1,
-          192
-        ],
-        "'ASK": [
-          -1,
-          192
-        ],
-        "'NEW": [
-          -1,
-          192
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          194
-        ],
-        "'STRING": [
-          -1,
-          194
-        ],
-        "'LBRACE": [
-          -1,
-          194
-        ],
-        "'PARENSPACE": [
-          -1,
-          194
-        ],
-        "'SWITCH": [
-          -1,
-          194
-        ],
-        "'DASH": [
-          -1,
-          194
-        ],
-        "'BANG": [
-          -1,
-          194
-        ],
-        "'LBRACK": [
-          -1,
-          194
-        ],
-        "'NUMBER": [
-          -1,
-          194
-        ],
-        "'TRUE": [
-          -1,
-          194
-        ],
-        "'FALSE": [
-          -1,
-          194
-        ],
-        "'NULL": [
-          -1,
-          194
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          194
-        ],
-        "'TABLE": [
-          -1,
-          194
-        ],
-        "'ASK": [
-          -1,
-          194
-        ],
-        "'NEW": [
-          -1,
-          194
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          196
-        ],
-        "'STRING": [
-          -1,
-          196
-        ],
-        "'LBRACE": [
-          -1,
-          196
-        ],
-        "'PARENSPACE": [
-          -1,
-          196
-        ],
-        "'SWITCH": [
-          -1,
-          196
-        ],
-        "'DASH": [
-          -1,
-          196
-        ],
-        "'BANG": [
-          -1,
-          196
-        ],
-        "'LBRACK": [
-          -1,
-          196
-        ],
-        "'NUMBER": [
-          -1,
-          196
-        ],
-        "'TRUE": [
-          -1,
-          196
-        ],
-        "'FALSE": [
-          -1,
-          196
-        ],
-        "'NULL": [
-          -1,
-          196
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          196
-        ],
-        "'TABLE": [
-          -1,
-          196
-        ],
-        "'ASK": [
-          -1,
-          196
-        ],
-        "'NEW": [
-          -1,
-          196
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          198
-        ],
-        "'STRING": [
-          -1,
-          198
-        ],
-        "'LBRACE": [
-          -1,
-          198
-        ],
-        "'PARENSPACE": [
-          -1,
-          198
-        ],
-        "'SWITCH": [
-          -1,
-          198
-        ],
-        "'DASH": [
-          -1,
-          198
-        ],
-        "'BANG": [
-          -1,
-          198
-        ],
-        "'LBRACK": [
-          -1,
-          198
-        ],
-        "'NUMBER": [
-          -1,
-          198
-        ],
-        "'TRUE": [
-          -1,
-          198
-        ],
-        "'FALSE": [
-          -1,
-          198
-        ],
-        "'NULL": [
-          -1,
-          198
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          198
-        ],
-        "'TABLE": [
-          -1,
-          198
-        ],
-        "'ASK": [
-          -1,
-          198
-        ],
-        "'NEW": [
-          -1,
-          198
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          200
-        ],
-        "'STRING": [
-          -1,
-          200
-        ],
-        "'LBRACE": [
-          -1,
-          200
-        ],
-        "'PARENSPACE": [
-          -1,
-          200
-        ],
-        "'SWITCH": [
-          -1,
-          200
-        ],
-        "'DASH": [
-          -1,
-          200
-        ],
-        "'BANG": [
-          -1,
-          200
-        ],
-        "'LBRACK": [
-          -1,
-          200
-        ],
-        "'NUMBER": [
-          -1,
-          200
-        ],
-        "'TRUE": [
-          -1,
-          200
-        ],
-        "'FALSE": [
-          -1,
-          200
-        ],
-        "'NULL": [
-          -1,
-          200
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          200
-        ],
-        "'TABLE": [
-          -1,
-          200
-        ],
-        "'ASK": [
-          -1,
-          200
-        ],
-        "'NEW": [
-          -1,
-          200
-        ]
-      },
-      {
-        "app-or-access_A0_I2_I1*": [
-          228
-        ],
-        "'RPAREN": [
-          -1,
-          202,
-          204
-        ],
-        "'COMMA": [
-          -1,
-          204
-        ]
-      },
-      {
-        "'RPAREN": [
           229
         ]
       },
       {
         "'RPAREN": [
-          -1,
-          206
-        ]
-      },
-      {
-        "$": [
-          -1,
-          208
-        ],
-        "'NAME": [
-          -1,
-          208
-        ],
-        "'SEMI": [
-          -1,
-          208
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          208
-        ],
-        "'STRING": [
-          -1,
-          208
-        ],
-        "'RPAREN": [
-          -1,
-          208
-        ],
-        "'LBRACE": [
-          -1,
-          208
-        ],
-        "'RBRACE": [
-          -1,
-          208
-        ],
-        "'SPY": [
-          -1,
-          208
-        ],
-        "'PARENSPACE": [
-          -1,
-          208
-        ],
-        "'COMMA": [
-          -1,
-          208
-        ],
-        "'INT": [
-          -1,
-          208
-        ],
-        "'LONG": [
-          -1,
-          208
-        ],
-        "'DOUBLE": [
-          -1,
-          208
-        ],
-        "'FLOAT": [
-          -1,
-          208
-        ],
-        "'BOOLEAN": [
-          -1,
-          208
-        ],
-        "'VOID": [
-          -1,
-          208
-        ],
-        "'LT": [
-          -1,
-          208
-        ],
-        "'GT": [
-          -1,
-          208
-        ],
-        "'THINARROW": [
-          -1,
-          208
-        ],
-        "'DATA": [
-          -1,
-          208
-        ],
-        "'IF": [
-          -1,
-          208
-        ],
-        "'FOR": [
-          -1,
-          208
-        ],
-        "'RETURN": [
-          -1,
-          208
-        ],
-        "'VAR": [
-          -1,
-          208
-        ],
-        "'REC": [
-          -1,
-          208
-        ],
-        "'ATCHECK": [
-          -1,
-          208
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          208
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          208
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          208
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          208
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          208
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          208
-        ],
-        "'IS": [
-          -1,
-          208
-        ],
-        "'ISNOT": [
-          -1,
-          208
-        ],
-        "'SATISFIES": [
-          -1,
-          208
-        ],
-        "'RAISES": [
-          -1,
-          208
-        ],
-        "'SWITCH": [
-          -1,
-          208
-        ],
-        "'CASE": [
-          -1,
-          208
-        ],
-        "'DEFAULT": [
-          -1,
-          208
-        ],
-        "'YIELD": [
-          -1,
-          208
-        ],
-        "'PLUS": [
-          -1,
-          208
-        ],
-        "'DASH": [
-          -1,
-          208
-        ],
-        "'TIMES": [
-          -1,
-          208
-        ],
-        "'SLASH": [
-          -1,
-          208
-        ],
-        "'PERCENT": [
-          -1,
-          208
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          208
-        ],
-        "'NEQ": [
-          -1,
-          208
-        ],
-        "'LEQ": [
-          -1,
-          208
-        ],
-        "'GEQ": [
-          -1,
-          208
-        ],
-        "'AND": [
-          -1,
-          208
-        ],
-        "'OR": [
-          -1,
-          208
-        ],
-        "'BANG": [
-          -1,
-          208
-        ],
-        "'DOT": [
-          -1,
-          208
-        ],
-        "'LBRACK": [
-          -1,
-          208
-        ],
-        "'RBRACK": [
-          -1,
-          208
-        ],
-        "'NUMBER": [
-          -1,
-          208
-        ],
-        "'TRUE": [
-          -1,
-          208
-        ],
-        "'FALSE": [
-          -1,
-          208
-        ],
-        "'NULL": [
-          -1,
-          208
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          208
-        ],
-        "'TABLE": [
-          -1,
-          208
-        ],
-        "'ASK": [
-          -1,
-          208
-        ],
-        "'NEW": [
-          -1,
-          208
-        ]
-      },
-      {
-        "'RBRACK": [
           230
         ]
       },
       {
         "'NAME": [
-          96
+          -1,
+          178
+        ],
+        "'STRING": [
+          -1,
+          178
+        ],
+        "'LBRACE": [
+          -1,
+          178
+        ],
+        "'PARENSPACE": [
+          -1,
+          178
+        ],
+        "'SWITCH": [
+          -1,
+          178
+        ],
+        "'DASH": [
+          -1,
+          178
+        ],
+        "'BANG": [
+          -1,
+          178
+        ],
+        "'LBRACK": [
+          -1,
+          178
+        ],
+        "'NUMBER": [
+          -1,
+          178
+        ],
+        "'TRUE": [
+          -1,
+          178
+        ],
+        "'FALSE": [
+          -1,
+          178
+        ],
+        "'NULL": [
+          -1,
+          178
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          178
+        ],
+        "'BLOCK": [
+          -1,
+          178
+        ],
+        "'TABLE": [
+          -1,
+          178
+        ],
+        "'ASK": [
+          -1,
+          178
+        ],
+        "'NEW": [
+          -1,
+          178
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          180
+        ],
+        "'STRING": [
+          -1,
+          180
+        ],
+        "'LBRACE": [
+          -1,
+          180
+        ],
+        "'PARENSPACE": [
+          -1,
+          180
+        ],
+        "'SWITCH": [
+          -1,
+          180
+        ],
+        "'DASH": [
+          -1,
+          180
+        ],
+        "'BANG": [
+          -1,
+          180
+        ],
+        "'LBRACK": [
+          -1,
+          180
+        ],
+        "'NUMBER": [
+          -1,
+          180
+        ],
+        "'TRUE": [
+          -1,
+          180
+        ],
+        "'FALSE": [
+          -1,
+          180
+        ],
+        "'NULL": [
+          -1,
+          180
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          180
+        ],
+        "'BLOCK": [
+          -1,
+          180
+        ],
+        "'TABLE": [
+          -1,
+          180
+        ],
+        "'ASK": [
+          -1,
+          180
+        ],
+        "'NEW": [
+          -1,
+          180
+        ]
+      },
+      {
+        "$": [
+          -1,
+          182
+        ],
+        "'NAME": [
+          -1,
+          182
+        ],
+        "'SEMI": [
+          -1,
+          182
         ],
         "'PARENNOSPACE": [
-          11
+          -1,
+          182
+        ],
+        "'STRING": [
+          -1,
+          182
+        ],
+        "'RPAREN": [
+          -1,
+          182
+        ],
+        "'LBRACE": [
+          -1,
+          182
+        ],
+        "'RBRACE": [
+          -1,
+          182
+        ],
+        "'SPY": [
+          -1,
+          182
+        ],
+        "'PARENSPACE": [
+          -1,
+          182
+        ],
+        "'COMMA": [
+          -1,
+          182
+        ],
+        "'INT": [
+          -1,
+          182
+        ],
+        "'LONG": [
+          -1,
+          182
+        ],
+        "'DOUBLE": [
+          -1,
+          182
+        ],
+        "'FLOAT": [
+          -1,
+          182
+        ],
+        "'BOOLEAN": [
+          -1,
+          182
+        ],
+        "'VOID": [
+          -1,
+          182
+        ],
+        "'LT": [
+          -1,
+          182
+        ],
+        "'GT": [
+          -1,
+          182
+        ],
+        "'THINARROW": [
+          -1,
+          182
+        ],
+        "'DATA": [
+          -1,
+          182
+        ],
+        "'IF": [
+          -1,
+          182
+        ],
+        "'FOR": [
+          -1,
+          182
+        ],
+        "'RETURN": [
+          -1,
+          182
+        ],
+        "'VAR": [
+          -1,
+          182
+        ],
+        "'REC": [
+          -1,
+          182
+        ],
+        "'ATCHECK": [
+          -1,
+          182
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          182
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          182
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          182
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          182
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          182
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          182
+        ],
+        "'IS": [
+          -1,
+          182
+        ],
+        "'ISNOT": [
+          -1,
+          182
+        ],
+        "'SATISFIES": [
+          -1,
+          182
+        ],
+        "'RAISES": [
+          -1,
+          182
+        ],
+        "'SWITCH": [
+          -1,
+          182
+        ],
+        "'CASE": [
+          -1,
+          182
+        ],
+        "'DEFAULT": [
+          -1,
+          182
+        ],
+        "'YIELD": [
+          -1,
+          182
+        ],
+        "'PLUS": [
+          -1,
+          182
+        ],
+        "'DASH": [
+          -1,
+          182
+        ],
+        "'TIMES": [
+          -1,
+          182
+        ],
+        "'SLASH": [
+          -1,
+          182
+        ],
+        "'PERCENT": [
+          -1,
+          182
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          182
+        ],
+        "'NEQ": [
+          -1,
+          182
+        ],
+        "'LEQ": [
+          -1,
+          182
+        ],
+        "'GEQ": [
+          -1,
+          182
+        ],
+        "'AND": [
+          -1,
+          182
+        ],
+        "'OR": [
+          -1,
+          182
+        ],
+        "'BANG": [
+          -1,
+          182
+        ],
+        "'LBRACK": [
+          -1,
+          182
+        ],
+        "'RBRACK": [
+          -1,
+          182
+        ],
+        "'NUMBER": [
+          -1,
+          182
+        ],
+        "'TRUE": [
+          -1,
+          182
+        ],
+        "'FALSE": [
+          -1,
+          182
+        ],
+        "'NULL": [
+          -1,
+          182
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          182
+        ],
+        "'BLOCK": [
+          -1,
+          182
+        ],
+        "'TABLE": [
+          -1,
+          182
+        ],
+        "'ASK": [
+          -1,
+          182
+        ],
+        "'NEW": [
+          -1,
+          182
+        ]
+      },
+      {
+        "'NAME": [
+          98
         ],
         "'STRING": [
           12
@@ -18187,10 +17869,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          231
+          99
         ],
         "switch-expr": [
           37
@@ -18198,14 +17877,8 @@ function(E) {
         "'SWITCH": [
           38
         ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
         "unop-expr": [
-          41
+          231
         ],
         "'DASH": [
           42
@@ -18255,56 +17928,818 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
         ],
-        "construct-expr_A0_I3?": [
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          184
+        ],
+        "'STRING": [
+          -1,
+          184
+        ],
+        "'LBRACE": [
+          -1,
+          184
+        ],
+        "'PARENSPACE": [
+          -1,
+          184
+        ],
+        "'SWITCH": [
+          -1,
+          184
+        ],
+        "'DASH": [
+          -1,
+          184
+        ],
+        "'BANG": [
+          -1,
+          184
+        ],
+        "'LBRACK": [
+          -1,
+          184
+        ],
+        "'NUMBER": [
+          -1,
+          184
+        ],
+        "'TRUE": [
+          -1,
+          184
+        ],
+        "'FALSE": [
+          -1,
+          184
+        ],
+        "'NULL": [
+          -1,
+          184
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          184
+        ],
+        "'BLOCK": [
+          -1,
+          184
+        ],
+        "'TABLE": [
+          -1,
+          184
+        ],
+        "'ASK": [
+          -1,
+          184
+        ],
+        "'NEW": [
+          -1,
+          184
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          186
+        ],
+        "'STRING": [
+          -1,
+          186
+        ],
+        "'LBRACE": [
+          -1,
+          186
+        ],
+        "'PARENSPACE": [
+          -1,
+          186
+        ],
+        "'SWITCH": [
+          -1,
+          186
+        ],
+        "'DASH": [
+          -1,
+          186
+        ],
+        "'BANG": [
+          -1,
+          186
+        ],
+        "'LBRACK": [
+          -1,
+          186
+        ],
+        "'NUMBER": [
+          -1,
+          186
+        ],
+        "'TRUE": [
+          -1,
+          186
+        ],
+        "'FALSE": [
+          -1,
+          186
+        ],
+        "'NULL": [
+          -1,
+          186
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          186
+        ],
+        "'BLOCK": [
+          -1,
+          186
+        ],
+        "'TABLE": [
+          -1,
+          186
+        ],
+        "'ASK": [
+          -1,
+          186
+        ],
+        "'NEW": [
+          -1,
+          186
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          188
+        ],
+        "'STRING": [
+          -1,
+          188
+        ],
+        "'LBRACE": [
+          -1,
+          188
+        ],
+        "'PARENSPACE": [
+          -1,
+          188
+        ],
+        "'SWITCH": [
+          -1,
+          188
+        ],
+        "'DASH": [
+          -1,
+          188
+        ],
+        "'BANG": [
+          -1,
+          188
+        ],
+        "'LBRACK": [
+          -1,
+          188
+        ],
+        "'NUMBER": [
+          -1,
+          188
+        ],
+        "'TRUE": [
+          -1,
+          188
+        ],
+        "'FALSE": [
+          -1,
+          188
+        ],
+        "'NULL": [
+          -1,
+          188
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          188
+        ],
+        "'BLOCK": [
+          -1,
+          188
+        ],
+        "'TABLE": [
+          -1,
+          188
+        ],
+        "'ASK": [
+          -1,
+          188
+        ],
+        "'NEW": [
+          -1,
+          188
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          190
+        ],
+        "'STRING": [
+          -1,
+          190
+        ],
+        "'LBRACE": [
+          -1,
+          190
+        ],
+        "'PARENSPACE": [
+          -1,
+          190
+        ],
+        "'SWITCH": [
+          -1,
+          190
+        ],
+        "'DASH": [
+          -1,
+          190
+        ],
+        "'BANG": [
+          -1,
+          190
+        ],
+        "'LBRACK": [
+          -1,
+          190
+        ],
+        "'NUMBER": [
+          -1,
+          190
+        ],
+        "'TRUE": [
+          -1,
+          190
+        ],
+        "'FALSE": [
+          -1,
+          190
+        ],
+        "'NULL": [
+          -1,
+          190
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          190
+        ],
+        "'BLOCK": [
+          -1,
+          190
+        ],
+        "'TABLE": [
+          -1,
+          190
+        ],
+        "'ASK": [
+          -1,
+          190
+        ],
+        "'NEW": [
+          -1,
+          190
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          192
+        ],
+        "'STRING": [
+          -1,
+          192
+        ],
+        "'LBRACE": [
+          -1,
+          192
+        ],
+        "'PARENSPACE": [
+          -1,
+          192
+        ],
+        "'SWITCH": [
+          -1,
+          192
+        ],
+        "'DASH": [
+          -1,
+          192
+        ],
+        "'BANG": [
+          -1,
+          192
+        ],
+        "'LBRACK": [
+          -1,
+          192
+        ],
+        "'NUMBER": [
+          -1,
+          192
+        ],
+        "'TRUE": [
+          -1,
+          192
+        ],
+        "'FALSE": [
+          -1,
+          192
+        ],
+        "'NULL": [
+          -1,
+          192
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          192
+        ],
+        "'BLOCK": [
+          -1,
+          192
+        ],
+        "'TABLE": [
+          -1,
+          192
+        ],
+        "'ASK": [
+          -1,
+          192
+        ],
+        "'NEW": [
+          -1,
+          192
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          194
+        ],
+        "'STRING": [
+          -1,
+          194
+        ],
+        "'LBRACE": [
+          -1,
+          194
+        ],
+        "'PARENSPACE": [
+          -1,
+          194
+        ],
+        "'SWITCH": [
+          -1,
+          194
+        ],
+        "'DASH": [
+          -1,
+          194
+        ],
+        "'BANG": [
+          -1,
+          194
+        ],
+        "'LBRACK": [
+          -1,
+          194
+        ],
+        "'NUMBER": [
+          -1,
+          194
+        ],
+        "'TRUE": [
+          -1,
+          194
+        ],
+        "'FALSE": [
+          -1,
+          194
+        ],
+        "'NULL": [
+          -1,
+          194
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          194
+        ],
+        "'BLOCK": [
+          -1,
+          194
+        ],
+        "'TABLE": [
+          -1,
+          194
+        ],
+        "'ASK": [
+          -1,
+          194
+        ],
+        "'NEW": [
+          -1,
+          194
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          196
+        ],
+        "'STRING": [
+          -1,
+          196
+        ],
+        "'LBRACE": [
+          -1,
+          196
+        ],
+        "'PARENSPACE": [
+          -1,
+          196
+        ],
+        "'SWITCH": [
+          -1,
+          196
+        ],
+        "'DASH": [
+          -1,
+          196
+        ],
+        "'BANG": [
+          -1,
+          196
+        ],
+        "'LBRACK": [
+          -1,
+          196
+        ],
+        "'NUMBER": [
+          -1,
+          196
+        ],
+        "'TRUE": [
+          -1,
+          196
+        ],
+        "'FALSE": [
+          -1,
+          196
+        ],
+        "'NULL": [
+          -1,
+          196
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          196
+        ],
+        "'BLOCK": [
+          -1,
+          196
+        ],
+        "'TABLE": [
+          -1,
+          196
+        ],
+        "'ASK": [
+          -1,
+          196
+        ],
+        "'NEW": [
+          -1,
+          196
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          198
+        ],
+        "'STRING": [
+          -1,
+          198
+        ],
+        "'LBRACE": [
+          -1,
+          198
+        ],
+        "'PARENSPACE": [
+          -1,
+          198
+        ],
+        "'SWITCH": [
+          -1,
+          198
+        ],
+        "'DASH": [
+          -1,
+          198
+        ],
+        "'BANG": [
+          -1,
+          198
+        ],
+        "'LBRACK": [
+          -1,
+          198
+        ],
+        "'NUMBER": [
+          -1,
+          198
+        ],
+        "'TRUE": [
+          -1,
+          198
+        ],
+        "'FALSE": [
+          -1,
+          198
+        ],
+        "'NULL": [
+          -1,
+          198
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          198
+        ],
+        "'BLOCK": [
+          -1,
+          198
+        ],
+        "'TABLE": [
+          -1,
+          198
+        ],
+        "'ASK": [
+          -1,
+          198
+        ],
+        "'NEW": [
+          -1,
+          198
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          200
+        ],
+        "'STRING": [
+          -1,
+          200
+        ],
+        "'LBRACE": [
+          -1,
+          200
+        ],
+        "'PARENSPACE": [
+          -1,
+          200
+        ],
+        "'SWITCH": [
+          -1,
+          200
+        ],
+        "'DASH": [
+          -1,
+          200
+        ],
+        "'BANG": [
+          -1,
+          200
+        ],
+        "'LBRACK": [
+          -1,
+          200
+        ],
+        "'NUMBER": [
+          -1,
+          200
+        ],
+        "'TRUE": [
+          -1,
+          200
+        ],
+        "'FALSE": [
+          -1,
+          200
+        ],
+        "'NULL": [
+          -1,
+          200
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          200
+        ],
+        "'BLOCK": [
+          -1,
+          200
+        ],
+        "'TABLE": [
+          -1,
+          200
+        ],
+        "'ASK": [
+          -1,
+          200
+        ],
+        "'NEW": [
+          -1,
+          200
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          202
+        ],
+        "'STRING": [
+          -1,
+          202
+        ],
+        "'LBRACE": [
+          -1,
+          202
+        ],
+        "'PARENSPACE": [
+          -1,
+          202
+        ],
+        "'SWITCH": [
+          -1,
+          202
+        ],
+        "'DASH": [
+          -1,
+          202
+        ],
+        "'BANG": [
+          -1,
+          202
+        ],
+        "'LBRACK": [
+          -1,
+          202
+        ],
+        "'NUMBER": [
+          -1,
+          202
+        ],
+        "'TRUE": [
+          -1,
+          202
+        ],
+        "'FALSE": [
+          -1,
+          202
+        ],
+        "'NULL": [
+          -1,
+          202
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          202
+        ],
+        "'BLOCK": [
+          -1,
+          202
+        ],
+        "'TABLE": [
+          -1,
+          202
+        ],
+        "'ASK": [
+          -1,
+          202
+        ],
+        "'NEW": [
+          -1,
+          202
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          204
+        ],
+        "'STRING": [
+          -1,
+          204
+        ],
+        "'LBRACE": [
+          -1,
+          204
+        ],
+        "'PARENSPACE": [
+          -1,
+          204
+        ],
+        "'SWITCH": [
+          -1,
+          204
+        ],
+        "'DASH": [
+          -1,
+          204
+        ],
+        "'BANG": [
+          -1,
+          204
+        ],
+        "'LBRACK": [
+          -1,
+          204
+        ],
+        "'NUMBER": [
+          -1,
+          204
+        ],
+        "'TRUE": [
+          -1,
+          204
+        ],
+        "'FALSE": [
+          -1,
+          204
+        ],
+        "'NULL": [
+          -1,
+          204
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          204
+        ],
+        "'BLOCK": [
+          -1,
+          204
+        ],
+        "'TABLE": [
+          -1,
+          204
+        ],
+        "'ASK": [
+          -1,
+          204
+        ],
+        "'NEW": [
+          -1,
+          204
+        ]
+      },
+      {
+        "app-or-access_A0_I2_I1*": [
           232
         ],
-        "construct-expr_A0_I3": [
-          233
+        "'RPAREN": [
+          -1,
+          206,
+          208
         ],
-        "'RBRACK": [
+        "'COMMA": [
+          -1,
+          208
+        ]
+      },
+      {
+        "'RPAREN": [
+          233
+        ]
+      },
+      {
+        "'RPAREN": [
           -1,
           210
         ]
       },
       {
-        "'NAME": [
-          89
-        ],
-        "'PARENSPACE": [
-          68
-        ],
-        "type-ann": [
-          234
-        ],
-        "'INT": [
-          26
-        ],
-        "'LONG": [
-          27
-        ],
-        "'DOUBLE": [
-          28
-        ],
-        "'FLOAT": [
-          29
-        ],
-        "'BOOLEAN": [
-          30
-        ],
-        "'VOID": [
-          31
-        ]
-      },
-      {
         "$": [
           -1,
           212
@@ -18549,6 +18984,10 @@ function(E) {
           -1,
           212
         ],
+        "'BLOCK": [
+          -1,
+          212
+        ],
         "'TABLE": [
           -1,
           212
@@ -18563,36 +19002,13 @@ function(E) {
         ]
       },
       {
-        "'NAME": [
-          235
-        ]
-      },
-      {
-        "table-expr_I3*": [
-          236
-        ],
-        "'SEMI": [
-          -1,
-          214
-        ],
-        "'COMMA": [
-          -1,
-          214
-        ]
-      },
-      {
-        "'THINARROW": [
-          237
-        ]
-      },
-      {
-        "'SEMI": [
-          238
+        "'RBRACK": [
+          234
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -18604,10 +19020,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          239
+          235
         ],
         "switch-expr": [
           37
@@ -18672,552 +19088,389 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
         ],
-        "new-expr_I3?": [
-          240
+        "'ASK": [
+          61
         ],
-        "new-expr_I3": [
-          241
+        "'NEW": [
+          62
+        ],
+        "construct-expr_A0_I3?": [
+          236
+        ],
+        "construct-expr_A0_I3": [
+          237
+        ],
+        "'RBRACK": [
+          -1,
+          214
+        ]
+      },
+      {
+        "'NAME": [
+          91
+        ],
+        "'PARENSPACE": [
+          70
+        ],
+        "type-ann": [
+          238
+        ],
+        "'INT": [
+          26
+        ],
+        "'LONG": [
+          27
+        ],
+        "'DOUBLE": [
+          28
+        ],
+        "'FLOAT": [
+          29
+        ],
+        "'BOOLEAN": [
+          30
+        ],
+        "'VOID": [
+          31
+        ]
+      },
+      {
+        "$": [
+          -1,
+          216
+        ],
+        "'NAME": [
+          -1,
+          216
+        ],
+        "'SEMI": [
+          -1,
+          216
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          216
+        ],
+        "'STRING": [
+          -1,
+          216
         ],
         "'RPAREN": [
+          -1,
+          216
+        ],
+        "'LBRACE": [
+          -1,
+          216
+        ],
+        "'RBRACE": [
+          -1,
+          216
+        ],
+        "'SPY": [
+          -1,
+          216
+        ],
+        "'PARENSPACE": [
+          -1,
+          216
+        ],
+        "'COMMA": [
+          -1,
+          216
+        ],
+        "'INT": [
+          -1,
+          216
+        ],
+        "'LONG": [
+          -1,
+          216
+        ],
+        "'DOUBLE": [
+          -1,
+          216
+        ],
+        "'FLOAT": [
+          -1,
+          216
+        ],
+        "'BOOLEAN": [
+          -1,
+          216
+        ],
+        "'VOID": [
+          -1,
+          216
+        ],
+        "'LT": [
+          -1,
+          216
+        ],
+        "'GT": [
+          -1,
+          216
+        ],
+        "'THINARROW": [
+          -1,
+          216
+        ],
+        "'DATA": [
+          -1,
+          216
+        ],
+        "'IF": [
+          -1,
+          216
+        ],
+        "'FOR": [
+          -1,
+          216
+        ],
+        "'RETURN": [
+          -1,
+          216
+        ],
+        "'VAR": [
+          -1,
+          216
+        ],
+        "'REC": [
+          -1,
+          216
+        ],
+        "'ATCHECK": [
+          -1,
+          216
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          216
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          216
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          216
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          216
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          216
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          216
+        ],
+        "'IS": [
+          -1,
+          216
+        ],
+        "'ISNOT": [
+          -1,
+          216
+        ],
+        "'SATISFIES": [
+          -1,
+          216
+        ],
+        "'RAISES": [
+          -1,
+          216
+        ],
+        "'SWITCH": [
+          -1,
+          216
+        ],
+        "'CASE": [
+          -1,
+          216
+        ],
+        "'DEFAULT": [
+          -1,
+          216
+        ],
+        "'YIELD": [
+          -1,
+          216
+        ],
+        "'PLUS": [
+          -1,
+          216
+        ],
+        "'DASH": [
+          -1,
+          216
+        ],
+        "'TIMES": [
+          -1,
+          216
+        ],
+        "'SLASH": [
+          -1,
+          216
+        ],
+        "'PERCENT": [
+          -1,
+          216
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          216
+        ],
+        "'NEQ": [
+          -1,
+          216
+        ],
+        "'LEQ": [
+          -1,
+          216
+        ],
+        "'GEQ": [
+          -1,
+          216
+        ],
+        "'AND": [
+          -1,
+          216
+        ],
+        "'OR": [
+          -1,
+          216
+        ],
+        "'BANG": [
+          -1,
+          216
+        ],
+        "'DOT": [
+          -1,
+          216
+        ],
+        "'LBRACK": [
+          -1,
+          216
+        ],
+        "'RBRACK": [
+          -1,
+          216
+        ],
+        "'NUMBER": [
+          -1,
+          216
+        ],
+        "'TRUE": [
+          -1,
+          216
+        ],
+        "'FALSE": [
+          -1,
+          216
+        ],
+        "'NULL": [
+          -1,
+          216
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          216
+        ],
+        "'BLOCK": [
+          -1,
+          216
+        ],
+        "'TABLE": [
+          -1,
+          216
+        ],
+        "'ASK": [
+          -1,
+          216
+        ],
+        "'NEW": [
           -1,
           216
         ]
       },
       {
-        "'SEMI": [
-          242
-        ]
-      },
-      {
-        "'RPAREN": [
-          243
-        ]
-      },
-      {
-        "'SEMI": [
-          244
-        ]
-      },
-      {
-        "'RPAREN": [
-          245
-        ]
-      },
-      {
-        "'COMMA": [
-          246
-        ],
-        "'GT": [
-          247
-        ],
-        "type-ann_A6_I1_I2": [
-          248
-        ]
-      },
-      {
-        "$": [
-          -1,
-          218
-        ],
         "'NAME": [
-          -1,
-          218
+          10
         ],
         "'PARENNOSPACE": [
-          -1,
-          218
+          11
         ],
         "'STRING": [
-          -1,
-          218
+          12
+        ],
+        "fun-decl": [
+          200
+        ],
+        "data-decl": [
+          201
+        ],
+        "check-block": [
+          202
+        ],
+        "let-stmt": [
+          203
+        ],
+        "var-stmt": [
+          204
+        ],
+        "rec-stmt": [
+          205
+        ],
+        "assign-stmt": [
+          206
+        ],
+        "expr-stmt": [
+          207
         ],
         "'LBRACE": [
-          -1,
-          218
+          23
         ],
         "'RBRACE": [
-          -1,
-          218
+          239
+        ],
+        "block-stmt": [
+          240
+        ],
+        "if-stmt": [
+          210
+        ],
+        "for-stmt": [
+          211
+        ],
+        "return-stmt": [
+          212
+        ],
+        "yield-stmt": [
+          213
+        ],
+        "spy-stmt": [
+          214
         ],
         "'SPY": [
-          -1,
-          218
+          215
         ],
         "'PARENSPACE": [
-          -1,
-          218
-        ],
-        "'INT": [
-          -1,
-          218
-        ],
-        "'LONG": [
-          -1,
-          218
-        ],
-        "'DOUBLE": [
-          -1,
-          218
-        ],
-        "'FLOAT": [
-          -1,
-          218
-        ],
-        "'BOOLEAN": [
-          -1,
-          218
-        ],
-        "'VOID": [
-          -1,
-          218
-        ],
-        "'DATA": [
-          -1,
-          218
-        ],
-        "'IF": [
-          -1,
-          218
-        ],
-        "'FOR": [
-          -1,
-          218
-        ],
-        "'RETURN": [
-          -1,
-          218
-        ],
-        "'VAR": [
-          -1,
-          218
-        ],
-        "'REC": [
-          -1,
-          218
-        ],
-        "'ATCHECK": [
-          -1,
-          218
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          218
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          218
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          218
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          218
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          218
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          218
-        ],
-        "'SWITCH": [
-          -1,
-          218
-        ],
-        "'YIELD": [
-          -1,
-          218
-        ],
-        "'DASH": [
-          -1,
-          218
-        ],
-        "'BANG": [
-          -1,
-          218
-        ],
-        "'LBRACK": [
-          -1,
-          218
-        ],
-        "'NUMBER": [
-          -1,
-          218
-        ],
-        "'TRUE": [
-          -1,
-          218
-        ],
-        "'FALSE": [
-          -1,
-          218
-        ],
-        "'NULL": [
-          -1,
-          218
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          218
-        ],
-        "'TABLE": [
-          -1,
-          218
-        ],
-        "'ASK": [
-          -1,
-          218
-        ],
-        "'NEW": [
-          -1,
-          218
-        ]
-      },
-      {
-        "$": [
-          -1,
-          220
-        ],
-        "'NAME": [
-          -1,
-          220
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          220
-        ],
-        "'STRING": [
-          -1,
-          220
-        ],
-        "'LBRACE": [
-          -1,
-          220
-        ],
-        "'RBRACE": [
-          -1,
-          220
-        ],
-        "'SPY": [
-          -1,
-          220
-        ],
-        "'PARENSPACE": [
-          -1,
-          220
-        ],
-        "'INT": [
-          -1,
-          220
-        ],
-        "'LONG": [
-          -1,
-          220
-        ],
-        "'DOUBLE": [
-          -1,
-          220
-        ],
-        "'FLOAT": [
-          -1,
-          220
-        ],
-        "'BOOLEAN": [
-          -1,
-          220
-        ],
-        "'VOID": [
-          -1,
-          220
-        ],
-        "'DATA": [
-          -1,
-          220
-        ],
-        "'IF": [
-          -1,
-          220
-        ],
-        "'FOR": [
-          -1,
-          220
-        ],
-        "'RETURN": [
-          -1,
-          220
-        ],
-        "'VAR": [
-          -1,
-          220
-        ],
-        "'REC": [
-          -1,
-          220
-        ],
-        "'ATCHECK": [
-          -1,
-          220
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          220
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          220
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          220
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          220
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          220
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          220
-        ],
-        "'SWITCH": [
-          -1,
-          220
-        ],
-        "'YIELD": [
-          -1,
-          220
-        ],
-        "'DASH": [
-          -1,
-          220
-        ],
-        "'BANG": [
-          -1,
-          220
-        ],
-        "'LBRACK": [
-          -1,
-          220
-        ],
-        "'NUMBER": [
-          -1,
-          220
-        ],
-        "'TRUE": [
-          -1,
-          220
-        ],
-        "'FALSE": [
-          -1,
-          220
-        ],
-        "'NULL": [
-          -1,
-          220
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          220
-        ],
-        "'TABLE": [
-          -1,
-          220
-        ],
-        "'ASK": [
-          -1,
-          220
-        ],
-        "'NEW": [
-          -1,
-          220
-        ]
-      },
-      {
-        "$": [
-          -1,
-          222
-        ],
-        "'NAME": [
-          -1,
-          222
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          222
-        ],
-        "'STRING": [
-          -1,
-          222
-        ],
-        "'LBRACE": [
-          -1,
-          222
-        ],
-        "'RBRACE": [
-          -1,
-          222
-        ],
-        "'SPY": [
-          -1,
-          222
-        ],
-        "'PARENSPACE": [
-          -1,
-          222
-        ],
-        "'INT": [
-          -1,
-          222
-        ],
-        "'LONG": [
-          -1,
-          222
-        ],
-        "'DOUBLE": [
-          -1,
-          222
-        ],
-        "'FLOAT": [
-          -1,
-          222
-        ],
-        "'BOOLEAN": [
-          -1,
-          222
-        ],
-        "'VOID": [
-          -1,
-          222
-        ],
-        "'DATA": [
-          -1,
-          222
-        ],
-        "'IF": [
-          -1,
-          222
-        ],
-        "'FOR": [
-          -1,
-          222
-        ],
-        "'RETURN": [
-          -1,
-          222
-        ],
-        "'VAR": [
-          -1,
-          222
-        ],
-        "'REC": [
-          -1,
-          222
-        ],
-        "'ATCHECK": [
-          -1,
-          222
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          222
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          222
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          222
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          222
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          222
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          222
-        ],
-        "'SWITCH": [
-          -1,
-          222
-        ],
-        "'YIELD": [
-          -1,
-          222
-        ],
-        "'DASH": [
-          -1,
-          222
-        ],
-        "'BANG": [
-          -1,
-          222
-        ],
-        "'LBRACK": [
-          -1,
-          222
-        ],
-        "'NUMBER": [
-          -1,
-          222
-        ],
-        "'TRUE": [
-          -1,
-          222
-        ],
-        "'FALSE": [
-          -1,
-          222
-        ],
-        "'NULL": [
-          -1,
-          222
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          222
-        ],
-        "'TABLE": [
-          -1,
-          222
-        ],
-        "'ASK": [
-          -1,
-          222
-        ],
-        "'NEW": [
-          -1,
-          222
-        ]
-      },
-      {
-        "'NAME": [
-          67
-        ],
-        "'PARENSPACE": [
-          68
+          24
         ],
         "type-ann": [
-          69
+          25
         ],
         "'INT": [
           26
@@ -19237,543 +19490,789 @@ function(E) {
         "'VOID": [
           31
         ],
-        "lambda-param": [
+        "'DATA": [
+          32
+        ],
+        "'IF": [
+          217
+        ],
+        "full-expr": [
+          33
+        ],
+        "'FOR": [
+          219
+        ],
+        "'RETURN": [
+          220
+        ],
+        "'VAR": [
+          34
+        ],
+        "'REC": [
+          35
+        ],
+        "'ATCHECK": [
+          36
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "'YIELD": [
+          228
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "block-expr_I2": [
+          241
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'NAME": [
+          242
+        ]
+      },
+      {
+        "table-expr_I3*": [
+          243
+        ],
+        "'SEMI": [
+          -1,
+          218
+        ],
+        "'COMMA": [
+          -1,
+          218
+        ]
+      },
+      {
+        "'THINARROW": [
+          244
+        ]
+      },
+      {
+        "'SEMI": [
+          245
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          246
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ],
+        "new-expr_I3?": [
+          247
+        ],
+        "new-expr_I3": [
+          248
+        ],
+        "'RPAREN": [
+          -1,
+          220
+        ]
+      },
+      {
+        "'SEMI": [
           249
         ]
       },
       {
         "'RPAREN": [
-          -1,
-          224
-        ],
-        "'COMMA": [
-          -1,
-          224
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'PARENNOSPACE": [
-          11
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
           250
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
         ]
       },
       {
-        "'RBRACE": [
-          -1,
-          226
-        ],
+        "'SEMI": [
+          251
+        ]
+      },
+      {
+        "'RPAREN": [
+          252
+        ]
+      },
+      {
         "'COMMA": [
-          -1,
-          226
+          253
+        ],
+        "'GT": [
+          254
+        ],
+        "type-ann_A6_I1_I2": [
+          255
         ]
       },
       {
         "$": [
           -1,
-          228
+          222
         ],
         "'NAME": [
           -1,
-          228
-        ],
-        "'SEMI": [
-          -1,
-          228
+          222
         ],
         "'PARENNOSPACE": [
           -1,
-          228
+          222
         ],
         "'STRING": [
           -1,
-          228
-        ],
-        "'RPAREN": [
-          -1,
-          228
+          222
         ],
         "'LBRACE": [
           -1,
-          228
+          222
         ],
         "'RBRACE": [
           -1,
-          228
+          222
         ],
         "'SPY": [
           -1,
-          228
+          222
         ],
         "'PARENSPACE": [
           -1,
-          228
-        ],
-        "'COMMA": [
-          -1,
-          228
+          222
         ],
         "'INT": [
           -1,
-          228
+          222
         ],
         "'LONG": [
           -1,
-          228
+          222
         ],
         "'DOUBLE": [
           -1,
-          228
+          222
         ],
         "'FLOAT": [
           -1,
-          228
+          222
         ],
         "'BOOLEAN": [
           -1,
-          228
+          222
         ],
         "'VOID": [
           -1,
-          228
-        ],
-        "'LT": [
-          -1,
-          228
-        ],
-        "'GT": [
-          -1,
-          228
-        ],
-        "'THINARROW": [
-          -1,
-          228
+          222
         ],
         "'DATA": [
           -1,
-          228
+          222
         ],
         "'IF": [
           -1,
-          228
+          222
         ],
         "'FOR": [
           -1,
-          228
+          222
         ],
         "'RETURN": [
           -1,
-          228
+          222
         ],
         "'VAR": [
           -1,
-          228
+          222
         ],
         "'REC": [
           -1,
-          228
+          222
         ],
         "'ATCHECK": [
           -1,
-          228
+          222
         ],
         "'ASSERTEQUALS": [
           -1,
-          228
+          222
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          228
+          222
         ],
         "'ASSERTTRUE": [
           -1,
-          228
+          222
         ],
         "'ASSERTFALSE": [
           -1,
-          228
+          222
         ],
         "'ASSERTSATISFIES": [
           -1,
-          228
+          222
         ],
         "'ASSERTRAISES": [
           -1,
-          228
-        ],
-        "'IS": [
-          -1,
-          228
-        ],
-        "'ISNOT": [
-          -1,
-          228
-        ],
-        "'SATISFIES": [
-          -1,
-          228
-        ],
-        "'RAISES": [
-          -1,
-          228
+          222
         ],
         "'SWITCH": [
           -1,
-          228
-        ],
-        "'CASE": [
-          -1,
-          228
-        ],
-        "'DEFAULT": [
-          -1,
-          228
+          222
         ],
         "'YIELD": [
           -1,
-          228
-        ],
-        "'PLUS": [
-          -1,
-          228
+          222
         ],
         "'DASH": [
           -1,
-          228
-        ],
-        "'TIMES": [
-          -1,
-          228
-        ],
-        "'SLASH": [
-          -1,
-          228
-        ],
-        "'PERCENT": [
-          -1,
-          228
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          228
-        ],
-        "'NEQ": [
-          -1,
-          228
-        ],
-        "'LEQ": [
-          -1,
-          228
-        ],
-        "'GEQ": [
-          -1,
-          228
-        ],
-        "'AND": [
-          -1,
-          228
-        ],
-        "'OR": [
-          -1,
-          228
+          222
         ],
         "'BANG": [
           -1,
-          228
-        ],
-        "'DOT": [
-          -1,
-          228
+          222
         ],
         "'LBRACK": [
           -1,
-          228
-        ],
-        "'RBRACK": [
-          -1,
-          228
+          222
         ],
         "'NUMBER": [
           -1,
-          228
+          222
         ],
         "'TRUE": [
           -1,
-          228
+          222
         ],
         "'FALSE": [
           -1,
-          228
+          222
         ],
         "'NULL": [
           -1,
-          228
+          222
         ],
         "'PARENAFTERBRACE": [
           -1,
-          228
+          222
+        ],
+        "'BLOCK": [
+          -1,
+          222
         ],
         "'TABLE": [
           -1,
-          228
+          222
         ],
         "'ASK": [
           -1,
-          228
+          222
         ],
         "'NEW": [
           -1,
-          228
+          222
         ]
       },
       {
+        "$": [
+          -1,
+          224
+        ],
         "'NAME": [
-          73
-        ],
-        "record-field": [
-          251
-        ]
-      },
-      {
-        "'RBRACE": [
           -1,
-          230
-        ],
-        "'COMMA": [
-          -1,
-          230
-        ]
-      },
-      {
-        "'NAME": [
-          89
-        ],
-        "'PARENSPACE": [
-          68
-        ],
-        "type-ann": [
-          252
-        ],
-        "'INT": [
-          26
-        ],
-        "'LONG": [
-          27
-        ],
-        "'DOUBLE": [
-          28
-        ],
-        "'FLOAT": [
-          29
-        ],
-        "'BOOLEAN": [
-          30
-        ],
-        "'VOID": [
-          31
-        ]
-      },
-      {
-        "'COMMA": [
-          -1,
-          232
-        ],
-        "'THINARROW": [
-          -1,
-          232
-        ]
-      },
-      {
-        "'RPAREN": [
-          253
-        ]
-      },
-      {
-        "'NAME": [
-          96
+          224
         ],
         "'PARENNOSPACE": [
-          11
+          -1,
+          224
         ],
         "'STRING": [
-          12
+          -1,
+          224
         ],
         "'LBRACE": [
-          23
+          -1,
+          224
+        ],
+        "'RBRACE": [
+          -1,
+          224
+        ],
+        "'SPY": [
+          -1,
+          224
         ],
         "'PARENSPACE": [
-          106
+          -1,
+          224
         ],
-        "full-expr": [
-          254
+        "'INT": [
+          -1,
+          224
         ],
-        "switch-expr": [
-          37
+        "'LONG": [
+          -1,
+          224
+        ],
+        "'DOUBLE": [
+          -1,
+          224
+        ],
+        "'FLOAT": [
+          -1,
+          224
+        ],
+        "'BOOLEAN": [
+          -1,
+          224
+        ],
+        "'VOID": [
+          -1,
+          224
+        ],
+        "'DATA": [
+          -1,
+          224
+        ],
+        "'IF": [
+          -1,
+          224
+        ],
+        "'FOR": [
+          -1,
+          224
+        ],
+        "'RETURN": [
+          -1,
+          224
+        ],
+        "'VAR": [
+          -1,
+          224
+        ],
+        "'REC": [
+          -1,
+          224
+        ],
+        "'ATCHECK": [
+          -1,
+          224
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          224
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          224
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          224
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          224
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          224
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          224
         ],
         "'SWITCH": [
-          38
+          -1,
+          224
         ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
+        "'YIELD": [
+          -1,
+          224
         ],
         "'DASH": [
-          42
+          -1,
+          224
         ],
         "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
+          -1,
+          224
         ],
         "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
+          -1,
+          224
         ],
         "'NUMBER": [
-          47
+          -1,
+          224
         ],
         "'TRUE": [
-          48
+          -1,
+          224
         ],
         "'FALSE": [
-          49
+          -1,
+          224
         ],
         "'NULL": [
-          50
+          -1,
+          224
         ],
         "'PARENAFTERBRACE": [
-          51
+          -1,
+          224
         ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
+        "'BLOCK": [
+          -1,
+          224
         ],
         "'TABLE": [
-          58
+          -1,
+          224
         ],
         "'ASK": [
-          59
+          -1,
+          224
         ],
         "'NEW": [
-          60
+          -1,
+          224
+        ]
+      },
+      {
+        "$": [
+          -1,
+          226
+        ],
+        "'NAME": [
+          -1,
+          226
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          226
+        ],
+        "'STRING": [
+          -1,
+          226
+        ],
+        "'LBRACE": [
+          -1,
+          226
+        ],
+        "'RBRACE": [
+          -1,
+          226
+        ],
+        "'SPY": [
+          -1,
+          226
+        ],
+        "'PARENSPACE": [
+          -1,
+          226
+        ],
+        "'INT": [
+          -1,
+          226
+        ],
+        "'LONG": [
+          -1,
+          226
+        ],
+        "'DOUBLE": [
+          -1,
+          226
+        ],
+        "'FLOAT": [
+          -1,
+          226
+        ],
+        "'BOOLEAN": [
+          -1,
+          226
+        ],
+        "'VOID": [
+          -1,
+          226
+        ],
+        "'DATA": [
+          -1,
+          226
+        ],
+        "'IF": [
+          -1,
+          226
+        ],
+        "'FOR": [
+          -1,
+          226
+        ],
+        "'RETURN": [
+          -1,
+          226
+        ],
+        "'VAR": [
+          -1,
+          226
+        ],
+        "'REC": [
+          -1,
+          226
+        ],
+        "'ATCHECK": [
+          -1,
+          226
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          226
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          226
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          226
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          226
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          226
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          226
+        ],
+        "'SWITCH": [
+          -1,
+          226
+        ],
+        "'YIELD": [
+          -1,
+          226
+        ],
+        "'DASH": [
+          -1,
+          226
+        ],
+        "'BANG": [
+          -1,
+          226
+        ],
+        "'LBRACK": [
+          -1,
+          226
+        ],
+        "'NUMBER": [
+          -1,
+          226
+        ],
+        "'TRUE": [
+          -1,
+          226
+        ],
+        "'FALSE": [
+          -1,
+          226
+        ],
+        "'NULL": [
+          -1,
+          226
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          226
+        ],
+        "'BLOCK": [
+          -1,
+          226
+        ],
+        "'TABLE": [
+          -1,
+          226
+        ],
+        "'ASK": [
+          -1,
+          226
+        ],
+        "'NEW": [
+          -1,
+          226
         ]
       },
       {
         "'NAME": [
-          67
+          69
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          69
+          71
         ],
         "'INT": [
           26
@@ -19794,11 +20293,399 @@ function(E) {
           31
         ],
         "lambda-param": [
-          255
+          256
         ]
       },
       {
         "'RPAREN": [
+          -1,
+          228
+        ],
+        "'COMMA": [
+          -1,
+          228
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          257
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'RBRACE": [
+          -1,
+          230
+        ],
+        "'COMMA": [
+          -1,
+          230
+        ]
+      },
+      {
+        "$": [
+          -1,
+          232
+        ],
+        "'NAME": [
+          -1,
+          232
+        ],
+        "'SEMI": [
+          -1,
+          232
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          232
+        ],
+        "'STRING": [
+          -1,
+          232
+        ],
+        "'RPAREN": [
+          -1,
+          232
+        ],
+        "'LBRACE": [
+          -1,
+          232
+        ],
+        "'RBRACE": [
+          -1,
+          232
+        ],
+        "'SPY": [
+          -1,
+          232
+        ],
+        "'PARENSPACE": [
+          -1,
+          232
+        ],
+        "'COMMA": [
+          -1,
+          232
+        ],
+        "'INT": [
+          -1,
+          232
+        ],
+        "'LONG": [
+          -1,
+          232
+        ],
+        "'DOUBLE": [
+          -1,
+          232
+        ],
+        "'FLOAT": [
+          -1,
+          232
+        ],
+        "'BOOLEAN": [
+          -1,
+          232
+        ],
+        "'VOID": [
+          -1,
+          232
+        ],
+        "'LT": [
+          -1,
+          232
+        ],
+        "'GT": [
+          -1,
+          232
+        ],
+        "'THINARROW": [
+          -1,
+          232
+        ],
+        "'DATA": [
+          -1,
+          232
+        ],
+        "'IF": [
+          -1,
+          232
+        ],
+        "'FOR": [
+          -1,
+          232
+        ],
+        "'RETURN": [
+          -1,
+          232
+        ],
+        "'VAR": [
+          -1,
+          232
+        ],
+        "'REC": [
+          -1,
+          232
+        ],
+        "'ATCHECK": [
+          -1,
+          232
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          232
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          232
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          232
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          232
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          232
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          232
+        ],
+        "'IS": [
+          -1,
+          232
+        ],
+        "'ISNOT": [
+          -1,
+          232
+        ],
+        "'SATISFIES": [
+          -1,
+          232
+        ],
+        "'RAISES": [
+          -1,
+          232
+        ],
+        "'SWITCH": [
+          -1,
+          232
+        ],
+        "'CASE": [
+          -1,
+          232
+        ],
+        "'DEFAULT": [
+          -1,
+          232
+        ],
+        "'YIELD": [
+          -1,
+          232
+        ],
+        "'PLUS": [
+          -1,
+          232
+        ],
+        "'DASH": [
+          -1,
+          232
+        ],
+        "'TIMES": [
+          -1,
+          232
+        ],
+        "'SLASH": [
+          -1,
+          232
+        ],
+        "'PERCENT": [
+          -1,
+          232
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          232
+        ],
+        "'NEQ": [
+          -1,
+          232
+        ],
+        "'LEQ": [
+          -1,
+          232
+        ],
+        "'GEQ": [
+          -1,
+          232
+        ],
+        "'AND": [
+          -1,
+          232
+        ],
+        "'OR": [
+          -1,
+          232
+        ],
+        "'BANG": [
+          -1,
+          232
+        ],
+        "'DOT": [
+          -1,
+          232
+        ],
+        "'LBRACK": [
+          -1,
+          232
+        ],
+        "'RBRACK": [
+          -1,
+          232
+        ],
+        "'NUMBER": [
+          -1,
+          232
+        ],
+        "'TRUE": [
+          -1,
+          232
+        ],
+        "'FALSE": [
+          -1,
+          232
+        ],
+        "'NULL": [
+          -1,
+          232
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          232
+        ],
+        "'BLOCK": [
+          -1,
+          232
+        ],
+        "'TABLE": [
+          -1,
+          232
+        ],
+        "'ASK": [
+          -1,
+          232
+        ],
+        "'NEW": [
+          -1,
+          232
+        ]
+      },
+      {
+        "'NAME": [
+          75
+        ],
+        "record-field": [
+          258
+        ]
+      },
+      {
+        "'RBRACE": [
           -1,
           234
         ],
@@ -19809,274 +20696,463 @@ function(E) {
       },
       {
         "'NAME": [
-          256
+          91
+        ],
+        "'PARENSPACE": [
+          70
+        ],
+        "type-ann": [
+          259
+        ],
+        "'INT": [
+          26
+        ],
+        "'LONG": [
+          27
+        ],
+        "'DOUBLE": [
+          28
+        ],
+        "'FLOAT": [
+          29
+        ],
+        "'BOOLEAN": [
+          30
+        ],
+        "'VOID": [
+          31
         ]
       },
       {
-        "'RPAREN": [
-          257
-        ]
-      },
-      {
-        "'RPAREN": [
+        "'COMMA": [
+          -1,
+          236
+        ],
+        "'THINARROW": [
           -1,
           236
         ]
       },
       {
-        "fun-decl_I3_I1*": [
-          258
+        "'RPAREN": [
+          260
+        ]
+      },
+      {
+        "'NAME": [
+          98
         ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          261
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'NAME": [
+          69
+        ],
+        "'PARENSPACE": [
+          70
+        ],
+        "type-ann": [
+          71
+        ],
+        "'INT": [
+          26
+        ],
+        "'LONG": [
+          27
+        ],
+        "'DOUBLE": [
+          28
+        ],
+        "'FLOAT": [
+          29
+        ],
+        "'BOOLEAN": [
+          30
+        ],
+        "'VOID": [
+          31
+        ],
+        "lambda-param": [
+          262
+        ]
+      },
+      {
         "'RPAREN": [
           -1,
-          238,
-          240
+          238
         ],
         "'COMMA": [
           -1,
+          238
+        ]
+      },
+      {
+        "'NAME": [
+          263
+        ]
+      },
+      {
+        "'RPAREN": [
+          264
+        ]
+      },
+      {
+        "'RPAREN": [
+          -1,
           240
         ]
       },
       {
-        "'SEMI": [
-          259
+        "fun-decl_I3_I1*": [
+          265
         ],
-        "let-stmt_I4?": [
-          260
-        ],
-        "let-stmt_I4": [
-          261
-        ],
-        "$": [
+        "'RPAREN": [
           -1,
           242,
           244
         ],
-        "'NAME": [
+        "'COMMA": [
           -1,
-          242,
-          244
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          242,
-          244
-        ],
-        "'STRING": [
-          -1,
-          242,
-          244
-        ],
-        "'LBRACE": [
-          -1,
-          242,
-          244
-        ],
-        "'RBRACE": [
-          -1,
-          242,
-          244
-        ],
-        "'SPY": [
-          -1,
-          242,
-          244
-        ],
-        "'PARENSPACE": [
-          -1,
-          242,
-          244
-        ],
-        "'INT": [
-          -1,
-          242,
-          244
-        ],
-        "'LONG": [
-          -1,
-          242,
-          244
-        ],
-        "'DOUBLE": [
-          -1,
-          242,
-          244
-        ],
-        "'FLOAT": [
-          -1,
-          242,
-          244
-        ],
-        "'BOOLEAN": [
-          -1,
-          242,
-          244
-        ],
-        "'VOID": [
-          -1,
-          242,
-          244
-        ],
-        "'DATA": [
-          -1,
-          242,
-          244
-        ],
-        "'IF": [
-          -1,
-          242,
-          244
-        ],
-        "'FOR": [
-          -1,
-          242,
-          244
-        ],
-        "'RETURN": [
-          -1,
-          242,
-          244
-        ],
-        "'VAR": [
-          -1,
-          242,
-          244
-        ],
-        "'REC": [
-          -1,
-          242,
-          244
-        ],
-        "'ATCHECK": [
-          -1,
-          242,
-          244
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          242,
-          244
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          242,
-          244
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          242,
-          244
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          242,
-          244
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          242,
-          244
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          242,
-          244
-        ],
-        "'SWITCH": [
-          -1,
-          242,
-          244
-        ],
-        "'YIELD": [
-          -1,
-          242,
-          244
-        ],
-        "'DASH": [
-          -1,
-          242,
-          244
-        ],
-        "'BANG": [
-          -1,
-          242,
-          244
-        ],
-        "'LBRACK": [
-          -1,
-          242,
-          244
-        ],
-        "'NUMBER": [
-          -1,
-          242,
-          244
-        ],
-        "'TRUE": [
-          -1,
-          242,
-          244
-        ],
-        "'FALSE": [
-          -1,
-          242,
-          244
-        ],
-        "'NULL": [
-          -1,
-          242,
-          244
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          242,
-          244
-        ],
-        "'TABLE": [
-          -1,
-          242,
-          244
-        ],
-        "'ASK": [
-          -1,
-          242,
-          244
-        ],
-        "'NEW": [
-          -1,
-          242,
           244
         ]
       },
       {
-        "'PARENNOSPACE": [
-          262
-        ],
         "'SEMI": [
+          266
+        ],
+        "let-stmt_I4?": [
+          267
+        ],
+        "let-stmt_I4": [
+          268
+        ],
+        "$": [
           -1,
-          246
+          246,
+          248
+        ],
+        "'NAME": [
+          -1,
+          246,
+          248
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          246,
+          248
+        ],
+        "'STRING": [
+          -1,
+          246,
+          248
+        ],
+        "'LBRACE": [
+          -1,
+          246,
+          248
         ],
         "'RBRACE": [
           -1,
-          246
+          246,
+          248
+        ],
+        "'SPY": [
+          -1,
+          246,
+          248
+        ],
+        "'PARENSPACE": [
+          -1,
+          246,
+          248
+        ],
+        "'INT": [
+          -1,
+          246,
+          248
+        ],
+        "'LONG": [
+          -1,
+          246,
+          248
+        ],
+        "'DOUBLE": [
+          -1,
+          246,
+          248
+        ],
+        "'FLOAT": [
+          -1,
+          246,
+          248
+        ],
+        "'BOOLEAN": [
+          -1,
+          246,
+          248
+        ],
+        "'VOID": [
+          -1,
+          246,
+          248
+        ],
+        "'DATA": [
+          -1,
+          246,
+          248
+        ],
+        "'IF": [
+          -1,
+          246,
+          248
+        ],
+        "'FOR": [
+          -1,
+          246,
+          248
+        ],
+        "'RETURN": [
+          -1,
+          246,
+          248
+        ],
+        "'VAR": [
+          -1,
+          246,
+          248
+        ],
+        "'REC": [
+          -1,
+          246,
+          248
+        ],
+        "'ATCHECK": [
+          -1,
+          246,
+          248
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          246,
+          248
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          246,
+          248
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          246,
+          248
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          246,
+          248
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          246,
+          248
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          246,
+          248
+        ],
+        "'SWITCH": [
+          -1,
+          246,
+          248
+        ],
+        "'YIELD": [
+          -1,
+          246,
+          248
+        ],
+        "'DASH": [
+          -1,
+          246,
+          248
+        ],
+        "'BANG": [
+          -1,
+          246,
+          248
+        ],
+        "'LBRACK": [
+          -1,
+          246,
+          248
+        ],
+        "'NUMBER": [
+          -1,
+          246,
+          248
+        ],
+        "'TRUE": [
+          -1,
+          246,
+          248
+        ],
+        "'FALSE": [
+          -1,
+          246,
+          248
+        ],
+        "'NULL": [
+          -1,
+          246,
+          248
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          246,
+          248
+        ],
+        "'BLOCK": [
+          -1,
+          246,
+          248
+        ],
+        "'TABLE": [
+          -1,
+          246,
+          248
+        ],
+        "'ASK": [
+          -1,
+          246,
+          248
+        ],
+        "'NEW": [
+          -1,
+          246,
+          248
+        ]
+      },
+      {
+        "'PARENNOSPACE": [
+          269
+        ],
+        "'SEMI": [
+          -1,
+          250
+        ],
+        "'RBRACE": [
+          -1,
+          250
         ]
       },
       {
         "data-decl_I4*": [
-          263
+          270
         ],
         "'SEMI": [
           -1,
-          248
+          252
         ],
         "'RBRACE": [
           -1,
-          248
+          252
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -20088,10 +21164,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          264
+          271
         ],
         "switch-expr": [
           37
@@ -20156,19 +21232,25 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -20180,10 +21262,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          265
+          272
         ],
         "switch-expr": [
           37
@@ -20248,330 +21330,20 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          250
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          250
-        ],
-        "'STRING": [
-          -1,
-          250
-        ],
-        "'LBRACE": [
-          -1,
-          250
-        ],
-        "'RBRACE": [
-          -1,
-          250
-        ],
-        "'SPY": [
-          -1,
-          250
-        ],
-        "'PARENSPACE": [
-          -1,
-          250
-        ],
-        "'INT": [
-          -1,
-          250
-        ],
-        "'LONG": [
-          -1,
-          250
-        ],
-        "'DOUBLE": [
-          -1,
-          250
-        ],
-        "'FLOAT": [
-          -1,
-          250
-        ],
-        "'BOOLEAN": [
-          -1,
-          250
-        ],
-        "'VOID": [
-          -1,
-          250
-        ],
-        "'DATA": [
-          -1,
-          250
-        ],
-        "'IF": [
-          -1,
-          250
-        ],
-        "'FOR": [
-          -1,
-          250
-        ],
-        "'RETURN": [
-          -1,
-          250
-        ],
-        "'VAR": [
-          -1,
-          250
-        ],
-        "'REC": [
-          -1,
-          250
-        ],
-        "'ATCHECK": [
-          -1,
-          250
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          250
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          250
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          250
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          250
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          250
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          250
-        ],
-        "'SWITCH": [
-          -1,
-          250
-        ],
-        "'YIELD": [
-          -1,
-          250
-        ],
-        "'DASH": [
-          -1,
-          250
-        ],
-        "'BANG": [
-          -1,
-          250
-        ],
-        "'LBRACK": [
-          -1,
-          250
-        ],
-        "'NUMBER": [
-          -1,
-          250
-        ],
-        "'TRUE": [
-          -1,
-          250
-        ],
-        "'FALSE": [
-          -1,
-          250
-        ],
-        "'NULL": [
-          -1,
-          250
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          250
-        ],
-        "'TABLE": [
-          -1,
-          250
         ],
         "'ASK": [
-          -1,
-          250
+          61
         ],
         "'NEW": [
-          -1,
-          250
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          252
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          252
-        ],
-        "'STRING": [
-          -1,
-          252
-        ],
-        "'LBRACE": [
-          -1,
-          252
-        ],
-        "'RBRACE": [
-          -1,
-          252
-        ],
-        "'SPY": [
-          -1,
-          252
-        ],
-        "'PARENSPACE": [
-          -1,
-          252
-        ],
-        "'INT": [
-          -1,
-          252
-        ],
-        "'LONG": [
-          -1,
-          252
-        ],
-        "'DOUBLE": [
-          -1,
-          252
-        ],
-        "'FLOAT": [
-          -1,
-          252
-        ],
-        "'BOOLEAN": [
-          -1,
-          252
-        ],
-        "'VOID": [
-          -1,
-          252
-        ],
-        "'DATA": [
-          -1,
-          252
-        ],
-        "'IF": [
-          -1,
-          252
-        ],
-        "'FOR": [
-          -1,
-          252
-        ],
-        "'RETURN": [
-          -1,
-          252
-        ],
-        "'VAR": [
-          -1,
-          252
-        ],
-        "'REC": [
-          -1,
-          252
-        ],
-        "'ATCHECK": [
-          -1,
-          252
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          252
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          252
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          252
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          252
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          252
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          252
-        ],
-        "'SWITCH": [
-          -1,
-          252
-        ],
-        "'YIELD": [
-          -1,
-          252
-        ],
-        "'DASH": [
-          -1,
-          252
-        ],
-        "'BANG": [
-          -1,
-          252
-        ],
-        "'LBRACK": [
-          -1,
-          252
-        ],
-        "'NUMBER": [
-          -1,
-          252
-        ],
-        "'TRUE": [
-          -1,
-          252
-        ],
-        "'FALSE": [
-          -1,
-          252
-        ],
-        "'NULL": [
-          -1,
-          252
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          252
-        ],
-        "'TABLE": [
-          -1,
-          252
-        ],
-        "'ASK": [
-          -1,
-          252
-        ],
-        "'NEW": [
-          -1,
-          252
+          62
         ]
       },
       {
@@ -20716,6 +21488,10 @@ function(E) {
           254
         ],
         "'PARENAFTERBRACE": [
+          -1,
+          254
+        ],
+        "'BLOCK": [
           -1,
           254
         ],
@@ -20877,6 +21653,10 @@ function(E) {
           -1,
           256
         ],
+        "'BLOCK": [
+          -1,
+          256
+        ],
         "'TABLE": [
           -1,
           256
@@ -21035,6 +21815,10 @@ function(E) {
           -1,
           258
         ],
+        "'BLOCK": [
+          -1,
+          258
+        ],
         "'TABLE": [
           -1,
           258
@@ -21193,6 +21977,10 @@ function(E) {
           -1,
           260
         ],
+        "'BLOCK": [
+          -1,
+          260
+        ],
         "'TABLE": [
           -1,
           260
@@ -21351,6 +22139,10 @@ function(E) {
           -1,
           262
         ],
+        "'BLOCK": [
+          -1,
+          262
+        ],
         "'TABLE": [
           -1,
           262
@@ -21509,6 +22301,10 @@ function(E) {
           -1,
           264
         ],
+        "'BLOCK": [
+          -1,
+          264
+        ],
         "'TABLE": [
           -1,
           264
@@ -21520,329 +22316,337 @@ function(E) {
         "'NEW": [
           -1,
           264
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          266
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          266
+        ],
+        "'STRING": [
+          -1,
+          266
+        ],
+        "'LBRACE": [
+          -1,
+          266
+        ],
+        "'RBRACE": [
+          -1,
+          266
+        ],
+        "'SPY": [
+          -1,
+          266
+        ],
+        "'PARENSPACE": [
+          -1,
+          266
+        ],
+        "'INT": [
+          -1,
+          266
+        ],
+        "'LONG": [
+          -1,
+          266
+        ],
+        "'DOUBLE": [
+          -1,
+          266
+        ],
+        "'FLOAT": [
+          -1,
+          266
+        ],
+        "'BOOLEAN": [
+          -1,
+          266
+        ],
+        "'VOID": [
+          -1,
+          266
+        ],
+        "'DATA": [
+          -1,
+          266
+        ],
+        "'IF": [
+          -1,
+          266
+        ],
+        "'FOR": [
+          -1,
+          266
+        ],
+        "'RETURN": [
+          -1,
+          266
+        ],
+        "'VAR": [
+          -1,
+          266
+        ],
+        "'REC": [
+          -1,
+          266
+        ],
+        "'ATCHECK": [
+          -1,
+          266
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          266
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          266
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          266
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          266
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          266
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          266
+        ],
+        "'SWITCH": [
+          -1,
+          266
+        ],
+        "'YIELD": [
+          -1,
+          266
+        ],
+        "'DASH": [
+          -1,
+          266
+        ],
+        "'BANG": [
+          -1,
+          266
+        ],
+        "'LBRACK": [
+          -1,
+          266
+        ],
+        "'NUMBER": [
+          -1,
+          266
+        ],
+        "'TRUE": [
+          -1,
+          266
+        ],
+        "'FALSE": [
+          -1,
+          266
+        ],
+        "'NULL": [
+          -1,
+          266
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          266
+        ],
+        "'BLOCK": [
+          -1,
+          266
+        ],
+        "'TABLE": [
+          -1,
+          266
+        ],
+        "'ASK": [
+          -1,
+          266
+        ],
+        "'NEW": [
+          -1,
+          266
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          268
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          268
+        ],
+        "'STRING": [
+          -1,
+          268
+        ],
+        "'LBRACE": [
+          -1,
+          268
+        ],
+        "'RBRACE": [
+          -1,
+          268
+        ],
+        "'SPY": [
+          -1,
+          268
+        ],
+        "'PARENSPACE": [
+          -1,
+          268
+        ],
+        "'INT": [
+          -1,
+          268
+        ],
+        "'LONG": [
+          -1,
+          268
+        ],
+        "'DOUBLE": [
+          -1,
+          268
+        ],
+        "'FLOAT": [
+          -1,
+          268
+        ],
+        "'BOOLEAN": [
+          -1,
+          268
+        ],
+        "'VOID": [
+          -1,
+          268
+        ],
+        "'DATA": [
+          -1,
+          268
+        ],
+        "'IF": [
+          -1,
+          268
+        ],
+        "'FOR": [
+          -1,
+          268
+        ],
+        "'RETURN": [
+          -1,
+          268
+        ],
+        "'VAR": [
+          -1,
+          268
+        ],
+        "'REC": [
+          -1,
+          268
+        ],
+        "'ATCHECK": [
+          -1,
+          268
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          268
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          268
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          268
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          268
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          268
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          268
+        ],
+        "'SWITCH": [
+          -1,
+          268
+        ],
+        "'YIELD": [
+          -1,
+          268
+        ],
+        "'DASH": [
+          -1,
+          268
+        ],
+        "'BANG": [
+          -1,
+          268
+        ],
+        "'LBRACK": [
+          -1,
+          268
+        ],
+        "'NUMBER": [
+          -1,
+          268
+        ],
+        "'TRUE": [
+          -1,
+          268
+        ],
+        "'FALSE": [
+          -1,
+          268
+        ],
+        "'NULL": [
+          -1,
+          268
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          268
+        ],
+        "'BLOCK": [
+          -1,
+          268
+        ],
+        "'TABLE": [
+          -1,
+          268
+        ],
+        "'ASK": [
+          -1,
+          268
+        ],
+        "'NEW": [
+          -1,
+          268
         ]
       },
       {
         "$": [
           -1,
-          266
+          270
         ],
-        "'NAME": [
-          -1,
-          266
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          266
-        ],
-        "'STRING": [
-          -1,
-          266
-        ],
-        "'LBRACE": [
-          -1,
-          266
-        ],
-        "'RBRACE": [
-          -1,
-          266
-        ],
-        "'SPY": [
-          -1,
-          266
-        ],
-        "'PARENSPACE": [
-          -1,
-          266
-        ],
-        "'INT": [
-          -1,
-          266
-        ],
-        "'LONG": [
-          -1,
-          266
-        ],
-        "'DOUBLE": [
-          -1,
-          266
-        ],
-        "'FLOAT": [
-          -1,
-          266
-        ],
-        "'BOOLEAN": [
-          -1,
-          266
-        ],
-        "'VOID": [
-          -1,
-          266
-        ],
-        "'DATA": [
-          -1,
-          266
-        ],
-        "'IF": [
-          -1,
-          266
-        ],
-        "'FOR": [
-          -1,
-          266
-        ],
-        "'RETURN": [
-          -1,
-          266
-        ],
-        "'VAR": [
-          -1,
-          266
-        ],
-        "'REC": [
-          -1,
-          266
-        ],
-        "'ATCHECK": [
-          -1,
-          266
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          266
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          266
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          266
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          266
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          266
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          266
-        ],
-        "'SWITCH": [
-          -1,
-          266
-        ],
-        "'YIELD": [
-          -1,
-          266
-        ],
-        "'DASH": [
-          -1,
-          266
-        ],
-        "'BANG": [
-          -1,
-          266
-        ],
-        "'LBRACK": [
-          -1,
-          266
-        ],
-        "'NUMBER": [
-          -1,
-          266
-        ],
-        "'TRUE": [
-          -1,
-          266
-        ],
-        "'FALSE": [
-          -1,
-          266
-        ],
-        "'NULL": [
-          -1,
-          266
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          266
-        ],
-        "'TABLE": [
-          -1,
-          266
-        ],
-        "'ASK": [
-          -1,
-          266
-        ],
-        "'NEW": [
-          -1,
-          266
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          268
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          268
-        ],
-        "'STRING": [
-          -1,
-          268
-        ],
-        "'LBRACE": [
-          -1,
-          268
-        ],
-        "'RBRACE": [
-          -1,
-          268
-        ],
-        "'SPY": [
-          -1,
-          268
-        ],
-        "'PARENSPACE": [
-          -1,
-          268
-        ],
-        "'INT": [
-          -1,
-          268
-        ],
-        "'LONG": [
-          -1,
-          268
-        ],
-        "'DOUBLE": [
-          -1,
-          268
-        ],
-        "'FLOAT": [
-          -1,
-          268
-        ],
-        "'BOOLEAN": [
-          -1,
-          268
-        ],
-        "'VOID": [
-          -1,
-          268
-        ],
-        "'DATA": [
-          -1,
-          268
-        ],
-        "'IF": [
-          -1,
-          268
-        ],
-        "'FOR": [
-          -1,
-          268
-        ],
-        "'RETURN": [
-          -1,
-          268
-        ],
-        "'VAR": [
-          -1,
-          268
-        ],
-        "'REC": [
-          -1,
-          268
-        ],
-        "'ATCHECK": [
-          -1,
-          268
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          268
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          268
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          268
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          268
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          268
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          268
-        ],
-        "'SWITCH": [
-          -1,
-          268
-        ],
-        "'YIELD": [
-          -1,
-          268
-        ],
-        "'DASH": [
-          -1,
-          268
-        ],
-        "'BANG": [
-          -1,
-          268
-        ],
-        "'LBRACK": [
-          -1,
-          268
-        ],
-        "'NUMBER": [
-          -1,
-          268
-        ],
-        "'TRUE": [
-          -1,
-          268
-        ],
-        "'FALSE": [
-          -1,
-          268
-        ],
-        "'NULL": [
-          -1,
-          268
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          268
-        ],
-        "'TABLE": [
-          -1,
-          268
-        ],
-        "'ASK": [
-          -1,
-          268
-        ],
-        "'NEW": [
-          -1,
-          268
-        ]
-      },
-      {
         "'NAME": [
           -1,
           270
@@ -21984,6 +22788,10 @@ function(E) {
           270
         ],
         "'PARENAFTERBRACE": [
+          -1,
+          270
+        ],
+        "'BLOCK": [
           -1,
           270
         ],
@@ -22145,6 +22953,10 @@ function(E) {
           -1,
           272
         ],
+        "'BLOCK": [
+          -1,
+          272
+        ],
         "'TABLE": [
           -1,
           272
@@ -22303,6 +23115,10 @@ function(E) {
           -1,
           274
         ],
+        "'BLOCK": [
+          -1,
+          274
+        ],
         "'TABLE": [
           -1,
           274
@@ -22461,6 +23277,10 @@ function(E) {
           -1,
           276
         ],
+        "'BLOCK": [
+          -1,
+          276
+        ],
         "'TABLE": [
           -1,
           276
@@ -22619,6 +23439,10 @@ function(E) {
           -1,
           278
         ],
+        "'BLOCK": [
+          -1,
+          278
+        ],
         "'TABLE": [
           -1,
           278
@@ -22630,11 +23454,6 @@ function(E) {
         "'NEW": [
           -1,
           278
-        ]
-      },
-      {
-        "'PARENSPACE": [
-          266
         ]
       },
       {
@@ -22782,6 +23601,10 @@ function(E) {
           -1,
           280
         ],
+        "'BLOCK": [
+          -1,
+          280
+        ],
         "'TABLE": [
           -1,
           280
@@ -22796,519 +23619,573 @@ function(E) {
         ]
       },
       {
+        "'NAME": [
+          -1,
+          282
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          282
+        ],
+        "'STRING": [
+          -1,
+          282
+        ],
+        "'LBRACE": [
+          -1,
+          282
+        ],
+        "'RBRACE": [
+          -1,
+          282
+        ],
+        "'SPY": [
+          -1,
+          282
+        ],
         "'PARENSPACE": [
-          267
+          -1,
+          282
+        ],
+        "'INT": [
+          -1,
+          282
+        ],
+        "'LONG": [
+          -1,
+          282
+        ],
+        "'DOUBLE": [
+          -1,
+          282
+        ],
+        "'FLOAT": [
+          -1,
+          282
+        ],
+        "'BOOLEAN": [
+          -1,
+          282
+        ],
+        "'VOID": [
+          -1,
+          282
+        ],
+        "'DATA": [
+          -1,
+          282
+        ],
+        "'IF": [
+          -1,
+          282
+        ],
+        "'FOR": [
+          -1,
+          282
+        ],
+        "'RETURN": [
+          -1,
+          282
+        ],
+        "'VAR": [
+          -1,
+          282
+        ],
+        "'REC": [
+          -1,
+          282
+        ],
+        "'ATCHECK": [
+          -1,
+          282
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          282
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          282
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          282
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          282
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          282
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          282
+        ],
+        "'SWITCH": [
+          -1,
+          282
+        ],
+        "'YIELD": [
+          -1,
+          282
+        ],
+        "'DASH": [
+          -1,
+          282
+        ],
+        "'BANG": [
+          -1,
+          282
+        ],
+        "'LBRACK": [
+          -1,
+          282
+        ],
+        "'NUMBER": [
+          -1,
+          282
+        ],
+        "'TRUE": [
+          -1,
+          282
+        ],
+        "'FALSE": [
+          -1,
+          282
+        ],
+        "'NULL": [
+          -1,
+          282
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          282
+        ],
+        "'BLOCK": [
+          -1,
+          282
+        ],
+        "'TABLE": [
+          -1,
+          282
+        ],
+        "'ASK": [
+          -1,
+          282
+        ],
+        "'NEW": [
+          -1,
+          282
+        ]
+      },
+      {
+        "'PARENSPACE": [
+          273
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          284
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          284
+        ],
+        "'STRING": [
+          -1,
+          284
+        ],
+        "'LBRACE": [
+          -1,
+          284
+        ],
+        "'RBRACE": [
+          -1,
+          284
+        ],
+        "'SPY": [
+          -1,
+          284
+        ],
+        "'PARENSPACE": [
+          -1,
+          284
+        ],
+        "'INT": [
+          -1,
+          284
+        ],
+        "'LONG": [
+          -1,
+          284
+        ],
+        "'DOUBLE": [
+          -1,
+          284
+        ],
+        "'FLOAT": [
+          -1,
+          284
+        ],
+        "'BOOLEAN": [
+          -1,
+          284
+        ],
+        "'VOID": [
+          -1,
+          284
+        ],
+        "'DATA": [
+          -1,
+          284
+        ],
+        "'IF": [
+          -1,
+          284
+        ],
+        "'FOR": [
+          -1,
+          284
+        ],
+        "'RETURN": [
+          -1,
+          284
+        ],
+        "'VAR": [
+          -1,
+          284
+        ],
+        "'REC": [
+          -1,
+          284
+        ],
+        "'ATCHECK": [
+          -1,
+          284
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          284
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          284
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          284
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          284
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          284
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          284
+        ],
+        "'SWITCH": [
+          -1,
+          284
+        ],
+        "'YIELD": [
+          -1,
+          284
+        ],
+        "'DASH": [
+          -1,
+          284
+        ],
+        "'BANG": [
+          -1,
+          284
+        ],
+        "'LBRACK": [
+          -1,
+          284
+        ],
+        "'NUMBER": [
+          -1,
+          284
+        ],
+        "'TRUE": [
+          -1,
+          284
+        ],
+        "'FALSE": [
+          -1,
+          284
+        ],
+        "'NULL": [
+          -1,
+          284
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          284
+        ],
+        "'BLOCK": [
+          -1,
+          284
+        ],
+        "'TABLE": [
+          -1,
+          284
+        ],
+        "'ASK": [
+          -1,
+          284
+        ],
+        "'NEW": [
+          -1,
+          284
+        ]
+      },
+      {
+        "'PARENSPACE": [
+          274
         ]
       },
       {
         "'SEMI": [
-          86
-        ],
-        "expr-stmt_I1?": [
-          87
-        ],
-        "expr-stmt_I1": [
           88
         ],
+        "expr-stmt_I1?": [
+          89
+        ],
+        "expr-stmt_I1": [
+          90
+        ],
         "'IS": [
-          268
+          275
         ],
         "'ISNOT": [
-          269
+          276
         ],
         "'SATISFIES": [
-          270
+          277
         ],
         "'RAISES": [
-          271
-        ],
-        "'NAME": [
-          -1,
-          68,
-          70
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          68,
-          70
-        ],
-        "'STRING": [
-          -1,
-          68,
-          70
-        ],
-        "'LBRACE": [
-          -1,
-          68,
-          70
-        ],
-        "'RBRACE": [
-          -1,
-          68,
-          70
-        ],
-        "'SPY": [
-          -1,
-          68,
-          70
-        ],
-        "'PARENSPACE": [
-          -1,
-          68,
-          70
-        ],
-        "'INT": [
-          -1,
-          68,
-          70
-        ],
-        "'LONG": [
-          -1,
-          68,
-          70
-        ],
-        "'DOUBLE": [
-          -1,
-          68,
-          70
-        ],
-        "'FLOAT": [
-          -1,
-          68,
-          70
-        ],
-        "'BOOLEAN": [
-          -1,
-          68,
-          70
-        ],
-        "'VOID": [
-          -1,
-          68,
-          70
-        ],
-        "'DATA": [
-          -1,
-          68,
-          70
-        ],
-        "'IF": [
-          -1,
-          68,
-          70
-        ],
-        "'FOR": [
-          -1,
-          68,
-          70
-        ],
-        "'RETURN": [
-          -1,
-          68,
-          70
-        ],
-        "'VAR": [
-          -1,
-          68,
-          70
-        ],
-        "'REC": [
-          -1,
-          68,
-          70
-        ],
-        "'ATCHECK": [
-          -1,
-          68,
-          70
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          68,
-          70
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          68,
-          70
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          68,
-          70
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          68,
-          70
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          68,
-          70
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          68,
-          70
-        ],
-        "'SWITCH": [
-          -1,
-          68,
-          70
-        ],
-        "'YIELD": [
-          -1,
-          68,
-          70
-        ],
-        "'DASH": [
-          -1,
-          68,
-          70
-        ],
-        "'BANG": [
-          -1,
-          68,
-          70
-        ],
-        "'LBRACK": [
-          -1,
-          68,
-          70
-        ],
-        "'NUMBER": [
-          -1,
-          68,
-          70
-        ],
-        "'TRUE": [
-          -1,
-          68,
-          70
-        ],
-        "'FALSE": [
-          -1,
-          68,
-          70
-        ],
-        "'NULL": [
-          -1,
-          68,
-          70
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          68,
-          70
-        ],
-        "'TABLE": [
-          -1,
-          68,
-          70
-        ],
-        "'ASK": [
-          -1,
-          68,
-          70
-        ],
-        "'NEW": [
-          -1,
-          68,
-          70
-        ]
-      },
-      {
-        "'PARENSPACE": [
-          272
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'SEMI": [
-          273
-        ],
-        "'PARENNOSPACE": [
-          11
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          274
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          282
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          282
-        ],
-        "'STRING": [
-          -1,
-          282
-        ],
-        "'LBRACE": [
-          -1,
-          282
-        ],
-        "'RBRACE": [
-          -1,
-          282
-        ],
-        "'SPY": [
-          -1,
-          282
-        ],
-        "'PARENSPACE": [
-          -1,
-          282
-        ],
-        "'INT": [
-          -1,
-          282
-        ],
-        "'LONG": [
-          -1,
-          282
-        ],
-        "'DOUBLE": [
-          -1,
-          282
-        ],
-        "'FLOAT": [
-          -1,
-          282
-        ],
-        "'BOOLEAN": [
-          -1,
-          282
-        ],
-        "'VOID": [
-          -1,
-          282
-        ],
-        "'DATA": [
-          -1,
-          282
-        ],
-        "'IF": [
-          -1,
-          282
-        ],
-        "'FOR": [
-          -1,
-          282
-        ],
-        "'RETURN": [
-          -1,
-          282
-        ],
-        "'VAR": [
-          -1,
-          282
-        ],
-        "'REC": [
-          -1,
-          282
-        ],
-        "'ATCHECK": [
-          -1,
-          282
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          282
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          282
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          282
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          282
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          282
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          282
-        ],
-        "'SWITCH": [
-          -1,
-          282
-        ],
-        "'YIELD": [
-          -1,
-          282
-        ],
-        "'DASH": [
-          -1,
-          282
-        ],
-        "'BANG": [
-          -1,
-          282
-        ],
-        "'LBRACK": [
-          -1,
-          282
-        ],
-        "'NUMBER": [
-          -1,
-          282
-        ],
-        "'TRUE": [
-          -1,
-          282
-        ],
-        "'FALSE": [
-          -1,
-          282
-        ],
-        "'NULL": [
-          -1,
-          282
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          282
-        ],
-        "'TABLE": [
-          -1,
-          282
-        ],
-        "'ASK": [
-          -1,
-          282
-        ],
-        "'NEW": [
-          -1,
-          282
-        ]
-      },
-      {
-        "'PARENNOSPACE": [
-          275
-        ]
-      },
-      {
-        "'PARENNOSPACE": [
-          276
-        ]
-      },
-      {
-        "'PARENNOSPACE": [
-          277
-        ]
-      },
-      {
-        "'PARENNOSPACE": [
           278
+        ],
+        "'NAME": [
+          -1,
+          68,
+          70
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          68,
+          70
+        ],
+        "'STRING": [
+          -1,
+          68,
+          70
+        ],
+        "'LBRACE": [
+          -1,
+          68,
+          70
+        ],
+        "'RBRACE": [
+          -1,
+          68,
+          70
+        ],
+        "'SPY": [
+          -1,
+          68,
+          70
+        ],
+        "'PARENSPACE": [
+          -1,
+          68,
+          70
+        ],
+        "'INT": [
+          -1,
+          68,
+          70
+        ],
+        "'LONG": [
+          -1,
+          68,
+          70
+        ],
+        "'DOUBLE": [
+          -1,
+          68,
+          70
+        ],
+        "'FLOAT": [
+          -1,
+          68,
+          70
+        ],
+        "'BOOLEAN": [
+          -1,
+          68,
+          70
+        ],
+        "'VOID": [
+          -1,
+          68,
+          70
+        ],
+        "'DATA": [
+          -1,
+          68,
+          70
+        ],
+        "'IF": [
+          -1,
+          68,
+          70
+        ],
+        "'FOR": [
+          -1,
+          68,
+          70
+        ],
+        "'RETURN": [
+          -1,
+          68,
+          70
+        ],
+        "'VAR": [
+          -1,
+          68,
+          70
+        ],
+        "'REC": [
+          -1,
+          68,
+          70
+        ],
+        "'ATCHECK": [
+          -1,
+          68,
+          70
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          68,
+          70
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          68,
+          70
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          68,
+          70
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          68,
+          70
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          68,
+          70
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          68,
+          70
+        ],
+        "'SWITCH": [
+          -1,
+          68,
+          70
+        ],
+        "'YIELD": [
+          -1,
+          68,
+          70
+        ],
+        "'DASH": [
+          -1,
+          68,
+          70
+        ],
+        "'BANG": [
+          -1,
+          68,
+          70
+        ],
+        "'LBRACK": [
+          -1,
+          68,
+          70
+        ],
+        "'NUMBER": [
+          -1,
+          68,
+          70
+        ],
+        "'TRUE": [
+          -1,
+          68,
+          70
+        ],
+        "'FALSE": [
+          -1,
+          68,
+          70
+        ],
+        "'NULL": [
+          -1,
+          68,
+          70
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          68,
+          70
+        ],
+        "'BLOCK": [
+          -1,
+          68,
+          70
+        ],
+        "'TABLE": [
+          -1,
+          68,
+          70
+        ],
+        "'ASK": [
+          -1,
+          68,
+          70
+        ],
+        "'NEW": [
+          -1,
+          68,
+          70
         ]
       },
       {
-        "'PARENNOSPACE": [
+        "'PARENSPACE": [
           279
         ]
       },
       {
-        "'PARENNOSPACE": [
-          280
-        ]
-      },
-      {
         "'NAME": [
-          96
+          98
+        ],
+        "'SEMI": [
+          280
         ],
         "'PARENNOSPACE": [
           11
@@ -23320,7 +24197,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
           281
@@ -23388,862 +24265,217 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
-        "'RPAREN": [
+        "'NAME": [
+          -1,
+          286
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          286
+        ],
+        "'STRING": [
+          -1,
+          286
+        ],
+        "'LBRACE": [
+          -1,
+          286
+        ],
+        "'RBRACE": [
+          -1,
+          286
+        ],
+        "'SPY": [
+          -1,
+          286
+        ],
+        "'PARENSPACE": [
+          -1,
+          286
+        ],
+        "'INT": [
+          -1,
+          286
+        ],
+        "'LONG": [
+          -1,
+          286
+        ],
+        "'DOUBLE": [
+          -1,
+          286
+        ],
+        "'FLOAT": [
+          -1,
+          286
+        ],
+        "'BOOLEAN": [
+          -1,
+          286
+        ],
+        "'VOID": [
+          -1,
+          286
+        ],
+        "'DATA": [
+          -1,
+          286
+        ],
+        "'IF": [
+          -1,
+          286
+        ],
+        "'FOR": [
+          -1,
+          286
+        ],
+        "'RETURN": [
+          -1,
+          286
+        ],
+        "'VAR": [
+          -1,
+          286
+        ],
+        "'REC": [
+          -1,
+          286
+        ],
+        "'ATCHECK": [
+          -1,
+          286
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          286
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          286
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          286
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          286
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          286
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          286
+        ],
+        "'SWITCH": [
+          -1,
+          286
+        ],
+        "'YIELD": [
+          -1,
+          286
+        ],
+        "'DASH": [
+          -1,
+          286
+        ],
+        "'BANG": [
+          -1,
+          286
+        ],
+        "'LBRACK": [
+          -1,
+          286
+        ],
+        "'NUMBER": [
+          -1,
+          286
+        ],
+        "'TRUE": [
+          -1,
+          286
+        ],
+        "'FALSE": [
+          -1,
+          286
+        ],
+        "'NULL": [
+          -1,
+          286
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          286
+        ],
+        "'BLOCK": [
+          -1,
+          286
+        ],
+        "'TABLE": [
+          -1,
+          286
+        ],
+        "'ASK": [
+          -1,
+          286
+        ],
+        "'NEW": [
+          -1,
+          286
+        ]
+      },
+      {
+        "'PARENNOSPACE": [
           282
         ]
       },
       {
-        "'LBRACE": [
+        "'PARENNOSPACE": [
           283
         ]
       },
       {
-        "$": [
-          -1,
-          284
-        ],
-        "'NAME": [
-          -1,
-          284
-        ],
-        "'SEMI": [
-          -1,
-          284
-        ],
         "'PARENNOSPACE": [
-          -1,
-          284
-        ],
-        "'STRING": [
-          -1,
-          284
-        ],
-        "'RPAREN": [
-          -1,
-          284
-        ],
-        "'LBRACE": [
-          -1,
-          284
-        ],
-        "'RBRACE": [
-          -1,
-          284
-        ],
-        "'SPY": [
-          -1,
-          284
-        ],
-        "'PARENSPACE": [
-          -1,
-          284
-        ],
-        "'COMMA": [
-          -1,
-          284
-        ],
-        "'INT": [
-          -1,
-          284
-        ],
-        "'LONG": [
-          -1,
-          284
-        ],
-        "'DOUBLE": [
-          -1,
-          284
-        ],
-        "'FLOAT": [
-          -1,
-          284
-        ],
-        "'BOOLEAN": [
-          -1,
-          284
-        ],
-        "'VOID": [
-          -1,
-          284
-        ],
-        "'LT": [
-          -1,
-          284
-        ],
-        "'GT": [
-          -1,
-          284
-        ],
-        "'THINARROW": [
-          -1,
-          284
-        ],
-        "'DATA": [
-          -1,
-          284
-        ],
-        "'IF": [
-          -1,
-          284
-        ],
-        "'FOR": [
-          -1,
-          284
-        ],
-        "'RETURN": [
-          -1,
-          284
-        ],
-        "'VAR": [
-          -1,
-          284
-        ],
-        "'REC": [
-          -1,
-          284
-        ],
-        "'ATCHECK": [
-          -1,
-          284
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          284
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          284
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          284
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          284
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          284
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          284
-        ],
-        "'IS": [
-          -1,
-          284
-        ],
-        "'ISNOT": [
-          -1,
-          284
-        ],
-        "'SATISFIES": [
-          -1,
-          284
-        ],
-        "'RAISES": [
-          -1,
-          284
-        ],
-        "'SWITCH": [
-          -1,
-          284
-        ],
-        "'CASE": [
-          -1,
-          284
-        ],
-        "'DEFAULT": [
-          -1,
-          284
-        ],
-        "'YIELD": [
-          -1,
-          284
-        ],
-        "'PLUS": [
-          -1,
-          284
-        ],
-        "'DASH": [
-          -1,
-          284
-        ],
-        "'TIMES": [
-          -1,
-          284
-        ],
-        "'SLASH": [
-          -1,
-          284
-        ],
-        "'PERCENT": [
-          -1,
-          284
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          284
-        ],
-        "'NEQ": [
-          -1,
-          284
-        ],
-        "'LEQ": [
-          -1,
-          284
-        ],
-        "'GEQ": [
-          -1,
-          284
-        ],
-        "'AND": [
-          -1,
-          284
-        ],
-        "'OR": [
-          -1,
-          284
-        ],
-        "'BANG": [
-          -1,
-          284
-        ],
-        "'LBRACK": [
-          -1,
-          284
-        ],
-        "'RBRACK": [
-          -1,
-          284
-        ],
-        "'NUMBER": [
-          -1,
-          284
-        ],
-        "'TRUE": [
-          -1,
-          284
-        ],
-        "'FALSE": [
-          -1,
-          284
-        ],
-        "'NULL": [
-          -1,
-          284
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          284
-        ],
-        "'TABLE": [
-          -1,
-          284
-        ],
-        "'ASK": [
-          -1,
-          284
-        ],
-        "'NEW": [
-          -1,
           284
         ]
       },
       {
-        "'COMMA": [
-          284
-        ],
-        "app-or-access_A0_I2_I1": [
+        "'PARENNOSPACE": [
           285
-        ],
-        "'RPAREN": [
-          -1,
+        ]
+      },
+      {
+        "'PARENNOSPACE": [
           286
         ]
       },
       {
-        "$": [
-          -1,
-          288
-        ],
-        "'NAME": [
-          -1,
-          288
-        ],
-        "'SEMI": [
-          -1,
-          288
-        ],
         "'PARENNOSPACE": [
-          -1,
-          288
-        ],
-        "'STRING": [
-          -1,
-          288
-        ],
-        "'RPAREN": [
-          -1,
-          288
-        ],
-        "'LBRACE": [
-          -1,
-          288
-        ],
-        "'RBRACE": [
-          -1,
-          288
-        ],
-        "'SPY": [
-          -1,
-          288
-        ],
-        "'PARENSPACE": [
-          -1,
-          288
-        ],
-        "'COMMA": [
-          -1,
-          288
-        ],
-        "'INT": [
-          -1,
-          288
-        ],
-        "'LONG": [
-          -1,
-          288
-        ],
-        "'DOUBLE": [
-          -1,
-          288
-        ],
-        "'FLOAT": [
-          -1,
-          288
-        ],
-        "'BOOLEAN": [
-          -1,
-          288
-        ],
-        "'VOID": [
-          -1,
-          288
-        ],
-        "'LT": [
-          -1,
-          288
-        ],
-        "'GT": [
-          -1,
-          288
-        ],
-        "'THINARROW": [
-          -1,
-          288
-        ],
-        "'DATA": [
-          -1,
-          288
-        ],
-        "'IF": [
-          -1,
-          288
-        ],
-        "'FOR": [
-          -1,
-          288
-        ],
-        "'RETURN": [
-          -1,
-          288
-        ],
-        "'VAR": [
-          -1,
-          288
-        ],
-        "'REC": [
-          -1,
-          288
-        ],
-        "'ATCHECK": [
-          -1,
-          288
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          288
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          288
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          288
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          288
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          288
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          288
-        ],
-        "'IS": [
-          -1,
-          288
-        ],
-        "'ISNOT": [
-          -1,
-          288
-        ],
-        "'SATISFIES": [
-          -1,
-          288
-        ],
-        "'RAISES": [
-          -1,
-          288
-        ],
-        "'SWITCH": [
-          -1,
-          288
-        ],
-        "'CASE": [
-          -1,
-          288
-        ],
-        "'DEFAULT": [
-          -1,
-          288
-        ],
-        "'YIELD": [
-          -1,
-          288
-        ],
-        "'PLUS": [
-          -1,
-          288
-        ],
-        "'DASH": [
-          -1,
-          288
-        ],
-        "'TIMES": [
-          -1,
-          288
-        ],
-        "'SLASH": [
-          -1,
-          288
-        ],
-        "'PERCENT": [
-          -1,
-          288
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          288
-        ],
-        "'NEQ": [
-          -1,
-          288
-        ],
-        "'LEQ": [
-          -1,
-          288
-        ],
-        "'GEQ": [
-          -1,
-          288
-        ],
-        "'AND": [
-          -1,
-          288
-        ],
-        "'OR": [
-          -1,
-          288
-        ],
-        "'BANG": [
-          -1,
-          288
-        ],
-        "'DOT": [
-          -1,
-          288
-        ],
-        "'LBRACK": [
-          -1,
-          288
-        ],
-        "'RBRACK": [
-          -1,
-          288
-        ],
-        "'NUMBER": [
-          -1,
-          288
-        ],
-        "'TRUE": [
-          -1,
-          288
-        ],
-        "'FALSE": [
-          -1,
-          288
-        ],
-        "'NULL": [
-          -1,
-          288
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          288
-        ],
-        "'TABLE": [
-          -1,
-          288
-        ],
-        "'ASK": [
-          -1,
-          288
-        ],
-        "'NEW": [
-          -1,
-          288
-        ]
-      },
-      {
-        "$": [
-          -1,
-          290
-        ],
-        "'NAME": [
-          -1,
-          290
-        ],
-        "'SEMI": [
-          -1,
-          290
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          290
-        ],
-        "'STRING": [
-          -1,
-          290
-        ],
-        "'RPAREN": [
-          -1,
-          290
-        ],
-        "'LBRACE": [
-          -1,
-          290
-        ],
-        "'RBRACE": [
-          -1,
-          290
-        ],
-        "'SPY": [
-          -1,
-          290
-        ],
-        "'PARENSPACE": [
-          -1,
-          290
-        ],
-        "'COMMA": [
-          -1,
-          290
-        ],
-        "'INT": [
-          -1,
-          290
-        ],
-        "'LONG": [
-          -1,
-          290
-        ],
-        "'DOUBLE": [
-          -1,
-          290
-        ],
-        "'FLOAT": [
-          -1,
-          290
-        ],
-        "'BOOLEAN": [
-          -1,
-          290
-        ],
-        "'VOID": [
-          -1,
-          290
-        ],
-        "'LT": [
-          -1,
-          290
-        ],
-        "'GT": [
-          -1,
-          290
-        ],
-        "'THINARROW": [
-          -1,
-          290
-        ],
-        "'DATA": [
-          -1,
-          290
-        ],
-        "'IF": [
-          -1,
-          290
-        ],
-        "'FOR": [
-          -1,
-          290
-        ],
-        "'RETURN": [
-          -1,
-          290
-        ],
-        "'VAR": [
-          -1,
-          290
-        ],
-        "'REC": [
-          -1,
-          290
-        ],
-        "'ATCHECK": [
-          -1,
-          290
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          290
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          290
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          290
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          290
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          290
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          290
-        ],
-        "'IS": [
-          -1,
-          290
-        ],
-        "'ISNOT": [
-          -1,
-          290
-        ],
-        "'SATISFIES": [
-          -1,
-          290
-        ],
-        "'RAISES": [
-          -1,
-          290
-        ],
-        "'SWITCH": [
-          -1,
-          290
-        ],
-        "'CASE": [
-          -1,
-          290
-        ],
-        "'DEFAULT": [
-          -1,
-          290
-        ],
-        "'YIELD": [
-          -1,
-          290
-        ],
-        "'PLUS": [
-          -1,
-          290
-        ],
-        "'DASH": [
-          -1,
-          290
-        ],
-        "'TIMES": [
-          -1,
-          290
-        ],
-        "'SLASH": [
-          -1,
-          290
-        ],
-        "'PERCENT": [
-          -1,
-          290
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          290
-        ],
-        "'NEQ": [
-          -1,
-          290
-        ],
-        "'LEQ": [
-          -1,
-          290
-        ],
-        "'GEQ": [
-          -1,
-          290
-        ],
-        "'AND": [
-          -1,
-          290
-        ],
-        "'OR": [
-          -1,
-          290
-        ],
-        "'BANG": [
-          -1,
-          290
-        ],
-        "'DOT": [
-          -1,
-          290
-        ],
-        "'LBRACK": [
-          -1,
-          290
-        ],
-        "'RBRACK": [
-          -1,
-          290
-        ],
-        "'NUMBER": [
-          -1,
-          290
-        ],
-        "'TRUE": [
-          -1,
-          290
-        ],
-        "'FALSE": [
-          -1,
-          290
-        ],
-        "'NULL": [
-          -1,
-          290
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          290
-        ],
-        "'TABLE": [
-          -1,
-          290
-        ],
-        "'ASK": [
-          -1,
-          290
-        ],
-        "'NEW": [
-          -1,
-          290
-        ]
-      },
-      {
-        "construct-expr_A0_I3_I1*": [
-          286
-        ],
-        "'COMMA": [
-          -1,
-          292
-        ],
-        "'RBRACK": [
-          -1,
-          294,
-          292
-        ]
-      },
-      {
-        "'RBRACK": [
           287
         ]
       },
       {
-        "'RBRACK": [
-          -1,
-          296
-        ]
-      },
-      {
         "'NAME": [
-          288
-        ]
-      },
-      {
-        "'SEMI": [
-          -1,
-          298
-        ],
-        "'COMMA": [
-          -1,
-          298
-        ]
-      },
-      {
-        "'SEMI": [
-          289
-        ],
-        "'COMMA": [
-          290
-        ],
-        "table-expr_I3": [
-          291
-        ]
-      },
-      {
-        "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -24255,10 +24487,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          292
+          288
         ],
         "switch-expr": [
           37
@@ -24323,403 +24555,1913 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
-        "ask-expr_A0_I4*": [
-          293
+        "'RPAREN": [
+          289
+        ]
+      },
+      {
+        "'LBRACE": [
+          290
+        ]
+      },
+      {
+        "$": [
+          -1,
+          288
         ],
-        "ask-expr_A1_I4*": [
+        "'NAME": [
+          -1,
+          288
+        ],
+        "'SEMI": [
+          -1,
+          288
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          288
+        ],
+        "'STRING": [
+          -1,
+          288
+        ],
+        "'RPAREN": [
+          -1,
+          288
+        ],
+        "'LBRACE": [
+          -1,
+          288
+        ],
+        "'RBRACE": [
+          -1,
+          288
+        ],
+        "'SPY": [
+          -1,
+          288
+        ],
+        "'PARENSPACE": [
+          -1,
+          288
+        ],
+        "'COMMA": [
+          -1,
+          288
+        ],
+        "'INT": [
+          -1,
+          288
+        ],
+        "'LONG": [
+          -1,
+          288
+        ],
+        "'DOUBLE": [
+          -1,
+          288
+        ],
+        "'FLOAT": [
+          -1,
+          288
+        ],
+        "'BOOLEAN": [
+          -1,
+          288
+        ],
+        "'VOID": [
+          -1,
+          288
+        ],
+        "'LT": [
+          -1,
+          288
+        ],
+        "'GT": [
+          -1,
+          288
+        ],
+        "'THINARROW": [
+          -1,
+          288
+        ],
+        "'DATA": [
+          -1,
+          288
+        ],
+        "'IF": [
+          -1,
+          288
+        ],
+        "'FOR": [
+          -1,
+          288
+        ],
+        "'RETURN": [
+          -1,
+          288
+        ],
+        "'VAR": [
+          -1,
+          288
+        ],
+        "'REC": [
+          -1,
+          288
+        ],
+        "'ATCHECK": [
+          -1,
+          288
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          288
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          288
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          288
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          288
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          288
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          288
+        ],
+        "'IS": [
+          -1,
+          288
+        ],
+        "'ISNOT": [
+          -1,
+          288
+        ],
+        "'SATISFIES": [
+          -1,
+          288
+        ],
+        "'RAISES": [
+          -1,
+          288
+        ],
+        "'SWITCH": [
+          -1,
+          288
+        ],
+        "'CASE": [
+          -1,
+          288
+        ],
+        "'DEFAULT": [
+          -1,
+          288
+        ],
+        "'YIELD": [
+          -1,
+          288
+        ],
+        "'PLUS": [
+          -1,
+          288
+        ],
+        "'DASH": [
+          -1,
+          288
+        ],
+        "'TIMES": [
+          -1,
+          288
+        ],
+        "'SLASH": [
+          -1,
+          288
+        ],
+        "'PERCENT": [
+          -1,
+          288
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          288
+        ],
+        "'NEQ": [
+          -1,
+          288
+        ],
+        "'LEQ": [
+          -1,
+          288
+        ],
+        "'GEQ": [
+          -1,
+          288
+        ],
+        "'AND": [
+          -1,
+          288
+        ],
+        "'OR": [
+          -1,
+          288
+        ],
+        "'BANG": [
+          -1,
+          288
+        ],
+        "'LBRACK": [
+          -1,
+          288
+        ],
+        "'RBRACK": [
+          -1,
+          288
+        ],
+        "'NUMBER": [
+          -1,
+          288
+        ],
+        "'TRUE": [
+          -1,
+          288
+        ],
+        "'FALSE": [
+          -1,
+          288
+        ],
+        "'NULL": [
+          -1,
+          288
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          288
+        ],
+        "'BLOCK": [
+          -1,
+          288
+        ],
+        "'TABLE": [
+          -1,
+          288
+        ],
+        "'ASK": [
+          -1,
+          288
+        ],
+        "'NEW": [
+          -1,
+          288
+        ]
+      },
+      {
+        "'COMMA": [
+          291
+        ],
+        "app-or-access_A0_I2_I1": [
+          292
+        ],
+        "'RPAREN": [
+          -1,
+          290
+        ]
+      },
+      {
+        "$": [
+          -1,
+          292
+        ],
+        "'NAME": [
+          -1,
+          292
+        ],
+        "'SEMI": [
+          -1,
+          292
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          292
+        ],
+        "'STRING": [
+          -1,
+          292
+        ],
+        "'RPAREN": [
+          -1,
+          292
+        ],
+        "'LBRACE": [
+          -1,
+          292
+        ],
+        "'RBRACE": [
+          -1,
+          292
+        ],
+        "'SPY": [
+          -1,
+          292
+        ],
+        "'PARENSPACE": [
+          -1,
+          292
+        ],
+        "'COMMA": [
+          -1,
+          292
+        ],
+        "'INT": [
+          -1,
+          292
+        ],
+        "'LONG": [
+          -1,
+          292
+        ],
+        "'DOUBLE": [
+          -1,
+          292
+        ],
+        "'FLOAT": [
+          -1,
+          292
+        ],
+        "'BOOLEAN": [
+          -1,
+          292
+        ],
+        "'VOID": [
+          -1,
+          292
+        ],
+        "'LT": [
+          -1,
+          292
+        ],
+        "'GT": [
+          -1,
+          292
+        ],
+        "'THINARROW": [
+          -1,
+          292
+        ],
+        "'DATA": [
+          -1,
+          292
+        ],
+        "'IF": [
+          -1,
+          292
+        ],
+        "'FOR": [
+          -1,
+          292
+        ],
+        "'RETURN": [
+          -1,
+          292
+        ],
+        "'VAR": [
+          -1,
+          292
+        ],
+        "'REC": [
+          -1,
+          292
+        ],
+        "'ATCHECK": [
+          -1,
+          292
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          292
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          292
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          292
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          292
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          292
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          292
+        ],
+        "'IS": [
+          -1,
+          292
+        ],
+        "'ISNOT": [
+          -1,
+          292
+        ],
+        "'SATISFIES": [
+          -1,
+          292
+        ],
+        "'RAISES": [
+          -1,
+          292
+        ],
+        "'SWITCH": [
+          -1,
+          292
+        ],
+        "'CASE": [
+          -1,
+          292
+        ],
+        "'DEFAULT": [
+          -1,
+          292
+        ],
+        "'YIELD": [
+          -1,
+          292
+        ],
+        "'PLUS": [
+          -1,
+          292
+        ],
+        "'DASH": [
+          -1,
+          292
+        ],
+        "'TIMES": [
+          -1,
+          292
+        ],
+        "'SLASH": [
+          -1,
+          292
+        ],
+        "'PERCENT": [
+          -1,
+          292
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          292
+        ],
+        "'NEQ": [
+          -1,
+          292
+        ],
+        "'LEQ": [
+          -1,
+          292
+        ],
+        "'GEQ": [
+          -1,
+          292
+        ],
+        "'AND": [
+          -1,
+          292
+        ],
+        "'OR": [
+          -1,
+          292
+        ],
+        "'BANG": [
+          -1,
+          292
+        ],
+        "'DOT": [
+          -1,
+          292
+        ],
+        "'LBRACK": [
+          -1,
+          292
+        ],
+        "'RBRACK": [
+          -1,
+          292
+        ],
+        "'NUMBER": [
+          -1,
+          292
+        ],
+        "'TRUE": [
+          -1,
+          292
+        ],
+        "'FALSE": [
+          -1,
+          292
+        ],
+        "'NULL": [
+          -1,
+          292
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          292
+        ],
+        "'BLOCK": [
+          -1,
+          292
+        ],
+        "'TABLE": [
+          -1,
+          292
+        ],
+        "'ASK": [
+          -1,
+          292
+        ],
+        "'NEW": [
+          -1,
+          292
+        ]
+      },
+      {
+        "$": [
+          -1,
           294
         ],
         "'NAME": [
           -1,
-          300,
+          294
+        ],
+        "'SEMI": [
+          -1,
+          294
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          294
+        ],
+        "'STRING": [
+          -1,
+          294
+        ],
+        "'RPAREN": [
+          -1,
+          294
+        ],
+        "'LBRACE": [
+          -1,
+          294
+        ],
+        "'RBRACE": [
+          -1,
+          294
+        ],
+        "'SPY": [
+          -1,
+          294
+        ],
+        "'PARENSPACE": [
+          -1,
+          294
+        ],
+        "'COMMA": [
+          -1,
+          294
+        ],
+        "'INT": [
+          -1,
+          294
+        ],
+        "'LONG": [
+          -1,
+          294
+        ],
+        "'DOUBLE": [
+          -1,
+          294
+        ],
+        "'FLOAT": [
+          -1,
+          294
+        ],
+        "'BOOLEAN": [
+          -1,
+          294
+        ],
+        "'VOID": [
+          -1,
+          294
+        ],
+        "'LT": [
+          -1,
+          294
+        ],
+        "'GT": [
+          -1,
+          294
+        ],
+        "'THINARROW": [
+          -1,
+          294
+        ],
+        "'DATA": [
+          -1,
+          294
+        ],
+        "'IF": [
+          -1,
+          294
+        ],
+        "'FOR": [
+          -1,
+          294
+        ],
+        "'RETURN": [
+          -1,
+          294
+        ],
+        "'VAR": [
+          -1,
+          294
+        ],
+        "'REC": [
+          -1,
+          294
+        ],
+        "'ATCHECK": [
+          -1,
+          294
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          294
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          294
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          294
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          294
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          294
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          294
+        ],
+        "'IS": [
+          -1,
+          294
+        ],
+        "'ISNOT": [
+          -1,
+          294
+        ],
+        "'SATISFIES": [
+          -1,
+          294
+        ],
+        "'RAISES": [
+          -1,
+          294
+        ],
+        "'SWITCH": [
+          -1,
+          294
+        ],
+        "'CASE": [
+          -1,
+          294
+        ],
+        "'DEFAULT": [
+          -1,
+          294
+        ],
+        "'YIELD": [
+          -1,
+          294
+        ],
+        "'PLUS": [
+          -1,
+          294
+        ],
+        "'DASH": [
+          -1,
+          294
+        ],
+        "'TIMES": [
+          -1,
+          294
+        ],
+        "'SLASH": [
+          -1,
+          294
+        ],
+        "'PERCENT": [
+          -1,
+          294
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          294
+        ],
+        "'NEQ": [
+          -1,
+          294
+        ],
+        "'LEQ": [
+          -1,
+          294
+        ],
+        "'GEQ": [
+          -1,
+          294
+        ],
+        "'AND": [
+          -1,
+          294
+        ],
+        "'OR": [
+          -1,
+          294
+        ],
+        "'BANG": [
+          -1,
+          294
+        ],
+        "'DOT": [
+          -1,
+          294
+        ],
+        "'LBRACK": [
+          -1,
+          294
+        ],
+        "'RBRACK": [
+          -1,
+          294
+        ],
+        "'NUMBER": [
+          -1,
+          294
+        ],
+        "'TRUE": [
+          -1,
+          294
+        ],
+        "'FALSE": [
+          -1,
+          294
+        ],
+        "'NULL": [
+          -1,
+          294
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          294
+        ],
+        "'BLOCK": [
+          -1,
+          294
+        ],
+        "'TABLE": [
+          -1,
+          294
+        ],
+        "'ASK": [
+          -1,
+          294
+        ],
+        "'NEW": [
+          -1,
+          294
+        ]
+      },
+      {
+        "construct-expr_A0_I3_I1*": [
+          293
+        ],
+        "'COMMA": [
+          -1,
+          296
+        ],
+        "'RBRACK": [
+          -1,
+          298,
+          296
+        ]
+      },
+      {
+        "'RBRACK": [
+          294
+        ]
+      },
+      {
+        "'RBRACK": [
+          -1,
+          300
+        ]
+      },
+      {
+        "'NAME": [
+          295
+        ]
+      },
+      {
+        "$": [
+          -1,
+          302
+        ],
+        "'NAME": [
+          -1,
+          302
+        ],
+        "'SEMI": [
+          -1,
+          302
+        ],
+        "'PARENNOSPACE": [
+          -1,
           302
         ],
         "'STRING": [
           -1,
-          300,
+          302
+        ],
+        "'RPAREN": [
+          -1,
           302
         ],
         "'LBRACE": [
           -1,
-          300,
           302
         ],
         "'RBRACE": [
           -1,
-          300
+          302
+        ],
+        "'SPY": [
+          -1,
+          302
         ],
         "'PARENSPACE": [
           -1,
-          300,
+          302
+        ],
+        "'COMMA": [
+          -1,
+          302
+        ],
+        "'INT": [
+          -1,
+          302
+        ],
+        "'LONG": [
+          -1,
+          302
+        ],
+        "'DOUBLE": [
+          -1,
+          302
+        ],
+        "'FLOAT": [
+          -1,
+          302
+        ],
+        "'BOOLEAN": [
+          -1,
+          302
+        ],
+        "'VOID": [
+          -1,
+          302
+        ],
+        "'LT": [
+          -1,
+          302
+        ],
+        "'GT": [
+          -1,
+          302
+        ],
+        "'THINARROW": [
+          -1,
+          302
+        ],
+        "'DATA": [
+          -1,
+          302
+        ],
+        "'IF": [
+          -1,
+          302
+        ],
+        "'FOR": [
+          -1,
+          302
+        ],
+        "'RETURN": [
+          -1,
+          302
+        ],
+        "'VAR": [
+          -1,
+          302
+        ],
+        "'REC": [
+          -1,
+          302
+        ],
+        "'ATCHECK": [
+          -1,
+          302
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          302
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          302
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          302
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          302
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          302
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          302
+        ],
+        "'IS": [
+          -1,
+          302
+        ],
+        "'ISNOT": [
+          -1,
+          302
+        ],
+        "'SATISFIES": [
+          -1,
+          302
+        ],
+        "'RAISES": [
+          -1,
           302
         ],
         "'SWITCH": [
           -1,
-          300,
+          302
+        ],
+        "'CASE": [
+          -1,
+          302
+        ],
+        "'DEFAULT": [
+          -1,
+          302
+        ],
+        "'YIELD": [
+          -1,
+          302
+        ],
+        "'PLUS": [
+          -1,
           302
         ],
         "'DASH": [
           -1,
-          300,
+          302
+        ],
+        "'TIMES": [
+          -1,
+          302
+        ],
+        "'SLASH": [
+          -1,
+          302
+        ],
+        "'PERCENT": [
+          -1,
+          302
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          302
+        ],
+        "'NEQ": [
+          -1,
+          302
+        ],
+        "'LEQ": [
+          -1,
+          302
+        ],
+        "'GEQ": [
+          -1,
+          302
+        ],
+        "'AND": [
+          -1,
+          302
+        ],
+        "'OR": [
+          -1,
           302
         ],
         "'BANG": [
           -1,
-          300,
+          302
+        ],
+        "'DOT": [
+          -1,
           302
         ],
         "'LBRACK": [
           -1,
-          300,
+          302
+        ],
+        "'RBRACK": [
+          -1,
           302
         ],
         "'NUMBER": [
           -1,
-          300,
           302
         ],
         "'TRUE": [
           -1,
-          300,
           302
         ],
         "'FALSE": [
           -1,
-          300,
           302
         ],
         "'NULL": [
           -1,
-          300,
           302
         ],
         "'PARENAFTERBRACE": [
           -1,
-          300,
+          302
+        ],
+        "'BLOCK": [
+          -1,
           302
         ],
         "'TABLE": [
           -1,
-          300,
           302
         ],
         "'ASK": [
-          -1,
-          300,
-          302
-        ],
-        "'OTHERWISE": [
           -1,
           302
         ],
         "'NEW": [
           -1,
-          300,
           302
         ]
       },
       {
-        "new-expr_I3_I1*": [
-          295
-        ],
-        "'RPAREN": [
+        "'NAME": [
           -1,
-          304,
+          304
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          304
+        ],
+        "'STRING": [
+          -1,
+          304
+        ],
+        "'LBRACE": [
+          -1,
+          304
+        ],
+        "'RBRACE": [
+          -1,
+          304
+        ],
+        "'SPY": [
+          -1,
+          304
+        ],
+        "'PARENSPACE": [
+          -1,
+          304
+        ],
+        "'INT": [
+          -1,
+          304
+        ],
+        "'LONG": [
+          -1,
+          304
+        ],
+        "'DOUBLE": [
+          -1,
+          304
+        ],
+        "'FLOAT": [
+          -1,
+          304
+        ],
+        "'BOOLEAN": [
+          -1,
+          304
+        ],
+        "'VOID": [
+          -1,
+          304
+        ],
+        "'DATA": [
+          -1,
+          304
+        ],
+        "'IF": [
+          -1,
+          304
+        ],
+        "'FOR": [
+          -1,
+          304
+        ],
+        "'RETURN": [
+          -1,
+          304
+        ],
+        "'VAR": [
+          -1,
+          304
+        ],
+        "'REC": [
+          -1,
+          304
+        ],
+        "'ATCHECK": [
+          -1,
+          304
+        ],
+        "'SWITCH": [
+          -1,
+          304
+        ],
+        "'YIELD": [
+          -1,
+          304
+        ],
+        "'DASH": [
+          -1,
+          304
+        ],
+        "'BANG": [
+          -1,
+          304
+        ],
+        "'LBRACK": [
+          -1,
+          304
+        ],
+        "'NUMBER": [
+          -1,
+          304
+        ],
+        "'TRUE": [
+          -1,
+          304
+        ],
+        "'FALSE": [
+          -1,
+          304
+        ],
+        "'NULL": [
+          -1,
+          304
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          304
+        ],
+        "'BLOCK": [
+          -1,
+          304
+        ],
+        "'TABLE": [
+          -1,
+          304
+        ],
+        "'ASK": [
+          -1,
+          304
+        ],
+        "'NEW": [
+          -1,
+          304
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
           306
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          306
+        ],
+        "'STRING": [
+          -1,
+          306
+        ],
+        "'LBRACE": [
+          -1,
+          306
+        ],
+        "'RBRACE": [
+          -1,
+          306
+        ],
+        "'SPY": [
+          -1,
+          306
+        ],
+        "'PARENSPACE": [
+          -1,
+          306
+        ],
+        "'INT": [
+          -1,
+          306
+        ],
+        "'LONG": [
+          -1,
+          306
+        ],
+        "'DOUBLE": [
+          -1,
+          306
+        ],
+        "'FLOAT": [
+          -1,
+          306
+        ],
+        "'BOOLEAN": [
+          -1,
+          306
+        ],
+        "'VOID": [
+          -1,
+          306
+        ],
+        "'DATA": [
+          -1,
+          306
+        ],
+        "'IF": [
+          -1,
+          306
+        ],
+        "'FOR": [
+          -1,
+          306
+        ],
+        "'RETURN": [
+          -1,
+          306
+        ],
+        "'VAR": [
+          -1,
+          306
+        ],
+        "'REC": [
+          -1,
+          306
+        ],
+        "'ATCHECK": [
+          -1,
+          306
+        ],
+        "'SWITCH": [
+          -1,
+          306
+        ],
+        "'YIELD": [
+          -1,
+          306
+        ],
+        "'DASH": [
+          -1,
+          306
+        ],
+        "'BANG": [
+          -1,
+          306
+        ],
+        "'LBRACK": [
+          -1,
+          306
+        ],
+        "'NUMBER": [
+          -1,
+          306
+        ],
+        "'TRUE": [
+          -1,
+          306
+        ],
+        "'FALSE": [
+          -1,
+          306
+        ],
+        "'NULL": [
+          -1,
+          306
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          306
+        ],
+        "'BLOCK": [
+          -1,
+          306
+        ],
+        "'TABLE": [
+          -1,
+          306
+        ],
+        "'ASK": [
+          -1,
+          306
+        ],
+        "'NEW": [
+          -1,
+          306
+        ]
+      },
+      {
+        "'SEMI": [
+          -1,
+          308
         ],
         "'COMMA": [
-          -1,
-          306
-        ]
-      },
-      {
-        "'RPAREN": [
-          296
-        ]
-      },
-      {
-        "'RPAREN": [
           -1,
           308
         ]
       },
       {
-        "$": [
-          -1,
-          310
-        ],
-        "'IMPORT": [
-          -1,
-          310
-        ],
-        "'NAME": [
-          -1,
-          310
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          310
-        ],
-        "'STRING": [
-          -1,
-          310
-        ],
-        "'INCLUDE": [
-          -1,
-          310
-        ],
-        "'LBRACE": [
-          -1,
-          310
-        ],
-        "'PARENSPACE": [
-          -1,
-          310
-        ],
-        "'INT": [
-          -1,
-          310
-        ],
-        "'LONG": [
-          -1,
-          310
-        ],
-        "'DOUBLE": [
-          -1,
-          310
-        ],
-        "'FLOAT": [
-          -1,
-          310
-        ],
-        "'BOOLEAN": [
-          -1,
-          310
-        ],
-        "'VOID": [
-          -1,
-          310
-        ],
-        "'DATA": [
-          -1,
-          310
-        ],
-        "'VAR": [
-          -1,
-          310
-        ],
-        "'REC": [
-          -1,
-          310
-        ],
-        "'ATCHECK": [
-          -1,
-          310
-        ],
-        "'SWITCH": [
-          -1,
-          310
-        ],
-        "'DASH": [
-          -1,
-          310
-        ],
-        "'BANG": [
-          -1,
-          310
-        ],
-        "'LBRACK": [
-          -1,
-          310
-        ],
-        "'NUMBER": [
-          -1,
-          310
-        ],
-        "'TRUE": [
-          -1,
-          310
-        ],
-        "'FALSE": [
-          -1,
-          310
-        ],
-        "'NULL": [
-          -1,
-          310
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          310
-        ],
-        "'TABLE": [
-          -1,
-          310
-        ],
-        "'ASK": [
-          -1,
-          310
-        ],
-        "'NEW": [
-          -1,
-          310
-        ]
-      },
-      {
         "'SEMI": [
+          296
+        ],
+        "'COMMA": [
           297
         ],
-        "'AS": [
+        "table-expr_I3": [
           298
         ]
       },
       {
-        "$": [
-          -1,
-          312
+        "'NAME": [
+          98
         ],
-        "'IMPORT": [
-          -1,
-          312
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          299
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "ask-expr_A0_I4*": [
+          300
+        ],
+        "ask-expr_A1_I4*": [
+          301
         ],
         "'NAME": [
           -1,
-          312
-        ],
-        "'PARENNOSPACE": [
-          -1,
+          310,
           312
         ],
         "'STRING": [
           -1,
-          312
-        ],
-        "'INCLUDE": [
-          -1,
+          310,
           312
         ],
         "'LBRACE": [
           -1,
+          310,
           312
+        ],
+        "'RBRACE": [
+          -1,
+          310
         ],
         "'PARENSPACE": [
           -1,
-          312
-        ],
-        "'INT": [
-          -1,
-          312
-        ],
-        "'LONG": [
-          -1,
-          312
-        ],
-        "'DOUBLE": [
-          -1,
-          312
-        ],
-        "'FLOAT": [
-          -1,
-          312
-        ],
-        "'BOOLEAN": [
-          -1,
-          312
-        ],
-        "'VOID": [
-          -1,
-          312
-        ],
-        "'DATA": [
-          -1,
-          312
-        ],
-        "'VAR": [
-          -1,
-          312
-        ],
-        "'REC": [
-          -1,
-          312
-        ],
-        "'ATCHECK": [
-          -1,
+          310,
           312
         ],
         "'SWITCH": [
           -1,
+          310,
           312
         ],
         "'DASH": [
           -1,
+          310,
           312
         ],
         "'BANG": [
           -1,
+          310,
           312
         ],
         "'LBRACK": [
           -1,
+          310,
           312
         ],
         "'NUMBER": [
           -1,
+          310,
           312
         ],
         "'TRUE": [
           -1,
+          310,
           312
         ],
         "'FALSE": [
           -1,
+          310,
           312
         ],
         "'NULL": [
           -1,
+          310,
           312
         ],
         "'PARENAFTERBRACE": [
           -1,
+          310,
+          312
+        ],
+        "'BLOCK": [
+          -1,
+          310,
           312
         ],
         "'TABLE": [
           -1,
+          310,
           312
         ],
         "'ASK": [
+          -1,
+          310,
+          312
+        ],
+        "'OTHERWISE": [
           -1,
           312
         ],
         "'NEW": [
           -1,
+          310,
           312
         ]
       },
       {
+        "new-expr_I3_I1*": [
+          302
+        ],
+        "'RPAREN": [
+          -1,
+          314,
+          316
+        ],
+        "'COMMA": [
+          -1,
+          316
+        ]
+      },
+      {
+        "'RPAREN": [
+          303
+        ]
+      },
+      {
+        "'RPAREN": [
+          -1,
+          318
+        ]
+      },
+      {
+        "$": [
+          -1,
+          320
+        ],
+        "'IMPORT": [
+          -1,
+          320
+        ],
+        "'NAME": [
+          -1,
+          320
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          320
+        ],
+        "'STRING": [
+          -1,
+          320
+        ],
+        "'INCLUDE": [
+          -1,
+          320
+        ],
+        "'LBRACE": [
+          -1,
+          320
+        ],
+        "'PARENSPACE": [
+          -1,
+          320
+        ],
+        "'INT": [
+          -1,
+          320
+        ],
+        "'LONG": [
+          -1,
+          320
+        ],
+        "'DOUBLE": [
+          -1,
+          320
+        ],
+        "'FLOAT": [
+          -1,
+          320
+        ],
+        "'BOOLEAN": [
+          -1,
+          320
+        ],
+        "'VOID": [
+          -1,
+          320
+        ],
+        "'DATA": [
+          -1,
+          320
+        ],
+        "'VAR": [
+          -1,
+          320
+        ],
+        "'REC": [
+          -1,
+          320
+        ],
+        "'ATCHECK": [
+          -1,
+          320
+        ],
+        "'SWITCH": [
+          -1,
+          320
+        ],
+        "'DASH": [
+          -1,
+          320
+        ],
+        "'BANG": [
+          -1,
+          320
+        ],
+        "'LBRACK": [
+          -1,
+          320
+        ],
+        "'NUMBER": [
+          -1,
+          320
+        ],
+        "'TRUE": [
+          -1,
+          320
+        ],
+        "'FALSE": [
+          -1,
+          320
+        ],
+        "'NULL": [
+          -1,
+          320
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          320
+        ],
+        "'BLOCK": [
+          -1,
+          320
+        ],
+        "'TABLE": [
+          -1,
+          320
+        ],
+        "'ASK": [
+          -1,
+          320
+        ],
+        "'NEW": [
+          -1,
+          320
+        ]
+      },
+      {
         "'SEMI": [
-          299
+          304
+        ],
+        "'AS": [
+          305
+        ]
+      },
+      {
+        "$": [
+          -1,
+          322
+        ],
+        "'IMPORT": [
+          -1,
+          322
+        ],
+        "'NAME": [
+          -1,
+          322
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          322
+        ],
+        "'STRING": [
+          -1,
+          322
+        ],
+        "'INCLUDE": [
+          -1,
+          322
+        ],
+        "'LBRACE": [
+          -1,
+          322
+        ],
+        "'PARENSPACE": [
+          -1,
+          322
+        ],
+        "'INT": [
+          -1,
+          322
+        ],
+        "'LONG": [
+          -1,
+          322
+        ],
+        "'DOUBLE": [
+          -1,
+          322
+        ],
+        "'FLOAT": [
+          -1,
+          322
+        ],
+        "'BOOLEAN": [
+          -1,
+          322
+        ],
+        "'VOID": [
+          -1,
+          322
+        ],
+        "'DATA": [
+          -1,
+          322
+        ],
+        "'VAR": [
+          -1,
+          322
+        ],
+        "'REC": [
+          -1,
+          322
+        ],
+        "'ATCHECK": [
+          -1,
+          322
+        ],
+        "'SWITCH": [
+          -1,
+          322
+        ],
+        "'DASH": [
+          -1,
+          322
+        ],
+        "'BANG": [
+          -1,
+          322
+        ],
+        "'LBRACK": [
+          -1,
+          322
+        ],
+        "'NUMBER": [
+          -1,
+          322
+        ],
+        "'TRUE": [
+          -1,
+          322
+        ],
+        "'FALSE": [
+          -1,
+          322
+        ],
+        "'NULL": [
+          -1,
+          322
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          322
+        ],
+        "'BLOCK": [
+          -1,
+          322
+        ],
+        "'TABLE": [
+          -1,
+          322
+        ],
+        "'ASK": [
+          -1,
+          322
+        ],
+        "'NEW": [
+          -1,
+          322
+        ]
+      },
+      {
+        "'SEMI": [
+          306
         ]
       },
       {
         "'NAME": [
-          89
+          91
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          300
+          307
         ],
         "'INT": [
           26
@@ -24743,259 +26485,17 @@ function(E) {
       {
         "'NAME": [
           -1,
-          314
+          324
         ],
         "'RPAREN": [
           -1,
-          314
+          324
         ],
         "'COMMA": [
           -1,
-          314
+          324
         ],
         "'GT": [
-          -1,
-          314
-        ],
-        "'THINARROW": [
-          -1,
-          314
-        ]
-      },
-      {
-        "'COMMA": [
-          -1,
-          316
-        ],
-        "'GT": [
-          -1,
-          316
-        ]
-      },
-      {
-        "'RPAREN": [
-          -1,
-          318
-        ],
-        "'COMMA": [
-          -1,
-          318
-        ]
-      },
-      {
-        "$": [
-          -1,
-          320
-        ],
-        "'NAME": [
-          -1,
-          320
-        ],
-        "'SEMI": [
-          -1,
-          320
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          320
-        ],
-        "'STRING": [
-          -1,
-          320
-        ],
-        "'RPAREN": [
-          -1,
-          320
-        ],
-        "'LBRACE": [
-          -1,
-          320
-        ],
-        "'RBRACE": [
-          -1,
-          320
-        ],
-        "'SPY": [
-          -1,
-          320
-        ],
-        "'PARENSPACE": [
-          -1,
-          320
-        ],
-        "'COMMA": [
-          -1,
-          320
-        ],
-        "'INT": [
-          -1,
-          320
-        ],
-        "'LONG": [
-          -1,
-          320
-        ],
-        "'DOUBLE": [
-          -1,
-          320
-        ],
-        "'FLOAT": [
-          -1,
-          320
-        ],
-        "'BOOLEAN": [
-          -1,
-          320
-        ],
-        "'VOID": [
-          -1,
-          320
-        ],
-        "'DATA": [
-          -1,
-          320
-        ],
-        "'IF": [
-          -1,
-          320
-        ],
-        "'FOR": [
-          -1,
-          320
-        ],
-        "'RETURN": [
-          -1,
-          320
-        ],
-        "'VAR": [
-          -1,
-          320
-        ],
-        "'REC": [
-          -1,
-          320
-        ],
-        "'ATCHECK": [
-          -1,
-          320
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          320
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          320
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          320
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          320
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          320
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          320
-        ],
-        "'IS": [
-          -1,
-          320
-        ],
-        "'ISNOT": [
-          -1,
-          320
-        ],
-        "'SATISFIES": [
-          -1,
-          320
-        ],
-        "'RAISES": [
-          -1,
-          320
-        ],
-        "'SWITCH": [
-          -1,
-          320
-        ],
-        "'CASE": [
-          -1,
-          320
-        ],
-        "'DEFAULT": [
-          -1,
-          320
-        ],
-        "'YIELD": [
-          -1,
-          320
-        ],
-        "'DASH": [
-          -1,
-          320
-        ],
-        "'BANG": [
-          -1,
-          320
-        ],
-        "'LBRACK": [
-          -1,
-          320
-        ],
-        "'RBRACK": [
-          -1,
-          320
-        ],
-        "'NUMBER": [
-          -1,
-          320
-        ],
-        "'TRUE": [
-          -1,
-          320
-        ],
-        "'FALSE": [
-          -1,
-          320
-        ],
-        "'NULL": [
-          -1,
-          320
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          320
-        ],
-        "'TABLE": [
-          -1,
-          320
-        ],
-        "'ASK": [
-          -1,
-          320
-        ],
-        "'NEW": [
-          -1,
-          320
-        ]
-      },
-      {
-        "'RBRACE": [
-          -1,
-          322
-        ],
-        "'COMMA": [
-          -1,
-          322
-        ]
-      },
-      {
-        "'COMMA": [
           -1,
           324
         ],
@@ -25005,14 +26505,6 @@ function(E) {
         ]
       },
       {
-        "'NAME": [
-          -1,
-          326
-        ],
-        "'RPAREN": [
-          -1,
-          326
-        ],
         "'COMMA": [
           -1,
           326
@@ -25020,226 +26512,226 @@ function(E) {
         "'GT": [
           -1,
           326
-        ],
-        "'THINARROW": [
+        ]
+      },
+      {
+        "'RPAREN": [
           -1,
-          326
+          328
+        ],
+        "'COMMA": [
+          -1,
+          328
         ]
       },
       {
         "$": [
           -1,
-          328
+          330
         ],
         "'NAME": [
           -1,
-          328
+          330
         ],
         "'SEMI": [
           -1,
-          328
+          330
         ],
         "'PARENNOSPACE": [
           -1,
-          328
+          330
         ],
         "'STRING": [
           -1,
-          328
+          330
         ],
         "'RPAREN": [
           -1,
-          328
+          330
         ],
         "'LBRACE": [
           -1,
-          328
+          330
         ],
         "'RBRACE": [
           -1,
-          328
+          330
         ],
         "'SPY": [
           -1,
-          328
+          330
         ],
         "'PARENSPACE": [
           -1,
-          328
+          330
         ],
         "'COMMA": [
           -1,
-          328
+          330
         ],
         "'INT": [
           -1,
-          328
+          330
         ],
         "'LONG": [
           -1,
-          328
+          330
         ],
         "'DOUBLE": [
           -1,
-          328
+          330
         ],
         "'FLOAT": [
           -1,
-          328
+          330
         ],
         "'BOOLEAN": [
           -1,
-          328
+          330
         ],
         "'VOID": [
           -1,
-          328
+          330
         ],
         "'DATA": [
           -1,
-          328
+          330
         ],
         "'IF": [
           -1,
-          328
+          330
         ],
         "'FOR": [
           -1,
-          328
+          330
         ],
         "'RETURN": [
           -1,
-          328
+          330
         ],
         "'VAR": [
           -1,
-          328
+          330
         ],
         "'REC": [
           -1,
-          328
+          330
         ],
         "'ATCHECK": [
           -1,
-          328
+          330
         ],
         "'ASSERTEQUALS": [
           -1,
-          328
+          330
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          328
+          330
         ],
         "'ASSERTTRUE": [
           -1,
-          328
+          330
         ],
         "'ASSERTFALSE": [
           -1,
-          328
+          330
         ],
         "'ASSERTSATISFIES": [
           -1,
-          328
+          330
         ],
         "'ASSERTRAISES": [
           -1,
-          328
+          330
         ],
         "'IS": [
           -1,
-          328
+          330
         ],
         "'ISNOT": [
           -1,
-          328
+          330
         ],
         "'SATISFIES": [
           -1,
-          328
+          330
         ],
         "'RAISES": [
           -1,
-          328
+          330
         ],
         "'SWITCH": [
           -1,
-          328
+          330
         ],
         "'CASE": [
           -1,
-          328
+          330
         ],
         "'DEFAULT": [
           -1,
-          328
+          330
         ],
         "'YIELD": [
           -1,
-          328
+          330
         ],
         "'DASH": [
           -1,
-          328
+          330
         ],
         "'BANG": [
           -1,
-          328
+          330
         ],
         "'LBRACK": [
           -1,
-          328
+          330
         ],
         "'RBRACK": [
           -1,
-          328
+          330
         ],
         "'NUMBER": [
           -1,
-          328
+          330
         ],
         "'TRUE": [
           -1,
-          328
+          330
         ],
         "'FALSE": [
           -1,
-          328
+          330
         ],
         "'NULL": [
           -1,
-          328
+          330
         ],
         "'PARENAFTERBRACE": [
           -1,
-          328
+          330
+        ],
+        "'BLOCK": [
+          -1,
+          330
         ],
         "'TABLE": [
           -1,
-          328
+          330
         ],
         "'ASK": [
           -1,
-          328
+          330
         ],
         "'NEW": [
           -1,
-          328
-        ]
-      },
-      {
-        "'RPAREN": [
-          -1,
-          330
-        ],
-        "'COMMA": [
-          -1,
           330
         ]
       },
       {
-        "'RPAREN": [
+        "'RBRACE": [
           -1,
           332
         ],
@@ -25249,183 +26741,33 @@ function(E) {
         ]
       },
       {
-        "block": [
-          301
-        ],
-        "'LBRACE": [
-          302
-        ]
-      },
-      {
         "'COMMA": [
-          303
+          -1,
+          334
         ],
-        "fun-decl_I3_I1": [
-          304
-        ],
-        "'RPAREN": [
+        "'THINARROW": [
           -1,
           334
         ]
       },
       {
-        "$": [
-          -1,
-          336
-        ],
         "'NAME": [
           -1,
           336
         ],
-        "'PARENNOSPACE": [
+        "'RPAREN": [
           -1,
           336
         ],
-        "'STRING": [
+        "'COMMA": [
           -1,
           336
         ],
-        "'LBRACE": [
+        "'GT": [
           -1,
           336
         ],
-        "'RBRACE": [
-          -1,
-          336
-        ],
-        "'SPY": [
-          -1,
-          336
-        ],
-        "'PARENSPACE": [
-          -1,
-          336
-        ],
-        "'INT": [
-          -1,
-          336
-        ],
-        "'LONG": [
-          -1,
-          336
-        ],
-        "'DOUBLE": [
-          -1,
-          336
-        ],
-        "'FLOAT": [
-          -1,
-          336
-        ],
-        "'BOOLEAN": [
-          -1,
-          336
-        ],
-        "'VOID": [
-          -1,
-          336
-        ],
-        "'DATA": [
-          -1,
-          336
-        ],
-        "'IF": [
-          -1,
-          336
-        ],
-        "'FOR": [
-          -1,
-          336
-        ],
-        "'RETURN": [
-          -1,
-          336
-        ],
-        "'VAR": [
-          -1,
-          336
-        ],
-        "'REC": [
-          -1,
-          336
-        ],
-        "'ATCHECK": [
-          -1,
-          336
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          336
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          336
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          336
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          336
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          336
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          336
-        ],
-        "'SWITCH": [
-          -1,
-          336
-        ],
-        "'YIELD": [
-          -1,
-          336
-        ],
-        "'DASH": [
-          -1,
-          336
-        ],
-        "'BANG": [
-          -1,
-          336
-        ],
-        "'LBRACK": [
-          -1,
-          336
-        ],
-        "'NUMBER": [
-          -1,
-          336
-        ],
-        "'TRUE": [
-          -1,
-          336
-        ],
-        "'FALSE": [
-          -1,
-          336
-        ],
-        "'NULL": [
-          -1,
-          336
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          336
-        ],
-        "'TABLE": [
-          -1,
-          336
-        ],
-        "'ASK": [
-          -1,
-          336
-        ],
-        "'NEW": [
+        "'THINARROW": [
           -1,
           336
         ]
@@ -25439,11 +26781,19 @@ function(E) {
           -1,
           338
         ],
+        "'SEMI": [
+          -1,
+          338
+        ],
         "'PARENNOSPACE": [
           -1,
           338
         ],
         "'STRING": [
+          -1,
+          338
+        ],
+        "'RPAREN": [
           -1,
           338
         ],
@@ -25460,6 +26810,10 @@ function(E) {
           338
         ],
         "'PARENSPACE": [
+          -1,
+          338
+        ],
+        "'COMMA": [
           -1,
           338
         ],
@@ -25539,7 +26893,31 @@ function(E) {
           -1,
           338
         ],
+        "'IS": [
+          -1,
+          338
+        ],
+        "'ISNOT": [
+          -1,
+          338
+        ],
+        "'SATISFIES": [
+          -1,
+          338
+        ],
+        "'RAISES": [
+          -1,
+          338
+        ],
         "'SWITCH": [
+          -1,
+          338
+        ],
+        "'CASE": [
+          -1,
+          338
+        ],
+        "'DEFAULT": [
           -1,
           338
         ],
@@ -25556,6 +26934,10 @@ function(E) {
           338
         ],
         "'LBRACK": [
+          -1,
+          338
+        ],
+        "'RBRACK": [
           -1,
           338
         ],
@@ -25579,6 +26961,10 @@ function(E) {
           -1,
           338
         ],
+        "'BLOCK": [
+          -1,
+          338
+        ],
         "'TABLE": [
           -1,
           338
@@ -25590,179 +26976,555 @@ function(E) {
         "'NEW": [
           -1,
           338
+        ]
+      },
+      {
+        "'RPAREN": [
+          -1,
+          340
+        ],
+        "'COMMA": [
+          -1,
+          340
+        ]
+      },
+      {
+        "'RPAREN": [
+          -1,
+          342
+        ],
+        "'COMMA": [
+          -1,
+          342
+        ]
+      },
+      {
+        "block": [
+          308
+        ],
+        "'LBRACE": [
+          309
+        ]
+      },
+      {
+        "'COMMA": [
+          310
+        ],
+        "fun-decl_I3_I1": [
+          311
+        ],
+        "'RPAREN": [
+          -1,
+          344
         ]
       },
       {
         "$": [
           -1,
-          340
+          346
         ],
         "'NAME": [
           -1,
-          340
+          346
         ],
         "'PARENNOSPACE": [
           -1,
-          340
+          346
         ],
         "'STRING": [
           -1,
-          340
+          346
         ],
         "'LBRACE": [
           -1,
-          340
+          346
         ],
         "'RBRACE": [
           -1,
-          340
+          346
         ],
         "'SPY": [
           -1,
-          340
+          346
         ],
         "'PARENSPACE": [
           -1,
-          340
+          346
         ],
         "'INT": [
           -1,
-          340
+          346
         ],
         "'LONG": [
           -1,
-          340
+          346
         ],
         "'DOUBLE": [
           -1,
-          340
+          346
         ],
         "'FLOAT": [
           -1,
-          340
+          346
         ],
         "'BOOLEAN": [
           -1,
-          340
+          346
         ],
         "'VOID": [
           -1,
-          340
+          346
         ],
         "'DATA": [
           -1,
-          340
+          346
         ],
         "'IF": [
           -1,
-          340
+          346
         ],
         "'FOR": [
           -1,
-          340
+          346
         ],
         "'RETURN": [
           -1,
-          340
+          346
         ],
         "'VAR": [
           -1,
-          340
+          346
         ],
         "'REC": [
           -1,
-          340
+          346
         ],
         "'ATCHECK": [
           -1,
-          340
+          346
         ],
         "'ASSERTEQUALS": [
           -1,
-          340
+          346
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          340
+          346
         ],
         "'ASSERTTRUE": [
           -1,
-          340
+          346
         ],
         "'ASSERTFALSE": [
           -1,
-          340
+          346
         ],
         "'ASSERTSATISFIES": [
           -1,
-          340
+          346
         ],
         "'ASSERTRAISES": [
           -1,
-          340
+          346
         ],
         "'SWITCH": [
           -1,
-          340
+          346
         ],
         "'YIELD": [
           -1,
-          340
+          346
         ],
         "'DASH": [
           -1,
-          340
+          346
         ],
         "'BANG": [
           -1,
-          340
+          346
         ],
         "'LBRACK": [
           -1,
-          340
+          346
         ],
         "'NUMBER": [
           -1,
-          340
+          346
         ],
         "'TRUE": [
           -1,
-          340
+          346
         ],
         "'FALSE": [
           -1,
-          340
+          346
         ],
         "'NULL": [
           -1,
-          340
+          346
         ],
         "'PARENAFTERBRACE": [
           -1,
-          340
+          346
+        ],
+        "'BLOCK": [
+          -1,
+          346
         ],
         "'TABLE": [
           -1,
-          340
+          346
         ],
         "'ASK": [
           -1,
-          340
+          346
         ],
         "'NEW": [
           -1,
-          340
+          346
+        ]
+      },
+      {
+        "$": [
+          -1,
+          348
+        ],
+        "'NAME": [
+          -1,
+          348
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          348
+        ],
+        "'STRING": [
+          -1,
+          348
+        ],
+        "'LBRACE": [
+          -1,
+          348
+        ],
+        "'RBRACE": [
+          -1,
+          348
+        ],
+        "'SPY": [
+          -1,
+          348
+        ],
+        "'PARENSPACE": [
+          -1,
+          348
+        ],
+        "'INT": [
+          -1,
+          348
+        ],
+        "'LONG": [
+          -1,
+          348
+        ],
+        "'DOUBLE": [
+          -1,
+          348
+        ],
+        "'FLOAT": [
+          -1,
+          348
+        ],
+        "'BOOLEAN": [
+          -1,
+          348
+        ],
+        "'VOID": [
+          -1,
+          348
+        ],
+        "'DATA": [
+          -1,
+          348
+        ],
+        "'IF": [
+          -1,
+          348
+        ],
+        "'FOR": [
+          -1,
+          348
+        ],
+        "'RETURN": [
+          -1,
+          348
+        ],
+        "'VAR": [
+          -1,
+          348
+        ],
+        "'REC": [
+          -1,
+          348
+        ],
+        "'ATCHECK": [
+          -1,
+          348
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          348
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          348
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          348
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          348
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          348
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          348
+        ],
+        "'SWITCH": [
+          -1,
+          348
+        ],
+        "'YIELD": [
+          -1,
+          348
+        ],
+        "'DASH": [
+          -1,
+          348
+        ],
+        "'BANG": [
+          -1,
+          348
+        ],
+        "'LBRACK": [
+          -1,
+          348
+        ],
+        "'NUMBER": [
+          -1,
+          348
+        ],
+        "'TRUE": [
+          -1,
+          348
+        ],
+        "'FALSE": [
+          -1,
+          348
+        ],
+        "'NULL": [
+          -1,
+          348
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          348
+        ],
+        "'BLOCK": [
+          -1,
+          348
+        ],
+        "'TABLE": [
+          -1,
+          348
+        ],
+        "'ASK": [
+          -1,
+          348
+        ],
+        "'NEW": [
+          -1,
+          348
+        ]
+      },
+      {
+        "$": [
+          -1,
+          350
+        ],
+        "'NAME": [
+          -1,
+          350
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          350
+        ],
+        "'STRING": [
+          -1,
+          350
+        ],
+        "'LBRACE": [
+          -1,
+          350
+        ],
+        "'RBRACE": [
+          -1,
+          350
+        ],
+        "'SPY": [
+          -1,
+          350
+        ],
+        "'PARENSPACE": [
+          -1,
+          350
+        ],
+        "'INT": [
+          -1,
+          350
+        ],
+        "'LONG": [
+          -1,
+          350
+        ],
+        "'DOUBLE": [
+          -1,
+          350
+        ],
+        "'FLOAT": [
+          -1,
+          350
+        ],
+        "'BOOLEAN": [
+          -1,
+          350
+        ],
+        "'VOID": [
+          -1,
+          350
+        ],
+        "'DATA": [
+          -1,
+          350
+        ],
+        "'IF": [
+          -1,
+          350
+        ],
+        "'FOR": [
+          -1,
+          350
+        ],
+        "'RETURN": [
+          -1,
+          350
+        ],
+        "'VAR": [
+          -1,
+          350
+        ],
+        "'REC": [
+          -1,
+          350
+        ],
+        "'ATCHECK": [
+          -1,
+          350
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          350
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          350
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          350
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          350
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          350
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          350
+        ],
+        "'SWITCH": [
+          -1,
+          350
+        ],
+        "'YIELD": [
+          -1,
+          350
+        ],
+        "'DASH": [
+          -1,
+          350
+        ],
+        "'BANG": [
+          -1,
+          350
+        ],
+        "'LBRACK": [
+          -1,
+          350
+        ],
+        "'NUMBER": [
+          -1,
+          350
+        ],
+        "'TRUE": [
+          -1,
+          350
+        ],
+        "'FALSE": [
+          -1,
+          350
+        ],
+        "'NULL": [
+          -1,
+          350
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          350
+        ],
+        "'BLOCK": [
+          -1,
+          350
+        ],
+        "'TABLE": [
+          -1,
+          350
+        ],
+        "'ASK": [
+          -1,
+          350
+        ],
+        "'NEW": [
+          -1,
+          350
         ]
       },
       {
         "'NAME": [
-          89
+          91
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          305
+          312
         ],
         "'INT": [
           26
@@ -25783,1119 +27545,477 @@ function(E) {
           31
         ],
         "variant-decl_A0_I2?": [
-          306
+          313
         ],
         "variant-decl_A0_I2": [
-          307
+          314
         ],
         "variant-member": [
-          308
+          315
         ],
         "'RPAREN": [
           -1,
-          342
-        ]
-      },
-      {
-        "'SEMI": [
-          309
-        ],
-        "data-decl_I5?": [
-          310
-        ],
-        "data-decl_I4": [
-          311
-        ],
-        "data-decl_I5": [
-          312
-        ],
-        "'RBRACE": [
-          -1,
-          344
-        ]
-      },
-      {
-        "'SEMI": [
-          313
-        ],
-        "var-stmt_I5?": [
-          314
-        ],
-        "var-stmt_I5": [
-          315
-        ],
-        "$": [
-          -1,
-          346,
-          348
-        ],
-        "'NAME": [
-          -1,
-          346,
-          348
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          346,
-          348
-        ],
-        "'STRING": [
-          -1,
-          346,
-          348
-        ],
-        "'LBRACE": [
-          -1,
-          346,
-          348
-        ],
-        "'RBRACE": [
-          -1,
-          346,
-          348
-        ],
-        "'SPY": [
-          -1,
-          346,
-          348
-        ],
-        "'PARENSPACE": [
-          -1,
-          346,
-          348
-        ],
-        "'INT": [
-          -1,
-          346,
-          348
-        ],
-        "'LONG": [
-          -1,
-          346,
-          348
-        ],
-        "'DOUBLE": [
-          -1,
-          346,
-          348
-        ],
-        "'FLOAT": [
-          -1,
-          346,
-          348
-        ],
-        "'BOOLEAN": [
-          -1,
-          346,
-          348
-        ],
-        "'VOID": [
-          -1,
-          346,
-          348
-        ],
-        "'DATA": [
-          -1,
-          346,
-          348
-        ],
-        "'IF": [
-          -1,
-          346,
-          348
-        ],
-        "'FOR": [
-          -1,
-          346,
-          348
-        ],
-        "'RETURN": [
-          -1,
-          346,
-          348
-        ],
-        "'VAR": [
-          -1,
-          346,
-          348
-        ],
-        "'REC": [
-          -1,
-          346,
-          348
-        ],
-        "'ATCHECK": [
-          -1,
-          346,
-          348
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          346,
-          348
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          346,
-          348
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          346,
-          348
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          346,
-          348
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          346,
-          348
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          346,
-          348
-        ],
-        "'SWITCH": [
-          -1,
-          346,
-          348
-        ],
-        "'YIELD": [
-          -1,
-          346,
-          348
-        ],
-        "'DASH": [
-          -1,
-          346,
-          348
-        ],
-        "'BANG": [
-          -1,
-          346,
-          348
-        ],
-        "'LBRACK": [
-          -1,
-          346,
-          348
-        ],
-        "'NUMBER": [
-          -1,
-          346,
-          348
-        ],
-        "'TRUE": [
-          -1,
-          346,
-          348
-        ],
-        "'FALSE": [
-          -1,
-          346,
-          348
-        ],
-        "'NULL": [
-          -1,
-          346,
-          348
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          346,
-          348
-        ],
-        "'TABLE": [
-          -1,
-          346,
-          348
-        ],
-        "'ASK": [
-          -1,
-          346,
-          348
-        ],
-        "'NEW": [
-          -1,
-          346,
-          348
+          352
         ]
       },
       {
         "'SEMI": [
           316
         ],
-        "rec-stmt_I5?": [
+        "data-decl_I5?": [
           317
         ],
-        "rec-stmt_I5": [
+        "data-decl_I4": [
           318
         ],
-        "$": [
-          -1,
-          350,
-          352
-        ],
-        "'NAME": [
-          -1,
-          350,
-          352
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          350,
-          352
-        ],
-        "'STRING": [
-          -1,
-          350,
-          352
-        ],
-        "'LBRACE": [
-          -1,
-          350,
-          352
-        ],
-        "'RBRACE": [
-          -1,
-          350,
-          352
-        ],
-        "'SPY": [
-          -1,
-          350,
-          352
-        ],
-        "'PARENSPACE": [
-          -1,
-          350,
-          352
-        ],
-        "'INT": [
-          -1,
-          350,
-          352
-        ],
-        "'LONG": [
-          -1,
-          350,
-          352
-        ],
-        "'DOUBLE": [
-          -1,
-          350,
-          352
-        ],
-        "'FLOAT": [
-          -1,
-          350,
-          352
-        ],
-        "'BOOLEAN": [
-          -1,
-          350,
-          352
-        ],
-        "'VOID": [
-          -1,
-          350,
-          352
-        ],
-        "'DATA": [
-          -1,
-          350,
-          352
-        ],
-        "'IF": [
-          -1,
-          350,
-          352
-        ],
-        "'FOR": [
-          -1,
-          350,
-          352
-        ],
-        "'RETURN": [
-          -1,
-          350,
-          352
-        ],
-        "'VAR": [
-          -1,
-          350,
-          352
-        ],
-        "'REC": [
-          -1,
-          350,
-          352
-        ],
-        "'ATCHECK": [
-          -1,
-          350,
-          352
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          350,
-          352
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          350,
-          352
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          350,
-          352
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          350,
-          352
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          350,
-          352
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          350,
-          352
-        ],
-        "'SWITCH": [
-          -1,
-          350,
-          352
-        ],
-        "'YIELD": [
-          -1,
-          350,
-          352
-        ],
-        "'DASH": [
-          -1,
-          350,
-          352
-        ],
-        "'BANG": [
-          -1,
-          350,
-          352
-        ],
-        "'LBRACK": [
-          -1,
-          350,
-          352
-        ],
-        "'NUMBER": [
-          -1,
-          350,
-          352
-        ],
-        "'TRUE": [
-          -1,
-          350,
-          352
-        ],
-        "'FALSE": [
-          -1,
-          350,
-          352
-        ],
-        "'NULL": [
-          -1,
-          350,
-          352
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          350,
-          352
-        ],
-        "'TABLE": [
-          -1,
-          350,
-          352
-        ],
-        "'ASK": [
-          -1,
-          350,
-          352
-        ],
-        "'NEW": [
-          -1,
-          350,
-          352
-        ]
-      },
-      {
-        "'NAME": [
+        "data-decl_I5": [
           319
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'PARENNOSPACE": [
-          11
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          320
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'PARENNOSPACE": [
-          11
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          321
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'PARENNOSPACE": [
-          11
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          322
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'PARENNOSPACE": [
-          11
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          323
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'PARENNOSPACE": [
-          11
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          324
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'NAME": [
-          89
-        ],
-        "'PARENSPACE": [
-          68
-        ],
-        "type-ann": [
-          325
-        ],
-        "'INT": [
-          26
-        ],
-        "'LONG": [
-          27
-        ],
-        "'DOUBLE": [
-          28
-        ],
-        "'FLOAT": [
-          29
-        ],
-        "'BOOLEAN": [
-          30
-        ],
-        "'VOID": [
-          31
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          354
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          354
-        ],
-        "'STRING": [
-          -1,
-          354
-        ],
-        "'LBRACE": [
-          -1,
-          354
         ],
         "'RBRACE": [
-          -1,
-          354
-        ],
-        "'SPY": [
-          -1,
-          354
-        ],
-        "'PARENSPACE": [
-          -1,
-          354
-        ],
-        "'INT": [
-          -1,
-          354
-        ],
-        "'LONG": [
-          -1,
-          354
-        ],
-        "'DOUBLE": [
-          -1,
-          354
-        ],
-        "'FLOAT": [
-          -1,
-          354
-        ],
-        "'BOOLEAN": [
-          -1,
-          354
-        ],
-        "'VOID": [
-          -1,
-          354
-        ],
-        "'DATA": [
-          -1,
-          354
-        ],
-        "'IF": [
-          -1,
-          354
-        ],
-        "'FOR": [
-          -1,
-          354
-        ],
-        "'RETURN": [
-          -1,
-          354
-        ],
-        "'VAR": [
-          -1,
-          354
-        ],
-        "'REC": [
-          -1,
-          354
-        ],
-        "'ATCHECK": [
-          -1,
-          354
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          354
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          354
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          354
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          354
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          354
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          354
-        ],
-        "'SWITCH": [
-          -1,
-          354
-        ],
-        "'YIELD": [
-          -1,
-          354
-        ],
-        "'DASH": [
-          -1,
-          354
-        ],
-        "'BANG": [
-          -1,
-          354
-        ],
-        "'LBRACK": [
-          -1,
-          354
-        ],
-        "'NUMBER": [
-          -1,
-          354
-        ],
-        "'TRUE": [
-          -1,
-          354
-        ],
-        "'FALSE": [
-          -1,
-          354
-        ],
-        "'NULL": [
-          -1,
-          354
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          354
-        ],
-        "'TABLE": [
-          -1,
-          354
-        ],
-        "'ASK": [
-          -1,
-          354
-        ],
-        "'NEW": [
           -1,
           354
         ]
       },
       {
         "'SEMI": [
+          320
+        ],
+        "var-stmt_I5?": [
+          321
+        ],
+        "var-stmt_I5": [
+          322
+        ],
+        "$": [
+          -1,
+          356,
+          358
+        ],
+        "'NAME": [
+          -1,
+          356,
+          358
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          356,
+          358
+        ],
+        "'STRING": [
+          -1,
+          356,
+          358
+        ],
+        "'LBRACE": [
+          -1,
+          356,
+          358
+        ],
+        "'RBRACE": [
+          -1,
+          356,
+          358
+        ],
+        "'SPY": [
+          -1,
+          356,
+          358
+        ],
+        "'PARENSPACE": [
+          -1,
+          356,
+          358
+        ],
+        "'INT": [
+          -1,
+          356,
+          358
+        ],
+        "'LONG": [
+          -1,
+          356,
+          358
+        ],
+        "'DOUBLE": [
+          -1,
+          356,
+          358
+        ],
+        "'FLOAT": [
+          -1,
+          356,
+          358
+        ],
+        "'BOOLEAN": [
+          -1,
+          356,
+          358
+        ],
+        "'VOID": [
+          -1,
+          356,
+          358
+        ],
+        "'DATA": [
+          -1,
+          356,
+          358
+        ],
+        "'IF": [
+          -1,
+          356,
+          358
+        ],
+        "'FOR": [
+          -1,
+          356,
+          358
+        ],
+        "'RETURN": [
+          -1,
+          356,
+          358
+        ],
+        "'VAR": [
+          -1,
+          356,
+          358
+        ],
+        "'REC": [
+          -1,
+          356,
+          358
+        ],
+        "'ATCHECK": [
+          -1,
+          356,
+          358
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          356,
+          358
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          356,
+          358
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          356,
+          358
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          356,
+          358
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          356,
+          358
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          356,
+          358
+        ],
+        "'SWITCH": [
+          -1,
+          356,
+          358
+        ],
+        "'YIELD": [
+          -1,
+          356,
+          358
+        ],
+        "'DASH": [
+          -1,
+          356,
+          358
+        ],
+        "'BANG": [
+          -1,
+          356,
+          358
+        ],
+        "'LBRACK": [
+          -1,
+          356,
+          358
+        ],
+        "'NUMBER": [
+          -1,
+          356,
+          358
+        ],
+        "'TRUE": [
+          -1,
+          356,
+          358
+        ],
+        "'FALSE": [
+          -1,
+          356,
+          358
+        ],
+        "'NULL": [
+          -1,
+          356,
+          358
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          356,
+          358
+        ],
+        "'BLOCK": [
+          -1,
+          356,
+          358
+        ],
+        "'TABLE": [
+          -1,
+          356,
+          358
+        ],
+        "'ASK": [
+          -1,
+          356,
+          358
+        ],
+        "'NEW": [
+          -1,
+          356,
+          358
+        ]
+      },
+      {
+        "'SEMI": [
+          323
+        ],
+        "rec-stmt_I5?": [
+          324
+        ],
+        "rec-stmt_I5": [
+          325
+        ],
+        "$": [
+          -1,
+          360,
+          362
+        ],
+        "'NAME": [
+          -1,
+          360,
+          362
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          360,
+          362
+        ],
+        "'STRING": [
+          -1,
+          360,
+          362
+        ],
+        "'LBRACE": [
+          -1,
+          360,
+          362
+        ],
+        "'RBRACE": [
+          -1,
+          360,
+          362
+        ],
+        "'SPY": [
+          -1,
+          360,
+          362
+        ],
+        "'PARENSPACE": [
+          -1,
+          360,
+          362
+        ],
+        "'INT": [
+          -1,
+          360,
+          362
+        ],
+        "'LONG": [
+          -1,
+          360,
+          362
+        ],
+        "'DOUBLE": [
+          -1,
+          360,
+          362
+        ],
+        "'FLOAT": [
+          -1,
+          360,
+          362
+        ],
+        "'BOOLEAN": [
+          -1,
+          360,
+          362
+        ],
+        "'VOID": [
+          -1,
+          360,
+          362
+        ],
+        "'DATA": [
+          -1,
+          360,
+          362
+        ],
+        "'IF": [
+          -1,
+          360,
+          362
+        ],
+        "'FOR": [
+          -1,
+          360,
+          362
+        ],
+        "'RETURN": [
+          -1,
+          360,
+          362
+        ],
+        "'VAR": [
+          -1,
+          360,
+          362
+        ],
+        "'REC": [
+          -1,
+          360,
+          362
+        ],
+        "'ATCHECK": [
+          -1,
+          360,
+          362
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          360,
+          362
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          360,
+          362
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          360,
+          362
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          360,
+          362
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          360,
+          362
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          360,
+          362
+        ],
+        "'SWITCH": [
+          -1,
+          360,
+          362
+        ],
+        "'YIELD": [
+          -1,
+          360,
+          362
+        ],
+        "'DASH": [
+          -1,
+          360,
+          362
+        ],
+        "'BANG": [
+          -1,
+          360,
+          362
+        ],
+        "'LBRACK": [
+          -1,
+          360,
+          362
+        ],
+        "'NUMBER": [
+          -1,
+          360,
+          362
+        ],
+        "'TRUE": [
+          -1,
+          360,
+          362
+        ],
+        "'FALSE": [
+          -1,
+          360,
+          362
+        ],
+        "'NULL": [
+          -1,
+          360,
+          362
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          360,
+          362
+        ],
+        "'BLOCK": [
+          -1,
+          360,
+          362
+        ],
+        "'TABLE": [
+          -1,
+          360,
+          362
+        ],
+        "'ASK": [
+          -1,
+          360,
+          362
+        ],
+        "'NEW": [
+          -1,
+          360,
+          362
+        ]
+      },
+      {
+        "'NAME": [
           326
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -26907,7 +28027,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
           327
@@ -26975,19 +28095,25 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -26999,7 +28125,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
           328
@@ -27067,19 +28193,25 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -27091,7 +28223,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
           329
@@ -27159,19 +28291,25 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -27183,7 +28321,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
           330
@@ -27251,19 +28389,25 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -27275,7 +28419,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
           331
@@ -27343,19 +28487,221 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'NAME": [
-          96
+          91
+        ],
+        "'PARENSPACE": [
+          70
+        ],
+        "type-ann": [
+          332
+        ],
+        "'INT": [
+          26
+        ],
+        "'LONG": [
+          27
+        ],
+        "'DOUBLE": [
+          28
+        ],
+        "'FLOAT": [
+          29
+        ],
+        "'BOOLEAN": [
+          30
+        ],
+        "'VOID": [
+          31
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          364
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          364
+        ],
+        "'STRING": [
+          -1,
+          364
+        ],
+        "'LBRACE": [
+          -1,
+          364
+        ],
+        "'RBRACE": [
+          -1,
+          364
+        ],
+        "'SPY": [
+          -1,
+          364
+        ],
+        "'PARENSPACE": [
+          -1,
+          364
+        ],
+        "'INT": [
+          -1,
+          364
+        ],
+        "'LONG": [
+          -1,
+          364
+        ],
+        "'DOUBLE": [
+          -1,
+          364
+        ],
+        "'FLOAT": [
+          -1,
+          364
+        ],
+        "'BOOLEAN": [
+          -1,
+          364
+        ],
+        "'VOID": [
+          -1,
+          364
+        ],
+        "'DATA": [
+          -1,
+          364
+        ],
+        "'IF": [
+          -1,
+          364
+        ],
+        "'FOR": [
+          -1,
+          364
+        ],
+        "'RETURN": [
+          -1,
+          364
+        ],
+        "'VAR": [
+          -1,
+          364
+        ],
+        "'REC": [
+          -1,
+          364
+        ],
+        "'ATCHECK": [
+          -1,
+          364
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          364
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          364
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          364
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          364
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          364
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          364
+        ],
+        "'SWITCH": [
+          -1,
+          364
+        ],
+        "'YIELD": [
+          -1,
+          364
+        ],
+        "'DASH": [
+          -1,
+          364
+        ],
+        "'BANG": [
+          -1,
+          364
+        ],
+        "'LBRACK": [
+          -1,
+          364
+        ],
+        "'NUMBER": [
+          -1,
+          364
+        ],
+        "'TRUE": [
+          -1,
+          364
+        ],
+        "'FALSE": [
+          -1,
+          364
+        ],
+        "'NULL": [
+          -1,
+          364
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          364
+        ],
+        "'BLOCK": [
+          -1,
+          364
+        ],
+        "'TABLE": [
+          -1,
+          364
+        ],
+        "'ASK": [
+          -1,
+          364
+        ],
+        "'NEW": [
+          -1,
+          364
+        ]
+      },
+      {
+        "'SEMI": [
+          333
+        ]
+      },
+      {
+        "'NAME": [
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -27367,10 +28713,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          332
+          334
         ],
         "switch-expr": [
           37
@@ -27435,257 +28781,25 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'SEMI": [
-          333
-        ],
-        "yield-stmt_I2?": [
-          334
-        ],
-        "yield-stmt_I2": [
-          335
-        ],
-        "'NAME": [
-          -1,
-          356,
-          358
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          356,
-          358
-        ],
-        "'STRING": [
-          -1,
-          356,
-          358
-        ],
-        "'LBRACE": [
-          -1,
-          356,
-          358
-        ],
-        "'RBRACE": [
-          -1,
-          356,
-          358
-        ],
-        "'SPY": [
-          -1,
-          356,
-          358
-        ],
-        "'PARENSPACE": [
-          -1,
-          356,
-          358
-        ],
-        "'INT": [
-          -1,
-          356,
-          358
-        ],
-        "'LONG": [
-          -1,
-          356,
-          358
-        ],
-        "'DOUBLE": [
-          -1,
-          356,
-          358
-        ],
-        "'FLOAT": [
-          -1,
-          356,
-          358
-        ],
-        "'BOOLEAN": [
-          -1,
-          356,
-          358
-        ],
-        "'VOID": [
-          -1,
-          356,
-          358
-        ],
-        "'DATA": [
-          -1,
-          356,
-          358
-        ],
-        "'IF": [
-          -1,
-          356,
-          358
-        ],
-        "'FOR": [
-          -1,
-          356,
-          358
-        ],
-        "'RETURN": [
-          -1,
-          356,
-          358
-        ],
-        "'VAR": [
-          -1,
-          356,
-          358
-        ],
-        "'REC": [
-          -1,
-          356,
-          358
-        ],
-        "'ATCHECK": [
-          -1,
-          356,
-          358
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          356,
-          358
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          356,
-          358
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          356,
-          358
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          356,
-          358
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          356,
-          358
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          356,
-          358
-        ],
-        "'SWITCH": [
-          -1,
-          356,
-          358
-        ],
-        "'CASE": [
-          -1,
-          356,
-          358
-        ],
-        "'DEFAULT": [
-          -1,
-          356,
-          358
-        ],
-        "'YIELD": [
-          -1,
-          356,
-          358
-        ],
-        "'DASH": [
-          -1,
-          356,
-          358
-        ],
-        "'BANG": [
-          -1,
-          356,
-          358
-        ],
-        "'LBRACK": [
-          -1,
-          356,
-          358
-        ],
-        "'NUMBER": [
-          -1,
-          356,
-          358
-        ],
-        "'TRUE": [
-          -1,
-          356,
-          358
-        ],
-        "'FALSE": [
-          -1,
-          356,
-          358
-        ],
-        "'NULL": [
-          -1,
-          356,
-          358
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          356,
-          358
-        ],
         "'TABLE": [
-          -1,
-          356,
-          358
+          60
         ],
         "'ASK": [
-          -1,
-          356,
-          358
+          61
         ],
         "'NEW": [
-          -1,
-          356,
-          358
-        ]
-      },
-      {
-        "'LBRACE": [
-          336
-        ]
-      },
-      {
-        "switch-expr_I5*": [
-          337
-        ],
-        "'RBRACE": [
-          -1,
-          360
-        ],
-        "'CASE": [
-          -1,
-          360
-        ],
-        "'DEFAULT": [
-          -1,
-          360
+          62
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -27697,7 +28811,301 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
+        ],
+        "full-expr": [
+          335
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          336
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          337
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
         ],
         "full-expr": [
           338
@@ -27765,323 +29173,772 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          339
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'SEMI": [
+          340
+        ],
+        "yield-stmt_I2?": [
+          341
+        ],
+        "yield-stmt_I2": [
+          342
+        ],
+        "'NAME": [
+          -1,
+          366,
+          368
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          366,
+          368
+        ],
+        "'STRING": [
+          -1,
+          366,
+          368
+        ],
+        "'LBRACE": [
+          -1,
+          366,
+          368
+        ],
+        "'RBRACE": [
+          -1,
+          366,
+          368
+        ],
+        "'SPY": [
+          -1,
+          366,
+          368
+        ],
+        "'PARENSPACE": [
+          -1,
+          366,
+          368
+        ],
+        "'INT": [
+          -1,
+          366,
+          368
+        ],
+        "'LONG": [
+          -1,
+          366,
+          368
+        ],
+        "'DOUBLE": [
+          -1,
+          366,
+          368
+        ],
+        "'FLOAT": [
+          -1,
+          366,
+          368
+        ],
+        "'BOOLEAN": [
+          -1,
+          366,
+          368
+        ],
+        "'VOID": [
+          -1,
+          366,
+          368
+        ],
+        "'DATA": [
+          -1,
+          366,
+          368
+        ],
+        "'IF": [
+          -1,
+          366,
+          368
+        ],
+        "'FOR": [
+          -1,
+          366,
+          368
+        ],
+        "'RETURN": [
+          -1,
+          366,
+          368
+        ],
+        "'VAR": [
+          -1,
+          366,
+          368
+        ],
+        "'REC": [
+          -1,
+          366,
+          368
+        ],
+        "'ATCHECK": [
+          -1,
+          366,
+          368
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          366,
+          368
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          366,
+          368
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          366,
+          368
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          366,
+          368
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          366,
+          368
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          366,
+          368
+        ],
+        "'SWITCH": [
+          -1,
+          366,
+          368
+        ],
+        "'CASE": [
+          -1,
+          366,
+          368
+        ],
+        "'DEFAULT": [
+          -1,
+          366,
+          368
+        ],
+        "'YIELD": [
+          -1,
+          366,
+          368
+        ],
+        "'DASH": [
+          -1,
+          366,
+          368
+        ],
+        "'BANG": [
+          -1,
+          366,
+          368
+        ],
+        "'LBRACK": [
+          -1,
+          366,
+          368
+        ],
+        "'NUMBER": [
+          -1,
+          366,
+          368
+        ],
+        "'TRUE": [
+          -1,
+          366,
+          368
+        ],
+        "'FALSE": [
+          -1,
+          366,
+          368
+        ],
+        "'NULL": [
+          -1,
+          366,
+          368
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          366,
+          368
+        ],
+        "'BLOCK": [
+          -1,
+          366,
+          368
+        ],
+        "'TABLE": [
+          -1,
+          366,
+          368
+        ],
+        "'ASK": [
+          -1,
+          366,
+          368
+        ],
+        "'NEW": [
+          -1,
+          366,
+          368
+        ]
+      },
+      {
+        "'LBRACE": [
+          343
+        ]
+      },
+      {
+        "switch-expr_I5*": [
+          344
+        ],
+        "'RBRACE": [
+          -1,
+          370
+        ],
+        "'CASE": [
+          -1,
+          370
+        ],
+        "'DEFAULT": [
+          -1,
+          370
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          345
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'RPAREN": [
           -1,
-          362
+          372
         ],
         "'COMMA": [
           -1,
-          362
+          372
         ]
       },
       {
         "'COMMA": [
-          339
+          346
         ],
         "construct-expr_A0_I3_I1": [
-          340
+          347
         ],
         "'RBRACK": [
           -1,
-          364
+          374
         ]
       },
       {
         "$": [
           -1,
-          366
+          376
         ],
         "'NAME": [
           -1,
-          366
+          376
         ],
         "'SEMI": [
           -1,
-          366
+          376
         ],
         "'PARENNOSPACE": [
           -1,
-          366
+          376
         ],
         "'STRING": [
           -1,
-          366
+          376
         ],
         "'RPAREN": [
           -1,
-          366
+          376
         ],
         "'LBRACE": [
           -1,
-          366
+          376
         ],
         "'RBRACE": [
           -1,
-          366
+          376
         ],
         "'SPY": [
           -1,
-          366
+          376
         ],
         "'PARENSPACE": [
           -1,
-          366
+          376
         ],
         "'COMMA": [
           -1,
-          366
+          376
         ],
         "'INT": [
           -1,
-          366
+          376
         ],
         "'LONG": [
           -1,
-          366
+          376
         ],
         "'DOUBLE": [
           -1,
-          366
+          376
         ],
         "'FLOAT": [
           -1,
-          366
+          376
         ],
         "'BOOLEAN": [
           -1,
-          366
+          376
         ],
         "'VOID": [
           -1,
-          366
+          376
         ],
         "'LT": [
           -1,
-          366
+          376
         ],
         "'GT": [
           -1,
-          366
+          376
         ],
         "'THINARROW": [
           -1,
-          366
+          376
         ],
         "'DATA": [
           -1,
-          366
+          376
         ],
         "'IF": [
           -1,
-          366
+          376
         ],
         "'FOR": [
           -1,
-          366
+          376
         ],
         "'RETURN": [
           -1,
-          366
+          376
         ],
         "'VAR": [
           -1,
-          366
+          376
         ],
         "'REC": [
           -1,
-          366
+          376
         ],
         "'ATCHECK": [
           -1,
-          366
+          376
         ],
         "'ASSERTEQUALS": [
           -1,
-          366
+          376
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          366
+          376
         ],
         "'ASSERTTRUE": [
           -1,
-          366
+          376
         ],
         "'ASSERTFALSE": [
           -1,
-          366
+          376
         ],
         "'ASSERTSATISFIES": [
           -1,
-          366
+          376
         ],
         "'ASSERTRAISES": [
           -1,
-          366
+          376
         ],
         "'IS": [
           -1,
-          366
+          376
         ],
         "'ISNOT": [
           -1,
-          366
+          376
         ],
         "'SATISFIES": [
           -1,
-          366
+          376
         ],
         "'RAISES": [
           -1,
-          366
+          376
         ],
         "'SWITCH": [
           -1,
-          366
+          376
         ],
         "'CASE": [
           -1,
-          366
+          376
         ],
         "'DEFAULT": [
           -1,
-          366
+          376
         ],
         "'YIELD": [
           -1,
-          366
+          376
         ],
         "'PLUS": [
           -1,
-          366
+          376
         ],
         "'DASH": [
           -1,
-          366
+          376
         ],
         "'TIMES": [
           -1,
-          366
+          376
         ],
         "'SLASH": [
           -1,
-          366
+          376
         ],
         "'PERCENT": [
           -1,
-          366
+          376
         ],
         "'EQUALEQUAL": [
           -1,
-          366
+          376
         ],
         "'NEQ": [
           -1,
-          366
+          376
         ],
         "'LEQ": [
           -1,
-          366
+          376
         ],
         "'GEQ": [
           -1,
-          366
+          376
         ],
         "'AND": [
           -1,
-          366
+          376
         ],
         "'OR": [
           -1,
-          366
+          376
         ],
         "'BANG": [
           -1,
-          366
+          376
         ],
         "'DOT": [
           -1,
-          366
+          376
         ],
         "'LBRACK": [
           -1,
-          366
+          376
         ],
         "'RBRACK": [
           -1,
-          366
+          376
         ],
         "'NUMBER": [
           -1,
-          366
+          376
         ],
         "'TRUE": [
           -1,
-          366
+          376
         ],
         "'FALSE": [
           -1,
-          366
+          376
         ],
         "'NULL": [
           -1,
-          366
+          376
         ],
         "'PARENAFTERBRACE": [
           -1,
-          366
+          376
+        ],
+        "'BLOCK": [
+          -1,
+          376
         ],
         "'TABLE": [
           -1,
-          366
+          376
         ],
         "'ASK": [
           -1,
-          366
+          376
         ],
         "'NEW": [
           -1,
-          366
+          376
         ]
       },
       {
         "'COLON": [
-          341
+          348
         ]
       },
       {
         "table-expr_I5*": [
-          342
+          349
         ],
         "'RBRACE": [
           -1,
-          368
+          378
         ],
         "'ROW": [
           -1,
-          368
+          378
         ]
       },
       {
         "'NAME": [
-          89
+          91
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          161
+          165
         ],
         "'INT": [
           26
@@ -28102,28 +29959,28 @@ function(E) {
           31
         ],
         "table-header": [
-          343
+          350
         ]
       },
       {
         "'SEMI": [
           -1,
-          370
+          380
         ],
         "'COMMA": [
           -1,
-          370
+          380
         ]
       },
       {
         "'SEMI": [
           -1,
-          372
+          382
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'STRING": [
           12
@@ -28132,10 +29989,10 @@ function(E) {
           23
         ],
         "'RBRACE": [
-          344
+          351
         ],
         "'PARENSPACE": [
-          97
+          99
         ],
         "switch-expr": [
           37
@@ -28144,7 +30001,7 @@ function(E) {
           38
         ],
         "binop-expr": [
-          163
+          167
         ],
         "unop-expr": [
           41
@@ -28197,25 +30054,31 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
         "ask-branch": [
-          345
+          352
         ],
         "ask-expr_A0_I4": [
-          346
+          353
         ],
         "'NEW": [
-          60
+          62
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'STRING": [
           12
@@ -28224,7 +30087,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          97
+          99
         ],
         "switch-expr": [
           37
@@ -28233,7 +30096,7 @@ function(E) {
           38
         ],
         "binop-expr": [
-          163
+          167
         ],
         "unop-expr": [
           41
@@ -28286,920 +30149,947 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
         "ask-branch": [
-          347
+          354
         ],
         "otherwise-branch": [
-          348
+          355
         ],
         "ask-expr_A1_I4": [
-          349
+          356
         ],
         "'OTHERWISE": [
-          350
+          357
         ],
         "'NEW": [
-          60
+          62
         ]
       },
       {
         "'COMMA": [
-          351
+          358
         ],
         "new-expr_I3_I1": [
-          352
+          359
         ],
         "'RPAREN": [
           -1,
-          374
+          384
         ]
       },
       {
         "$": [
           -1,
-          376
+          386
         ],
         "'NAME": [
           -1,
-          376
+          386
         ],
         "'SEMI": [
           -1,
-          376
+          386
         ],
         "'PARENNOSPACE": [
           -1,
-          376
+          386
         ],
         "'STRING": [
           -1,
-          376
+          386
         ],
         "'RPAREN": [
           -1,
-          376
+          386
         ],
         "'LBRACE": [
           -1,
-          376
+          386
         ],
         "'RBRACE": [
           -1,
-          376
+          386
         ],
         "'SPY": [
           -1,
-          376
+          386
         ],
         "'PARENSPACE": [
           -1,
-          376
+          386
         ],
         "'COMMA": [
           -1,
-          376
+          386
         ],
         "'INT": [
           -1,
-          376
+          386
         ],
         "'LONG": [
           -1,
-          376
+          386
         ],
         "'DOUBLE": [
           -1,
-          376
+          386
         ],
         "'FLOAT": [
           -1,
-          376
+          386
         ],
         "'BOOLEAN": [
           -1,
-          376
+          386
         ],
         "'VOID": [
           -1,
-          376
+          386
         ],
         "'LT": [
           -1,
-          376
+          386
         ],
         "'GT": [
           -1,
-          376
+          386
         ],
         "'THINARROW": [
           -1,
-          376
+          386
         ],
         "'DATA": [
           -1,
-          376
+          386
         ],
         "'IF": [
           -1,
-          376
+          386
         ],
         "'FOR": [
           -1,
-          376
+          386
         ],
         "'RETURN": [
           -1,
-          376
+          386
         ],
         "'VAR": [
           -1,
-          376
+          386
         ],
         "'REC": [
           -1,
-          376
+          386
         ],
         "'ATCHECK": [
           -1,
-          376
+          386
         ],
         "'ASSERTEQUALS": [
           -1,
-          376
+          386
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          376
+          386
         ],
         "'ASSERTTRUE": [
           -1,
-          376
+          386
         ],
         "'ASSERTFALSE": [
           -1,
-          376
+          386
         ],
         "'ASSERTSATISFIES": [
           -1,
-          376
+          386
         ],
         "'ASSERTRAISES": [
           -1,
-          376
+          386
         ],
         "'IS": [
           -1,
-          376
+          386
         ],
         "'ISNOT": [
           -1,
-          376
+          386
         ],
         "'SATISFIES": [
           -1,
-          376
+          386
         ],
         "'RAISES": [
           -1,
-          376
+          386
         ],
         "'SWITCH": [
           -1,
-          376
+          386
         ],
         "'CASE": [
           -1,
-          376
+          386
         ],
         "'DEFAULT": [
           -1,
-          376
+          386
         ],
         "'YIELD": [
           -1,
-          376
+          386
         ],
         "'PLUS": [
           -1,
-          376
+          386
         ],
         "'DASH": [
           -1,
-          376
+          386
         ],
         "'TIMES": [
           -1,
-          376
+          386
         ],
         "'SLASH": [
           -1,
-          376
+          386
         ],
         "'PERCENT": [
           -1,
-          376
+          386
         ],
         "'EQUALEQUAL": [
           -1,
-          376
+          386
         ],
         "'NEQ": [
           -1,
-          376
+          386
         ],
         "'LEQ": [
           -1,
-          376
+          386
         ],
         "'GEQ": [
           -1,
-          376
+          386
         ],
         "'AND": [
           -1,
-          376
+          386
         ],
         "'OR": [
           -1,
-          376
+          386
         ],
         "'BANG": [
           -1,
-          376
+          386
         ],
         "'DOT": [
           -1,
-          376
+          386
         ],
         "'LBRACK": [
           -1,
-          376
+          386
         ],
         "'RBRACK": [
           -1,
-          376
+          386
         ],
         "'NUMBER": [
           -1,
-          376
+          386
         ],
         "'TRUE": [
           -1,
-          376
+          386
         ],
         "'FALSE": [
           -1,
-          376
+          386
         ],
         "'NULL": [
           -1,
-          376
+          386
         ],
         "'PARENAFTERBRACE": [
           -1,
-          376
+          386
+        ],
+        "'BLOCK": [
+          -1,
+          386
         ],
         "'TABLE": [
           -1,
-          376
+          386
         ],
         "'ASK": [
           -1,
-          376
+          386
         ],
         "'NEW": [
           -1,
-          376
+          386
         ]
       },
       {
         "$": [
           -1,
-          378
+          388
         ],
         "'IMPORT": [
           -1,
-          378
+          388
         ],
         "'NAME": [
           -1,
-          378
+          388
         ],
         "'PARENNOSPACE": [
           -1,
-          378
+          388
         ],
         "'STRING": [
           -1,
-          378
+          388
         ],
         "'INCLUDE": [
           -1,
-          378
+          388
         ],
         "'LBRACE": [
           -1,
-          378
+          388
         ],
         "'PARENSPACE": [
           -1,
-          378
+          388
         ],
         "'INT": [
           -1,
-          378
+          388
         ],
         "'LONG": [
           -1,
-          378
+          388
         ],
         "'DOUBLE": [
           -1,
-          378
+          388
         ],
         "'FLOAT": [
           -1,
-          378
+          388
         ],
         "'BOOLEAN": [
           -1,
-          378
+          388
         ],
         "'VOID": [
           -1,
-          378
+          388
         ],
         "'DATA": [
           -1,
-          378
+          388
         ],
         "'VAR": [
           -1,
-          378
+          388
         ],
         "'REC": [
           -1,
-          378
+          388
         ],
         "'ATCHECK": [
           -1,
-          378
+          388
         ],
         "'SWITCH": [
           -1,
-          378
+          388
         ],
         "'DASH": [
           -1,
-          378
+          388
         ],
         "'BANG": [
           -1,
-          378
+          388
         ],
         "'LBRACK": [
           -1,
-          378
+          388
         ],
         "'NUMBER": [
           -1,
-          378
+          388
         ],
         "'TRUE": [
           -1,
-          378
+          388
         ],
         "'FALSE": [
           -1,
-          378
+          388
         ],
         "'NULL": [
           -1,
-          378
+          388
         ],
         "'PARENAFTERBRACE": [
           -1,
-          378
+          388
+        ],
+        "'BLOCK": [
+          -1,
+          388
         ],
         "'TABLE": [
           -1,
-          378
+          388
         ],
         "'ASK": [
           -1,
-          378
+          388
         ],
         "'NEW": [
           -1,
-          378
+          388
         ]
       },
       {
         "'NAME": [
-          353
+          360
         ]
       },
       {
         "$": [
           -1,
-          380
+          390
         ],
         "'IMPORT": [
           -1,
-          380
+          390
         ],
         "'NAME": [
           -1,
-          380
+          390
         ],
         "'PARENNOSPACE": [
           -1,
-          380
+          390
         ],
         "'STRING": [
           -1,
-          380
+          390
         ],
         "'INCLUDE": [
           -1,
-          380
+          390
         ],
         "'LBRACE": [
           -1,
-          380
+          390
         ],
         "'PARENSPACE": [
           -1,
-          380
+          390
         ],
         "'INT": [
           -1,
-          380
+          390
         ],
         "'LONG": [
           -1,
-          380
+          390
         ],
         "'DOUBLE": [
           -1,
-          380
+          390
         ],
         "'FLOAT": [
           -1,
-          380
+          390
         ],
         "'BOOLEAN": [
           -1,
-          380
+          390
         ],
         "'VOID": [
           -1,
-          380
+          390
         ],
         "'DATA": [
           -1,
-          380
+          390
         ],
         "'VAR": [
           -1,
-          380
+          390
         ],
         "'REC": [
           -1,
-          380
+          390
         ],
         "'ATCHECK": [
           -1,
-          380
+          390
         ],
         "'SWITCH": [
           -1,
-          380
+          390
         ],
         "'DASH": [
           -1,
-          380
+          390
         ],
         "'BANG": [
           -1,
-          380
+          390
         ],
         "'LBRACK": [
           -1,
-          380
+          390
         ],
         "'NUMBER": [
           -1,
-          380
+          390
         ],
         "'TRUE": [
           -1,
-          380
+          390
         ],
         "'FALSE": [
           -1,
-          380
+          390
         ],
         "'NULL": [
           -1,
-          380
+          390
         ],
         "'PARENAFTERBRACE": [
           -1,
-          380
+          390
+        ],
+        "'BLOCK": [
+          -1,
+          390
         ],
         "'TABLE": [
           -1,
-          380
+          390
         ],
         "'ASK": [
           -1,
-          380
+          390
         ],
         "'NEW": [
           -1,
-          380
+          390
         ]
       },
       {
         "'COMMA": [
           -1,
-          382
+          392
         ],
         "'GT": [
           -1,
-          382
+          392
         ]
       },
       {
         "fun-decl_I6?": [
-          354
+          361
         ],
         "fun-decl_I6": [
-          355
+          362
         ],
         "where-clause": [
-          356
+          363
         ],
         "'WHERE": [
-          357
+          364
         ],
         "$": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'NAME": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'PARENNOSPACE": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'STRING": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'LBRACE": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'RBRACE": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'SPY": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'PARENSPACE": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'INT": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'LONG": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'DOUBLE": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'FLOAT": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'BOOLEAN": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'VOID": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'DATA": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'IF": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'FOR": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'RETURN": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'VAR": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'REC": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'ATCHECK": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'ASSERTEQUALS": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'ASSERTTRUE": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'ASSERTFALSE": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'ASSERTSATISFIES": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'ASSERTRAISES": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'SWITCH": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'YIELD": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'DASH": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'BANG": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'LBRACK": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'NUMBER": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'TRUE": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'FALSE": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'NULL": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'PARENAFTERBRACE": [
           -1,
-          384,
-          386
+          394,
+          396
+        ],
+        "'BLOCK": [
+          -1,
+          394,
+          396
         ],
         "'TABLE": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'ASK": [
           -1,
-          384,
-          386
+          394,
+          396
         ],
         "'NEW": [
           -1,
-          384,
-          386
+          394,
+          396
         ]
       },
       {
         "block_I1*": [
-          358
+          365
         ],
         "'NAME": [
           -1,
-          388
+          398
         ],
         "'PARENNOSPACE": [
           -1,
-          388
+          398
         ],
         "'STRING": [
           -1,
-          388
+          398
         ],
         "'LBRACE": [
           -1,
-          388
+          398
         ],
         "'RBRACE": [
           -1,
-          388
+          398
         ],
         "'SPY": [
           -1,
-          388
+          398
         ],
         "'PARENSPACE": [
           -1,
-          388
+          398
         ],
         "'INT": [
           -1,
-          388
+          398
         ],
         "'LONG": [
           -1,
-          388
+          398
         ],
         "'DOUBLE": [
           -1,
-          388
+          398
         ],
         "'FLOAT": [
           -1,
-          388
+          398
         ],
         "'BOOLEAN": [
           -1,
-          388
+          398
         ],
         "'VOID": [
           -1,
-          388
+          398
         ],
         "'DATA": [
           -1,
-          388
+          398
         ],
         "'IF": [
           -1,
-          388
+          398
         ],
         "'FOR": [
           -1,
-          388
+          398
         ],
         "'RETURN": [
           -1,
-          388
+          398
         ],
         "'VAR": [
           -1,
-          388
+          398
         ],
         "'REC": [
           -1,
-          388
+          398
         ],
         "'ATCHECK": [
           -1,
-          388
+          398
         ],
         "'SWITCH": [
           -1,
-          388
+          398
         ],
         "'YIELD": [
           -1,
-          388
+          398
         ],
         "'DASH": [
           -1,
-          388
+          398
         ],
         "'BANG": [
           -1,
-          388
+          398
         ],
         "'LBRACK": [
           -1,
-          388
+          398
         ],
         "'NUMBER": [
           -1,
-          388
+          398
         ],
         "'TRUE": [
           -1,
-          388
+          398
         ],
         "'FALSE": [
           -1,
-          388
+          398
         ],
         "'NULL": [
           -1,
-          388
+          398
         ],
         "'PARENAFTERBRACE": [
           -1,
-          388
+          398
+        ],
+        "'BLOCK": [
+          -1,
+          398
         ],
         "'TABLE": [
           -1,
-          388
+          398
         ],
         "'ASK": [
           -1,
-          388
+          398
         ],
         "'NEW": [
           -1,
-          388
+          398
         ]
       },
       {
         "'NAME": [
-          89
+          91
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          187
+          191
         ],
         "param": [
-          359
+          366
         ],
         "'INT": [
           26
@@ -29223,882 +31113,72 @@ function(E) {
       {
         "'RPAREN": [
           -1,
-          390
-        ],
-        "'COMMA": [
-          -1,
-          390
-        ]
-      },
-      {
-        "'NAME": [
-          360
-        ]
-      },
-      {
-        "'RPAREN": [
-          361
-        ]
-      },
-      {
-        "'RPAREN": [
-          -1,
-          392
-        ]
-      },
-      {
-        "variant-decl_A0_I2_I1*": [
-          362
-        ],
-        "'RPAREN": [
-          -1,
-          394,
-          396
-        ],
-        "'COMMA": [
-          -1,
-          396
-        ]
-      },
-      {
-        "'NAME": [
-          192
-        ],
-        "variant-decl": [
-          363
-        ],
-        "'RBRACE": [
-          -1,
-          398
-        ]
-      },
-      {
-        "'RBRACE": [
-          364
-        ]
-      },
-      {
-        "'SEMI": [
-          -1,
           400
         ],
-        "'RBRACE": [
+        "'COMMA": [
           -1,
           400
         ]
       },
       {
-        "'RBRACE": [
+        "'NAME": [
+          367
+        ]
+      },
+      {
+        "'RPAREN": [
+          368
+        ]
+      },
+      {
+        "'RPAREN": [
           -1,
           402
         ]
       },
       {
-        "$": [
-          -1,
-          404
+        "variant-decl_A0_I2_I1*": [
+          369
         ],
-        "'NAME": [
+        "'RPAREN": [
           -1,
-          404
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          404
-        ],
-        "'STRING": [
-          -1,
-          404
-        ],
-        "'LBRACE": [
-          -1,
-          404
-        ],
-        "'RBRACE": [
-          -1,
-          404
-        ],
-        "'SPY": [
-          -1,
-          404
-        ],
-        "'PARENSPACE": [
-          -1,
-          404
-        ],
-        "'INT": [
-          -1,
-          404
-        ],
-        "'LONG": [
-          -1,
-          404
-        ],
-        "'DOUBLE": [
-          -1,
-          404
-        ],
-        "'FLOAT": [
-          -1,
-          404
-        ],
-        "'BOOLEAN": [
-          -1,
-          404
-        ],
-        "'VOID": [
-          -1,
-          404
-        ],
-        "'DATA": [
-          -1,
-          404
-        ],
-        "'IF": [
-          -1,
-          404
-        ],
-        "'FOR": [
-          -1,
-          404
-        ],
-        "'RETURN": [
-          -1,
-          404
-        ],
-        "'VAR": [
-          -1,
-          404
-        ],
-        "'REC": [
-          -1,
-          404
-        ],
-        "'ATCHECK": [
-          -1,
-          404
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          404
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          404
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          404
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          404
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          404
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          404
-        ],
-        "'SWITCH": [
-          -1,
-          404
-        ],
-        "'YIELD": [
-          -1,
-          404
-        ],
-        "'DASH": [
-          -1,
-          404
-        ],
-        "'BANG": [
-          -1,
-          404
-        ],
-        "'LBRACK": [
-          -1,
-          404
-        ],
-        "'NUMBER": [
-          -1,
-          404
-        ],
-        "'TRUE": [
-          -1,
-          404
-        ],
-        "'FALSE": [
-          -1,
-          404
-        ],
-        "'NULL": [
-          -1,
-          404
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          404
-        ],
-        "'TABLE": [
-          -1,
-          404
-        ],
-        "'ASK": [
-          -1,
-          404
-        ],
-        "'NEW": [
-          -1,
-          404
-        ]
-      },
-      {
-        "$": [
-          -1,
+          404,
           406
         ],
-        "'NAME": [
-          -1,
-          406
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          406
-        ],
-        "'STRING": [
-          -1,
-          406
-        ],
-        "'LBRACE": [
-          -1,
-          406
-        ],
-        "'RBRACE": [
-          -1,
-          406
-        ],
-        "'SPY": [
-          -1,
-          406
-        ],
-        "'PARENSPACE": [
-          -1,
-          406
-        ],
-        "'INT": [
-          -1,
-          406
-        ],
-        "'LONG": [
-          -1,
-          406
-        ],
-        "'DOUBLE": [
-          -1,
-          406
-        ],
-        "'FLOAT": [
-          -1,
-          406
-        ],
-        "'BOOLEAN": [
-          -1,
-          406
-        ],
-        "'VOID": [
-          -1,
-          406
-        ],
-        "'DATA": [
-          -1,
-          406
-        ],
-        "'IF": [
-          -1,
-          406
-        ],
-        "'FOR": [
-          -1,
-          406
-        ],
-        "'RETURN": [
-          -1,
-          406
-        ],
-        "'VAR": [
-          -1,
-          406
-        ],
-        "'REC": [
-          -1,
-          406
-        ],
-        "'ATCHECK": [
-          -1,
-          406
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          406
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          406
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          406
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          406
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          406
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          406
-        ],
-        "'SWITCH": [
-          -1,
-          406
-        ],
-        "'YIELD": [
-          -1,
-          406
-        ],
-        "'DASH": [
-          -1,
-          406
-        ],
-        "'BANG": [
-          -1,
-          406
-        ],
-        "'LBRACK": [
-          -1,
-          406
-        ],
-        "'NUMBER": [
-          -1,
-          406
-        ],
-        "'TRUE": [
-          -1,
-          406
-        ],
-        "'FALSE": [
-          -1,
-          406
-        ],
-        "'NULL": [
-          -1,
-          406
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          406
-        ],
-        "'TABLE": [
-          -1,
-          406
-        ],
-        "'ASK": [
-          -1,
-          406
-        ],
-        "'NEW": [
+        "'COMMA": [
           -1,
           406
         ]
       },
       {
-        "$": [
-          -1,
-          408
-        ],
         "'NAME": [
-          -1,
-          408
+          196
         ],
-        "'PARENNOSPACE": [
-          -1,
-          408
-        ],
-        "'STRING": [
-          -1,
-          408
-        ],
-        "'LBRACE": [
-          -1,
-          408
+        "variant-decl": [
+          370
         ],
         "'RBRACE": [
-          -1,
-          408
-        ],
-        "'SPY": [
-          -1,
-          408
-        ],
-        "'PARENSPACE": [
-          -1,
-          408
-        ],
-        "'INT": [
-          -1,
-          408
-        ],
-        "'LONG": [
-          -1,
-          408
-        ],
-        "'DOUBLE": [
-          -1,
-          408
-        ],
-        "'FLOAT": [
-          -1,
-          408
-        ],
-        "'BOOLEAN": [
-          -1,
-          408
-        ],
-        "'VOID": [
-          -1,
-          408
-        ],
-        "'DATA": [
-          -1,
-          408
-        ],
-        "'IF": [
-          -1,
-          408
-        ],
-        "'FOR": [
-          -1,
-          408
-        ],
-        "'RETURN": [
-          -1,
-          408
-        ],
-        "'VAR": [
-          -1,
-          408
-        ],
-        "'REC": [
-          -1,
-          408
-        ],
-        "'ATCHECK": [
-          -1,
-          408
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          408
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          408
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          408
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          408
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          408
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          408
-        ],
-        "'SWITCH": [
-          -1,
-          408
-        ],
-        "'YIELD": [
-          -1,
-          408
-        ],
-        "'DASH": [
-          -1,
-          408
-        ],
-        "'BANG": [
-          -1,
-          408
-        ],
-        "'LBRACK": [
-          -1,
-          408
-        ],
-        "'NUMBER": [
-          -1,
-          408
-        ],
-        "'TRUE": [
-          -1,
-          408
-        ],
-        "'FALSE": [
-          -1,
-          408
-        ],
-        "'NULL": [
-          -1,
-          408
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          408
-        ],
-        "'TABLE": [
-          -1,
-          408
-        ],
-        "'ASK": [
-          -1,
-          408
-        ],
-        "'NEW": [
           -1,
           408
         ]
       },
       {
-        "$": [
-          -1,
-          410
-        ],
-        "'NAME": [
-          -1,
-          410
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          410
-        ],
-        "'STRING": [
-          -1,
-          410
-        ],
-        "'LBRACE": [
+        "'RBRACE": [
+          371
+        ]
+      },
+      {
+        "'SEMI": [
           -1,
           410
         ],
         "'RBRACE": [
-          -1,
-          410
-        ],
-        "'SPY": [
-          -1,
-          410
-        ],
-        "'PARENSPACE": [
-          -1,
-          410
-        ],
-        "'INT": [
-          -1,
-          410
-        ],
-        "'LONG": [
-          -1,
-          410
-        ],
-        "'DOUBLE": [
-          -1,
-          410
-        ],
-        "'FLOAT": [
-          -1,
-          410
-        ],
-        "'BOOLEAN": [
-          -1,
-          410
-        ],
-        "'VOID": [
-          -1,
-          410
-        ],
-        "'DATA": [
-          -1,
-          410
-        ],
-        "'IF": [
-          -1,
-          410
-        ],
-        "'FOR": [
-          -1,
-          410
-        ],
-        "'RETURN": [
-          -1,
-          410
-        ],
-        "'VAR": [
-          -1,
-          410
-        ],
-        "'REC": [
-          -1,
-          410
-        ],
-        "'ATCHECK": [
-          -1,
-          410
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          410
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          410
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          410
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          410
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          410
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          410
-        ],
-        "'SWITCH": [
-          -1,
-          410
-        ],
-        "'YIELD": [
-          -1,
-          410
-        ],
-        "'DASH": [
-          -1,
-          410
-        ],
-        "'BANG": [
-          -1,
-          410
-        ],
-        "'LBRACK": [
-          -1,
-          410
-        ],
-        "'NUMBER": [
-          -1,
-          410
-        ],
-        "'TRUE": [
-          -1,
-          410
-        ],
-        "'FALSE": [
-          -1,
-          410
-        ],
-        "'NULL": [
-          -1,
-          410
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          410
-        ],
-        "'TABLE": [
-          -1,
-          410
-        ],
-        "'ASK": [
-          -1,
-          410
-        ],
-        "'NEW": [
           -1,
           410
         ]
       },
       {
-        "$": [
-          -1,
-          412
-        ],
-        "'NAME": [
-          -1,
-          412
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          412
-        ],
-        "'STRING": [
-          -1,
-          412
-        ],
-        "'LBRACE": [
-          -1,
-          412
-        ],
         "'RBRACE": [
-          -1,
-          412
-        ],
-        "'SPY": [
-          -1,
-          412
-        ],
-        "'PARENSPACE": [
-          -1,
-          412
-        ],
-        "'INT": [
-          -1,
-          412
-        ],
-        "'LONG": [
-          -1,
-          412
-        ],
-        "'DOUBLE": [
-          -1,
-          412
-        ],
-        "'FLOAT": [
-          -1,
-          412
-        ],
-        "'BOOLEAN": [
-          -1,
-          412
-        ],
-        "'VOID": [
-          -1,
-          412
-        ],
-        "'DATA": [
-          -1,
-          412
-        ],
-        "'IF": [
-          -1,
-          412
-        ],
-        "'FOR": [
-          -1,
-          412
-        ],
-        "'RETURN": [
-          -1,
-          412
-        ],
-        "'VAR": [
-          -1,
-          412
-        ],
-        "'REC": [
-          -1,
-          412
-        ],
-        "'ATCHECK": [
-          -1,
-          412
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          412
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          412
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          412
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          412
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          412
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          412
-        ],
-        "'SWITCH": [
-          -1,
-          412
-        ],
-        "'YIELD": [
-          -1,
-          412
-        ],
-        "'DASH": [
-          -1,
-          412
-        ],
-        "'BANG": [
-          -1,
-          412
-        ],
-        "'LBRACK": [
-          -1,
-          412
-        ],
-        "'NUMBER": [
-          -1,
-          412
-        ],
-        "'TRUE": [
-          -1,
-          412
-        ],
-        "'FALSE": [
-          -1,
-          412
-        ],
-        "'NULL": [
-          -1,
-          412
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          412
-        ],
-        "'TABLE": [
-          -1,
-          412
-        ],
-        "'ASK": [
-          -1,
-          412
-        ],
-        "'NEW": [
           -1,
           412
         ]
@@ -30252,6 +31332,10 @@ function(E) {
           -1,
           414
         ],
+        "'BLOCK": [
+          -1,
+          414
+        ],
         "'TABLE": [
           -1,
           414
@@ -30263,2115 +31347,2516 @@ function(E) {
         "'NEW": [
           -1,
           414
+        ]
+      },
+      {
+        "$": [
+          -1,
+          416
+        ],
+        "'NAME": [
+          -1,
+          416
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          416
+        ],
+        "'STRING": [
+          -1,
+          416
+        ],
+        "'LBRACE": [
+          -1,
+          416
+        ],
+        "'RBRACE": [
+          -1,
+          416
+        ],
+        "'SPY": [
+          -1,
+          416
+        ],
+        "'PARENSPACE": [
+          -1,
+          416
+        ],
+        "'INT": [
+          -1,
+          416
+        ],
+        "'LONG": [
+          -1,
+          416
+        ],
+        "'DOUBLE": [
+          -1,
+          416
+        ],
+        "'FLOAT": [
+          -1,
+          416
+        ],
+        "'BOOLEAN": [
+          -1,
+          416
+        ],
+        "'VOID": [
+          -1,
+          416
+        ],
+        "'DATA": [
+          -1,
+          416
+        ],
+        "'IF": [
+          -1,
+          416
+        ],
+        "'FOR": [
+          -1,
+          416
+        ],
+        "'RETURN": [
+          -1,
+          416
+        ],
+        "'VAR": [
+          -1,
+          416
+        ],
+        "'REC": [
+          -1,
+          416
+        ],
+        "'ATCHECK": [
+          -1,
+          416
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          416
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          416
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          416
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          416
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          416
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          416
+        ],
+        "'SWITCH": [
+          -1,
+          416
+        ],
+        "'YIELD": [
+          -1,
+          416
+        ],
+        "'DASH": [
+          -1,
+          416
+        ],
+        "'BANG": [
+          -1,
+          416
+        ],
+        "'LBRACK": [
+          -1,
+          416
+        ],
+        "'NUMBER": [
+          -1,
+          416
+        ],
+        "'TRUE": [
+          -1,
+          416
+        ],
+        "'FALSE": [
+          -1,
+          416
+        ],
+        "'NULL": [
+          -1,
+          416
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          416
+        ],
+        "'BLOCK": [
+          -1,
+          416
+        ],
+        "'TABLE": [
+          -1,
+          416
+        ],
+        "'ASK": [
+          -1,
+          416
+        ],
+        "'NEW": [
+          -1,
+          416
+        ]
+      },
+      {
+        "$": [
+          -1,
+          418
+        ],
+        "'NAME": [
+          -1,
+          418
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          418
+        ],
+        "'STRING": [
+          -1,
+          418
+        ],
+        "'LBRACE": [
+          -1,
+          418
+        ],
+        "'RBRACE": [
+          -1,
+          418
+        ],
+        "'SPY": [
+          -1,
+          418
+        ],
+        "'PARENSPACE": [
+          -1,
+          418
+        ],
+        "'INT": [
+          -1,
+          418
+        ],
+        "'LONG": [
+          -1,
+          418
+        ],
+        "'DOUBLE": [
+          -1,
+          418
+        ],
+        "'FLOAT": [
+          -1,
+          418
+        ],
+        "'BOOLEAN": [
+          -1,
+          418
+        ],
+        "'VOID": [
+          -1,
+          418
+        ],
+        "'DATA": [
+          -1,
+          418
+        ],
+        "'IF": [
+          -1,
+          418
+        ],
+        "'FOR": [
+          -1,
+          418
+        ],
+        "'RETURN": [
+          -1,
+          418
+        ],
+        "'VAR": [
+          -1,
+          418
+        ],
+        "'REC": [
+          -1,
+          418
+        ],
+        "'ATCHECK": [
+          -1,
+          418
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          418
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          418
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          418
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          418
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          418
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          418
+        ],
+        "'SWITCH": [
+          -1,
+          418
+        ],
+        "'YIELD": [
+          -1,
+          418
+        ],
+        "'DASH": [
+          -1,
+          418
+        ],
+        "'BANG": [
+          -1,
+          418
+        ],
+        "'LBRACK": [
+          -1,
+          418
+        ],
+        "'NUMBER": [
+          -1,
+          418
+        ],
+        "'TRUE": [
+          -1,
+          418
+        ],
+        "'FALSE": [
+          -1,
+          418
+        ],
+        "'NULL": [
+          -1,
+          418
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          418
+        ],
+        "'BLOCK": [
+          -1,
+          418
+        ],
+        "'TABLE": [
+          -1,
+          418
+        ],
+        "'ASK": [
+          -1,
+          418
+        ],
+        "'NEW": [
+          -1,
+          418
+        ]
+      },
+      {
+        "$": [
+          -1,
+          420
+        ],
+        "'NAME": [
+          -1,
+          420
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          420
+        ],
+        "'STRING": [
+          -1,
+          420
+        ],
+        "'LBRACE": [
+          -1,
+          420
+        ],
+        "'RBRACE": [
+          -1,
+          420
+        ],
+        "'SPY": [
+          -1,
+          420
+        ],
+        "'PARENSPACE": [
+          -1,
+          420
+        ],
+        "'INT": [
+          -1,
+          420
+        ],
+        "'LONG": [
+          -1,
+          420
+        ],
+        "'DOUBLE": [
+          -1,
+          420
+        ],
+        "'FLOAT": [
+          -1,
+          420
+        ],
+        "'BOOLEAN": [
+          -1,
+          420
+        ],
+        "'VOID": [
+          -1,
+          420
+        ],
+        "'DATA": [
+          -1,
+          420
+        ],
+        "'IF": [
+          -1,
+          420
+        ],
+        "'FOR": [
+          -1,
+          420
+        ],
+        "'RETURN": [
+          -1,
+          420
+        ],
+        "'VAR": [
+          -1,
+          420
+        ],
+        "'REC": [
+          -1,
+          420
+        ],
+        "'ATCHECK": [
+          -1,
+          420
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          420
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          420
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          420
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          420
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          420
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          420
+        ],
+        "'SWITCH": [
+          -1,
+          420
+        ],
+        "'YIELD": [
+          -1,
+          420
+        ],
+        "'DASH": [
+          -1,
+          420
+        ],
+        "'BANG": [
+          -1,
+          420
+        ],
+        "'LBRACK": [
+          -1,
+          420
+        ],
+        "'NUMBER": [
+          -1,
+          420
+        ],
+        "'TRUE": [
+          -1,
+          420
+        ],
+        "'FALSE": [
+          -1,
+          420
+        ],
+        "'NULL": [
+          -1,
+          420
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          420
+        ],
+        "'BLOCK": [
+          -1,
+          420
+        ],
+        "'TABLE": [
+          -1,
+          420
+        ],
+        "'ASK": [
+          -1,
+          420
+        ],
+        "'NEW": [
+          -1,
+          420
+        ]
+      },
+      {
+        "$": [
+          -1,
+          422
+        ],
+        "'NAME": [
+          -1,
+          422
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          422
+        ],
+        "'STRING": [
+          -1,
+          422
+        ],
+        "'LBRACE": [
+          -1,
+          422
+        ],
+        "'RBRACE": [
+          -1,
+          422
+        ],
+        "'SPY": [
+          -1,
+          422
+        ],
+        "'PARENSPACE": [
+          -1,
+          422
+        ],
+        "'INT": [
+          -1,
+          422
+        ],
+        "'LONG": [
+          -1,
+          422
+        ],
+        "'DOUBLE": [
+          -1,
+          422
+        ],
+        "'FLOAT": [
+          -1,
+          422
+        ],
+        "'BOOLEAN": [
+          -1,
+          422
+        ],
+        "'VOID": [
+          -1,
+          422
+        ],
+        "'DATA": [
+          -1,
+          422
+        ],
+        "'IF": [
+          -1,
+          422
+        ],
+        "'FOR": [
+          -1,
+          422
+        ],
+        "'RETURN": [
+          -1,
+          422
+        ],
+        "'VAR": [
+          -1,
+          422
+        ],
+        "'REC": [
+          -1,
+          422
+        ],
+        "'ATCHECK": [
+          -1,
+          422
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          422
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          422
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          422
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          422
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          422
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          422
+        ],
+        "'SWITCH": [
+          -1,
+          422
+        ],
+        "'YIELD": [
+          -1,
+          422
+        ],
+        "'DASH": [
+          -1,
+          422
+        ],
+        "'BANG": [
+          -1,
+          422
+        ],
+        "'LBRACK": [
+          -1,
+          422
+        ],
+        "'NUMBER": [
+          -1,
+          422
+        ],
+        "'TRUE": [
+          -1,
+          422
+        ],
+        "'FALSE": [
+          -1,
+          422
+        ],
+        "'NULL": [
+          -1,
+          422
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          422
+        ],
+        "'BLOCK": [
+          -1,
+          422
+        ],
+        "'TABLE": [
+          -1,
+          422
+        ],
+        "'ASK": [
+          -1,
+          422
+        ],
+        "'NEW": [
+          -1,
+          422
+        ]
+      },
+      {
+        "$": [
+          -1,
+          424
+        ],
+        "'NAME": [
+          -1,
+          424
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          424
+        ],
+        "'STRING": [
+          -1,
+          424
+        ],
+        "'LBRACE": [
+          -1,
+          424
+        ],
+        "'RBRACE": [
+          -1,
+          424
+        ],
+        "'SPY": [
+          -1,
+          424
+        ],
+        "'PARENSPACE": [
+          -1,
+          424
+        ],
+        "'INT": [
+          -1,
+          424
+        ],
+        "'LONG": [
+          -1,
+          424
+        ],
+        "'DOUBLE": [
+          -1,
+          424
+        ],
+        "'FLOAT": [
+          -1,
+          424
+        ],
+        "'BOOLEAN": [
+          -1,
+          424
+        ],
+        "'VOID": [
+          -1,
+          424
+        ],
+        "'DATA": [
+          -1,
+          424
+        ],
+        "'IF": [
+          -1,
+          424
+        ],
+        "'FOR": [
+          -1,
+          424
+        ],
+        "'RETURN": [
+          -1,
+          424
+        ],
+        "'VAR": [
+          -1,
+          424
+        ],
+        "'REC": [
+          -1,
+          424
+        ],
+        "'ATCHECK": [
+          -1,
+          424
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          424
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          424
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          424
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          424
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          424
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          424
+        ],
+        "'SWITCH": [
+          -1,
+          424
+        ],
+        "'YIELD": [
+          -1,
+          424
+        ],
+        "'DASH": [
+          -1,
+          424
+        ],
+        "'BANG": [
+          -1,
+          424
+        ],
+        "'LBRACK": [
+          -1,
+          424
+        ],
+        "'NUMBER": [
+          -1,
+          424
+        ],
+        "'TRUE": [
+          -1,
+          424
+        ],
+        "'FALSE": [
+          -1,
+          424
+        ],
+        "'NULL": [
+          -1,
+          424
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          424
+        ],
+        "'BLOCK": [
+          -1,
+          424
+        ],
+        "'TABLE": [
+          -1,
+          424
+        ],
+        "'ASK": [
+          -1,
+          424
+        ],
+        "'NEW": [
+          -1,
+          424
         ]
       },
       {
         "spy-stmt_I3*": [
-          365
-        ],
-        "'RPAREN": [
-          -1,
-          416
-        ],
-        "'COMMA": [
-          -1,
-          416
-        ]
-      },
-      {
-        "'RPAREN": [
-          366
-        ]
-      },
-      {
-        "'SEMI": [
-          367
-        ],
-        "assert-stmt_A6_I3?": [
-          368
-        ],
-        "assert-stmt_A6_I3": [
-          369
-        ],
-        "'NAME": [
-          -1,
-          418,
-          420
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          418,
-          420
-        ],
-        "'STRING": [
-          -1,
-          418,
-          420
-        ],
-        "'LBRACE": [
-          -1,
-          418,
-          420
-        ],
-        "'RBRACE": [
-          -1,
-          418,
-          420
-        ],
-        "'SPY": [
-          -1,
-          418,
-          420
-        ],
-        "'PARENSPACE": [
-          -1,
-          418,
-          420
-        ],
-        "'INT": [
-          -1,
-          418,
-          420
-        ],
-        "'LONG": [
-          -1,
-          418,
-          420
-        ],
-        "'DOUBLE": [
-          -1,
-          418,
-          420
-        ],
-        "'FLOAT": [
-          -1,
-          418,
-          420
-        ],
-        "'BOOLEAN": [
-          -1,
-          418,
-          420
-        ],
-        "'VOID": [
-          -1,
-          418,
-          420
-        ],
-        "'DATA": [
-          -1,
-          418,
-          420
-        ],
-        "'IF": [
-          -1,
-          418,
-          420
-        ],
-        "'FOR": [
-          -1,
-          418,
-          420
-        ],
-        "'RETURN": [
-          -1,
-          418,
-          420
-        ],
-        "'VAR": [
-          -1,
-          418,
-          420
-        ],
-        "'REC": [
-          -1,
-          418,
-          420
-        ],
-        "'ATCHECK": [
-          -1,
-          418,
-          420
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          418,
-          420
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          418,
-          420
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          418,
-          420
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          418,
-          420
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          418,
-          420
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          418,
-          420
-        ],
-        "'SWITCH": [
-          -1,
-          418,
-          420
-        ],
-        "'YIELD": [
-          -1,
-          418,
-          420
-        ],
-        "'DASH": [
-          -1,
-          418,
-          420
-        ],
-        "'BANG": [
-          -1,
-          418,
-          420
-        ],
-        "'LBRACK": [
-          -1,
-          418,
-          420
-        ],
-        "'NUMBER": [
-          -1,
-          418,
-          420
-        ],
-        "'TRUE": [
-          -1,
-          418,
-          420
-        ],
-        "'FALSE": [
-          -1,
-          418,
-          420
-        ],
-        "'NULL": [
-          -1,
-          418,
-          420
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          418,
-          420
-        ],
-        "'TABLE": [
-          -1,
-          418,
-          420
-        ],
-        "'ASK": [
-          -1,
-          418,
-          420
-        ],
-        "'NEW": [
-          -1,
-          418,
-          420
-        ]
-      },
-      {
-        "'SEMI": [
-          370
-        ],
-        "assert-stmt_A7_I3?": [
-          371
-        ],
-        "assert-stmt_A7_I3": [
           372
         ],
-        "'NAME": [
+        "'RPAREN": [
           -1,
-          422,
-          424
+          426
         ],
-        "'PARENNOSPACE": [
+        "'COMMA": [
           -1,
-          422,
-          424
-        ],
-        "'STRING": [
-          -1,
-          422,
-          424
-        ],
-        "'LBRACE": [
-          -1,
-          422,
-          424
-        ],
-        "'RBRACE": [
-          -1,
-          422,
-          424
-        ],
-        "'SPY": [
-          -1,
-          422,
-          424
-        ],
-        "'PARENSPACE": [
-          -1,
-          422,
-          424
-        ],
-        "'INT": [
-          -1,
-          422,
-          424
-        ],
-        "'LONG": [
-          -1,
-          422,
-          424
-        ],
-        "'DOUBLE": [
-          -1,
-          422,
-          424
-        ],
-        "'FLOAT": [
-          -1,
-          422,
-          424
-        ],
-        "'BOOLEAN": [
-          -1,
-          422,
-          424
-        ],
-        "'VOID": [
-          -1,
-          422,
-          424
-        ],
-        "'DATA": [
-          -1,
-          422,
-          424
-        ],
-        "'IF": [
-          -1,
-          422,
-          424
-        ],
-        "'FOR": [
-          -1,
-          422,
-          424
-        ],
-        "'RETURN": [
-          -1,
-          422,
-          424
-        ],
-        "'VAR": [
-          -1,
-          422,
-          424
-        ],
-        "'REC": [
-          -1,
-          422,
-          424
-        ],
-        "'ATCHECK": [
-          -1,
-          422,
-          424
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          422,
-          424
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          422,
-          424
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          422,
-          424
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          422,
-          424
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          422,
-          424
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          422,
-          424
-        ],
-        "'SWITCH": [
-          -1,
-          422,
-          424
-        ],
-        "'YIELD": [
-          -1,
-          422,
-          424
-        ],
-        "'DASH": [
-          -1,
-          422,
-          424
-        ],
-        "'BANG": [
-          -1,
-          422,
-          424
-        ],
-        "'LBRACK": [
-          -1,
-          422,
-          424
-        ],
-        "'NUMBER": [
-          -1,
-          422,
-          424
-        ],
-        "'TRUE": [
-          -1,
-          422,
-          424
-        ],
-        "'FALSE": [
-          -1,
-          422,
-          424
-        ],
-        "'NULL": [
-          -1,
-          422,
-          424
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          422,
-          424
-        ],
-        "'TABLE": [
-          -1,
-          422,
-          424
-        ],
-        "'ASK": [
-          -1,
-          422,
-          424
-        ],
-        "'NEW": [
-          -1,
-          422,
-          424
+          426
+        ]
+      },
+      {
+        "'RPAREN": [
+          373
         ]
       },
       {
         "'SEMI": [
-          373
-        ],
-        "assert-stmt_A8_I3?": [
           374
         ],
-        "assert-stmt_A8_I3": [
+        "assert-stmt_A6_I3?": [
           375
+        ],
+        "assert-stmt_A6_I3": [
+          376
         ],
         "'NAME": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'PARENNOSPACE": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'STRING": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'LBRACE": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'RBRACE": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'SPY": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'PARENSPACE": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'INT": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'LONG": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'DOUBLE": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'FLOAT": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'BOOLEAN": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'VOID": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'DATA": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'IF": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'FOR": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'RETURN": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'VAR": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'REC": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'ATCHECK": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'ASSERTEQUALS": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'ASSERTTRUE": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'ASSERTFALSE": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'ASSERTSATISFIES": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'ASSERTRAISES": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'SWITCH": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'YIELD": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'DASH": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'BANG": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'LBRACK": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'NUMBER": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'TRUE": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'FALSE": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'NULL": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'PARENAFTERBRACE": [
           -1,
-          426,
-          428
+          428,
+          430
+        ],
+        "'BLOCK": [
+          -1,
+          428,
+          430
         ],
         "'TABLE": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'ASK": [
           -1,
-          426,
-          428
+          428,
+          430
         ],
         "'NEW": [
           -1,
-          426,
-          428
+          428,
+          430
         ]
       },
       {
         "'SEMI": [
-          376
-        ],
-        "assert-stmt_A9_I3?": [
           377
         ],
-        "assert-stmt_A9_I3": [
+        "assert-stmt_A7_I3?": [
           378
         ],
-        "'NAME": [
-          -1,
-          430,
-          432
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          430,
-          432
-        ],
-        "'STRING": [
-          -1,
-          430,
-          432
-        ],
-        "'LBRACE": [
-          -1,
-          430,
-          432
-        ],
-        "'RBRACE": [
-          -1,
-          430,
-          432
-        ],
-        "'SPY": [
-          -1,
-          430,
-          432
-        ],
-        "'PARENSPACE": [
-          -1,
-          430,
-          432
-        ],
-        "'INT": [
-          -1,
-          430,
-          432
-        ],
-        "'LONG": [
-          -1,
-          430,
-          432
-        ],
-        "'DOUBLE": [
-          -1,
-          430,
-          432
-        ],
-        "'FLOAT": [
-          -1,
-          430,
-          432
-        ],
-        "'BOOLEAN": [
-          -1,
-          430,
-          432
-        ],
-        "'VOID": [
-          -1,
-          430,
-          432
-        ],
-        "'DATA": [
-          -1,
-          430,
-          432
-        ],
-        "'IF": [
-          -1,
-          430,
-          432
-        ],
-        "'FOR": [
-          -1,
-          430,
-          432
-        ],
-        "'RETURN": [
-          -1,
-          430,
-          432
-        ],
-        "'VAR": [
-          -1,
-          430,
-          432
-        ],
-        "'REC": [
-          -1,
-          430,
-          432
-        ],
-        "'ATCHECK": [
-          -1,
-          430,
-          432
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          430,
-          432
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          430,
-          432
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          430,
-          432
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          430,
-          432
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          430,
-          432
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          430,
-          432
-        ],
-        "'SWITCH": [
-          -1,
-          430,
-          432
-        ],
-        "'YIELD": [
-          -1,
-          430,
-          432
-        ],
-        "'DASH": [
-          -1,
-          430,
-          432
-        ],
-        "'BANG": [
-          -1,
-          430,
-          432
-        ],
-        "'LBRACK": [
-          -1,
-          430,
-          432
-        ],
-        "'NUMBER": [
-          -1,
-          430,
-          432
-        ],
-        "'TRUE": [
-          -1,
-          430,
-          432
-        ],
-        "'FALSE": [
-          -1,
-          430,
-          432
-        ],
-        "'NULL": [
-          -1,
-          430,
-          432
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          430,
-          432
-        ],
-        "'TABLE": [
-          -1,
-          430,
-          432
-        ],
-        "'ASK": [
-          -1,
-          430,
-          432
-        ],
-        "'NEW": [
-          -1,
-          430,
-          432
-        ]
-      },
-      {
-        "'NAME": [
+        "assert-stmt_A7_I3": [
           379
-        ]
-      },
-      {
+        ],
         "'NAME": [
           -1,
+          432,
           434
         ],
         "'PARENNOSPACE": [
           -1,
+          432,
           434
         ],
         "'STRING": [
           -1,
+          432,
           434
         ],
         "'LBRACE": [
           -1,
+          432,
           434
         ],
         "'RBRACE": [
           -1,
+          432,
           434
         ],
         "'SPY": [
           -1,
+          432,
           434
         ],
         "'PARENSPACE": [
           -1,
+          432,
           434
         ],
         "'INT": [
           -1,
+          432,
           434
         ],
         "'LONG": [
           -1,
+          432,
           434
         ],
         "'DOUBLE": [
           -1,
+          432,
           434
         ],
         "'FLOAT": [
           -1,
+          432,
           434
         ],
         "'BOOLEAN": [
           -1,
+          432,
           434
         ],
         "'VOID": [
           -1,
+          432,
           434
         ],
         "'DATA": [
           -1,
+          432,
           434
         ],
         "'IF": [
           -1,
+          432,
           434
         ],
         "'FOR": [
           -1,
+          432,
           434
         ],
         "'RETURN": [
           -1,
+          432,
           434
         ],
         "'VAR": [
           -1,
+          432,
           434
         ],
         "'REC": [
           -1,
+          432,
           434
         ],
         "'ATCHECK": [
           -1,
+          432,
           434
         ],
         "'ASSERTEQUALS": [
           -1,
+          432,
           434
         ],
         "'ASSERTNOTEQUALS": [
           -1,
+          432,
           434
         ],
         "'ASSERTTRUE": [
           -1,
+          432,
           434
         ],
         "'ASSERTFALSE": [
           -1,
+          432,
           434
         ],
         "'ASSERTSATISFIES": [
           -1,
+          432,
           434
         ],
         "'ASSERTRAISES": [
           -1,
+          432,
           434
         ],
         "'SWITCH": [
           -1,
+          432,
           434
         ],
         "'YIELD": [
           -1,
+          432,
           434
         ],
         "'DASH": [
           -1,
+          432,
           434
         ],
         "'BANG": [
           -1,
+          432,
           434
         ],
         "'LBRACK": [
           -1,
+          432,
           434
         ],
         "'NUMBER": [
           -1,
+          432,
           434
         ],
         "'TRUE": [
           -1,
+          432,
           434
         ],
         "'FALSE": [
           -1,
+          432,
           434
         ],
         "'NULL": [
           -1,
+          432,
           434
         ],
         "'PARENAFTERBRACE": [
           -1,
+          432,
+          434
+        ],
+        "'BLOCK": [
+          -1,
+          432,
           434
         ],
         "'TABLE": [
           -1,
+          432,
           434
         ],
         "'ASK": [
           -1,
+          432,
           434
         ],
         "'NEW": [
           -1,
+          432,
           434
         ]
       },
       {
-        "'COMMA": [
+        "'SEMI": [
           380
-        ]
-      },
-      {
-        "'COMMA": [
+        ],
+        "assert-stmt_A8_I3?": [
           381
-        ]
-      },
-      {
-        "'RPAREN": [
+        ],
+        "assert-stmt_A8_I3": [
           382
+        ],
+        "'NAME": [
+          -1,
+          436,
+          438
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          436,
+          438
+        ],
+        "'STRING": [
+          -1,
+          436,
+          438
+        ],
+        "'LBRACE": [
+          -1,
+          436,
+          438
+        ],
+        "'RBRACE": [
+          -1,
+          436,
+          438
+        ],
+        "'SPY": [
+          -1,
+          436,
+          438
+        ],
+        "'PARENSPACE": [
+          -1,
+          436,
+          438
+        ],
+        "'INT": [
+          -1,
+          436,
+          438
+        ],
+        "'LONG": [
+          -1,
+          436,
+          438
+        ],
+        "'DOUBLE": [
+          -1,
+          436,
+          438
+        ],
+        "'FLOAT": [
+          -1,
+          436,
+          438
+        ],
+        "'BOOLEAN": [
+          -1,
+          436,
+          438
+        ],
+        "'VOID": [
+          -1,
+          436,
+          438
+        ],
+        "'DATA": [
+          -1,
+          436,
+          438
+        ],
+        "'IF": [
+          -1,
+          436,
+          438
+        ],
+        "'FOR": [
+          -1,
+          436,
+          438
+        ],
+        "'RETURN": [
+          -1,
+          436,
+          438
+        ],
+        "'VAR": [
+          -1,
+          436,
+          438
+        ],
+        "'REC": [
+          -1,
+          436,
+          438
+        ],
+        "'ATCHECK": [
+          -1,
+          436,
+          438
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          436,
+          438
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          436,
+          438
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          436,
+          438
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          436,
+          438
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          436,
+          438
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          436,
+          438
+        ],
+        "'SWITCH": [
+          -1,
+          436,
+          438
+        ],
+        "'YIELD": [
+          -1,
+          436,
+          438
+        ],
+        "'DASH": [
+          -1,
+          436,
+          438
+        ],
+        "'BANG": [
+          -1,
+          436,
+          438
+        ],
+        "'LBRACK": [
+          -1,
+          436,
+          438
+        ],
+        "'NUMBER": [
+          -1,
+          436,
+          438
+        ],
+        "'TRUE": [
+          -1,
+          436,
+          438
+        ],
+        "'FALSE": [
+          -1,
+          436,
+          438
+        ],
+        "'NULL": [
+          -1,
+          436,
+          438
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          436,
+          438
+        ],
+        "'BLOCK": [
+          -1,
+          436,
+          438
+        ],
+        "'TABLE": [
+          -1,
+          436,
+          438
+        ],
+        "'ASK": [
+          -1,
+          436,
+          438
+        ],
+        "'NEW": [
+          -1,
+          436,
+          438
         ]
       },
       {
-        "'RPAREN": [
+        "'SEMI": [
           383
-        ]
-      },
-      {
-        "'COMMA": [
+        ],
+        "assert-stmt_A9_I3?": [
           384
-        ]
-      },
-      {
-        "'COMMA": [
+        ],
+        "assert-stmt_A9_I3": [
           385
+        ],
+        "'NAME": [
+          -1,
+          440,
+          442
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          440,
+          442
+        ],
+        "'STRING": [
+          -1,
+          440,
+          442
+        ],
+        "'LBRACE": [
+          -1,
+          440,
+          442
+        ],
+        "'RBRACE": [
+          -1,
+          440,
+          442
+        ],
+        "'SPY": [
+          -1,
+          440,
+          442
+        ],
+        "'PARENSPACE": [
+          -1,
+          440,
+          442
+        ],
+        "'INT": [
+          -1,
+          440,
+          442
+        ],
+        "'LONG": [
+          -1,
+          440,
+          442
+        ],
+        "'DOUBLE": [
+          -1,
+          440,
+          442
+        ],
+        "'FLOAT": [
+          -1,
+          440,
+          442
+        ],
+        "'BOOLEAN": [
+          -1,
+          440,
+          442
+        ],
+        "'VOID": [
+          -1,
+          440,
+          442
+        ],
+        "'DATA": [
+          -1,
+          440,
+          442
+        ],
+        "'IF": [
+          -1,
+          440,
+          442
+        ],
+        "'FOR": [
+          -1,
+          440,
+          442
+        ],
+        "'RETURN": [
+          -1,
+          440,
+          442
+        ],
+        "'VAR": [
+          -1,
+          440,
+          442
+        ],
+        "'REC": [
+          -1,
+          440,
+          442
+        ],
+        "'ATCHECK": [
+          -1,
+          440,
+          442
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          440,
+          442
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          440,
+          442
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          440,
+          442
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          440,
+          442
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          440,
+          442
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          440,
+          442
+        ],
+        "'SWITCH": [
+          -1,
+          440,
+          442
+        ],
+        "'YIELD": [
+          -1,
+          440,
+          442
+        ],
+        "'DASH": [
+          -1,
+          440,
+          442
+        ],
+        "'BANG": [
+          -1,
+          440,
+          442
+        ],
+        "'LBRACK": [
+          -1,
+          440,
+          442
+        ],
+        "'NUMBER": [
+          -1,
+          440,
+          442
+        ],
+        "'TRUE": [
+          -1,
+          440,
+          442
+        ],
+        "'FALSE": [
+          -1,
+          440,
+          442
+        ],
+        "'NULL": [
+          -1,
+          440,
+          442
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          440,
+          442
+        ],
+        "'BLOCK": [
+          -1,
+          440,
+          442
+        ],
+        "'TABLE": [
+          -1,
+          440,
+          442
+        ],
+        "'ASK": [
+          -1,
+          440,
+          442
+        ],
+        "'NEW": [
+          -1,
+          440,
+          442
         ]
       },
       {
         "'NAME": [
-          -1,
-          436
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          436
-        ],
-        "'STRING": [
-          -1,
-          436
-        ],
-        "'LBRACE": [
-          -1,
-          436
-        ],
-        "'RBRACE": [
-          -1,
-          436
-        ],
-        "'SPY": [
-          -1,
-          436
-        ],
-        "'PARENSPACE": [
-          -1,
-          436
-        ],
-        "'INT": [
-          -1,
-          436
-        ],
-        "'LONG": [
-          -1,
-          436
-        ],
-        "'DOUBLE": [
-          -1,
-          436
-        ],
-        "'FLOAT": [
-          -1,
-          436
-        ],
-        "'BOOLEAN": [
-          -1,
-          436
-        ],
-        "'VOID": [
-          -1,
-          436
-        ],
-        "'DATA": [
-          -1,
-          436
-        ],
-        "'IF": [
-          -1,
-          436
-        ],
-        "'FOR": [
-          -1,
-          436
-        ],
-        "'RETURN": [
-          -1,
-          436
-        ],
-        "'VAR": [
-          -1,
-          436
-        ],
-        "'REC": [
-          -1,
-          436
-        ],
-        "'ATCHECK": [
-          -1,
-          436
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          436
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          436
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          436
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          436
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          436
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          436
-        ],
-        "'SWITCH": [
-          -1,
-          436
-        ],
-        "'CASE": [
-          -1,
-          436
-        ],
-        "'DEFAULT": [
-          -1,
-          436
-        ],
-        "'YIELD": [
-          -1,
-          436
-        ],
-        "'DASH": [
-          -1,
-          436
-        ],
-        "'BANG": [
-          -1,
-          436
-        ],
-        "'LBRACK": [
-          -1,
-          436
-        ],
-        "'NUMBER": [
-          -1,
-          436
-        ],
-        "'TRUE": [
-          -1,
-          436
-        ],
-        "'FALSE": [
-          -1,
-          436
-        ],
-        "'NULL": [
-          -1,
-          436
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          436
-        ],
-        "'TABLE": [
-          -1,
-          436
-        ],
-        "'ASK": [
-          -1,
-          436
-        ],
-        "'NEW": [
-          -1,
-          436
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          438
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          438
-        ],
-        "'STRING": [
-          -1,
-          438
-        ],
-        "'LBRACE": [
-          -1,
-          438
-        ],
-        "'RBRACE": [
-          -1,
-          438
-        ],
-        "'SPY": [
-          -1,
-          438
-        ],
-        "'PARENSPACE": [
-          -1,
-          438
-        ],
-        "'INT": [
-          -1,
-          438
-        ],
-        "'LONG": [
-          -1,
-          438
-        ],
-        "'DOUBLE": [
-          -1,
-          438
-        ],
-        "'FLOAT": [
-          -1,
-          438
-        ],
-        "'BOOLEAN": [
-          -1,
-          438
-        ],
-        "'VOID": [
-          -1,
-          438
-        ],
-        "'DATA": [
-          -1,
-          438
-        ],
-        "'IF": [
-          -1,
-          438
-        ],
-        "'FOR": [
-          -1,
-          438
-        ],
-        "'RETURN": [
-          -1,
-          438
-        ],
-        "'VAR": [
-          -1,
-          438
-        ],
-        "'REC": [
-          -1,
-          438
-        ],
-        "'ATCHECK": [
-          -1,
-          438
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          438
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          438
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          438
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          438
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          438
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          438
-        ],
-        "'SWITCH": [
-          -1,
-          438
-        ],
-        "'CASE": [
-          -1,
-          438
-        ],
-        "'DEFAULT": [
-          -1,
-          438
-        ],
-        "'YIELD": [
-          -1,
-          438
-        ],
-        "'DASH": [
-          -1,
-          438
-        ],
-        "'BANG": [
-          -1,
-          438
-        ],
-        "'LBRACK": [
-          -1,
-          438
-        ],
-        "'NUMBER": [
-          -1,
-          438
-        ],
-        "'TRUE": [
-          -1,
-          438
-        ],
-        "'FALSE": [
-          -1,
-          438
-        ],
-        "'NULL": [
-          -1,
-          438
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          438
-        ],
-        "'TABLE": [
-          -1,
-          438
-        ],
-        "'ASK": [
-          -1,
-          438
-        ],
-        "'NEW": [
-          -1,
-          438
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          440
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          440
-        ],
-        "'STRING": [
-          -1,
-          440
-        ],
-        "'LBRACE": [
-          -1,
-          440
-        ],
-        "'RBRACE": [
-          -1,
-          440
-        ],
-        "'SPY": [
-          -1,
-          440
-        ],
-        "'PARENSPACE": [
-          -1,
-          440
-        ],
-        "'INT": [
-          -1,
-          440
-        ],
-        "'LONG": [
-          -1,
-          440
-        ],
-        "'DOUBLE": [
-          -1,
-          440
-        ],
-        "'FLOAT": [
-          -1,
-          440
-        ],
-        "'BOOLEAN": [
-          -1,
-          440
-        ],
-        "'VOID": [
-          -1,
-          440
-        ],
-        "'DATA": [
-          -1,
-          440
-        ],
-        "'IF": [
-          -1,
-          440
-        ],
-        "'FOR": [
-          -1,
-          440
-        ],
-        "'RETURN": [
-          -1,
-          440
-        ],
-        "'VAR": [
-          -1,
-          440
-        ],
-        "'REC": [
-          -1,
-          440
-        ],
-        "'ATCHECK": [
-          -1,
-          440
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          440
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          440
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          440
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          440
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          440
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          440
-        ],
-        "'SWITCH": [
-          -1,
-          440
-        ],
-        "'CASE": [
-          -1,
-          440
-        ],
-        "'DEFAULT": [
-          -1,
-          440
-        ],
-        "'YIELD": [
-          -1,
-          440
-        ],
-        "'DASH": [
-          -1,
-          440
-        ],
-        "'BANG": [
-          -1,
-          440
-        ],
-        "'LBRACK": [
-          -1,
-          440
-        ],
-        "'NUMBER": [
-          -1,
-          440
-        ],
-        "'TRUE": [
-          -1,
-          440
-        ],
-        "'FALSE": [
-          -1,
-          440
-        ],
-        "'NULL": [
-          -1,
-          440
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          440
-        ],
-        "'TABLE": [
-          -1,
-          440
-        ],
-        "'ASK": [
-          -1,
-          440
-        ],
-        "'NEW": [
-          -1,
-          440
-        ]
-      },
-      {
-        "check-block_A0_I6*": [
           386
-        ],
-        "'NAME": [
-          -1,
-          442
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          442
-        ],
-        "'STRING": [
-          -1,
-          442
-        ],
-        "'LBRACE": [
-          -1,
-          442
-        ],
-        "'RBRACE": [
-          -1,
-          442
-        ],
-        "'SPY": [
-          -1,
-          442
-        ],
-        "'PARENSPACE": [
-          -1,
-          442
-        ],
-        "'INT": [
-          -1,
-          442
-        ],
-        "'LONG": [
-          -1,
-          442
-        ],
-        "'DOUBLE": [
-          -1,
-          442
-        ],
-        "'FLOAT": [
-          -1,
-          442
-        ],
-        "'BOOLEAN": [
-          -1,
-          442
-        ],
-        "'VOID": [
-          -1,
-          442
-        ],
-        "'DATA": [
-          -1,
-          442
-        ],
-        "'IF": [
-          -1,
-          442
-        ],
-        "'FOR": [
-          -1,
-          442
-        ],
-        "'RETURN": [
-          -1,
-          442
-        ],
-        "'VAR": [
-          -1,
-          442
-        ],
-        "'REC": [
-          -1,
-          442
-        ],
-        "'ATCHECK": [
-          -1,
-          442
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          442
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          442
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          442
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          442
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          442
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          442
-        ],
-        "'SWITCH": [
-          -1,
-          442
-        ],
-        "'YIELD": [
-          -1,
-          442
-        ],
-        "'DASH": [
-          -1,
-          442
-        ],
-        "'BANG": [
-          -1,
-          442
-        ],
-        "'LBRACK": [
-          -1,
-          442
-        ],
-        "'NUMBER": [
-          -1,
-          442
-        ],
-        "'TRUE": [
-          -1,
-          442
-        ],
-        "'FALSE": [
-          -1,
-          442
-        ],
-        "'NULL": [
-          -1,
-          442
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          442
-        ],
-        "'TABLE": [
-          -1,
-          442
-        ],
-        "'ASK": [
-          -1,
-          442
-        ],
-        "'NEW": [
-          -1,
-          442
         ]
       },
       {
-        "switch-expr_I6?": [
-          387
+        "'NAME": [
+          -1,
+          444
         ],
-        "switch-expr_I5": [
-          388
+        "'PARENNOSPACE": [
+          -1,
+          444
         ],
-        "case-branch": [
-          389
+        "'STRING": [
+          -1,
+          444
         ],
-        "switch-expr_I6": [
-          390
-        ],
-        "default-branch": [
-          391
-        ],
-        "'CASE": [
-          392
-        ],
-        "'DEFAULT": [
-          393
+        "'LBRACE": [
+          -1,
+          444
         ],
         "'RBRACE": [
+          -1,
+          444
+        ],
+        "'SPY": [
+          -1,
+          444
+        ],
+        "'PARENSPACE": [
+          -1,
+          444
+        ],
+        "'INT": [
+          -1,
+          444
+        ],
+        "'LONG": [
+          -1,
+          444
+        ],
+        "'DOUBLE": [
+          -1,
+          444
+        ],
+        "'FLOAT": [
+          -1,
+          444
+        ],
+        "'BOOLEAN": [
+          -1,
+          444
+        ],
+        "'VOID": [
+          -1,
+          444
+        ],
+        "'DATA": [
+          -1,
+          444
+        ],
+        "'IF": [
+          -1,
+          444
+        ],
+        "'FOR": [
+          -1,
+          444
+        ],
+        "'RETURN": [
+          -1,
+          444
+        ],
+        "'VAR": [
+          -1,
+          444
+        ],
+        "'REC": [
+          -1,
+          444
+        ],
+        "'ATCHECK": [
+          -1,
+          444
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          444
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          444
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          444
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          444
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          444
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          444
+        ],
+        "'SWITCH": [
+          -1,
+          444
+        ],
+        "'YIELD": [
+          -1,
+          444
+        ],
+        "'DASH": [
+          -1,
+          444
+        ],
+        "'BANG": [
+          -1,
+          444
+        ],
+        "'LBRACK": [
+          -1,
+          444
+        ],
+        "'NUMBER": [
+          -1,
+          444
+        ],
+        "'TRUE": [
+          -1,
+          444
+        ],
+        "'FALSE": [
+          -1,
+          444
+        ],
+        "'NULL": [
+          -1,
+          444
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          444
+        ],
+        "'BLOCK": [
+          -1,
+          444
+        ],
+        "'TABLE": [
+          -1,
+          444
+        ],
+        "'ASK": [
+          -1,
+          444
+        ],
+        "'NEW": [
           -1,
           444
         ]
       },
       {
+        "'COMMA": [
+          387
+        ]
+      },
+      {
+        "'COMMA": [
+          388
+        ]
+      },
+      {
         "'RPAREN": [
+          389
+        ]
+      },
+      {
+        "'RPAREN": [
+          390
+        ]
+      },
+      {
+        "'COMMA": [
+          391
+        ]
+      },
+      {
+        "'COMMA": [
+          392
+        ]
+      },
+      {
+        "'NAME": [
           -1,
           446
         ],
-        "'COMMA": [
+        "'PARENNOSPACE": [
           -1,
           446
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'PARENNOSPACE": [
-          11
         ],
         "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          394
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'COMMA": [
           -1,
-          448
-        ],
-        "'RBRACK": [
-          -1,
-          448
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'PARENNOSPACE": [
-          11
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          395
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'RBRACE": [
-          396
-        ],
-        "table-expr_I5": [
-          397
-        ],
-        "table-row": [
-          398
-        ],
-        "'ROW": [
-          399
-        ]
-      },
-      {
-        "'SEMI": [
-          -1,
-          450
-        ],
-        "'COMMA": [
-          -1,
-          450
-        ]
-      },
-      {
-        "$": [
-          -1,
-          452
-        ],
-        "'NAME": [
-          -1,
-          452
-        ],
-        "'SEMI": [
-          -1,
-          452
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          452
-        ],
-        "'STRING": [
-          -1,
-          452
-        ],
-        "'RPAREN": [
-          -1,
-          452
+          446
         ],
         "'LBRACE": [
           -1,
-          452
+          446
         ],
         "'RBRACE": [
           -1,
-          452
+          446
         ],
         "'SPY": [
           -1,
-          452
+          446
         ],
         "'PARENSPACE": [
           -1,
-          452
-        ],
-        "'COMMA": [
-          -1,
-          452
+          446
         ],
         "'INT": [
           -1,
-          452
+          446
         ],
         "'LONG": [
           -1,
-          452
+          446
         ],
         "'DOUBLE": [
           -1,
-          452
+          446
         ],
         "'FLOAT": [
           -1,
-          452
+          446
         ],
         "'BOOLEAN": [
           -1,
-          452
+          446
         ],
         "'VOID": [
           -1,
-          452
-        ],
-        "'LT": [
-          -1,
-          452
-        ],
-        "'GT": [
-          -1,
-          452
-        ],
-        "'THINARROW": [
-          -1,
-          452
+          446
         ],
         "'DATA": [
           -1,
-          452
+          446
         ],
         "'IF": [
           -1,
-          452
+          446
         ],
         "'FOR": [
           -1,
-          452
+          446
         ],
         "'RETURN": [
           -1,
-          452
+          446
         ],
         "'VAR": [
           -1,
-          452
+          446
         ],
         "'REC": [
           -1,
-          452
+          446
         ],
         "'ATCHECK": [
           -1,
-          452
+          446
         ],
         "'ASSERTEQUALS": [
           -1,
-          452
+          446
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          452
+          446
         ],
         "'ASSERTTRUE": [
           -1,
-          452
+          446
         ],
         "'ASSERTFALSE": [
           -1,
-          452
+          446
         ],
         "'ASSERTSATISFIES": [
           -1,
-          452
+          446
         ],
         "'ASSERTRAISES": [
           -1,
-          452
-        ],
-        "'IS": [
-          -1,
-          452
-        ],
-        "'ISNOT": [
-          -1,
-          452
-        ],
-        "'SATISFIES": [
-          -1,
-          452
-        ],
-        "'RAISES": [
-          -1,
-          452
+          446
         ],
         "'SWITCH": [
           -1,
-          452
+          446
         ],
         "'CASE": [
           -1,
-          452
+          446
         ],
         "'DEFAULT": [
+          -1,
+          446
+        ],
+        "'YIELD": [
+          -1,
+          446
+        ],
+        "'DASH": [
+          -1,
+          446
+        ],
+        "'BANG": [
+          -1,
+          446
+        ],
+        "'LBRACK": [
+          -1,
+          446
+        ],
+        "'NUMBER": [
+          -1,
+          446
+        ],
+        "'TRUE": [
+          -1,
+          446
+        ],
+        "'FALSE": [
+          -1,
+          446
+        ],
+        "'NULL": [
+          -1,
+          446
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          446
+        ],
+        "'BLOCK": [
+          -1,
+          446
+        ],
+        "'TABLE": [
+          -1,
+          446
+        ],
+        "'ASK": [
+          -1,
+          446
+        ],
+        "'NEW": [
+          -1,
+          446
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          448
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          448
+        ],
+        "'STRING": [
+          -1,
+          448
+        ],
+        "'LBRACE": [
+          -1,
+          448
+        ],
+        "'RBRACE": [
+          -1,
+          448
+        ],
+        "'SPY": [
+          -1,
+          448
+        ],
+        "'PARENSPACE": [
+          -1,
+          448
+        ],
+        "'INT": [
+          -1,
+          448
+        ],
+        "'LONG": [
+          -1,
+          448
+        ],
+        "'DOUBLE": [
+          -1,
+          448
+        ],
+        "'FLOAT": [
+          -1,
+          448
+        ],
+        "'BOOLEAN": [
+          -1,
+          448
+        ],
+        "'VOID": [
+          -1,
+          448
+        ],
+        "'DATA": [
+          -1,
+          448
+        ],
+        "'IF": [
+          -1,
+          448
+        ],
+        "'FOR": [
+          -1,
+          448
+        ],
+        "'RETURN": [
+          -1,
+          448
+        ],
+        "'VAR": [
+          -1,
+          448
+        ],
+        "'REC": [
+          -1,
+          448
+        ],
+        "'ATCHECK": [
+          -1,
+          448
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          448
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          448
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          448
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          448
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          448
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          448
+        ],
+        "'SWITCH": [
+          -1,
+          448
+        ],
+        "'CASE": [
+          -1,
+          448
+        ],
+        "'DEFAULT": [
+          -1,
+          448
+        ],
+        "'YIELD": [
+          -1,
+          448
+        ],
+        "'DASH": [
+          -1,
+          448
+        ],
+        "'BANG": [
+          -1,
+          448
+        ],
+        "'LBRACK": [
+          -1,
+          448
+        ],
+        "'NUMBER": [
+          -1,
+          448
+        ],
+        "'TRUE": [
+          -1,
+          448
+        ],
+        "'FALSE": [
+          -1,
+          448
+        ],
+        "'NULL": [
+          -1,
+          448
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          448
+        ],
+        "'BLOCK": [
+          -1,
+          448
+        ],
+        "'TABLE": [
+          -1,
+          448
+        ],
+        "'ASK": [
+          -1,
+          448
+        ],
+        "'NEW": [
+          -1,
+          448
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          450
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          450
+        ],
+        "'STRING": [
+          -1,
+          450
+        ],
+        "'LBRACE": [
+          -1,
+          450
+        ],
+        "'RBRACE": [
+          -1,
+          450
+        ],
+        "'SPY": [
+          -1,
+          450
+        ],
+        "'PARENSPACE": [
+          -1,
+          450
+        ],
+        "'INT": [
+          -1,
+          450
+        ],
+        "'LONG": [
+          -1,
+          450
+        ],
+        "'DOUBLE": [
+          -1,
+          450
+        ],
+        "'FLOAT": [
+          -1,
+          450
+        ],
+        "'BOOLEAN": [
+          -1,
+          450
+        ],
+        "'VOID": [
+          -1,
+          450
+        ],
+        "'DATA": [
+          -1,
+          450
+        ],
+        "'IF": [
+          -1,
+          450
+        ],
+        "'FOR": [
+          -1,
+          450
+        ],
+        "'RETURN": [
+          -1,
+          450
+        ],
+        "'VAR": [
+          -1,
+          450
+        ],
+        "'REC": [
+          -1,
+          450
+        ],
+        "'ATCHECK": [
+          -1,
+          450
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          450
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          450
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          450
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          450
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          450
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          450
+        ],
+        "'SWITCH": [
+          -1,
+          450
+        ],
+        "'CASE": [
+          -1,
+          450
+        ],
+        "'DEFAULT": [
+          -1,
+          450
+        ],
+        "'YIELD": [
+          -1,
+          450
+        ],
+        "'DASH": [
+          -1,
+          450
+        ],
+        "'BANG": [
+          -1,
+          450
+        ],
+        "'LBRACK": [
+          -1,
+          450
+        ],
+        "'NUMBER": [
+          -1,
+          450
+        ],
+        "'TRUE": [
+          -1,
+          450
+        ],
+        "'FALSE": [
+          -1,
+          450
+        ],
+        "'NULL": [
+          -1,
+          450
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          450
+        ],
+        "'BLOCK": [
+          -1,
+          450
+        ],
+        "'TABLE": [
+          -1,
+          450
+        ],
+        "'ASK": [
+          -1,
+          450
+        ],
+        "'NEW": [
+          -1,
+          450
+        ]
+      },
+      {
+        "check-block_A0_I6*": [
+          393
+        ],
+        "'NAME": [
+          -1,
+          452
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          452
+        ],
+        "'STRING": [
+          -1,
+          452
+        ],
+        "'LBRACE": [
+          -1,
+          452
+        ],
+        "'RBRACE": [
+          -1,
+          452
+        ],
+        "'SPY": [
+          -1,
+          452
+        ],
+        "'PARENSPACE": [
+          -1,
+          452
+        ],
+        "'INT": [
+          -1,
+          452
+        ],
+        "'LONG": [
+          -1,
+          452
+        ],
+        "'DOUBLE": [
+          -1,
+          452
+        ],
+        "'FLOAT": [
+          -1,
+          452
+        ],
+        "'BOOLEAN": [
+          -1,
+          452
+        ],
+        "'VOID": [
+          -1,
+          452
+        ],
+        "'DATA": [
+          -1,
+          452
+        ],
+        "'IF": [
+          -1,
+          452
+        ],
+        "'FOR": [
+          -1,
+          452
+        ],
+        "'RETURN": [
+          -1,
+          452
+        ],
+        "'VAR": [
+          -1,
+          452
+        ],
+        "'REC": [
+          -1,
+          452
+        ],
+        "'ATCHECK": [
+          -1,
+          452
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          452
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          452
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          452
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          452
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          452
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          452
+        ],
+        "'SWITCH": [
           -1,
           452
         ],
@@ -32379,47 +33864,7 @@ function(E) {
           -1,
           452
         ],
-        "'PLUS": [
-          -1,
-          452
-        ],
         "'DASH": [
-          -1,
-          452
-        ],
-        "'TIMES": [
-          -1,
-          452
-        ],
-        "'SLASH": [
-          -1,
-          452
-        ],
-        "'PERCENT": [
-          -1,
-          452
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          452
-        ],
-        "'NEQ": [
-          -1,
-          452
-        ],
-        "'LEQ": [
-          -1,
-          452
-        ],
-        "'GEQ": [
-          -1,
-          452
-        ],
-        "'AND": [
-          -1,
-          452
-        ],
-        "'OR": [
           -1,
           452
         ],
@@ -32427,15 +33872,7 @@ function(E) {
           -1,
           452
         ],
-        "'DOT": [
-          -1,
-          452
-        ],
         "'LBRACK": [
-          -1,
-          452
-        ],
-        "'RBRACK": [
           -1,
           452
         ],
@@ -32459,6 +33896,10 @@ function(E) {
           -1,
           452
         ],
+        "'BLOCK": [
+          -1,
+          452
+        ],
         "'TABLE": [
           -1,
           452
@@ -32473,168 +33914,45 @@ function(E) {
         ]
       },
       {
-        "'SEMI": [
+        "switch-expr_I6?": [
+          394
+        ],
+        "switch-expr_I5": [
+          395
+        ],
+        "case-branch": [
+          396
+        ],
+        "switch-expr_I6": [
+          397
+        ],
+        "default-branch": [
+          398
+        ],
+        "'CASE": [
+          399
+        ],
+        "'DEFAULT": [
           400
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          454
-        ],
-        "'STRING": [
-          -1,
-          454
-        ],
-        "'LBRACE": [
-          -1,
-          454
         ],
         "'RBRACE": [
           -1,
           454
-        ],
-        "'PARENSPACE": [
-          -1,
-          454
-        ],
-        "'SWITCH": [
-          -1,
-          454
-        ],
-        "'DASH": [
-          -1,
-          454
-        ],
-        "'BANG": [
-          -1,
-          454
-        ],
-        "'LBRACK": [
-          -1,
-          454
-        ],
-        "'NUMBER": [
-          -1,
-          454
-        ],
-        "'TRUE": [
-          -1,
-          454
-        ],
-        "'FALSE": [
-          -1,
-          454
-        ],
-        "'NULL": [
-          -1,
-          454
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          454
-        ],
-        "'TABLE": [
-          -1,
-          454
-        ],
-        "'ASK": [
-          -1,
-          454
-        ],
-        "'NEW": [
-          -1,
-          454
         ]
       },
       {
-        "'SEMI": [
-          401
-        ]
-      },
-      {
-        "'SEMI": [
-          402
-        ]
-      },
-      {
-        "'NAME": [
+        "'RPAREN": [
           -1,
           456
         ],
-        "'STRING": [
+        "'COMMA": [
           -1,
           456
-        ],
-        "'LBRACE": [
-          -1,
-          456
-        ],
-        "'PARENSPACE": [
-          -1,
-          456
-        ],
-        "'SWITCH": [
-          -1,
-          456
-        ],
-        "'DASH": [
-          -1,
-          456
-        ],
-        "'BANG": [
-          -1,
-          456
-        ],
-        "'LBRACK": [
-          -1,
-          456
-        ],
-        "'NUMBER": [
-          -1,
-          456
-        ],
-        "'TRUE": [
-          -1,
-          456
-        ],
-        "'FALSE": [
-          -1,
-          456
-        ],
-        "'NULL": [
-          -1,
-          456
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          456
-        ],
-        "'TABLE": [
-          -1,
-          456
-        ],
-        "'ASK": [
-          -1,
-          456
-        ],
-        "'OTHERWISE": [
-          -1,
-          456
-        ],
-        "'NEW": [
-          -1,
-          456
-        ]
-      },
-      {
-        "'THINARROW": [
-          403
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -32646,10 +33964,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          404
+          401
         ],
         "switch-expr": [
           37
@@ -32714,520 +34032,1198 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'COMMA": [
+          -1,
+          458
+        ],
+        "'RBRACK": [
+          -1,
+          458
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          402
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'RBRACE": [
+          403
+        ],
+        "table-expr_I5": [
+          404
+        ],
+        "table-row": [
+          405
+        ],
+        "'ROW": [
+          406
+        ]
+      },
+      {
+        "'SEMI": [
+          -1,
+          460
+        ],
+        "'COMMA": [
+          -1,
+          460
+        ]
+      },
+      {
+        "$": [
+          -1,
+          462
+        ],
+        "'NAME": [
+          -1,
+          462
+        ],
+        "'SEMI": [
+          -1,
+          462
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          462
+        ],
+        "'STRING": [
+          -1,
+          462
+        ],
+        "'RPAREN": [
+          -1,
+          462
+        ],
+        "'LBRACE": [
+          -1,
+          462
+        ],
+        "'RBRACE": [
+          -1,
+          462
+        ],
+        "'SPY": [
+          -1,
+          462
+        ],
+        "'PARENSPACE": [
+          -1,
+          462
+        ],
+        "'COMMA": [
+          -1,
+          462
+        ],
+        "'INT": [
+          -1,
+          462
+        ],
+        "'LONG": [
+          -1,
+          462
+        ],
+        "'DOUBLE": [
+          -1,
+          462
+        ],
+        "'FLOAT": [
+          -1,
+          462
+        ],
+        "'BOOLEAN": [
+          -1,
+          462
+        ],
+        "'VOID": [
+          -1,
+          462
+        ],
+        "'LT": [
+          -1,
+          462
+        ],
+        "'GT": [
+          -1,
+          462
+        ],
+        "'THINARROW": [
+          -1,
+          462
+        ],
+        "'DATA": [
+          -1,
+          462
+        ],
+        "'IF": [
+          -1,
+          462
+        ],
+        "'FOR": [
+          -1,
+          462
+        ],
+        "'RETURN": [
+          -1,
+          462
+        ],
+        "'VAR": [
+          -1,
+          462
+        ],
+        "'REC": [
+          -1,
+          462
+        ],
+        "'ATCHECK": [
+          -1,
+          462
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          462
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          462
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          462
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          462
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          462
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          462
+        ],
+        "'IS": [
+          -1,
+          462
+        ],
+        "'ISNOT": [
+          -1,
+          462
+        ],
+        "'SATISFIES": [
+          -1,
+          462
+        ],
+        "'RAISES": [
+          -1,
+          462
+        ],
+        "'SWITCH": [
+          -1,
+          462
+        ],
+        "'CASE": [
+          -1,
+          462
+        ],
+        "'DEFAULT": [
+          -1,
+          462
+        ],
+        "'YIELD": [
+          -1,
+          462
+        ],
+        "'PLUS": [
+          -1,
+          462
+        ],
+        "'DASH": [
+          -1,
+          462
+        ],
+        "'TIMES": [
+          -1,
+          462
+        ],
+        "'SLASH": [
+          -1,
+          462
+        ],
+        "'PERCENT": [
+          -1,
+          462
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          462
+        ],
+        "'NEQ": [
+          -1,
+          462
+        ],
+        "'LEQ": [
+          -1,
+          462
+        ],
+        "'GEQ": [
+          -1,
+          462
+        ],
+        "'AND": [
+          -1,
+          462
+        ],
+        "'OR": [
+          -1,
+          462
+        ],
+        "'BANG": [
+          -1,
+          462
+        ],
+        "'DOT": [
+          -1,
+          462
+        ],
+        "'LBRACK": [
+          -1,
+          462
+        ],
+        "'RBRACK": [
+          -1,
+          462
+        ],
+        "'NUMBER": [
+          -1,
+          462
+        ],
+        "'TRUE": [
+          -1,
+          462
+        ],
+        "'FALSE": [
+          -1,
+          462
+        ],
+        "'NULL": [
+          -1,
+          462
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          462
+        ],
+        "'BLOCK": [
+          -1,
+          462
+        ],
+        "'TABLE": [
+          -1,
+          462
+        ],
+        "'ASK": [
+          -1,
+          462
+        ],
+        "'NEW": [
+          -1,
+          462
+        ]
+      },
+      {
+        "'SEMI": [
+          407
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          464
+        ],
+        "'STRING": [
+          -1,
+          464
+        ],
+        "'LBRACE": [
+          -1,
+          464
+        ],
+        "'RBRACE": [
+          -1,
+          464
+        ],
+        "'PARENSPACE": [
+          -1,
+          464
+        ],
+        "'SWITCH": [
+          -1,
+          464
+        ],
+        "'DASH": [
+          -1,
+          464
+        ],
+        "'BANG": [
+          -1,
+          464
+        ],
+        "'LBRACK": [
+          -1,
+          464
+        ],
+        "'NUMBER": [
+          -1,
+          464
+        ],
+        "'TRUE": [
+          -1,
+          464
+        ],
+        "'FALSE": [
+          -1,
+          464
+        ],
+        "'NULL": [
+          -1,
+          464
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          464
+        ],
+        "'BLOCK": [
+          -1,
+          464
+        ],
+        "'TABLE": [
+          -1,
+          464
+        ],
+        "'ASK": [
+          -1,
+          464
+        ],
+        "'NEW": [
+          -1,
+          464
+        ]
+      },
+      {
+        "'SEMI": [
+          408
+        ]
+      },
+      {
+        "'SEMI": [
+          409
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          466
+        ],
+        "'STRING": [
+          -1,
+          466
+        ],
+        "'LBRACE": [
+          -1,
+          466
+        ],
+        "'PARENSPACE": [
+          -1,
+          466
+        ],
+        "'SWITCH": [
+          -1,
+          466
+        ],
+        "'DASH": [
+          -1,
+          466
+        ],
+        "'BANG": [
+          -1,
+          466
+        ],
+        "'LBRACK": [
+          -1,
+          466
+        ],
+        "'NUMBER": [
+          -1,
+          466
+        ],
+        "'TRUE": [
+          -1,
+          466
+        ],
+        "'FALSE": [
+          -1,
+          466
+        ],
+        "'NULL": [
+          -1,
+          466
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          466
+        ],
+        "'BLOCK": [
+          -1,
+          466
+        ],
+        "'TABLE": [
+          -1,
+          466
+        ],
+        "'ASK": [
+          -1,
+          466
+        ],
+        "'OTHERWISE": [
+          -1,
+          466
+        ],
+        "'NEW": [
+          -1,
+          466
+        ]
+      },
+      {
+        "'THINARROW": [
+          410
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          411
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'RPAREN": [
           -1,
-          458
+          468
         ],
         "'COMMA": [
           -1,
-          458
+          468
         ]
       },
       {
         "'SEMI": [
-          405
+          412
         ]
       },
       {
         "$": [
           -1,
-          460
+          470
         ],
         "'NAME": [
           -1,
-          460
+          470
         ],
         "'PARENNOSPACE": [
           -1,
-          460
+          470
         ],
         "'STRING": [
           -1,
-          460
+          470
         ],
         "'LBRACE": [
           -1,
-          460
+          470
         ],
         "'RBRACE": [
           -1,
-          460
+          470
         ],
         "'SPY": [
           -1,
-          460
+          470
         ],
         "'PARENSPACE": [
           -1,
-          460
+          470
         ],
         "'INT": [
           -1,
-          460
+          470
         ],
         "'LONG": [
           -1,
-          460
+          470
         ],
         "'DOUBLE": [
           -1,
-          460
+          470
         ],
         "'FLOAT": [
           -1,
-          460
+          470
         ],
         "'BOOLEAN": [
           -1,
-          460
+          470
         ],
         "'VOID": [
           -1,
-          460
+          470
         ],
         "'DATA": [
           -1,
-          460
+          470
         ],
         "'IF": [
           -1,
-          460
+          470
         ],
         "'FOR": [
           -1,
-          460
+          470
         ],
         "'RETURN": [
           -1,
-          460
+          470
         ],
         "'VAR": [
           -1,
-          460
+          470
         ],
         "'REC": [
           -1,
-          460
+          470
         ],
         "'ATCHECK": [
           -1,
-          460
+          470
         ],
         "'ASSERTEQUALS": [
           -1,
-          460
+          470
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          460
+          470
         ],
         "'ASSERTTRUE": [
           -1,
-          460
+          470
         ],
         "'ASSERTFALSE": [
           -1,
-          460
+          470
         ],
         "'ASSERTSATISFIES": [
           -1,
-          460
+          470
         ],
         "'ASSERTRAISES": [
           -1,
-          460
+          470
         ],
         "'SWITCH": [
           -1,
-          460
+          470
         ],
         "'YIELD": [
           -1,
-          460
+          470
         ],
         "'DASH": [
           -1,
-          460
+          470
         ],
         "'BANG": [
           -1,
-          460
+          470
         ],
         "'LBRACK": [
           -1,
-          460
+          470
         ],
         "'NUMBER": [
           -1,
-          460
+          470
         ],
         "'TRUE": [
           -1,
-          460
+          470
         ],
         "'FALSE": [
           -1,
-          460
+          470
         ],
         "'NULL": [
           -1,
-          460
+          470
         ],
         "'PARENAFTERBRACE": [
           -1,
-          460
+          470
+        ],
+        "'BLOCK": [
+          -1,
+          470
         ],
         "'TABLE": [
           -1,
-          460
+          470
         ],
         "'ASK": [
           -1,
-          460
+          470
         ],
         "'NEW": [
           -1,
-          460
+          470
         ]
       },
       {
         "$": [
           -1,
-          462
+          472
         ],
         "'NAME": [
           -1,
-          462
+          472
         ],
         "'PARENNOSPACE": [
           -1,
-          462
+          472
         ],
         "'STRING": [
           -1,
-          462
+          472
         ],
         "'LBRACE": [
           -1,
-          462
+          472
         ],
         "'RBRACE": [
           -1,
-          462
+          472
         ],
         "'SPY": [
           -1,
-          462
+          472
         ],
         "'PARENSPACE": [
           -1,
-          462
+          472
         ],
         "'INT": [
           -1,
-          462
+          472
         ],
         "'LONG": [
           -1,
-          462
+          472
         ],
         "'DOUBLE": [
           -1,
-          462
+          472
         ],
         "'FLOAT": [
           -1,
-          462
+          472
         ],
         "'BOOLEAN": [
           -1,
-          462
+          472
         ],
         "'VOID": [
           -1,
-          462
+          472
         ],
         "'DATA": [
           -1,
-          462
+          472
         ],
         "'IF": [
           -1,
-          462
+          472
         ],
         "'FOR": [
           -1,
-          462
+          472
         ],
         "'RETURN": [
           -1,
-          462
+          472
         ],
         "'VAR": [
           -1,
-          462
+          472
         ],
         "'REC": [
           -1,
-          462
+          472
         ],
         "'ATCHECK": [
           -1,
-          462
+          472
         ],
         "'ASSERTEQUALS": [
           -1,
-          462
+          472
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          462
+          472
         ],
         "'ASSERTTRUE": [
           -1,
-          462
+          472
         ],
         "'ASSERTFALSE": [
           -1,
-          462
+          472
         ],
         "'ASSERTSATISFIES": [
           -1,
-          462
+          472
         ],
         "'ASSERTRAISES": [
           -1,
-          462
+          472
         ],
         "'SWITCH": [
           -1,
-          462
+          472
         ],
         "'YIELD": [
           -1,
-          462
+          472
         ],
         "'DASH": [
           -1,
-          462
+          472
         ],
         "'BANG": [
           -1,
-          462
+          472
         ],
         "'LBRACK": [
           -1,
-          462
+          472
         ],
         "'NUMBER": [
           -1,
-          462
+          472
         ],
         "'TRUE": [
           -1,
-          462
+          472
         ],
         "'FALSE": [
           -1,
-          462
+          472
         ],
         "'NULL": [
           -1,
-          462
+          472
         ],
         "'PARENAFTERBRACE": [
           -1,
-          462
+          472
+        ],
+        "'BLOCK": [
+          -1,
+          472
         ],
         "'TABLE": [
           -1,
-          462
+          472
         ],
         "'ASK": [
           -1,
-          462
+          472
         ],
         "'NEW": [
           -1,
-          462
+          472
         ]
       },
       {
         "$": [
           -1,
-          464
+          474
         ],
         "'NAME": [
           -1,
-          464
+          474
         ],
         "'PARENNOSPACE": [
           -1,
-          464
+          474
         ],
         "'STRING": [
           -1,
-          464
+          474
         ],
         "'LBRACE": [
           -1,
-          464
+          474
         ],
         "'RBRACE": [
           -1,
-          464
+          474
         ],
         "'SPY": [
           -1,
-          464
+          474
         ],
         "'PARENSPACE": [
           -1,
-          464
+          474
         ],
         "'INT": [
           -1,
-          464
+          474
         ],
         "'LONG": [
           -1,
-          464
+          474
         ],
         "'DOUBLE": [
           -1,
-          464
+          474
         ],
         "'FLOAT": [
           -1,
-          464
+          474
         ],
         "'BOOLEAN": [
           -1,
-          464
+          474
         ],
         "'VOID": [
           -1,
-          464
+          474
         ],
         "'DATA": [
           -1,
-          464
+          474
         ],
         "'IF": [
           -1,
-          464
+          474
         ],
         "'FOR": [
           -1,
-          464
+          474
         ],
         "'RETURN": [
           -1,
-          464
+          474
         ],
         "'VAR": [
           -1,
-          464
+          474
         ],
         "'REC": [
           -1,
-          464
+          474
         ],
         "'ATCHECK": [
           -1,
-          464
+          474
         ],
         "'ASSERTEQUALS": [
           -1,
-          464
+          474
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          464
+          474
         ],
         "'ASSERTTRUE": [
           -1,
-          464
+          474
         ],
         "'ASSERTFALSE": [
           -1,
-          464
+          474
         ],
         "'ASSERTSATISFIES": [
           -1,
-          464
+          474
         ],
         "'ASSERTRAISES": [
           -1,
-          464
+          474
         ],
         "'SWITCH": [
           -1,
-          464
+          474
         ],
         "'YIELD": [
           -1,
-          464
+          474
         ],
         "'DASH": [
           -1,
-          464
+          474
         ],
         "'BANG": [
           -1,
-          464
+          474
         ],
         "'LBRACK": [
           -1,
-          464
+          474
         ],
         "'NUMBER": [
           -1,
-          464
+          474
         ],
         "'TRUE": [
           -1,
-          464
+          474
         ],
         "'FALSE": [
           -1,
-          464
+          474
         ],
         "'NULL": [
           -1,
-          464
+          474
         ],
         "'PARENAFTERBRACE": [
           -1,
-          464
+          474
+        ],
+        "'BLOCK": [
+          -1,
+          474
         ],
         "'TABLE": [
           -1,
-          464
+          474
         ],
         "'ASK": [
           -1,
-          464
+          474
         ],
         "'NEW": [
           -1,
-          464
+          474
         ]
       },
       {
         "'LBRACE": [
-          406
+          413
         ]
       },
       {
@@ -33241,58 +35237,58 @@ function(E) {
           12
         ],
         "fun-decl": [
-          196
-        ],
-        "data-decl": [
-          197
-        ],
-        "check-block": [
-          198
-        ],
-        "let-stmt": [
-          199
-        ],
-        "var-stmt": [
           200
         ],
-        "rec-stmt": [
+        "data-decl": [
           201
         ],
-        "assign-stmt": [
+        "check-block": [
           202
         ],
-        "expr-stmt": [
+        "let-stmt": [
           203
+        ],
+        "var-stmt": [
+          204
+        ],
+        "rec-stmt": [
+          205
+        ],
+        "assign-stmt": [
+          206
+        ],
+        "expr-stmt": [
+          207
         ],
         "'LBRACE": [
           23
         ],
         "'RBRACE": [
-          407
+          414
         ],
         "block_I1": [
-          408
+          415
         ],
         "block-stmt": [
-          409
+          416
         ],
         "if-stmt": [
-          206
-        ],
-        "for-stmt": [
-          207
-        ],
-        "return-stmt": [
-          208
-        ],
-        "yield-stmt": [
-          209
-        ],
-        "spy-stmt": [
           210
         ],
-        "'SPY": [
+        "for-stmt": [
           211
+        ],
+        "return-stmt": [
+          212
+        ],
+        "yield-stmt": [
+          213
+        ],
+        "spy-stmt": [
+          214
+        ],
+        "'SPY": [
+          215
         ],
         "'PARENSPACE": [
           24
@@ -33322,16 +35318,16 @@ function(E) {
           32
         ],
         "'IF": [
-          213
+          217
         ],
         "full-expr": [
           33
         ],
         "'FOR": [
-          215
+          219
         ],
         "'RETURN": [
-          216
+          220
         ],
         "'VAR": [
           34
@@ -33349,7 +35345,7 @@ function(E) {
           38
         ],
         "'YIELD": [
-          224
+          228
         ],
         "lambda-expr": [
           39
@@ -33408,1037 +35404,257 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'RPAREN": [
           -1,
-          466
+          476
         ],
         "'COMMA": [
           -1,
-          466
+          476
         ]
       },
       {
         "'RPAREN": [
           -1,
-          468
+          478
         ],
         "'COMMA": [
           -1,
-          468
+          478
         ]
       },
       {
         "'SEMI": [
           -1,
-          470
+          480
         ],
         "'RBRACE": [
           -1,
-          470
+          480
         ]
       },
       {
         "'COMMA": [
-          410
+          417
         ],
         "variant-decl_A0_I2_I1": [
-          411
+          418
         ],
         "'RPAREN": [
           -1,
-          472
+          482
         ]
       },
       {
         "'SEMI": [
           -1,
-          474
+          484
         ],
         "'RBRACE": [
           -1,
-          474
+          484
         ]
       },
       {
         "$": [
           -1,
-          476
+          486
         ],
         "'NAME": [
           -1,
-          476
+          486
         ],
         "'PARENNOSPACE": [
           -1,
-          476
+          486
         ],
         "'STRING": [
           -1,
-          476
+          486
         ],
         "'LBRACE": [
           -1,
-          476
+          486
         ],
         "'RBRACE": [
           -1,
-          476
+          486
         ],
         "'SPY": [
           -1,
-          476
+          486
         ],
         "'PARENSPACE": [
           -1,
-          476
+          486
         ],
         "'INT": [
           -1,
-          476
+          486
         ],
         "'LONG": [
           -1,
-          476
+          486
         ],
         "'DOUBLE": [
           -1,
-          476
+          486
         ],
         "'FLOAT": [
           -1,
-          476
+          486
         ],
         "'BOOLEAN": [
           -1,
-          476
+          486
         ],
         "'VOID": [
           -1,
-          476
+          486
         ],
         "'DATA": [
           -1,
-          476
+          486
         ],
         "'IF": [
           -1,
-          476
+          486
         ],
         "'FOR": [
           -1,
-          476
+          486
         ],
         "'RETURN": [
           -1,
-          476
+          486
         ],
         "'VAR": [
           -1,
-          476
+          486
         ],
         "'REC": [
           -1,
-          476
+          486
         ],
         "'ATCHECK": [
           -1,
-          476
+          486
         ],
         "'ASSERTEQUALS": [
           -1,
-          476
+          486
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          476
+          486
         ],
         "'ASSERTTRUE": [
           -1,
-          476
+          486
         ],
         "'ASSERTFALSE": [
           -1,
-          476
+          486
         ],
         "'ASSERTSATISFIES": [
           -1,
-          476
+          486
         ],
         "'ASSERTRAISES": [
           -1,
-          476
+          486
         ],
         "'SWITCH": [
           -1,
-          476
+          486
         ],
         "'YIELD": [
           -1,
-          476
+          486
         ],
         "'DASH": [
           -1,
-          476
+          486
         ],
         "'BANG": [
           -1,
-          476
+          486
         ],
         "'LBRACK": [
           -1,
-          476
+          486
         ],
         "'NUMBER": [
           -1,
-          476
+          486
         ],
         "'TRUE": [
           -1,
-          476
+          486
         ],
         "'FALSE": [
           -1,
-          476
+          486
         ],
         "'NULL": [
           -1,
-          476
+          486
         ],
         "'PARENAFTERBRACE": [
           -1,
-          476
+          486
+        ],
+        "'BLOCK": [
+          -1,
+          486
         ],
         "'TABLE": [
           -1,
-          476
+          486
         ],
         "'ASK": [
           -1,
-          476
+          486
         ],
         "'NEW": [
           -1,
-          476
+          486
         ]
       },
       {
         "'RPAREN": [
-          412
+          419
         ],
         "spy-stmt_I3": [
-          413
+          420
         ],
         "'COMMA": [
-          414
+          421
         ]
       },
       {
         "block": [
-          415
+          422
         ],
         "'LBRACE": [
-          302
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          478
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          478
-        ],
-        "'STRING": [
-          -1,
-          478
-        ],
-        "'LBRACE": [
-          -1,
-          478
-        ],
-        "'RBRACE": [
-          -1,
-          478
-        ],
-        "'SPY": [
-          -1,
-          478
-        ],
-        "'PARENSPACE": [
-          -1,
-          478
-        ],
-        "'INT": [
-          -1,
-          478
-        ],
-        "'LONG": [
-          -1,
-          478
-        ],
-        "'DOUBLE": [
-          -1,
-          478
-        ],
-        "'FLOAT": [
-          -1,
-          478
-        ],
-        "'BOOLEAN": [
-          -1,
-          478
-        ],
-        "'VOID": [
-          -1,
-          478
-        ],
-        "'DATA": [
-          -1,
-          478
-        ],
-        "'IF": [
-          -1,
-          478
-        ],
-        "'FOR": [
-          -1,
-          478
-        ],
-        "'RETURN": [
-          -1,
-          478
-        ],
-        "'VAR": [
-          -1,
-          478
-        ],
-        "'REC": [
-          -1,
-          478
-        ],
-        "'ATCHECK": [
-          -1,
-          478
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          478
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          478
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          478
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          478
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          478
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          478
-        ],
-        "'SWITCH": [
-          -1,
-          478
-        ],
-        "'YIELD": [
-          -1,
-          478
-        ],
-        "'DASH": [
-          -1,
-          478
-        ],
-        "'BANG": [
-          -1,
-          478
-        ],
-        "'LBRACK": [
-          -1,
-          478
-        ],
-        "'NUMBER": [
-          -1,
-          478
-        ],
-        "'TRUE": [
-          -1,
-          478
-        ],
-        "'FALSE": [
-          -1,
-          478
-        ],
-        "'NULL": [
-          -1,
-          478
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          478
-        ],
-        "'TABLE": [
-          -1,
-          478
-        ],
-        "'ASK": [
-          -1,
-          478
-        ],
-        "'NEW": [
-          -1,
-          478
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          480
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          480
-        ],
-        "'STRING": [
-          -1,
-          480
-        ],
-        "'LBRACE": [
-          -1,
-          480
-        ],
-        "'RBRACE": [
-          -1,
-          480
-        ],
-        "'SPY": [
-          -1,
-          480
-        ],
-        "'PARENSPACE": [
-          -1,
-          480
-        ],
-        "'INT": [
-          -1,
-          480
-        ],
-        "'LONG": [
-          -1,
-          480
-        ],
-        "'DOUBLE": [
-          -1,
-          480
-        ],
-        "'FLOAT": [
-          -1,
-          480
-        ],
-        "'BOOLEAN": [
-          -1,
-          480
-        ],
-        "'VOID": [
-          -1,
-          480
-        ],
-        "'DATA": [
-          -1,
-          480
-        ],
-        "'IF": [
-          -1,
-          480
-        ],
-        "'FOR": [
-          -1,
-          480
-        ],
-        "'RETURN": [
-          -1,
-          480
-        ],
-        "'VAR": [
-          -1,
-          480
-        ],
-        "'REC": [
-          -1,
-          480
-        ],
-        "'ATCHECK": [
-          -1,
-          480
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          480
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          480
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          480
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          480
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          480
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          480
-        ],
-        "'SWITCH": [
-          -1,
-          480
-        ],
-        "'YIELD": [
-          -1,
-          480
-        ],
-        "'DASH": [
-          -1,
-          480
-        ],
-        "'BANG": [
-          -1,
-          480
-        ],
-        "'LBRACK": [
-          -1,
-          480
-        ],
-        "'NUMBER": [
-          -1,
-          480
-        ],
-        "'TRUE": [
-          -1,
-          480
-        ],
-        "'FALSE": [
-          -1,
-          480
-        ],
-        "'NULL": [
-          -1,
-          480
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          480
-        ],
-        "'TABLE": [
-          -1,
-          480
-        ],
-        "'ASK": [
-          -1,
-          480
-        ],
-        "'NEW": [
-          -1,
-          480
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          482
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          482
-        ],
-        "'STRING": [
-          -1,
-          482
-        ],
-        "'LBRACE": [
-          -1,
-          482
-        ],
-        "'RBRACE": [
-          -1,
-          482
-        ],
-        "'SPY": [
-          -1,
-          482
-        ],
-        "'PARENSPACE": [
-          -1,
-          482
-        ],
-        "'INT": [
-          -1,
-          482
-        ],
-        "'LONG": [
-          -1,
-          482
-        ],
-        "'DOUBLE": [
-          -1,
-          482
-        ],
-        "'FLOAT": [
-          -1,
-          482
-        ],
-        "'BOOLEAN": [
-          -1,
-          482
-        ],
-        "'VOID": [
-          -1,
-          482
-        ],
-        "'DATA": [
-          -1,
-          482
-        ],
-        "'IF": [
-          -1,
-          482
-        ],
-        "'FOR": [
-          -1,
-          482
-        ],
-        "'RETURN": [
-          -1,
-          482
-        ],
-        "'VAR": [
-          -1,
-          482
-        ],
-        "'REC": [
-          -1,
-          482
-        ],
-        "'ATCHECK": [
-          -1,
-          482
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          482
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          482
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          482
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          482
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          482
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          482
-        ],
-        "'SWITCH": [
-          -1,
-          482
-        ],
-        "'YIELD": [
-          -1,
-          482
-        ],
-        "'DASH": [
-          -1,
-          482
-        ],
-        "'BANG": [
-          -1,
-          482
-        ],
-        "'LBRACK": [
-          -1,
-          482
-        ],
-        "'NUMBER": [
-          -1,
-          482
-        ],
-        "'TRUE": [
-          -1,
-          482
-        ],
-        "'FALSE": [
-          -1,
-          482
-        ],
-        "'NULL": [
-          -1,
-          482
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          482
-        ],
-        "'TABLE": [
-          -1,
-          482
-        ],
-        "'ASK": [
-          -1,
-          482
-        ],
-        "'NEW": [
-          -1,
-          482
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          484
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          484
-        ],
-        "'STRING": [
-          -1,
-          484
-        ],
-        "'LBRACE": [
-          -1,
-          484
-        ],
-        "'RBRACE": [
-          -1,
-          484
-        ],
-        "'SPY": [
-          -1,
-          484
-        ],
-        "'PARENSPACE": [
-          -1,
-          484
-        ],
-        "'INT": [
-          -1,
-          484
-        ],
-        "'LONG": [
-          -1,
-          484
-        ],
-        "'DOUBLE": [
-          -1,
-          484
-        ],
-        "'FLOAT": [
-          -1,
-          484
-        ],
-        "'BOOLEAN": [
-          -1,
-          484
-        ],
-        "'VOID": [
-          -1,
-          484
-        ],
-        "'DATA": [
-          -1,
-          484
-        ],
-        "'IF": [
-          -1,
-          484
-        ],
-        "'FOR": [
-          -1,
-          484
-        ],
-        "'RETURN": [
-          -1,
-          484
-        ],
-        "'VAR": [
-          -1,
-          484
-        ],
-        "'REC": [
-          -1,
-          484
-        ],
-        "'ATCHECK": [
-          -1,
-          484
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          484
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          484
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          484
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          484
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          484
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          484
-        ],
-        "'SWITCH": [
-          -1,
-          484
-        ],
-        "'YIELD": [
-          -1,
-          484
-        ],
-        "'DASH": [
-          -1,
-          484
-        ],
-        "'BANG": [
-          -1,
-          484
-        ],
-        "'LBRACK": [
-          -1,
-          484
-        ],
-        "'NUMBER": [
-          -1,
-          484
-        ],
-        "'TRUE": [
-          -1,
-          484
-        ],
-        "'FALSE": [
-          -1,
-          484
-        ],
-        "'NULL": [
-          -1,
-          484
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          484
-        ],
-        "'TABLE": [
-          -1,
-          484
-        ],
-        "'ASK": [
-          -1,
-          484
-        ],
-        "'NEW": [
-          -1,
-          484
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          486
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          486
-        ],
-        "'STRING": [
-          -1,
-          486
-        ],
-        "'LBRACE": [
-          -1,
-          486
-        ],
-        "'RBRACE": [
-          -1,
-          486
-        ],
-        "'SPY": [
-          -1,
-          486
-        ],
-        "'PARENSPACE": [
-          -1,
-          486
-        ],
-        "'INT": [
-          -1,
-          486
-        ],
-        "'LONG": [
-          -1,
-          486
-        ],
-        "'DOUBLE": [
-          -1,
-          486
-        ],
-        "'FLOAT": [
-          -1,
-          486
-        ],
-        "'BOOLEAN": [
-          -1,
-          486
-        ],
-        "'VOID": [
-          -1,
-          486
-        ],
-        "'DATA": [
-          -1,
-          486
-        ],
-        "'IF": [
-          -1,
-          486
-        ],
-        "'FOR": [
-          -1,
-          486
-        ],
-        "'RETURN": [
-          -1,
-          486
-        ],
-        "'VAR": [
-          -1,
-          486
-        ],
-        "'REC": [
-          -1,
-          486
-        ],
-        "'ATCHECK": [
-          -1,
-          486
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          486
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          486
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          486
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          486
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          486
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          486
-        ],
-        "'SWITCH": [
-          -1,
-          486
-        ],
-        "'YIELD": [
-          -1,
-          486
-        ],
-        "'DASH": [
-          -1,
-          486
-        ],
-        "'BANG": [
-          -1,
-          486
-        ],
-        "'LBRACK": [
-          -1,
-          486
-        ],
-        "'NUMBER": [
-          -1,
-          486
-        ],
-        "'TRUE": [
-          -1,
-          486
-        ],
-        "'FALSE": [
-          -1,
-          486
-        ],
-        "'NULL": [
-          -1,
-          486
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          486
-        ],
-        "'TABLE": [
-          -1,
-          486
-        ],
-        "'ASK": [
-          -1,
-          486
-        ],
-        "'NEW": [
-          -1,
-          486
+          309
         ]
       },
       {
@@ -34583,6 +35799,10 @@ function(E) {
           488
         ],
         "'PARENAFTERBRACE": [
+          -1,
+          488
+        ],
+        "'BLOCK": [
           -1,
           488
         ],
@@ -34744,6 +35964,10 @@ function(E) {
           -1,
           490
         ],
+        "'BLOCK": [
+          -1,
+          490
+        ],
         "'TABLE": [
           -1,
           490
@@ -34902,6 +36126,10 @@ function(E) {
           -1,
           492
         ],
+        "'BLOCK": [
+          -1,
+          492
+        ],
         "'TABLE": [
           -1,
           492
@@ -35060,6 +36288,10 @@ function(E) {
           -1,
           494
         ],
+        "'BLOCK": [
+          -1,
+          494
+        ],
         "'TABLE": [
           -1,
           494
@@ -35218,6 +36450,10 @@ function(E) {
           -1,
           496
         ],
+        "'BLOCK": [
+          -1,
+          496
+        ],
         "'TABLE": [
           -1,
           496
@@ -35376,6 +36612,10 @@ function(E) {
           -1,
           498
         ],
+        "'BLOCK": [
+          -1,
+          498
+        ],
         "'TABLE": [
           -1,
           498
@@ -35534,6 +36774,10 @@ function(E) {
           -1,
           500
         ],
+        "'BLOCK": [
+          -1,
+          500
+        ],
         "'TABLE": [
           -1,
           500
@@ -35545,612 +36789,924 @@ function(E) {
         "'NEW": [
           -1,
           500
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          502
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          502
+        ],
+        "'STRING": [
+          -1,
+          502
+        ],
+        "'LBRACE": [
+          -1,
+          502
+        ],
+        "'RBRACE": [
+          -1,
+          502
+        ],
+        "'SPY": [
+          -1,
+          502
+        ],
+        "'PARENSPACE": [
+          -1,
+          502
+        ],
+        "'INT": [
+          -1,
+          502
+        ],
+        "'LONG": [
+          -1,
+          502
+        ],
+        "'DOUBLE": [
+          -1,
+          502
+        ],
+        "'FLOAT": [
+          -1,
+          502
+        ],
+        "'BOOLEAN": [
+          -1,
+          502
+        ],
+        "'VOID": [
+          -1,
+          502
+        ],
+        "'DATA": [
+          -1,
+          502
+        ],
+        "'IF": [
+          -1,
+          502
+        ],
+        "'FOR": [
+          -1,
+          502
+        ],
+        "'RETURN": [
+          -1,
+          502
+        ],
+        "'VAR": [
+          -1,
+          502
+        ],
+        "'REC": [
+          -1,
+          502
+        ],
+        "'ATCHECK": [
+          -1,
+          502
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          502
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          502
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          502
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          502
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          502
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          502
+        ],
+        "'SWITCH": [
+          -1,
+          502
+        ],
+        "'YIELD": [
+          -1,
+          502
+        ],
+        "'DASH": [
+          -1,
+          502
+        ],
+        "'BANG": [
+          -1,
+          502
+        ],
+        "'LBRACK": [
+          -1,
+          502
+        ],
+        "'NUMBER": [
+          -1,
+          502
+        ],
+        "'TRUE": [
+          -1,
+          502
+        ],
+        "'FALSE": [
+          -1,
+          502
+        ],
+        "'NULL": [
+          -1,
+          502
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          502
+        ],
+        "'BLOCK": [
+          -1,
+          502
+        ],
+        "'TABLE": [
+          -1,
+          502
+        ],
+        "'ASK": [
+          -1,
+          502
+        ],
+        "'NEW": [
+          -1,
+          502
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          504
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          504
+        ],
+        "'STRING": [
+          -1,
+          504
+        ],
+        "'LBRACE": [
+          -1,
+          504
+        ],
+        "'RBRACE": [
+          -1,
+          504
+        ],
+        "'SPY": [
+          -1,
+          504
+        ],
+        "'PARENSPACE": [
+          -1,
+          504
+        ],
+        "'INT": [
+          -1,
+          504
+        ],
+        "'LONG": [
+          -1,
+          504
+        ],
+        "'DOUBLE": [
+          -1,
+          504
+        ],
+        "'FLOAT": [
+          -1,
+          504
+        ],
+        "'BOOLEAN": [
+          -1,
+          504
+        ],
+        "'VOID": [
+          -1,
+          504
+        ],
+        "'DATA": [
+          -1,
+          504
+        ],
+        "'IF": [
+          -1,
+          504
+        ],
+        "'FOR": [
+          -1,
+          504
+        ],
+        "'RETURN": [
+          -1,
+          504
+        ],
+        "'VAR": [
+          -1,
+          504
+        ],
+        "'REC": [
+          -1,
+          504
+        ],
+        "'ATCHECK": [
+          -1,
+          504
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          504
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          504
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          504
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          504
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          504
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          504
+        ],
+        "'SWITCH": [
+          -1,
+          504
+        ],
+        "'YIELD": [
+          -1,
+          504
+        ],
+        "'DASH": [
+          -1,
+          504
+        ],
+        "'BANG": [
+          -1,
+          504
+        ],
+        "'LBRACK": [
+          -1,
+          504
+        ],
+        "'NUMBER": [
+          -1,
+          504
+        ],
+        "'TRUE": [
+          -1,
+          504
+        ],
+        "'FALSE": [
+          -1,
+          504
+        ],
+        "'NULL": [
+          -1,
+          504
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          504
+        ],
+        "'BLOCK": [
+          -1,
+          504
+        ],
+        "'TABLE": [
+          -1,
+          504
+        ],
+        "'ASK": [
+          -1,
+          504
+        ],
+        "'NEW": [
+          -1,
+          504
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          506
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          506
+        ],
+        "'STRING": [
+          -1,
+          506
+        ],
+        "'LBRACE": [
+          -1,
+          506
+        ],
+        "'RBRACE": [
+          -1,
+          506
+        ],
+        "'SPY": [
+          -1,
+          506
+        ],
+        "'PARENSPACE": [
+          -1,
+          506
+        ],
+        "'INT": [
+          -1,
+          506
+        ],
+        "'LONG": [
+          -1,
+          506
+        ],
+        "'DOUBLE": [
+          -1,
+          506
+        ],
+        "'FLOAT": [
+          -1,
+          506
+        ],
+        "'BOOLEAN": [
+          -1,
+          506
+        ],
+        "'VOID": [
+          -1,
+          506
+        ],
+        "'DATA": [
+          -1,
+          506
+        ],
+        "'IF": [
+          -1,
+          506
+        ],
+        "'FOR": [
+          -1,
+          506
+        ],
+        "'RETURN": [
+          -1,
+          506
+        ],
+        "'VAR": [
+          -1,
+          506
+        ],
+        "'REC": [
+          -1,
+          506
+        ],
+        "'ATCHECK": [
+          -1,
+          506
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          506
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          506
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          506
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          506
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          506
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          506
+        ],
+        "'SWITCH": [
+          -1,
+          506
+        ],
+        "'YIELD": [
+          -1,
+          506
+        ],
+        "'DASH": [
+          -1,
+          506
+        ],
+        "'BANG": [
+          -1,
+          506
+        ],
+        "'LBRACK": [
+          -1,
+          506
+        ],
+        "'NUMBER": [
+          -1,
+          506
+        ],
+        "'TRUE": [
+          -1,
+          506
+        ],
+        "'FALSE": [
+          -1,
+          506
+        ],
+        "'NULL": [
+          -1,
+          506
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          506
+        ],
+        "'BLOCK": [
+          -1,
+          506
+        ],
+        "'TABLE": [
+          -1,
+          506
+        ],
+        "'ASK": [
+          -1,
+          506
+        ],
+        "'NEW": [
+          -1,
+          506
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          508
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          508
+        ],
+        "'STRING": [
+          -1,
+          508
+        ],
+        "'LBRACE": [
+          -1,
+          508
+        ],
+        "'RBRACE": [
+          -1,
+          508
+        ],
+        "'SPY": [
+          -1,
+          508
+        ],
+        "'PARENSPACE": [
+          -1,
+          508
+        ],
+        "'INT": [
+          -1,
+          508
+        ],
+        "'LONG": [
+          -1,
+          508
+        ],
+        "'DOUBLE": [
+          -1,
+          508
+        ],
+        "'FLOAT": [
+          -1,
+          508
+        ],
+        "'BOOLEAN": [
+          -1,
+          508
+        ],
+        "'VOID": [
+          -1,
+          508
+        ],
+        "'DATA": [
+          -1,
+          508
+        ],
+        "'IF": [
+          -1,
+          508
+        ],
+        "'FOR": [
+          -1,
+          508
+        ],
+        "'RETURN": [
+          -1,
+          508
+        ],
+        "'VAR": [
+          -1,
+          508
+        ],
+        "'REC": [
+          -1,
+          508
+        ],
+        "'ATCHECK": [
+          -1,
+          508
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          508
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          508
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          508
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          508
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          508
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          508
+        ],
+        "'SWITCH": [
+          -1,
+          508
+        ],
+        "'YIELD": [
+          -1,
+          508
+        ],
+        "'DASH": [
+          -1,
+          508
+        ],
+        "'BANG": [
+          -1,
+          508
+        ],
+        "'LBRACK": [
+          -1,
+          508
+        ],
+        "'NUMBER": [
+          -1,
+          508
+        ],
+        "'TRUE": [
+          -1,
+          508
+        ],
+        "'FALSE": [
+          -1,
+          508
+        ],
+        "'NULL": [
+          -1,
+          508
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          508
+        ],
+        "'BLOCK": [
+          -1,
+          508
+        ],
+        "'TABLE": [
+          -1,
+          508
+        ],
+        "'ASK": [
+          -1,
+          508
+        ],
+        "'NEW": [
+          -1,
+          508
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          510
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          510
+        ],
+        "'STRING": [
+          -1,
+          510
+        ],
+        "'LBRACE": [
+          -1,
+          510
+        ],
+        "'RBRACE": [
+          -1,
+          510
+        ],
+        "'SPY": [
+          -1,
+          510
+        ],
+        "'PARENSPACE": [
+          -1,
+          510
+        ],
+        "'INT": [
+          -1,
+          510
+        ],
+        "'LONG": [
+          -1,
+          510
+        ],
+        "'DOUBLE": [
+          -1,
+          510
+        ],
+        "'FLOAT": [
+          -1,
+          510
+        ],
+        "'BOOLEAN": [
+          -1,
+          510
+        ],
+        "'VOID": [
+          -1,
+          510
+        ],
+        "'DATA": [
+          -1,
+          510
+        ],
+        "'IF": [
+          -1,
+          510
+        ],
+        "'FOR": [
+          -1,
+          510
+        ],
+        "'RETURN": [
+          -1,
+          510
+        ],
+        "'VAR": [
+          -1,
+          510
+        ],
+        "'REC": [
+          -1,
+          510
+        ],
+        "'ATCHECK": [
+          -1,
+          510
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          510
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          510
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          510
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          510
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          510
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          510
+        ],
+        "'SWITCH": [
+          -1,
+          510
+        ],
+        "'YIELD": [
+          -1,
+          510
+        ],
+        "'DASH": [
+          -1,
+          510
+        ],
+        "'BANG": [
+          -1,
+          510
+        ],
+        "'LBRACK": [
+          -1,
+          510
+        ],
+        "'NUMBER": [
+          -1,
+          510
+        ],
+        "'TRUE": [
+          -1,
+          510
+        ],
+        "'FALSE": [
+          -1,
+          510
+        ],
+        "'NULL": [
+          -1,
+          510
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          510
+        ],
+        "'BLOCK": [
+          -1,
+          510
+        ],
+        "'TABLE": [
+          -1,
+          510
+        ],
+        "'ASK": [
+          -1,
+          510
+        ],
+        "'NEW": [
+          -1,
+          510
         ]
       },
       {
         "'COLON": [
-          416
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'PARENNOSPACE": [
-          11
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          417
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'PARENNOSPACE": [
-          11
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          418
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'SEMI": [
-          419
-        ],
-        "assert-stmt_A2_I4?": [
-          420
-        ],
-        "assert-stmt_A2_I4": [
-          421
-        ],
-        "'NAME": [
-          -1,
-          502,
-          504
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          502,
-          504
-        ],
-        "'STRING": [
-          -1,
-          502,
-          504
-        ],
-        "'LBRACE": [
-          -1,
-          502,
-          504
-        ],
-        "'RBRACE": [
-          -1,
-          502,
-          504
-        ],
-        "'SPY": [
-          -1,
-          502,
-          504
-        ],
-        "'PARENSPACE": [
-          -1,
-          502,
-          504
-        ],
-        "'INT": [
-          -1,
-          502,
-          504
-        ],
-        "'LONG": [
-          -1,
-          502,
-          504
-        ],
-        "'DOUBLE": [
-          -1,
-          502,
-          504
-        ],
-        "'FLOAT": [
-          -1,
-          502,
-          504
-        ],
-        "'BOOLEAN": [
-          -1,
-          502,
-          504
-        ],
-        "'VOID": [
-          -1,
-          502,
-          504
-        ],
-        "'DATA": [
-          -1,
-          502,
-          504
-        ],
-        "'IF": [
-          -1,
-          502,
-          504
-        ],
-        "'FOR": [
-          -1,
-          502,
-          504
-        ],
-        "'RETURN": [
-          -1,
-          502,
-          504
-        ],
-        "'VAR": [
-          -1,
-          502,
-          504
-        ],
-        "'REC": [
-          -1,
-          502,
-          504
-        ],
-        "'ATCHECK": [
-          -1,
-          502,
-          504
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          502,
-          504
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          502,
-          504
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          502,
-          504
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          502,
-          504
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          502,
-          504
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          502,
-          504
-        ],
-        "'SWITCH": [
-          -1,
-          502,
-          504
-        ],
-        "'YIELD": [
-          -1,
-          502,
-          504
-        ],
-        "'DASH": [
-          -1,
-          502,
-          504
-        ],
-        "'BANG": [
-          -1,
-          502,
-          504
-        ],
-        "'LBRACK": [
-          -1,
-          502,
-          504
-        ],
-        "'NUMBER": [
-          -1,
-          502,
-          504
-        ],
-        "'TRUE": [
-          -1,
-          502,
-          504
-        ],
-        "'FALSE": [
-          -1,
-          502,
-          504
-        ],
-        "'NULL": [
-          -1,
-          502,
-          504
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          502,
-          504
-        ],
-        "'TABLE": [
-          -1,
-          502,
-          504
-        ],
-        "'ASK": [
-          -1,
-          502,
-          504
-        ],
-        "'NEW": [
-          -1,
-          502,
-          504
-        ]
-      },
-      {
-        "'SEMI": [
-          422
-        ],
-        "assert-stmt_A3_I4?": [
           423
+        ]
+      },
+      {
+        "'NAME": [
+          98
         ],
-        "assert-stmt_A3_I4": [
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
           424
         ],
-        "'NAME": [
-          -1,
-          506,
-          508
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          506,
-          508
-        ],
-        "'STRING": [
-          -1,
-          506,
-          508
-        ],
-        "'LBRACE": [
-          -1,
-          506,
-          508
-        ],
-        "'RBRACE": [
-          -1,
-          506,
-          508
-        ],
-        "'SPY": [
-          -1,
-          506,
-          508
-        ],
-        "'PARENSPACE": [
-          -1,
-          506,
-          508
-        ],
-        "'INT": [
-          -1,
-          506,
-          508
-        ],
-        "'LONG": [
-          -1,
-          506,
-          508
-        ],
-        "'DOUBLE": [
-          -1,
-          506,
-          508
-        ],
-        "'FLOAT": [
-          -1,
-          506,
-          508
-        ],
-        "'BOOLEAN": [
-          -1,
-          506,
-          508
-        ],
-        "'VOID": [
-          -1,
-          506,
-          508
-        ],
-        "'DATA": [
-          -1,
-          506,
-          508
-        ],
-        "'IF": [
-          -1,
-          506,
-          508
-        ],
-        "'FOR": [
-          -1,
-          506,
-          508
-        ],
-        "'RETURN": [
-          -1,
-          506,
-          508
-        ],
-        "'VAR": [
-          -1,
-          506,
-          508
-        ],
-        "'REC": [
-          -1,
-          506,
-          508
-        ],
-        "'ATCHECK": [
-          -1,
-          506,
-          508
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          506,
-          508
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          506,
-          508
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          506,
-          508
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          506,
-          508
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          506,
-          508
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          506,
-          508
+        "switch-expr": [
+          37
         ],
         "'SWITCH": [
-          -1,
-          506,
-          508
+          38
         ],
-        "'YIELD": [
-          -1,
-          506,
-          508
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
         ],
         "'DASH": [
-          -1,
-          506,
-          508
+          42
         ],
         "'BANG": [
-          -1,
-          506,
-          508
+          43
+        ],
+        "app-or-access": [
+          44
         ],
         "'LBRACK": [
-          -1,
-          506,
-          508
+          45
+        ],
+        "prim-expr": [
+          46
         ],
         "'NUMBER": [
-          -1,
-          506,
-          508
+          47
         ],
         "'TRUE": [
-          -1,
-          506,
-          508
+          48
         ],
         "'FALSE": [
-          -1,
-          506,
-          508
+          49
         ],
         "'NULL": [
-          -1,
-          506,
-          508
+          50
         ],
         "'PARENAFTERBRACE": [
-          -1,
-          506,
-          508
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
         ],
         "'TABLE": [
-          -1,
-          506,
-          508
+          60
         ],
         "'ASK": [
-          -1,
-          506,
-          508
+          61
         ],
         "'NEW": [
-          -1,
-          506,
-          508
+          62
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -36162,7 +37718,7 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
           425
@@ -36230,19 +37786,447 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'SEMI": [
+          426
+        ],
+        "assert-stmt_A2_I4?": [
+          427
+        ],
+        "assert-stmt_A2_I4": [
+          428
+        ],
+        "'NAME": [
+          -1,
+          512,
+          514
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          512,
+          514
+        ],
+        "'STRING": [
+          -1,
+          512,
+          514
+        ],
+        "'LBRACE": [
+          -1,
+          512,
+          514
+        ],
+        "'RBRACE": [
+          -1,
+          512,
+          514
+        ],
+        "'SPY": [
+          -1,
+          512,
+          514
+        ],
+        "'PARENSPACE": [
+          -1,
+          512,
+          514
+        ],
+        "'INT": [
+          -1,
+          512,
+          514
+        ],
+        "'LONG": [
+          -1,
+          512,
+          514
+        ],
+        "'DOUBLE": [
+          -1,
+          512,
+          514
+        ],
+        "'FLOAT": [
+          -1,
+          512,
+          514
+        ],
+        "'BOOLEAN": [
+          -1,
+          512,
+          514
+        ],
+        "'VOID": [
+          -1,
+          512,
+          514
+        ],
+        "'DATA": [
+          -1,
+          512,
+          514
+        ],
+        "'IF": [
+          -1,
+          512,
+          514
+        ],
+        "'FOR": [
+          -1,
+          512,
+          514
+        ],
+        "'RETURN": [
+          -1,
+          512,
+          514
+        ],
+        "'VAR": [
+          -1,
+          512,
+          514
+        ],
+        "'REC": [
+          -1,
+          512,
+          514
+        ],
+        "'ATCHECK": [
+          -1,
+          512,
+          514
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          512,
+          514
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          512,
+          514
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          512,
+          514
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          512,
+          514
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          512,
+          514
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          512,
+          514
+        ],
+        "'SWITCH": [
+          -1,
+          512,
+          514
+        ],
+        "'YIELD": [
+          -1,
+          512,
+          514
+        ],
+        "'DASH": [
+          -1,
+          512,
+          514
+        ],
+        "'BANG": [
+          -1,
+          512,
+          514
+        ],
+        "'LBRACK": [
+          -1,
+          512,
+          514
+        ],
+        "'NUMBER": [
+          -1,
+          512,
+          514
+        ],
+        "'TRUE": [
+          -1,
+          512,
+          514
+        ],
+        "'FALSE": [
+          -1,
+          512,
+          514
+        ],
+        "'NULL": [
+          -1,
+          512,
+          514
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          512,
+          514
+        ],
+        "'BLOCK": [
+          -1,
+          512,
+          514
+        ],
+        "'TABLE": [
+          -1,
+          512,
+          514
+        ],
+        "'ASK": [
+          -1,
+          512,
+          514
+        ],
+        "'NEW": [
+          -1,
+          512,
+          514
+        ]
+      },
+      {
+        "'SEMI": [
+          429
+        ],
+        "assert-stmt_A3_I4?": [
+          430
+        ],
+        "assert-stmt_A3_I4": [
+          431
+        ],
+        "'NAME": [
+          -1,
+          516,
+          518
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          516,
+          518
+        ],
+        "'STRING": [
+          -1,
+          516,
+          518
+        ],
+        "'LBRACE": [
+          -1,
+          516,
+          518
+        ],
+        "'RBRACE": [
+          -1,
+          516,
+          518
+        ],
+        "'SPY": [
+          -1,
+          516,
+          518
+        ],
+        "'PARENSPACE": [
+          -1,
+          516,
+          518
+        ],
+        "'INT": [
+          -1,
+          516,
+          518
+        ],
+        "'LONG": [
+          -1,
+          516,
+          518
+        ],
+        "'DOUBLE": [
+          -1,
+          516,
+          518
+        ],
+        "'FLOAT": [
+          -1,
+          516,
+          518
+        ],
+        "'BOOLEAN": [
+          -1,
+          516,
+          518
+        ],
+        "'VOID": [
+          -1,
+          516,
+          518
+        ],
+        "'DATA": [
+          -1,
+          516,
+          518
+        ],
+        "'IF": [
+          -1,
+          516,
+          518
+        ],
+        "'FOR": [
+          -1,
+          516,
+          518
+        ],
+        "'RETURN": [
+          -1,
+          516,
+          518
+        ],
+        "'VAR": [
+          -1,
+          516,
+          518
+        ],
+        "'REC": [
+          -1,
+          516,
+          518
+        ],
+        "'ATCHECK": [
+          -1,
+          516,
+          518
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          516,
+          518
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          516,
+          518
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          516,
+          518
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          516,
+          518
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          516,
+          518
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          516,
+          518
+        ],
+        "'SWITCH": [
+          -1,
+          516,
+          518
+        ],
+        "'YIELD": [
+          -1,
+          516,
+          518
+        ],
+        "'DASH": [
+          -1,
+          516,
+          518
+        ],
+        "'BANG": [
+          -1,
+          516,
+          518
+        ],
+        "'LBRACK": [
+          -1,
+          516,
+          518
+        ],
+        "'NUMBER": [
+          -1,
+          516,
+          518
+        ],
+        "'TRUE": [
+          -1,
+          516,
+          518
+        ],
+        "'FALSE": [
+          -1,
+          516,
+          518
+        ],
+        "'NULL": [
+          -1,
+          516,
+          518
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          516,
+          518
+        ],
+        "'BLOCK": [
+          -1,
+          516,
+          518
+        ],
+        "'TABLE": [
+          -1,
+          516,
+          518
+        ],
+        "'ASK": [
+          -1,
+          516,
+          518
+        ],
+        "'NEW": [
+          -1,
+          516,
+          518
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -36254,10 +38238,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          426
+          432
         ],
         "switch-expr": [
           37
@@ -36322,14 +38306,118 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          433
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
@@ -36343,55 +38431,55 @@ function(E) {
           12
         ],
         "fun-decl": [
-          196
-        ],
-        "data-decl": [
-          197
-        ],
-        "check-block": [
-          198
-        ],
-        "let-stmt": [
-          199
-        ],
-        "var-stmt": [
           200
         ],
-        "rec-stmt": [
+        "data-decl": [
           201
         ],
-        "assign-stmt": [
+        "check-block": [
           202
         ],
-        "expr-stmt": [
+        "let-stmt": [
           203
+        ],
+        "var-stmt": [
+          204
+        ],
+        "rec-stmt": [
+          205
+        ],
+        "assign-stmt": [
+          206
+        ],
+        "expr-stmt": [
+          207
         ],
         "'LBRACE": [
           23
         ],
         "'RBRACE": [
-          427
+          434
         ],
         "block-stmt": [
-          428
+          435
         ],
         "if-stmt": [
-          206
-        ],
-        "for-stmt": [
-          207
-        ],
-        "return-stmt": [
-          208
-        ],
-        "yield-stmt": [
-          209
-        ],
-        "spy-stmt": [
           210
         ],
-        "'SPY": [
+        "for-stmt": [
           211
+        ],
+        "return-stmt": [
+          212
+        ],
+        "yield-stmt": [
+          213
+        ],
+        "spy-stmt": [
+          214
+        ],
+        "'SPY": [
+          215
         ],
         "'PARENSPACE": [
           24
@@ -36400,7 +38488,7 @@ function(E) {
           25
         ],
         "assert-stmt": [
-          429
+          436
         ],
         "'INT": [
           26
@@ -36424,16 +38512,16 @@ function(E) {
           32
         ],
         "'IF": [
-          213
+          217
         ],
         "full-expr": [
-          214
+          218
         ],
         "'FOR": [
-          215
+          219
         ],
         "'RETURN": [
-          216
+          220
         ],
         "'VAR": [
           34
@@ -36445,25 +38533,25 @@ function(E) {
           36
         ],
         "check-block_A0_I6": [
-          430
+          437
         ],
         "'ASSERTEQUALS": [
-          218
-        ],
-        "'ASSERTNOTEQUALS": [
-          219
-        ],
-        "'ASSERTTRUE": [
-          220
-        ],
-        "'ASSERTFALSE": [
-          221
-        ],
-        "'ASSERTSATISFIES": [
           222
         ],
-        "'ASSERTRAISES": [
+        "'ASSERTNOTEQUALS": [
           223
+        ],
+        "'ASSERTTRUE": [
+          224
+        ],
+        "'ASSERTFALSE": [
+          225
+        ],
+        "'ASSERTSATISFIES": [
+          226
+        ],
+        "'ASSERTRAISES": [
+          227
         ],
         "switch-expr": [
           37
@@ -36472,7 +38560,7 @@ function(E) {
           38
         ],
         "'YIELD": [
-          224
+          228
         ],
         "lambda-expr": [
           39
@@ -36531,512 +38619,530 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'RBRACE": [
-          431
+          438
         ]
       },
       {
         "'RBRACE": [
           -1,
-          510
+          520
         ],
         "'CASE": [
           -1,
-          510
+          520
         ],
         "'DEFAULT": [
           -1,
-          510
+          520
         ]
       },
       {
         "'RBRACE": [
           -1,
-          512
+          522
         ],
         "'CASE": [
           -1,
-          512
+          522
         ],
         "'DEFAULT": [
           -1,
-          512
+          522
         ]
       },
       {
         "'RBRACE": [
           -1,
-          514
+          524
         ]
       },
       {
         "'RBRACE": [
           -1,
-          516
+          526
         ]
       },
       {
         "'NAME": [
-          432
+          439
         ]
       },
       {
         "'COLON": [
-          433
+          440
         ]
       },
       {
         "'COMMA": [
           -1,
-          518
+          528
         ],
         "'RBRACK": [
           -1,
-          518
+          528
         ]
       },
       {
         "'RPAREN": [
-          434
+          441
         ]
       },
       {
         "$": [
           -1,
-          520
+          530
         ],
         "'NAME": [
           -1,
-          520
+          530
         ],
         "'SEMI": [
           -1,
-          520
+          530
         ],
         "'PARENNOSPACE": [
           -1,
-          520
+          530
         ],
         "'STRING": [
           -1,
-          520
+          530
         ],
         "'RPAREN": [
           -1,
-          520
+          530
         ],
         "'LBRACE": [
           -1,
-          520
+          530
         ],
         "'RBRACE": [
           -1,
-          520
+          530
         ],
         "'SPY": [
           -1,
-          520
+          530
         ],
         "'PARENSPACE": [
           -1,
-          520
+          530
         ],
         "'COMMA": [
           -1,
-          520
+          530
         ],
         "'INT": [
           -1,
-          520
+          530
         ],
         "'LONG": [
           -1,
-          520
+          530
         ],
         "'DOUBLE": [
           -1,
-          520
+          530
         ],
         "'FLOAT": [
           -1,
-          520
+          530
         ],
         "'BOOLEAN": [
           -1,
-          520
+          530
         ],
         "'VOID": [
           -1,
-          520
+          530
         ],
         "'LT": [
           -1,
-          520
+          530
         ],
         "'GT": [
           -1,
-          520
+          530
         ],
         "'THINARROW": [
           -1,
-          520
+          530
         ],
         "'DATA": [
           -1,
-          520
+          530
         ],
         "'IF": [
           -1,
-          520
+          530
         ],
         "'FOR": [
           -1,
-          520
+          530
         ],
         "'RETURN": [
           -1,
-          520
+          530
         ],
         "'VAR": [
           -1,
-          520
+          530
         ],
         "'REC": [
           -1,
-          520
+          530
         ],
         "'ATCHECK": [
           -1,
-          520
+          530
         ],
         "'ASSERTEQUALS": [
           -1,
-          520
+          530
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          520
+          530
         ],
         "'ASSERTTRUE": [
           -1,
-          520
+          530
         ],
         "'ASSERTFALSE": [
           -1,
-          520
+          530
         ],
         "'ASSERTSATISFIES": [
           -1,
-          520
+          530
         ],
         "'ASSERTRAISES": [
           -1,
-          520
+          530
         ],
         "'IS": [
           -1,
-          520
+          530
         ],
         "'ISNOT": [
           -1,
-          520
+          530
         ],
         "'SATISFIES": [
           -1,
-          520
+          530
         ],
         "'RAISES": [
           -1,
-          520
+          530
         ],
         "'SWITCH": [
           -1,
-          520
+          530
         ],
         "'CASE": [
           -1,
-          520
+          530
         ],
         "'DEFAULT": [
           -1,
-          520
+          530
         ],
         "'YIELD": [
           -1,
-          520
+          530
         ],
         "'PLUS": [
           -1,
-          520
+          530
         ],
         "'DASH": [
           -1,
-          520
+          530
         ],
         "'TIMES": [
           -1,
-          520
+          530
         ],
         "'SLASH": [
           -1,
-          520
+          530
         ],
         "'PERCENT": [
           -1,
-          520
+          530
         ],
         "'EQUALEQUAL": [
           -1,
-          520
+          530
         ],
         "'NEQ": [
           -1,
-          520
+          530
         ],
         "'LEQ": [
           -1,
-          520
+          530
         ],
         "'GEQ": [
           -1,
-          520
+          530
         ],
         "'AND": [
           -1,
-          520
+          530
         ],
         "'OR": [
           -1,
-          520
+          530
         ],
         "'BANG": [
           -1,
-          520
+          530
         ],
         "'DOT": [
           -1,
-          520
+          530
         ],
         "'LBRACK": [
           -1,
-          520
+          530
         ],
         "'RBRACK": [
           -1,
-          520
+          530
         ],
         "'NUMBER": [
           -1,
-          520
+          530
         ],
         "'TRUE": [
           -1,
-          520
+          530
         ],
         "'FALSE": [
           -1,
-          520
+          530
         ],
         "'NULL": [
           -1,
-          520
+          530
         ],
         "'PARENAFTERBRACE": [
           -1,
-          520
+          530
+        ],
+        "'BLOCK": [
+          -1,
+          530
         ],
         "'TABLE": [
           -1,
-          520
+          530
         ],
         "'ASK": [
           -1,
-          520
+          530
         ],
         "'NEW": [
           -1,
-          520
+          530
         ]
       },
       {
         "'RBRACE": [
           -1,
-          522
+          532
         ],
         "'ROW": [
           -1,
-          522
+          532
         ]
       },
       {
         "'SEMI": [
-          435
+          442
         ]
       },
       {
         "'COLON": [
-          436
+          443
         ]
       },
       {
         "'NAME": [
           -1,
-          524
+          534
         ],
         "'STRING": [
           -1,
-          524
+          534
         ],
         "'LBRACE": [
           -1,
-          524
+          534
         ],
         "'RBRACE": [
           -1,
-          524
+          534
         ],
         "'PARENSPACE": [
           -1,
-          524
+          534
         ],
         "'SWITCH": [
           -1,
-          524
+          534
         ],
         "'DASH": [
           -1,
-          524
+          534
         ],
         "'BANG": [
           -1,
-          524
+          534
         ],
         "'LBRACK": [
           -1,
-          524
+          534
         ],
         "'NUMBER": [
           -1,
-          524
+          534
         ],
         "'TRUE": [
           -1,
-          524
+          534
         ],
         "'FALSE": [
           -1,
-          524
+          534
         ],
         "'NULL": [
           -1,
-          524
+          534
         ],
         "'PARENAFTERBRACE": [
           -1,
-          524
+          534
+        ],
+        "'BLOCK": [
+          -1,
+          534
         ],
         "'TABLE": [
           -1,
-          524
+          534
         ],
         "'ASK": [
           -1,
-          524
+          534
         ],
         "'NEW": [
           -1,
-          524
+          534
         ]
       },
       {
         "'NAME": [
           -1,
-          526
+          536
         ],
         "'STRING": [
           -1,
-          526
+          536
         ],
         "'LBRACE": [
           -1,
-          526
+          536
         ],
         "'PARENSPACE": [
           -1,
-          526
+          536
         ],
         "'SWITCH": [
           -1,
-          526
+          536
         ],
         "'DASH": [
           -1,
-          526
+          536
         ],
         "'BANG": [
           -1,
-          526
+          536
         ],
         "'LBRACK": [
           -1,
-          526
+          536
         ],
         "'NUMBER": [
           -1,
-          526
+          536
         ],
         "'TRUE": [
           -1,
-          526
+          536
         ],
         "'FALSE": [
           -1,
-          526
+          536
         ],
         "'NULL": [
           -1,
-          526
+          536
         ],
         "'PARENAFTERBRACE": [
           -1,
-          526
+          536
+        ],
+        "'BLOCK": [
+          -1,
+          536
         ],
         "'TABLE": [
           -1,
-          526
+          536
         ],
         "'ASK": [
           -1,
-          526
+          536
         ],
         "'OTHERWISE": [
           -1,
-          526
+          536
         ],
         "'NEW": [
           -1,
-          526
+          536
         ]
       },
       {
         "'RBRACE": [
-          437
+          444
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -37048,10 +39154,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          438
+          445
         ],
         "switch-expr": [
           37
@@ -37116,760 +39222,786 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'RPAREN": [
           -1,
-          528
+          538
         ],
         "'COMMA": [
           -1,
-          528
+          538
         ]
       },
       {
         "$": [
           -1,
-          530
+          540
         ],
         "'IMPORT": [
           -1,
-          530
+          540
         ],
         "'NAME": [
           -1,
-          530
+          540
         ],
         "'PARENNOSPACE": [
           -1,
-          530
+          540
         ],
         "'STRING": [
           -1,
-          530
+          540
         ],
         "'INCLUDE": [
           -1,
-          530
+          540
         ],
         "'LBRACE": [
           -1,
-          530
+          540
         ],
         "'PARENSPACE": [
           -1,
-          530
+          540
         ],
         "'INT": [
           -1,
-          530
+          540
         ],
         "'LONG": [
           -1,
-          530
+          540
         ],
         "'DOUBLE": [
           -1,
-          530
+          540
         ],
         "'FLOAT": [
           -1,
-          530
+          540
         ],
         "'BOOLEAN": [
           -1,
-          530
+          540
         ],
         "'VOID": [
           -1,
-          530
+          540
         ],
         "'DATA": [
           -1,
-          530
+          540
         ],
         "'VAR": [
           -1,
-          530
+          540
         ],
         "'REC": [
           -1,
-          530
+          540
         ],
         "'ATCHECK": [
           -1,
-          530
+          540
         ],
         "'SWITCH": [
           -1,
-          530
+          540
         ],
         "'DASH": [
           -1,
-          530
+          540
         ],
         "'BANG": [
           -1,
-          530
+          540
         ],
         "'LBRACK": [
           -1,
-          530
+          540
         ],
         "'NUMBER": [
           -1,
-          530
+          540
         ],
         "'TRUE": [
           -1,
-          530
+          540
         ],
         "'FALSE": [
           -1,
-          530
+          540
         ],
         "'NULL": [
           -1,
-          530
+          540
         ],
         "'PARENAFTERBRACE": [
           -1,
-          530
+          540
+        ],
+        "'BLOCK": [
+          -1,
+          540
         ],
         "'TABLE": [
           -1,
-          530
+          540
         ],
         "'ASK": [
           -1,
-          530
+          540
         ],
         "'NEW": [
           -1,
-          530
+          540
         ]
       },
       {
         "where-clause_I2*": [
-          439
+          446
         ],
         "'NAME": [
           -1,
-          532
+          542
         ],
         "'PARENNOSPACE": [
           -1,
-          532
+          542
         ],
         "'STRING": [
           -1,
-          532
+          542
         ],
         "'LBRACE": [
           -1,
-          532
+          542
         ],
         "'RBRACE": [
           -1,
-          532
+          542
         ],
         "'SPY": [
           -1,
-          532
+          542
         ],
         "'PARENSPACE": [
           -1,
-          532
+          542
         ],
         "'INT": [
           -1,
-          532
+          542
         ],
         "'LONG": [
           -1,
-          532
+          542
         ],
         "'DOUBLE": [
           -1,
-          532
+          542
         ],
         "'FLOAT": [
           -1,
-          532
+          542
         ],
         "'BOOLEAN": [
           -1,
-          532
+          542
         ],
         "'VOID": [
           -1,
-          532
+          542
         ],
         "'DATA": [
           -1,
-          532
+          542
         ],
         "'IF": [
           -1,
-          532
+          542
         ],
         "'FOR": [
           -1,
-          532
+          542
         ],
         "'RETURN": [
           -1,
-          532
+          542
         ],
         "'VAR": [
           -1,
-          532
+          542
         ],
         "'REC": [
           -1,
-          532
+          542
         ],
         "'ATCHECK": [
           -1,
-          532
+          542
         ],
         "'ASSERTEQUALS": [
           -1,
-          532
+          542
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          532
+          542
         ],
         "'ASSERTTRUE": [
           -1,
-          532
+          542
         ],
         "'ASSERTFALSE": [
           -1,
-          532
+          542
         ],
         "'ASSERTSATISFIES": [
           -1,
-          532
+          542
         ],
         "'ASSERTRAISES": [
           -1,
-          532
+          542
         ],
         "'SWITCH": [
           -1,
-          532
+          542
         ],
         "'YIELD": [
           -1,
-          532
+          542
         ],
         "'DASH": [
           -1,
-          532
+          542
         ],
         "'BANG": [
           -1,
-          532
+          542
         ],
         "'LBRACK": [
           -1,
-          532
+          542
         ],
         "'NUMBER": [
           -1,
-          532
+          542
         ],
         "'TRUE": [
           -1,
-          532
+          542
         ],
         "'FALSE": [
           -1,
-          532
+          542
         ],
         "'NULL": [
           -1,
-          532
+          542
         ],
         "'PARENAFTERBRACE": [
           -1,
-          532
+          542
+        ],
+        "'BLOCK": [
+          -1,
+          542
         ],
         "'TABLE": [
           -1,
-          532
+          542
         ],
         "'ASK": [
           -1,
-          532
+          542
         ],
         "'NEW": [
           -1,
-          532
+          542
         ]
       },
       {
         "$": [
           -1,
-          534
+          544
         ],
         "'NAME": [
           -1,
-          534
+          544
         ],
         "'PARENNOSPACE": [
           -1,
-          534
+          544
         ],
         "'STRING": [
           -1,
-          534
+          544
         ],
         "'LBRACE": [
           -1,
-          534
+          544
         ],
         "'RBRACE": [
           -1,
-          534
+          544
         ],
         "'SPY": [
           -1,
-          534
+          544
         ],
         "'PARENSPACE": [
           -1,
-          534
+          544
         ],
         "'WHERE": [
           -1,
-          534
+          544
         ],
         "'INT": [
           -1,
-          534
+          544
         ],
         "'LONG": [
           -1,
-          534
+          544
         ],
         "'DOUBLE": [
           -1,
-          534
+          544
         ],
         "'FLOAT": [
           -1,
-          534
+          544
         ],
         "'BOOLEAN": [
           -1,
-          534
+          544
         ],
         "'VOID": [
           -1,
-          534
+          544
         ],
         "'DATA": [
           -1,
-          534
+          544
         ],
         "'IF": [
           -1,
-          534
+          544
         ],
         "'ELSE": [
           -1,
-          534
+          544
         ],
         "'FOR": [
           -1,
-          534
+          544
         ],
         "'RETURN": [
           -1,
-          534
+          544
         ],
         "'VAR": [
           -1,
-          534
+          544
         ],
         "'REC": [
           -1,
-          534
+          544
         ],
         "'ATCHECK": [
           -1,
-          534
+          544
         ],
         "'ASSERTEQUALS": [
           -1,
-          534
+          544
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          534
+          544
         ],
         "'ASSERTTRUE": [
           -1,
-          534
+          544
         ],
         "'ASSERTFALSE": [
           -1,
-          534
+          544
         ],
         "'ASSERTSATISFIES": [
           -1,
-          534
+          544
         ],
         "'ASSERTRAISES": [
           -1,
-          534
+          544
         ],
         "'SWITCH": [
           -1,
-          534
+          544
         ],
         "'YIELD": [
           -1,
-          534
+          544
         ],
         "'DASH": [
           -1,
-          534
+          544
         ],
         "'BANG": [
           -1,
-          534
+          544
         ],
         "'LBRACK": [
           -1,
-          534
+          544
         ],
         "'RBRACK": [
           -1,
-          534
+          544
         ],
         "'NUMBER": [
           -1,
-          534
+          544
         ],
         "'TRUE": [
           -1,
-          534
+          544
         ],
         "'FALSE": [
           -1,
-          534
+          544
         ],
         "'NULL": [
           -1,
-          534
+          544
         ],
         "'PARENAFTERBRACE": [
           -1,
-          534
+          544
+        ],
+        "'BLOCK": [
+          -1,
+          544
         ],
         "'TABLE": [
           -1,
-          534
+          544
         ],
         "'ASK": [
           -1,
-          534
+          544
         ],
         "'NEW": [
           -1,
-          534
+          544
         ]
       },
       {
         "'NAME": [
           -1,
-          536
+          546
         ],
         "'PARENNOSPACE": [
           -1,
-          536
+          546
         ],
         "'STRING": [
           -1,
-          536
+          546
         ],
         "'LBRACE": [
           -1,
-          536
+          546
         ],
         "'RBRACE": [
           -1,
-          536
+          546
         ],
         "'SPY": [
           -1,
-          536
+          546
         ],
         "'PARENSPACE": [
           -1,
-          536
+          546
         ],
         "'INT": [
           -1,
-          536
+          546
         ],
         "'LONG": [
           -1,
-          536
+          546
         ],
         "'DOUBLE": [
           -1,
-          536
+          546
         ],
         "'FLOAT": [
           -1,
-          536
+          546
         ],
         "'BOOLEAN": [
           -1,
-          536
+          546
         ],
         "'VOID": [
           -1,
-          536
+          546
         ],
         "'DATA": [
           -1,
-          536
+          546
         ],
         "'IF": [
           -1,
-          536
+          546
         ],
         "'FOR": [
           -1,
-          536
+          546
         ],
         "'RETURN": [
           -1,
-          536
+          546
         ],
         "'VAR": [
           -1,
-          536
+          546
         ],
         "'REC": [
           -1,
-          536
+          546
         ],
         "'ATCHECK": [
           -1,
-          536
+          546
         ],
         "'SWITCH": [
           -1,
-          536
+          546
         ],
         "'YIELD": [
           -1,
-          536
+          546
         ],
         "'DASH": [
           -1,
-          536
+          546
         ],
         "'BANG": [
           -1,
-          536
+          546
         ],
         "'LBRACK": [
           -1,
-          536
+          546
         ],
         "'NUMBER": [
           -1,
-          536
+          546
         ],
         "'TRUE": [
           -1,
-          536
+          546
         ],
         "'FALSE": [
           -1,
-          536
+          546
         ],
         "'NULL": [
           -1,
-          536
+          546
         ],
         "'PARENAFTERBRACE": [
           -1,
-          536
+          546
+        ],
+        "'BLOCK": [
+          -1,
+          546
         ],
         "'TABLE": [
           -1,
-          536
+          546
         ],
         "'ASK": [
           -1,
-          536
+          546
         ],
         "'NEW": [
           -1,
-          536
+          546
         ]
       },
       {
         "'NAME": [
           -1,
-          538
+          548
         ],
         "'PARENNOSPACE": [
           -1,
-          538
+          548
         ],
         "'STRING": [
           -1,
-          538
+          548
         ],
         "'LBRACE": [
           -1,
-          538
+          548
         ],
         "'RBRACE": [
           -1,
-          538
+          548
         ],
         "'SPY": [
           -1,
-          538
+          548
         ],
         "'PARENSPACE": [
           -1,
-          538
+          548
         ],
         "'INT": [
           -1,
-          538
+          548
         ],
         "'LONG": [
           -1,
-          538
+          548
         ],
         "'DOUBLE": [
           -1,
-          538
+          548
         ],
         "'FLOAT": [
           -1,
-          538
+          548
         ],
         "'BOOLEAN": [
           -1,
-          538
+          548
         ],
         "'VOID": [
           -1,
-          538
+          548
         ],
         "'DATA": [
           -1,
-          538
+          548
         ],
         "'IF": [
           -1,
-          538
+          548
         ],
         "'FOR": [
           -1,
-          538
+          548
         ],
         "'RETURN": [
           -1,
-          538
+          548
         ],
         "'VAR": [
           -1,
-          538
+          548
         ],
         "'REC": [
           -1,
-          538
+          548
         ],
         "'ATCHECK": [
           -1,
-          538
+          548
         ],
         "'SWITCH": [
           -1,
-          538
+          548
         ],
         "'YIELD": [
           -1,
-          538
+          548
         ],
         "'DASH": [
           -1,
-          538
+          548
         ],
         "'BANG": [
           -1,
-          538
+          548
         ],
         "'LBRACK": [
           -1,
-          538
+          548
         ],
         "'NUMBER": [
           -1,
-          538
+          548
         ],
         "'TRUE": [
           -1,
-          538
+          548
         ],
         "'FALSE": [
           -1,
-          538
+          548
         ],
         "'NULL": [
           -1,
-          538
+          548
         ],
         "'PARENAFTERBRACE": [
           -1,
-          538
+          548
+        ],
+        "'BLOCK": [
+          -1,
+          548
         ],
         "'TABLE": [
           -1,
-          538
+          548
         ],
         "'ASK": [
           -1,
-          538
+          548
         ],
         "'NEW": [
           -1,
-          538
+          548
         ]
       },
       {
         "'NAME": [
-          89
+          91
         ],
         "'PARENSPACE": [
-          68
+          70
         ],
         "type-ann": [
-          305
+          312
         ],
         "'INT": [
           26
@@ -37890,2362 +40022,251 @@ function(E) {
           31
         ],
         "variant-member": [
-          440
-        ]
-      },
-      {
-        "'RPAREN": [
-          -1,
-          540
-        ],
-        "'COMMA": [
-          -1,
-          540
-        ]
-      },
-      {
-        "'SEMI": [
-          441
-        ]
-      },
-      {
-        "'RPAREN": [
-          -1,
-          542
-        ],
-        "'COMMA": [
-          -1,
-          542
-        ]
-      },
-      {
-        "'NAME": [
-          442
-        ]
-      },
-      {
-        "if-stmt_I5*": [
-          443
-        ],
-        "'NAME": [
-          -1,
-          544,
-          546
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          544,
-          546
-        ],
-        "'STRING": [
-          -1,
-          544,
-          546
-        ],
-        "'LBRACE": [
-          -1,
-          544,
-          546
-        ],
-        "'RBRACE": [
-          -1,
-          544,
-          546
-        ],
-        "'SPY": [
-          -1,
-          544,
-          546
-        ],
-        "'PARENSPACE": [
-          -1,
-          544,
-          546
-        ],
-        "'INT": [
-          -1,
-          544,
-          546
-        ],
-        "'LONG": [
-          -1,
-          544,
-          546
-        ],
-        "'DOUBLE": [
-          -1,
-          544,
-          546
-        ],
-        "'FLOAT": [
-          -1,
-          544,
-          546
-        ],
-        "'BOOLEAN": [
-          -1,
-          544,
-          546
-        ],
-        "'VOID": [
-          -1,
-          544,
-          546
-        ],
-        "'DATA": [
-          -1,
-          544,
-          546
-        ],
-        "'IF": [
-          -1,
-          544,
-          546
-        ],
-        "'ELSE": [
-          -1,
-          546
-        ],
-        "'FOR": [
-          -1,
-          544,
-          546
-        ],
-        "'RETURN": [
-          -1,
-          544,
-          546
-        ],
-        "'VAR": [
-          -1,
-          544,
-          546
-        ],
-        "'REC": [
-          -1,
-          544,
-          546
-        ],
-        "'ATCHECK": [
-          -1,
-          544,
-          546
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          544,
-          546
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          544,
-          546
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          544,
-          546
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          544,
-          546
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          544,
-          546
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          544,
-          546
-        ],
-        "'SWITCH": [
-          -1,
-          544,
-          546
-        ],
-        "'YIELD": [
-          -1,
-          544,
-          546
-        ],
-        "'DASH": [
-          -1,
-          544,
-          546
-        ],
-        "'BANG": [
-          -1,
-          544,
-          546
-        ],
-        "'LBRACK": [
-          -1,
-          544,
-          546
-        ],
-        "'NUMBER": [
-          -1,
-          544,
-          546
-        ],
-        "'TRUE": [
-          -1,
-          544,
-          546
-        ],
-        "'FALSE": [
-          -1,
-          544,
-          546
-        ],
-        "'NULL": [
-          -1,
-          544,
-          546
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          544,
-          546
-        ],
-        "'TABLE": [
-          -1,
-          544,
-          546
-        ],
-        "'ASK": [
-          -1,
-          544,
-          546
-        ],
-        "'NEW": [
-          -1,
-          544,
-          546
-        ]
-      },
-      {
-        "'NAME": [
-          96
-        ],
-        "'PARENNOSPACE": [
-          11
-        ],
-        "'STRING": [
-          12
-        ],
-        "'LBRACE": [
-          23
-        ],
-        "'PARENSPACE": [
-          106
-        ],
-        "full-expr": [
-          444
-        ],
-        "switch-expr": [
-          37
-        ],
-        "'SWITCH": [
-          38
-        ],
-        "lambda-expr": [
-          39
-        ],
-        "binop-expr": [
-          40
-        ],
-        "unop-expr": [
-          41
-        ],
-        "'DASH": [
-          42
-        ],
-        "'BANG": [
-          43
-        ],
-        "app-or-access": [
-          44
-        ],
-        "'LBRACK": [
-          45
-        ],
-        "prim-expr": [
-          46
-        ],
-        "'NUMBER": [
-          47
-        ],
-        "'TRUE": [
-          48
-        ],
-        "'FALSE": [
-          49
-        ],
-        "'NULL": [
-          50
-        ],
-        "'PARENAFTERBRACE": [
-          51
-        ],
-        "construct-expr": [
-          52
-        ],
-        "map-for-expr": [
-          53
-        ],
-        "new-expr": [
-          54
-        ],
-        "ask-expr": [
-          55
-        ],
-        "table-expr": [
-          56
-        ],
-        "record-expr": [
-          57
-        ],
-        "'TABLE": [
-          58
-        ],
-        "'ASK": [
-          59
-        ],
-        "'NEW": [
-          60
-        ]
-      },
-      {
-        "'RPAREN": [
-          445
-        ]
-      },
-      {
-        "'RPAREN": [
-          446
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          548
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          548
-        ],
-        "'STRING": [
-          -1,
-          548
-        ],
-        "'LBRACE": [
-          -1,
-          548
-        ],
-        "'RBRACE": [
-          -1,
-          548
-        ],
-        "'SPY": [
-          -1,
-          548
-        ],
-        "'PARENSPACE": [
-          -1,
-          548
-        ],
-        "'INT": [
-          -1,
-          548
-        ],
-        "'LONG": [
-          -1,
-          548
-        ],
-        "'DOUBLE": [
-          -1,
-          548
-        ],
-        "'FLOAT": [
-          -1,
-          548
-        ],
-        "'BOOLEAN": [
-          -1,
-          548
-        ],
-        "'VOID": [
-          -1,
-          548
-        ],
-        "'DATA": [
-          -1,
-          548
-        ],
-        "'IF": [
-          -1,
-          548
-        ],
-        "'FOR": [
-          -1,
-          548
-        ],
-        "'RETURN": [
-          -1,
-          548
-        ],
-        "'VAR": [
-          -1,
-          548
-        ],
-        "'REC": [
-          -1,
-          548
-        ],
-        "'ATCHECK": [
-          -1,
-          548
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          548
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          548
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          548
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          548
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          548
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          548
-        ],
-        "'SWITCH": [
-          -1,
-          548
-        ],
-        "'YIELD": [
-          -1,
-          548
-        ],
-        "'DASH": [
-          -1,
-          548
-        ],
-        "'BANG": [
-          -1,
-          548
-        ],
-        "'LBRACK": [
-          -1,
-          548
-        ],
-        "'NUMBER": [
-          -1,
-          548
-        ],
-        "'TRUE": [
-          -1,
-          548
-        ],
-        "'FALSE": [
-          -1,
-          548
-        ],
-        "'NULL": [
-          -1,
-          548
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          548
-        ],
-        "'TABLE": [
-          -1,
-          548
-        ],
-        "'ASK": [
-          -1,
-          548
-        ],
-        "'NEW": [
-          -1,
-          548
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          550
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          550
-        ],
-        "'STRING": [
-          -1,
-          550
-        ],
-        "'LBRACE": [
-          -1,
-          550
-        ],
-        "'RBRACE": [
-          -1,
-          550
-        ],
-        "'SPY": [
-          -1,
-          550
-        ],
-        "'PARENSPACE": [
-          -1,
-          550
-        ],
-        "'INT": [
-          -1,
-          550
-        ],
-        "'LONG": [
-          -1,
-          550
-        ],
-        "'DOUBLE": [
-          -1,
-          550
-        ],
-        "'FLOAT": [
-          -1,
-          550
-        ],
-        "'BOOLEAN": [
-          -1,
-          550
-        ],
-        "'VOID": [
-          -1,
-          550
-        ],
-        "'DATA": [
-          -1,
-          550
-        ],
-        "'IF": [
-          -1,
-          550
-        ],
-        "'FOR": [
-          -1,
-          550
-        ],
-        "'RETURN": [
-          -1,
-          550
-        ],
-        "'VAR": [
-          -1,
-          550
-        ],
-        "'REC": [
-          -1,
-          550
-        ],
-        "'ATCHECK": [
-          -1,
-          550
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          550
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          550
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          550
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          550
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          550
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          550
-        ],
-        "'SWITCH": [
-          -1,
-          550
-        ],
-        "'YIELD": [
-          -1,
-          550
-        ],
-        "'DASH": [
-          -1,
-          550
-        ],
-        "'BANG": [
-          -1,
-          550
-        ],
-        "'LBRACK": [
-          -1,
-          550
-        ],
-        "'NUMBER": [
-          -1,
-          550
-        ],
-        "'TRUE": [
-          -1,
-          550
-        ],
-        "'FALSE": [
-          -1,
-          550
-        ],
-        "'NULL": [
-          -1,
-          550
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          550
-        ],
-        "'TABLE": [
-          -1,
-          550
-        ],
-        "'ASK": [
-          -1,
-          550
-        ],
-        "'NEW": [
-          -1,
-          550
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          552
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          552
-        ],
-        "'STRING": [
-          -1,
-          552
-        ],
-        "'LBRACE": [
-          -1,
-          552
-        ],
-        "'RBRACE": [
-          -1,
-          552
-        ],
-        "'SPY": [
-          -1,
-          552
-        ],
-        "'PARENSPACE": [
-          -1,
-          552
-        ],
-        "'INT": [
-          -1,
-          552
-        ],
-        "'LONG": [
-          -1,
-          552
-        ],
-        "'DOUBLE": [
-          -1,
-          552
-        ],
-        "'FLOAT": [
-          -1,
-          552
-        ],
-        "'BOOLEAN": [
-          -1,
-          552
-        ],
-        "'VOID": [
-          -1,
-          552
-        ],
-        "'DATA": [
-          -1,
-          552
-        ],
-        "'IF": [
-          -1,
-          552
-        ],
-        "'FOR": [
-          -1,
-          552
-        ],
-        "'RETURN": [
-          -1,
-          552
-        ],
-        "'VAR": [
-          -1,
-          552
-        ],
-        "'REC": [
-          -1,
-          552
-        ],
-        "'ATCHECK": [
-          -1,
-          552
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          552
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          552
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          552
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          552
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          552
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          552
-        ],
-        "'SWITCH": [
-          -1,
-          552
-        ],
-        "'YIELD": [
-          -1,
-          552
-        ],
-        "'DASH": [
-          -1,
-          552
-        ],
-        "'BANG": [
-          -1,
-          552
-        ],
-        "'LBRACK": [
-          -1,
-          552
-        ],
-        "'NUMBER": [
-          -1,
-          552
-        ],
-        "'TRUE": [
-          -1,
-          552
-        ],
-        "'FALSE": [
-          -1,
-          552
-        ],
-        "'NULL": [
-          -1,
-          552
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          552
-        ],
-        "'TABLE": [
-          -1,
-          552
-        ],
-        "'ASK": [
-          -1,
-          552
-        ],
-        "'NEW": [
-          -1,
-          552
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          554
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          554
-        ],
-        "'STRING": [
-          -1,
-          554
-        ],
-        "'LBRACE": [
-          -1,
-          554
-        ],
-        "'RBRACE": [
-          -1,
-          554
-        ],
-        "'SPY": [
-          -1,
-          554
-        ],
-        "'PARENSPACE": [
-          -1,
-          554
-        ],
-        "'INT": [
-          -1,
-          554
-        ],
-        "'LONG": [
-          -1,
-          554
-        ],
-        "'DOUBLE": [
-          -1,
-          554
-        ],
-        "'FLOAT": [
-          -1,
-          554
-        ],
-        "'BOOLEAN": [
-          -1,
-          554
-        ],
-        "'VOID": [
-          -1,
-          554
-        ],
-        "'DATA": [
-          -1,
-          554
-        ],
-        "'IF": [
-          -1,
-          554
-        ],
-        "'FOR": [
-          -1,
-          554
-        ],
-        "'RETURN": [
-          -1,
-          554
-        ],
-        "'VAR": [
-          -1,
-          554
-        ],
-        "'REC": [
-          -1,
-          554
-        ],
-        "'ATCHECK": [
-          -1,
-          554
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          554
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          554
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          554
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          554
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          554
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          554
-        ],
-        "'SWITCH": [
-          -1,
-          554
-        ],
-        "'YIELD": [
-          -1,
-          554
-        ],
-        "'DASH": [
-          -1,
-          554
-        ],
-        "'BANG": [
-          -1,
-          554
-        ],
-        "'LBRACK": [
-          -1,
-          554
-        ],
-        "'NUMBER": [
-          -1,
-          554
-        ],
-        "'TRUE": [
-          -1,
-          554
-        ],
-        "'FALSE": [
-          -1,
-          554
-        ],
-        "'NULL": [
-          -1,
-          554
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          554
-        ],
-        "'TABLE": [
-          -1,
-          554
-        ],
-        "'ASK": [
-          -1,
-          554
-        ],
-        "'NEW": [
-          -1,
-          554
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          556
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          556
-        ],
-        "'STRING": [
-          -1,
-          556
-        ],
-        "'LBRACE": [
-          -1,
-          556
-        ],
-        "'RBRACE": [
-          -1,
-          556
-        ],
-        "'SPY": [
-          -1,
-          556
-        ],
-        "'PARENSPACE": [
-          -1,
-          556
-        ],
-        "'INT": [
-          -1,
-          556
-        ],
-        "'LONG": [
-          -1,
-          556
-        ],
-        "'DOUBLE": [
-          -1,
-          556
-        ],
-        "'FLOAT": [
-          -1,
-          556
-        ],
-        "'BOOLEAN": [
-          -1,
-          556
-        ],
-        "'VOID": [
-          -1,
-          556
-        ],
-        "'DATA": [
-          -1,
-          556
-        ],
-        "'IF": [
-          -1,
-          556
-        ],
-        "'FOR": [
-          -1,
-          556
-        ],
-        "'RETURN": [
-          -1,
-          556
-        ],
-        "'VAR": [
-          -1,
-          556
-        ],
-        "'REC": [
-          -1,
-          556
-        ],
-        "'ATCHECK": [
-          -1,
-          556
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          556
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          556
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          556
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          556
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          556
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          556
-        ],
-        "'SWITCH": [
-          -1,
-          556
-        ],
-        "'YIELD": [
-          -1,
-          556
-        ],
-        "'DASH": [
-          -1,
-          556
-        ],
-        "'BANG": [
-          -1,
-          556
-        ],
-        "'LBRACK": [
-          -1,
-          556
-        ],
-        "'NUMBER": [
-          -1,
-          556
-        ],
-        "'TRUE": [
-          -1,
-          556
-        ],
-        "'FALSE": [
-          -1,
-          556
-        ],
-        "'NULL": [
-          -1,
-          556
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          556
-        ],
-        "'TABLE": [
-          -1,
-          556
-        ],
-        "'ASK": [
-          -1,
-          556
-        ],
-        "'NEW": [
-          -1,
-          556
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          558
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          558
-        ],
-        "'STRING": [
-          -1,
-          558
-        ],
-        "'LBRACE": [
-          -1,
-          558
-        ],
-        "'RBRACE": [
-          -1,
-          558
-        ],
-        "'SPY": [
-          -1,
-          558
-        ],
-        "'PARENSPACE": [
-          -1,
-          558
-        ],
-        "'INT": [
-          -1,
-          558
-        ],
-        "'LONG": [
-          -1,
-          558
-        ],
-        "'DOUBLE": [
-          -1,
-          558
-        ],
-        "'FLOAT": [
-          -1,
-          558
-        ],
-        "'BOOLEAN": [
-          -1,
-          558
-        ],
-        "'VOID": [
-          -1,
-          558
-        ],
-        "'DATA": [
-          -1,
-          558
-        ],
-        "'IF": [
-          -1,
-          558
-        ],
-        "'FOR": [
-          -1,
-          558
-        ],
-        "'RETURN": [
-          -1,
-          558
-        ],
-        "'VAR": [
-          -1,
-          558
-        ],
-        "'REC": [
-          -1,
-          558
-        ],
-        "'ATCHECK": [
-          -1,
-          558
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          558
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          558
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          558
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          558
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          558
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          558
-        ],
-        "'SWITCH": [
-          -1,
-          558
-        ],
-        "'YIELD": [
-          -1,
-          558
-        ],
-        "'DASH": [
-          -1,
-          558
-        ],
-        "'BANG": [
-          -1,
-          558
-        ],
-        "'LBRACK": [
-          -1,
-          558
-        ],
-        "'NUMBER": [
-          -1,
-          558
-        ],
-        "'TRUE": [
-          -1,
-          558
-        ],
-        "'FALSE": [
-          -1,
-          558
-        ],
-        "'NULL": [
-          -1,
-          558
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          558
-        ],
-        "'TABLE": [
-          -1,
-          558
-        ],
-        "'ASK": [
-          -1,
-          558
-        ],
-        "'NEW": [
-          -1,
-          558
-        ]
-      },
-      {
-        "'RPAREN": [
           447
         ]
       },
       {
         "'RPAREN": [
+          -1,
+          550
+        ],
+        "'COMMA": [
+          -1,
+          550
+        ]
+      },
+      {
+        "'SEMI": [
           448
         ]
       },
       {
-        "$": [
-          -1,
-          560
-        ],
-        "'NAME": [
-          -1,
-          560
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          560
-        ],
-        "'STRING": [
-          -1,
-          560
-        ],
-        "'LBRACE": [
-          -1,
-          560
-        ],
-        "'RBRACE": [
-          -1,
-          560
-        ],
-        "'SPY": [
-          -1,
-          560
-        ],
-        "'PARENSPACE": [
-          -1,
-          560
-        ],
-        "'INT": [
-          -1,
-          560
-        ],
-        "'LONG": [
-          -1,
-          560
-        ],
-        "'DOUBLE": [
-          -1,
-          560
-        ],
-        "'FLOAT": [
-          -1,
-          560
-        ],
-        "'BOOLEAN": [
-          -1,
-          560
-        ],
-        "'VOID": [
-          -1,
-          560
-        ],
-        "'DATA": [
-          -1,
-          560
-        ],
-        "'IF": [
-          -1,
-          560
-        ],
-        "'FOR": [
-          -1,
-          560
-        ],
-        "'RETURN": [
-          -1,
-          560
-        ],
-        "'VAR": [
-          -1,
-          560
-        ],
-        "'REC": [
-          -1,
-          560
-        ],
-        "'ATCHECK": [
-          -1,
-          560
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          560
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          560
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          560
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          560
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          560
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          560
-        ],
-        "'SWITCH": [
-          -1,
-          560
-        ],
-        "'YIELD": [
-          -1,
-          560
-        ],
-        "'DASH": [
-          -1,
-          560
-        ],
-        "'BANG": [
-          -1,
-          560
-        ],
-        "'LBRACK": [
-          -1,
-          560
-        ],
-        "'NUMBER": [
-          -1,
-          560
-        ],
-        "'TRUE": [
-          -1,
-          560
-        ],
-        "'FALSE": [
-          -1,
-          560
-        ],
-        "'NULL": [
-          -1,
-          560
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          560
-        ],
-        "'TABLE": [
-          -1,
-          560
-        ],
-        "'ASK": [
-          -1,
-          560
-        ],
-        "'NEW": [
-          -1,
-          560
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          562
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          562
-        ],
-        "'STRING": [
-          -1,
-          562
-        ],
-        "'LBRACE": [
-          -1,
-          562
-        ],
-        "'RBRACE": [
-          -1,
-          562
-        ],
-        "'SPY": [
-          -1,
-          562
-        ],
-        "'PARENSPACE": [
-          -1,
-          562
-        ],
-        "'INT": [
-          -1,
-          562
-        ],
-        "'LONG": [
-          -1,
-          562
-        ],
-        "'DOUBLE": [
-          -1,
-          562
-        ],
-        "'FLOAT": [
-          -1,
-          562
-        ],
-        "'BOOLEAN": [
-          -1,
-          562
-        ],
-        "'VOID": [
-          -1,
-          562
-        ],
-        "'DATA": [
-          -1,
-          562
-        ],
-        "'IF": [
-          -1,
-          562
-        ],
-        "'FOR": [
-          -1,
-          562
-        ],
-        "'RETURN": [
-          -1,
-          562
-        ],
-        "'VAR": [
-          -1,
-          562
-        ],
-        "'REC": [
-          -1,
-          562
-        ],
-        "'ATCHECK": [
-          -1,
-          562
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          562
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          562
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          562
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          562
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          562
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          562
-        ],
-        "'SWITCH": [
-          -1,
-          562
-        ],
-        "'YIELD": [
-          -1,
-          562
-        ],
-        "'DASH": [
-          -1,
-          562
-        ],
-        "'BANG": [
-          -1,
-          562
-        ],
-        "'LBRACK": [
-          -1,
-          562
-        ],
-        "'NUMBER": [
-          -1,
-          562
-        ],
-        "'TRUE": [
-          -1,
-          562
-        ],
-        "'FALSE": [
-          -1,
-          562
-        ],
-        "'NULL": [
-          -1,
-          562
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          562
-        ],
-        "'TABLE": [
-          -1,
-          562
-        ],
-        "'ASK": [
-          -1,
-          562
-        ],
-        "'NEW": [
-          -1,
-          562
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          564
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          564
-        ],
-        "'STRING": [
-          -1,
-          564
-        ],
-        "'LBRACE": [
-          -1,
-          564
-        ],
-        "'RBRACE": [
-          -1,
-          564
-        ],
-        "'SPY": [
-          -1,
-          564
-        ],
-        "'PARENSPACE": [
-          -1,
-          564
-        ],
-        "'INT": [
-          -1,
-          564
-        ],
-        "'LONG": [
-          -1,
-          564
-        ],
-        "'DOUBLE": [
-          -1,
-          564
-        ],
-        "'FLOAT": [
-          -1,
-          564
-        ],
-        "'BOOLEAN": [
-          -1,
-          564
-        ],
-        "'VOID": [
-          -1,
-          564
-        ],
-        "'DATA": [
-          -1,
-          564
-        ],
-        "'IF": [
-          -1,
-          564
-        ],
-        "'FOR": [
-          -1,
-          564
-        ],
-        "'RETURN": [
-          -1,
-          564
-        ],
-        "'VAR": [
-          -1,
-          564
-        ],
-        "'REC": [
-          -1,
-          564
-        ],
-        "'ATCHECK": [
-          -1,
-          564
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          564
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          564
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          564
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          564
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          564
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          564
-        ],
-        "'SWITCH": [
-          -1,
-          564
-        ],
-        "'YIELD": [
-          -1,
-          564
-        ],
-        "'DASH": [
-          -1,
-          564
-        ],
-        "'BANG": [
-          -1,
-          564
-        ],
-        "'LBRACK": [
-          -1,
-          564
-        ],
-        "'NUMBER": [
-          -1,
-          564
-        ],
-        "'TRUE": [
-          -1,
-          564
-        ],
-        "'FALSE": [
-          -1,
-          564
-        ],
-        "'NULL": [
-          -1,
-          564
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          564
-        ],
-        "'TABLE": [
-          -1,
-          564
-        ],
-        "'ASK": [
-          -1,
-          564
-        ],
-        "'NEW": [
-          -1,
-          564
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          566
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          566
-        ],
-        "'STRING": [
-          -1,
-          566
-        ],
-        "'LBRACE": [
-          -1,
-          566
-        ],
-        "'RBRACE": [
-          -1,
-          566
-        ],
-        "'SPY": [
-          -1,
-          566
-        ],
-        "'PARENSPACE": [
-          -1,
-          566
-        ],
-        "'INT": [
-          -1,
-          566
-        ],
-        "'LONG": [
-          -1,
-          566
-        ],
-        "'DOUBLE": [
-          -1,
-          566
-        ],
-        "'FLOAT": [
-          -1,
-          566
-        ],
-        "'BOOLEAN": [
-          -1,
-          566
-        ],
-        "'VOID": [
-          -1,
-          566
-        ],
-        "'DATA": [
-          -1,
-          566
-        ],
-        "'IF": [
-          -1,
-          566
-        ],
-        "'FOR": [
-          -1,
-          566
-        ],
-        "'RETURN": [
-          -1,
-          566
-        ],
-        "'VAR": [
-          -1,
-          566
-        ],
-        "'REC": [
-          -1,
-          566
-        ],
-        "'ATCHECK": [
-          -1,
-          566
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          566
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          566
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          566
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          566
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          566
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          566
-        ],
-        "'SWITCH": [
-          -1,
-          566
-        ],
-        "'YIELD": [
-          -1,
-          566
-        ],
-        "'DASH": [
-          -1,
-          566
-        ],
-        "'BANG": [
-          -1,
-          566
-        ],
-        "'LBRACK": [
-          -1,
-          566
-        ],
-        "'NUMBER": [
-          -1,
-          566
-        ],
-        "'TRUE": [
-          -1,
-          566
-        ],
-        "'FALSE": [
-          -1,
-          566
-        ],
-        "'NULL": [
-          -1,
-          566
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          566
-        ],
-        "'TABLE": [
-          -1,
-          566
-        ],
-        "'ASK": [
-          -1,
-          566
-        ],
-        "'NEW": [
-          -1,
-          566
-        ]
-      },
-      {
-        "$": [
-          -1,
-          568
-        ],
-        "'NAME": [
-          -1,
-          568
-        ],
-        "'SEMI": [
-          -1,
-          568
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          568
-        ],
-        "'STRING": [
-          -1,
-          568
-        ],
         "'RPAREN": [
           -1,
-          568
-        ],
-        "'LBRACE": [
-          -1,
-          568
-        ],
-        "'RBRACE": [
-          -1,
-          568
-        ],
-        "'SPY": [
-          -1,
-          568
-        ],
-        "'PARENSPACE": [
-          -1,
-          568
+          552
         ],
         "'COMMA": [
           -1,
-          568
-        ],
-        "'INT": [
-          -1,
-          568
-        ],
-        "'LONG": [
-          -1,
-          568
-        ],
-        "'DOUBLE": [
-          -1,
-          568
-        ],
-        "'FLOAT": [
-          -1,
-          568
-        ],
-        "'BOOLEAN": [
-          -1,
-          568
-        ],
-        "'VOID": [
-          -1,
-          568
-        ],
-        "'LT": [
-          -1,
-          568
-        ],
-        "'GT": [
-          -1,
-          568
-        ],
-        "'THINARROW": [
-          -1,
-          568
-        ],
-        "'DATA": [
-          -1,
-          568
-        ],
-        "'IF": [
-          -1,
-          568
-        ],
-        "'FOR": [
-          -1,
-          568
-        ],
-        "'RETURN": [
-          -1,
-          568
-        ],
-        "'VAR": [
-          -1,
-          568
-        ],
-        "'REC": [
-          -1,
-          568
-        ],
-        "'ATCHECK": [
-          -1,
-          568
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          568
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          568
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          568
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          568
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          568
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          568
-        ],
-        "'IS": [
-          -1,
-          568
-        ],
-        "'ISNOT": [
-          -1,
-          568
-        ],
-        "'SATISFIES": [
-          -1,
-          568
-        ],
-        "'RAISES": [
-          -1,
-          568
-        ],
-        "'SWITCH": [
-          -1,
-          568
-        ],
-        "'CASE": [
-          -1,
-          568
-        ],
-        "'DEFAULT": [
-          -1,
-          568
-        ],
-        "'YIELD": [
-          -1,
-          568
-        ],
-        "'PLUS": [
-          -1,
-          568
-        ],
-        "'DASH": [
-          -1,
-          568
-        ],
-        "'TIMES": [
-          -1,
-          568
-        ],
-        "'SLASH": [
-          -1,
-          568
-        ],
-        "'PERCENT": [
-          -1,
-          568
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          568
-        ],
-        "'NEQ": [
-          -1,
-          568
-        ],
-        "'LEQ": [
-          -1,
-          568
-        ],
-        "'GEQ": [
-          -1,
-          568
-        ],
-        "'AND": [
-          -1,
-          568
-        ],
-        "'OR": [
-          -1,
-          568
-        ],
-        "'BANG": [
-          -1,
-          568
-        ],
-        "'DOT": [
-          -1,
-          568
-        ],
-        "'LBRACK": [
-          -1,
-          568
-        ],
-        "'RBRACK": [
-          -1,
-          568
-        ],
-        "'NUMBER": [
-          -1,
-          568
-        ],
-        "'TRUE": [
-          -1,
-          568
-        ],
-        "'FALSE": [
-          -1,
-          568
-        ],
-        "'NULL": [
-          -1,
-          568
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          568
-        ],
-        "'TABLE": [
-          -1,
-          568
-        ],
-        "'ASK": [
-          -1,
-          568
-        ],
-        "'NEW": [
-          -1,
-          568
+          552
         ]
       },
       {
-        "'PARENNOSPACE": [
+        "'NAME": [
           449
-        ],
-        "'COLON": [
-          450
         ]
       },
       {
-        "switch-body": [
-          451
-        ],
-        "switch-body_I0*": [
-          452
+        "if-stmt_I5*": [
+          450
         ],
         "'NAME": [
           -1,
-          570
+          554,
+          556
         ],
         "'PARENNOSPACE": [
           -1,
-          570
+          554,
+          556
         ],
         "'STRING": [
           -1,
-          570
+          554,
+          556
         ],
         "'LBRACE": [
           -1,
-          570
+          554,
+          556
+        ],
+        "'RBRACE": [
+          -1,
+          554,
+          556
         ],
         "'SPY": [
           -1,
-          570
+          554,
+          556
         ],
         "'PARENSPACE": [
           -1,
-          570
+          554,
+          556
         ],
         "'INT": [
           -1,
-          570
+          554,
+          556
         ],
         "'LONG": [
           -1,
-          570
+          554,
+          556
         ],
         "'DOUBLE": [
           -1,
-          570
+          554,
+          556
         ],
         "'FLOAT": [
           -1,
-          570
+          554,
+          556
         ],
         "'BOOLEAN": [
           -1,
-          570
+          554,
+          556
         ],
         "'VOID": [
           -1,
-          570
+          554,
+          556
         ],
         "'DATA": [
           -1,
-          570
+          554,
+          556
         ],
         "'IF": [
           -1,
-          570
+          554,
+          556
+        ],
+        "'ELSE": [
+          -1,
+          556
         ],
         "'FOR": [
           -1,
-          570
+          554,
+          556
         ],
         "'RETURN": [
           -1,
-          570
+          554,
+          556
         ],
         "'VAR": [
           -1,
-          570
+          554,
+          556
         ],
         "'REC": [
           -1,
-          570
+          554,
+          556
         ],
         "'ATCHECK": [
           -1,
-          570
+          554,
+          556
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          554,
+          556
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          554,
+          556
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          554,
+          556
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          554,
+          556
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          554,
+          556
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          554,
+          556
         ],
         "'SWITCH": [
           -1,
-          570
+          554,
+          556
         ],
         "'YIELD": [
           -1,
-          570
+          554,
+          556
         ],
         "'DASH": [
           -1,
-          570
+          554,
+          556
         ],
         "'BANG": [
           -1,
-          570
+          554,
+          556
         ],
         "'LBRACK": [
           -1,
-          570
+          554,
+          556
         ],
         "'NUMBER": [
           -1,
-          570
+          554,
+          556
         ],
         "'TRUE": [
           -1,
-          570
+          554,
+          556
         ],
         "'FALSE": [
           -1,
-          570
+          554,
+          556
         ],
         "'NULL": [
           -1,
-          570
+          554,
+          556
         ],
         "'PARENAFTERBRACE": [
           -1,
-          570
+          554,
+          556
+        ],
+        "'BLOCK": [
+          -1,
+          554,
+          556
         ],
         "'TABLE": [
           -1,
-          570
+          554,
+          556
         ],
         "'ASK": [
           -1,
-          570
+          554,
+          556
         ],
         "'NEW": [
           -1,
-          570
-        ]
-      },
-      {
-        "block": [
-          453
-        ],
-        "'LBRACE": [
-          302
-        ]
-      },
-      {
-        "'RBRACE": [
-          -1,
-          572
-        ],
-        "'ROW": [
-          -1,
-          572
+          554,
+          556
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -40257,10 +40278,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          454
+          451
         ],
         "switch-expr": [
           37
@@ -40325,26 +40346,1344 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "'RPAREN": [
+          452
+        ]
+      },
+      {
+        "'RPAREN": [
+          453
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          558
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          558
+        ],
+        "'STRING": [
+          -1,
+          558
+        ],
+        "'LBRACE": [
+          -1,
+          558
+        ],
+        "'RBRACE": [
+          -1,
+          558
+        ],
+        "'SPY": [
+          -1,
+          558
+        ],
+        "'PARENSPACE": [
+          -1,
+          558
+        ],
+        "'INT": [
+          -1,
+          558
+        ],
+        "'LONG": [
+          -1,
+          558
+        ],
+        "'DOUBLE": [
+          -1,
+          558
+        ],
+        "'FLOAT": [
+          -1,
+          558
+        ],
+        "'BOOLEAN": [
+          -1,
+          558
+        ],
+        "'VOID": [
+          -1,
+          558
+        ],
+        "'DATA": [
+          -1,
+          558
+        ],
+        "'IF": [
+          -1,
+          558
+        ],
+        "'FOR": [
+          -1,
+          558
+        ],
+        "'RETURN": [
+          -1,
+          558
+        ],
+        "'VAR": [
+          -1,
+          558
+        ],
+        "'REC": [
+          -1,
+          558
+        ],
+        "'ATCHECK": [
+          -1,
+          558
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          558
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          558
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          558
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          558
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          558
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          558
+        ],
+        "'SWITCH": [
+          -1,
+          558
+        ],
+        "'YIELD": [
+          -1,
+          558
+        ],
+        "'DASH": [
+          -1,
+          558
+        ],
+        "'BANG": [
+          -1,
+          558
+        ],
+        "'LBRACK": [
+          -1,
+          558
+        ],
+        "'NUMBER": [
+          -1,
+          558
+        ],
+        "'TRUE": [
+          -1,
+          558
+        ],
+        "'FALSE": [
+          -1,
+          558
+        ],
+        "'NULL": [
+          -1,
+          558
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          558
+        ],
+        "'BLOCK": [
+          -1,
+          558
+        ],
+        "'TABLE": [
+          -1,
+          558
+        ],
+        "'ASK": [
+          -1,
+          558
+        ],
+        "'NEW": [
+          -1,
+          558
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          560
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          560
+        ],
+        "'STRING": [
+          -1,
+          560
+        ],
+        "'LBRACE": [
+          -1,
+          560
+        ],
+        "'RBRACE": [
+          -1,
+          560
+        ],
+        "'SPY": [
+          -1,
+          560
+        ],
+        "'PARENSPACE": [
+          -1,
+          560
+        ],
+        "'INT": [
+          -1,
+          560
+        ],
+        "'LONG": [
+          -1,
+          560
+        ],
+        "'DOUBLE": [
+          -1,
+          560
+        ],
+        "'FLOAT": [
+          -1,
+          560
+        ],
+        "'BOOLEAN": [
+          -1,
+          560
+        ],
+        "'VOID": [
+          -1,
+          560
+        ],
+        "'DATA": [
+          -1,
+          560
+        ],
+        "'IF": [
+          -1,
+          560
+        ],
+        "'FOR": [
+          -1,
+          560
+        ],
+        "'RETURN": [
+          -1,
+          560
+        ],
+        "'VAR": [
+          -1,
+          560
+        ],
+        "'REC": [
+          -1,
+          560
+        ],
+        "'ATCHECK": [
+          -1,
+          560
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          560
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          560
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          560
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          560
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          560
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          560
+        ],
+        "'SWITCH": [
+          -1,
+          560
+        ],
+        "'YIELD": [
+          -1,
+          560
+        ],
+        "'DASH": [
+          -1,
+          560
+        ],
+        "'BANG": [
+          -1,
+          560
+        ],
+        "'LBRACK": [
+          -1,
+          560
+        ],
+        "'NUMBER": [
+          -1,
+          560
+        ],
+        "'TRUE": [
+          -1,
+          560
+        ],
+        "'FALSE": [
+          -1,
+          560
+        ],
+        "'NULL": [
+          -1,
+          560
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          560
+        ],
+        "'BLOCK": [
+          -1,
+          560
+        ],
+        "'TABLE": [
+          -1,
+          560
+        ],
+        "'ASK": [
+          -1,
+          560
+        ],
+        "'NEW": [
+          -1,
+          560
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          562
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          562
+        ],
+        "'STRING": [
+          -1,
+          562
+        ],
+        "'LBRACE": [
+          -1,
+          562
+        ],
+        "'RBRACE": [
+          -1,
+          562
+        ],
+        "'SPY": [
+          -1,
+          562
+        ],
+        "'PARENSPACE": [
+          -1,
+          562
+        ],
+        "'INT": [
+          -1,
+          562
+        ],
+        "'LONG": [
+          -1,
+          562
+        ],
+        "'DOUBLE": [
+          -1,
+          562
+        ],
+        "'FLOAT": [
+          -1,
+          562
+        ],
+        "'BOOLEAN": [
+          -1,
+          562
+        ],
+        "'VOID": [
+          -1,
+          562
+        ],
+        "'DATA": [
+          -1,
+          562
+        ],
+        "'IF": [
+          -1,
+          562
+        ],
+        "'FOR": [
+          -1,
+          562
+        ],
+        "'RETURN": [
+          -1,
+          562
+        ],
+        "'VAR": [
+          -1,
+          562
+        ],
+        "'REC": [
+          -1,
+          562
+        ],
+        "'ATCHECK": [
+          -1,
+          562
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          562
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          562
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          562
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          562
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          562
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          562
+        ],
+        "'SWITCH": [
+          -1,
+          562
+        ],
+        "'YIELD": [
+          -1,
+          562
+        ],
+        "'DASH": [
+          -1,
+          562
+        ],
+        "'BANG": [
+          -1,
+          562
+        ],
+        "'LBRACK": [
+          -1,
+          562
+        ],
+        "'NUMBER": [
+          -1,
+          562
+        ],
+        "'TRUE": [
+          -1,
+          562
+        ],
+        "'FALSE": [
+          -1,
+          562
+        ],
+        "'NULL": [
+          -1,
+          562
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          562
+        ],
+        "'BLOCK": [
+          -1,
+          562
+        ],
+        "'TABLE": [
+          -1,
+          562
+        ],
+        "'ASK": [
+          -1,
+          562
+        ],
+        "'NEW": [
+          -1,
+          562
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          564
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          564
+        ],
+        "'STRING": [
+          -1,
+          564
+        ],
+        "'LBRACE": [
+          -1,
+          564
+        ],
+        "'RBRACE": [
+          -1,
+          564
+        ],
+        "'SPY": [
+          -1,
+          564
+        ],
+        "'PARENSPACE": [
+          -1,
+          564
+        ],
+        "'INT": [
+          -1,
+          564
+        ],
+        "'LONG": [
+          -1,
+          564
+        ],
+        "'DOUBLE": [
+          -1,
+          564
+        ],
+        "'FLOAT": [
+          -1,
+          564
+        ],
+        "'BOOLEAN": [
+          -1,
+          564
+        ],
+        "'VOID": [
+          -1,
+          564
+        ],
+        "'DATA": [
+          -1,
+          564
+        ],
+        "'IF": [
+          -1,
+          564
+        ],
+        "'FOR": [
+          -1,
+          564
+        ],
+        "'RETURN": [
+          -1,
+          564
+        ],
+        "'VAR": [
+          -1,
+          564
+        ],
+        "'REC": [
+          -1,
+          564
+        ],
+        "'ATCHECK": [
+          -1,
+          564
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          564
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          564
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          564
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          564
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          564
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          564
+        ],
+        "'SWITCH": [
+          -1,
+          564
+        ],
+        "'YIELD": [
+          -1,
+          564
+        ],
+        "'DASH": [
+          -1,
+          564
+        ],
+        "'BANG": [
+          -1,
+          564
+        ],
+        "'LBRACK": [
+          -1,
+          564
+        ],
+        "'NUMBER": [
+          -1,
+          564
+        ],
+        "'TRUE": [
+          -1,
+          564
+        ],
+        "'FALSE": [
+          -1,
+          564
+        ],
+        "'NULL": [
+          -1,
+          564
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          564
+        ],
+        "'BLOCK": [
+          -1,
+          564
+        ],
+        "'TABLE": [
+          -1,
+          564
+        ],
+        "'ASK": [
+          -1,
+          564
+        ],
+        "'NEW": [
+          -1,
+          564
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          566
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          566
+        ],
+        "'STRING": [
+          -1,
+          566
+        ],
+        "'LBRACE": [
+          -1,
+          566
+        ],
+        "'RBRACE": [
+          -1,
+          566
+        ],
+        "'SPY": [
+          -1,
+          566
+        ],
+        "'PARENSPACE": [
+          -1,
+          566
+        ],
+        "'INT": [
+          -1,
+          566
+        ],
+        "'LONG": [
+          -1,
+          566
+        ],
+        "'DOUBLE": [
+          -1,
+          566
+        ],
+        "'FLOAT": [
+          -1,
+          566
+        ],
+        "'BOOLEAN": [
+          -1,
+          566
+        ],
+        "'VOID": [
+          -1,
+          566
+        ],
+        "'DATA": [
+          -1,
+          566
+        ],
+        "'IF": [
+          -1,
+          566
+        ],
+        "'FOR": [
+          -1,
+          566
+        ],
+        "'RETURN": [
+          -1,
+          566
+        ],
+        "'VAR": [
+          -1,
+          566
+        ],
+        "'REC": [
+          -1,
+          566
+        ],
+        "'ATCHECK": [
+          -1,
+          566
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          566
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          566
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          566
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          566
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          566
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          566
+        ],
+        "'SWITCH": [
+          -1,
+          566
+        ],
+        "'YIELD": [
+          -1,
+          566
+        ],
+        "'DASH": [
+          -1,
+          566
+        ],
+        "'BANG": [
+          -1,
+          566
+        ],
+        "'LBRACK": [
+          -1,
+          566
+        ],
+        "'NUMBER": [
+          -1,
+          566
+        ],
+        "'TRUE": [
+          -1,
+          566
+        ],
+        "'FALSE": [
+          -1,
+          566
+        ],
+        "'NULL": [
+          -1,
+          566
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          566
+        ],
+        "'BLOCK": [
+          -1,
+          566
+        ],
+        "'TABLE": [
+          -1,
+          566
+        ],
+        "'ASK": [
+          -1,
+          566
+        ],
+        "'NEW": [
+          -1,
+          566
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          568
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          568
+        ],
+        "'STRING": [
+          -1,
+          568
+        ],
+        "'LBRACE": [
+          -1,
+          568
+        ],
+        "'RBRACE": [
+          -1,
+          568
+        ],
+        "'SPY": [
+          -1,
+          568
+        ],
+        "'PARENSPACE": [
+          -1,
+          568
+        ],
+        "'INT": [
+          -1,
+          568
+        ],
+        "'LONG": [
+          -1,
+          568
+        ],
+        "'DOUBLE": [
+          -1,
+          568
+        ],
+        "'FLOAT": [
+          -1,
+          568
+        ],
+        "'BOOLEAN": [
+          -1,
+          568
+        ],
+        "'VOID": [
+          -1,
+          568
+        ],
+        "'DATA": [
+          -1,
+          568
+        ],
+        "'IF": [
+          -1,
+          568
+        ],
+        "'FOR": [
+          -1,
+          568
+        ],
+        "'RETURN": [
+          -1,
+          568
+        ],
+        "'VAR": [
+          -1,
+          568
+        ],
+        "'REC": [
+          -1,
+          568
+        ],
+        "'ATCHECK": [
+          -1,
+          568
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          568
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          568
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          568
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          568
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          568
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          568
+        ],
+        "'SWITCH": [
+          -1,
+          568
+        ],
+        "'YIELD": [
+          -1,
+          568
+        ],
+        "'DASH": [
+          -1,
+          568
+        ],
+        "'BANG": [
+          -1,
+          568
+        ],
+        "'LBRACK": [
+          -1,
+          568
+        ],
+        "'NUMBER": [
+          -1,
+          568
+        ],
+        "'TRUE": [
+          -1,
+          568
+        ],
+        "'FALSE": [
+          -1,
+          568
+        ],
+        "'NULL": [
+          -1,
+          568
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          568
+        ],
+        "'BLOCK": [
+          -1,
+          568
+        ],
+        "'TABLE": [
+          -1,
+          568
+        ],
+        "'ASK": [
+          -1,
+          568
+        ],
+        "'NEW": [
+          -1,
+          568
+        ]
+      },
+      {
+        "'RPAREN": [
+          454
+        ]
+      },
+      {
+        "'RPAREN": [
+          455
         ]
       },
       {
         "$": [
           -1,
-          574
+          570
         ],
         "'NAME": [
           -1,
-          574
+          570
         ],
-        "'SEMI": [
+        "'PARENNOSPACE": [
+          -1,
+          570
+        ],
+        "'STRING": [
+          -1,
+          570
+        ],
+        "'LBRACE": [
+          -1,
+          570
+        ],
+        "'RBRACE": [
+          -1,
+          570
+        ],
+        "'SPY": [
+          -1,
+          570
+        ],
+        "'PARENSPACE": [
+          -1,
+          570
+        ],
+        "'INT": [
+          -1,
+          570
+        ],
+        "'LONG": [
+          -1,
+          570
+        ],
+        "'DOUBLE": [
+          -1,
+          570
+        ],
+        "'FLOAT": [
+          -1,
+          570
+        ],
+        "'BOOLEAN": [
+          -1,
+          570
+        ],
+        "'VOID": [
+          -1,
+          570
+        ],
+        "'DATA": [
+          -1,
+          570
+        ],
+        "'IF": [
+          -1,
+          570
+        ],
+        "'FOR": [
+          -1,
+          570
+        ],
+        "'RETURN": [
+          -1,
+          570
+        ],
+        "'VAR": [
+          -1,
+          570
+        ],
+        "'REC": [
+          -1,
+          570
+        ],
+        "'ATCHECK": [
+          -1,
+          570
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          570
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          570
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          570
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          570
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          570
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          570
+        ],
+        "'SWITCH": [
+          -1,
+          570
+        ],
+        "'YIELD": [
+          -1,
+          570
+        ],
+        "'DASH": [
+          -1,
+          570
+        ],
+        "'BANG": [
+          -1,
+          570
+        ],
+        "'LBRACK": [
+          -1,
+          570
+        ],
+        "'NUMBER": [
+          -1,
+          570
+        ],
+        "'TRUE": [
+          -1,
+          570
+        ],
+        "'FALSE": [
+          -1,
+          570
+        ],
+        "'NULL": [
+          -1,
+          570
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          570
+        ],
+        "'BLOCK": [
+          -1,
+          570
+        ],
+        "'TABLE": [
+          -1,
+          570
+        ],
+        "'ASK": [
+          -1,
+          570
+        ],
+        "'NEW": [
+          -1,
+          570
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          572
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          572
+        ],
+        "'STRING": [
+          -1,
+          572
+        ],
+        "'LBRACE": [
+          -1,
+          572
+        ],
+        "'RBRACE": [
+          -1,
+          572
+        ],
+        "'SPY": [
+          -1,
+          572
+        ],
+        "'PARENSPACE": [
+          -1,
+          572
+        ],
+        "'INT": [
+          -1,
+          572
+        ],
+        "'LONG": [
+          -1,
+          572
+        ],
+        "'DOUBLE": [
+          -1,
+          572
+        ],
+        "'FLOAT": [
+          -1,
+          572
+        ],
+        "'BOOLEAN": [
+          -1,
+          572
+        ],
+        "'VOID": [
+          -1,
+          572
+        ],
+        "'DATA": [
+          -1,
+          572
+        ],
+        "'IF": [
+          -1,
+          572
+        ],
+        "'FOR": [
+          -1,
+          572
+        ],
+        "'RETURN": [
+          -1,
+          572
+        ],
+        "'VAR": [
+          -1,
+          572
+        ],
+        "'REC": [
+          -1,
+          572
+        ],
+        "'ATCHECK": [
+          -1,
+          572
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          572
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          572
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          572
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          572
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          572
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          572
+        ],
+        "'SWITCH": [
+          -1,
+          572
+        ],
+        "'YIELD": [
+          -1,
+          572
+        ],
+        "'DASH": [
+          -1,
+          572
+        ],
+        "'BANG": [
+          -1,
+          572
+        ],
+        "'LBRACK": [
+          -1,
+          572
+        ],
+        "'NUMBER": [
+          -1,
+          572
+        ],
+        "'TRUE": [
+          -1,
+          572
+        ],
+        "'FALSE": [
+          -1,
+          572
+        ],
+        "'NULL": [
+          -1,
+          572
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          572
+        ],
+        "'BLOCK": [
+          -1,
+          572
+        ],
+        "'TABLE": [
+          -1,
+          572
+        ],
+        "'ASK": [
+          -1,
+          572
+        ],
+        "'NEW": [
+          -1,
+          572
+        ]
+      },
+      {
+        "'NAME": [
           -1,
           574
         ],
@@ -40353,10 +41692,6 @@ function(E) {
           574
         ],
         "'STRING": [
-          -1,
-          574
-        ],
-        "'RPAREN": [
           -1,
           574
         ],
@@ -40373,10 +41708,6 @@ function(E) {
           574
         ],
         "'PARENSPACE": [
-          -1,
-          574
-        ],
-        "'COMMA": [
           -1,
           574
         ],
@@ -40401,18 +41732,6 @@ function(E) {
           574
         ],
         "'VOID": [
-          -1,
-          574
-        ],
-        "'LT": [
-          -1,
-          574
-        ],
-        "'GT": [
-          -1,
-          574
-        ],
-        "'THINARROW": [
           -1,
           574
         ],
@@ -40468,31 +41787,7 @@ function(E) {
           -1,
           574
         ],
-        "'IS": [
-          -1,
-          574
-        ],
-        "'ISNOT": [
-          -1,
-          574
-        ],
-        "'SATISFIES": [
-          -1,
-          574
-        ],
-        "'RAISES": [
-          -1,
-          574
-        ],
         "'SWITCH": [
-          -1,
-          574
-        ],
-        "'CASE": [
-          -1,
-          574
-        ],
-        "'DEFAULT": [
           -1,
           574
         ],
@@ -40500,47 +41795,7 @@ function(E) {
           -1,
           574
         ],
-        "'PLUS": [
-          -1,
-          574
-        ],
         "'DASH": [
-          -1,
-          574
-        ],
-        "'TIMES": [
-          -1,
-          574
-        ],
-        "'SLASH": [
-          -1,
-          574
-        ],
-        "'PERCENT": [
-          -1,
-          574
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          574
-        ],
-        "'NEQ": [
-          -1,
-          574
-        ],
-        "'LEQ": [
-          -1,
-          574
-        ],
-        "'GEQ": [
-          -1,
-          574
-        ],
-        "'AND": [
-          -1,
-          574
-        ],
-        "'OR": [
           -1,
           574
         ],
@@ -40548,15 +41803,7 @@ function(E) {
           -1,
           574
         ],
-        "'DOT": [
-          -1,
-          574
-        ],
         "'LBRACK": [
-          -1,
-          574
-        ],
-        "'RBRACK": [
           -1,
           574
         ],
@@ -40580,6 +41827,10 @@ function(E) {
           -1,
           574
         ],
+        "'BLOCK": [
+          -1,
+          574
+        ],
         "'TABLE": [
           -1,
           574
@@ -40594,9 +41845,959 @@ function(E) {
         ]
       },
       {
-        "'SEMI": [
+        "'NAME": [
           -1,
           576
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          576
+        ],
+        "'STRING": [
+          -1,
+          576
+        ],
+        "'LBRACE": [
+          -1,
+          576
+        ],
+        "'RBRACE": [
+          -1,
+          576
+        ],
+        "'SPY": [
+          -1,
+          576
+        ],
+        "'PARENSPACE": [
+          -1,
+          576
+        ],
+        "'INT": [
+          -1,
+          576
+        ],
+        "'LONG": [
+          -1,
+          576
+        ],
+        "'DOUBLE": [
+          -1,
+          576
+        ],
+        "'FLOAT": [
+          -1,
+          576
+        ],
+        "'BOOLEAN": [
+          -1,
+          576
+        ],
+        "'VOID": [
+          -1,
+          576
+        ],
+        "'DATA": [
+          -1,
+          576
+        ],
+        "'IF": [
+          -1,
+          576
+        ],
+        "'FOR": [
+          -1,
+          576
+        ],
+        "'RETURN": [
+          -1,
+          576
+        ],
+        "'VAR": [
+          -1,
+          576
+        ],
+        "'REC": [
+          -1,
+          576
+        ],
+        "'ATCHECK": [
+          -1,
+          576
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          576
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          576
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          576
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          576
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          576
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          576
+        ],
+        "'SWITCH": [
+          -1,
+          576
+        ],
+        "'YIELD": [
+          -1,
+          576
+        ],
+        "'DASH": [
+          -1,
+          576
+        ],
+        "'BANG": [
+          -1,
+          576
+        ],
+        "'LBRACK": [
+          -1,
+          576
+        ],
+        "'NUMBER": [
+          -1,
+          576
+        ],
+        "'TRUE": [
+          -1,
+          576
+        ],
+        "'FALSE": [
+          -1,
+          576
+        ],
+        "'NULL": [
+          -1,
+          576
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          576
+        ],
+        "'BLOCK": [
+          -1,
+          576
+        ],
+        "'TABLE": [
+          -1,
+          576
+        ],
+        "'ASK": [
+          -1,
+          576
+        ],
+        "'NEW": [
+          -1,
+          576
+        ]
+      },
+      {
+        "$": [
+          -1,
+          578
+        ],
+        "'NAME": [
+          -1,
+          578
+        ],
+        "'SEMI": [
+          -1,
+          578
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          578
+        ],
+        "'STRING": [
+          -1,
+          578
+        ],
+        "'RPAREN": [
+          -1,
+          578
+        ],
+        "'LBRACE": [
+          -1,
+          578
+        ],
+        "'RBRACE": [
+          -1,
+          578
+        ],
+        "'SPY": [
+          -1,
+          578
+        ],
+        "'PARENSPACE": [
+          -1,
+          578
+        ],
+        "'COMMA": [
+          -1,
+          578
+        ],
+        "'INT": [
+          -1,
+          578
+        ],
+        "'LONG": [
+          -1,
+          578
+        ],
+        "'DOUBLE": [
+          -1,
+          578
+        ],
+        "'FLOAT": [
+          -1,
+          578
+        ],
+        "'BOOLEAN": [
+          -1,
+          578
+        ],
+        "'VOID": [
+          -1,
+          578
+        ],
+        "'LT": [
+          -1,
+          578
+        ],
+        "'GT": [
+          -1,
+          578
+        ],
+        "'THINARROW": [
+          -1,
+          578
+        ],
+        "'DATA": [
+          -1,
+          578
+        ],
+        "'IF": [
+          -1,
+          578
+        ],
+        "'FOR": [
+          -1,
+          578
+        ],
+        "'RETURN": [
+          -1,
+          578
+        ],
+        "'VAR": [
+          -1,
+          578
+        ],
+        "'REC": [
+          -1,
+          578
+        ],
+        "'ATCHECK": [
+          -1,
+          578
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          578
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          578
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          578
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          578
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          578
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          578
+        ],
+        "'IS": [
+          -1,
+          578
+        ],
+        "'ISNOT": [
+          -1,
+          578
+        ],
+        "'SATISFIES": [
+          -1,
+          578
+        ],
+        "'RAISES": [
+          -1,
+          578
+        ],
+        "'SWITCH": [
+          -1,
+          578
+        ],
+        "'CASE": [
+          -1,
+          578
+        ],
+        "'DEFAULT": [
+          -1,
+          578
+        ],
+        "'YIELD": [
+          -1,
+          578
+        ],
+        "'PLUS": [
+          -1,
+          578
+        ],
+        "'DASH": [
+          -1,
+          578
+        ],
+        "'TIMES": [
+          -1,
+          578
+        ],
+        "'SLASH": [
+          -1,
+          578
+        ],
+        "'PERCENT": [
+          -1,
+          578
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          578
+        ],
+        "'NEQ": [
+          -1,
+          578
+        ],
+        "'LEQ": [
+          -1,
+          578
+        ],
+        "'GEQ": [
+          -1,
+          578
+        ],
+        "'AND": [
+          -1,
+          578
+        ],
+        "'OR": [
+          -1,
+          578
+        ],
+        "'BANG": [
+          -1,
+          578
+        ],
+        "'DOT": [
+          -1,
+          578
+        ],
+        "'LBRACK": [
+          -1,
+          578
+        ],
+        "'RBRACK": [
+          -1,
+          578
+        ],
+        "'NUMBER": [
+          -1,
+          578
+        ],
+        "'TRUE": [
+          -1,
+          578
+        ],
+        "'FALSE": [
+          -1,
+          578
+        ],
+        "'NULL": [
+          -1,
+          578
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          578
+        ],
+        "'BLOCK": [
+          -1,
+          578
+        ],
+        "'TABLE": [
+          -1,
+          578
+        ],
+        "'ASK": [
+          -1,
+          578
+        ],
+        "'NEW": [
+          -1,
+          578
+        ]
+      },
+      {
+        "'PARENNOSPACE": [
+          456
+        ],
+        "'COLON": [
+          457
+        ]
+      },
+      {
+        "switch-body": [
+          458
+        ],
+        "switch-body_I0*": [
+          459
+        ],
+        "'NAME": [
+          -1,
+          580
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          580
+        ],
+        "'STRING": [
+          -1,
+          580
+        ],
+        "'LBRACE": [
+          -1,
+          580
+        ],
+        "'SPY": [
+          -1,
+          580
+        ],
+        "'PARENSPACE": [
+          -1,
+          580
+        ],
+        "'INT": [
+          -1,
+          580
+        ],
+        "'LONG": [
+          -1,
+          580
+        ],
+        "'DOUBLE": [
+          -1,
+          580
+        ],
+        "'FLOAT": [
+          -1,
+          580
+        ],
+        "'BOOLEAN": [
+          -1,
+          580
+        ],
+        "'VOID": [
+          -1,
+          580
+        ],
+        "'DATA": [
+          -1,
+          580
+        ],
+        "'IF": [
+          -1,
+          580
+        ],
+        "'FOR": [
+          -1,
+          580
+        ],
+        "'RETURN": [
+          -1,
+          580
+        ],
+        "'VAR": [
+          -1,
+          580
+        ],
+        "'REC": [
+          -1,
+          580
+        ],
+        "'ATCHECK": [
+          -1,
+          580
+        ],
+        "'SWITCH": [
+          -1,
+          580
+        ],
+        "'YIELD": [
+          -1,
+          580
+        ],
+        "'DASH": [
+          -1,
+          580
+        ],
+        "'BANG": [
+          -1,
+          580
+        ],
+        "'LBRACK": [
+          -1,
+          580
+        ],
+        "'NUMBER": [
+          -1,
+          580
+        ],
+        "'TRUE": [
+          -1,
+          580
+        ],
+        "'FALSE": [
+          -1,
+          580
+        ],
+        "'NULL": [
+          -1,
+          580
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          580
+        ],
+        "'BLOCK": [
+          -1,
+          580
+        ],
+        "'TABLE": [
+          -1,
+          580
+        ],
+        "'ASK": [
+          -1,
+          580
+        ],
+        "'NEW": [
+          -1,
+          580
+        ]
+      },
+      {
+        "block": [
+          460
+        ],
+        "'LBRACE": [
+          309
+        ]
+      },
+      {
+        "'RBRACE": [
+          -1,
+          582
+        ],
+        "'ROW": [
+          -1,
+          582
+        ]
+      },
+      {
+        "'NAME": [
+          98
+        ],
+        "'PARENNOSPACE": [
+          11
+        ],
+        "'STRING": [
+          12
+        ],
+        "'LBRACE": [
+          23
+        ],
+        "'PARENSPACE": [
+          108
+        ],
+        "full-expr": [
+          461
+        ],
+        "switch-expr": [
+          37
+        ],
+        "'SWITCH": [
+          38
+        ],
+        "lambda-expr": [
+          39
+        ],
+        "binop-expr": [
+          40
+        ],
+        "unop-expr": [
+          41
+        ],
+        "'DASH": [
+          42
+        ],
+        "'BANG": [
+          43
+        ],
+        "app-or-access": [
+          44
+        ],
+        "'LBRACK": [
+          45
+        ],
+        "prim-expr": [
+          46
+        ],
+        "'NUMBER": [
+          47
+        ],
+        "'TRUE": [
+          48
+        ],
+        "'FALSE": [
+          49
+        ],
+        "'NULL": [
+          50
+        ],
+        "'PARENAFTERBRACE": [
+          51
+        ],
+        "construct-expr": [
+          52
+        ],
+        "map-for-expr": [
+          53
+        ],
+        "new-expr": [
+          54
+        ],
+        "ask-expr": [
+          55
+        ],
+        "table-expr": [
+          56
+        ],
+        "record-expr": [
+          57
+        ],
+        "block-expr": [
+          58
+        ],
+        "'BLOCK": [
+          59
+        ],
+        "'TABLE": [
+          60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
+        ]
+      },
+      {
+        "$": [
+          -1,
+          584
+        ],
+        "'NAME": [
+          -1,
+          584
+        ],
+        "'SEMI": [
+          -1,
+          584
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          584
+        ],
+        "'STRING": [
+          -1,
+          584
+        ],
+        "'RPAREN": [
+          -1,
+          584
+        ],
+        "'LBRACE": [
+          -1,
+          584
+        ],
+        "'RBRACE": [
+          -1,
+          584
+        ],
+        "'SPY": [
+          -1,
+          584
+        ],
+        "'PARENSPACE": [
+          -1,
+          584
+        ],
+        "'COMMA": [
+          -1,
+          584
+        ],
+        "'INT": [
+          -1,
+          584
+        ],
+        "'LONG": [
+          -1,
+          584
+        ],
+        "'DOUBLE": [
+          -1,
+          584
+        ],
+        "'FLOAT": [
+          -1,
+          584
+        ],
+        "'BOOLEAN": [
+          -1,
+          584
+        ],
+        "'VOID": [
+          -1,
+          584
+        ],
+        "'LT": [
+          -1,
+          584
+        ],
+        "'GT": [
+          -1,
+          584
+        ],
+        "'THINARROW": [
+          -1,
+          584
+        ],
+        "'DATA": [
+          -1,
+          584
+        ],
+        "'IF": [
+          -1,
+          584
+        ],
+        "'FOR": [
+          -1,
+          584
+        ],
+        "'RETURN": [
+          -1,
+          584
+        ],
+        "'VAR": [
+          -1,
+          584
+        ],
+        "'REC": [
+          -1,
+          584
+        ],
+        "'ATCHECK": [
+          -1,
+          584
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          584
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          584
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          584
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          584
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          584
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          584
+        ],
+        "'IS": [
+          -1,
+          584
+        ],
+        "'ISNOT": [
+          -1,
+          584
+        ],
+        "'SATISFIES": [
+          -1,
+          584
+        ],
+        "'RAISES": [
+          -1,
+          584
+        ],
+        "'SWITCH": [
+          -1,
+          584
+        ],
+        "'CASE": [
+          -1,
+          584
+        ],
+        "'DEFAULT": [
+          -1,
+          584
+        ],
+        "'YIELD": [
+          -1,
+          584
+        ],
+        "'PLUS": [
+          -1,
+          584
+        ],
+        "'DASH": [
+          -1,
+          584
+        ],
+        "'TIMES": [
+          -1,
+          584
+        ],
+        "'SLASH": [
+          -1,
+          584
+        ],
+        "'PERCENT": [
+          -1,
+          584
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          584
+        ],
+        "'NEQ": [
+          -1,
+          584
+        ],
+        "'LEQ": [
+          -1,
+          584
+        ],
+        "'GEQ": [
+          -1,
+          584
+        ],
+        "'AND": [
+          -1,
+          584
+        ],
+        "'OR": [
+          -1,
+          584
+        ],
+        "'BANG": [
+          -1,
+          584
+        ],
+        "'DOT": [
+          -1,
+          584
+        ],
+        "'LBRACK": [
+          -1,
+          584
+        ],
+        "'RBRACK": [
+          -1,
+          584
+        ],
+        "'NUMBER": [
+          -1,
+          584
+        ],
+        "'TRUE": [
+          -1,
+          584
+        ],
+        "'FALSE": [
+          -1,
+          584
+        ],
+        "'NULL": [
+          -1,
+          584
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          584
+        ],
+        "'BLOCK": [
+          -1,
+          584
+        ],
+        "'TABLE": [
+          -1,
+          584
+        ],
+        "'ASK": [
+          -1,
+          584
+        ],
+        "'NEW": [
+          -1,
+          584
+        ]
+      },
+      {
+        "'SEMI": [
+          -1,
+          586
         ]
       },
       {
@@ -40610,55 +42811,55 @@ function(E) {
           12
         ],
         "fun-decl": [
-          196
-        ],
-        "data-decl": [
-          197
-        ],
-        "check-block": [
-          198
-        ],
-        "let-stmt": [
-          199
-        ],
-        "var-stmt": [
           200
         ],
-        "rec-stmt": [
+        "data-decl": [
           201
         ],
-        "assign-stmt": [
+        "check-block": [
           202
         ],
-        "expr-stmt": [
+        "let-stmt": [
           203
+        ],
+        "var-stmt": [
+          204
+        ],
+        "rec-stmt": [
+          205
+        ],
+        "assign-stmt": [
+          206
+        ],
+        "expr-stmt": [
+          207
         ],
         "'LBRACE": [
           23
         ],
         "'RBRACE": [
-          455
+          462
         ],
         "block-stmt": [
-          456
+          463
         ],
         "if-stmt": [
-          206
-        ],
-        "for-stmt": [
-          207
-        ],
-        "return-stmt": [
-          208
-        ],
-        "yield-stmt": [
-          209
-        ],
-        "spy-stmt": [
           210
         ],
-        "'SPY": [
+        "for-stmt": [
           211
+        ],
+        "return-stmt": [
+          212
+        ],
+        "yield-stmt": [
+          213
+        ],
+        "spy-stmt": [
+          214
+        ],
+        "'SPY": [
+          215
         ],
         "'PARENSPACE": [
           24
@@ -40667,10 +42868,10 @@ function(E) {
           25
         ],
         "where-clause_I2": [
-          457
+          464
         ],
         "assert-stmt": [
-          458
+          465
         ],
         "'INT": [
           26
@@ -40694,16 +42895,16 @@ function(E) {
           32
         ],
         "'IF": [
-          213
+          217
         ],
         "full-expr": [
-          214
+          218
         ],
         "'FOR": [
-          215
+          219
         ],
         "'RETURN": [
-          216
+          220
         ],
         "'VAR": [
           34
@@ -40715,22 +42916,22 @@ function(E) {
           36
         ],
         "'ASSERTEQUALS": [
-          218
-        ],
-        "'ASSERTNOTEQUALS": [
-          219
-        ],
-        "'ASSERTTRUE": [
-          220
-        ],
-        "'ASSERTFALSE": [
-          221
-        ],
-        "'ASSERTSATISFIES": [
           222
         ],
-        "'ASSERTRAISES": [
+        "'ASSERTNOTEQUALS": [
           223
+        ],
+        "'ASSERTTRUE": [
+          224
+        ],
+        "'ASSERTFALSE": [
+          225
+        ],
+        "'ASSERTSATISFIES": [
+          226
+        ],
+        "'ASSERTRAISES": [
+          227
         ],
         "switch-expr": [
           37
@@ -40739,7 +42940,7 @@ function(E) {
           38
         ],
         "'YIELD": [
-          224
+          228
         ],
         "lambda-expr": [
           39
@@ -40798,1387 +42999,1426 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'RPAREN": [
           -1,
-          578
+          588
         ],
         "'COMMA": [
           -1,
-          578
+          588
         ]
       },
       {
         "'NAME": [
           -1,
-          580
+          590
         ],
         "'PARENNOSPACE": [
           -1,
-          580
+          590
         ],
         "'STRING": [
           -1,
-          580
+          590
         ],
         "'LBRACE": [
           -1,
-          580
+          590
         ],
         "'RBRACE": [
           -1,
-          580
+          590
         ],
         "'SPY": [
           -1,
-          580
+          590
         ],
         "'PARENSPACE": [
           -1,
-          580
+          590
         ],
         "'INT": [
           -1,
-          580
+          590
         ],
         "'LONG": [
           -1,
-          580
+          590
         ],
         "'DOUBLE": [
           -1,
-          580
+          590
         ],
         "'FLOAT": [
           -1,
-          580
+          590
         ],
         "'BOOLEAN": [
           -1,
-          580
+          590
         ],
         "'VOID": [
           -1,
-          580
+          590
         ],
         "'DATA": [
           -1,
-          580
+          590
         ],
         "'IF": [
           -1,
-          580
+          590
         ],
         "'FOR": [
           -1,
-          580
+          590
         ],
         "'RETURN": [
           -1,
-          580
+          590
         ],
         "'VAR": [
           -1,
-          580
+          590
         ],
         "'REC": [
           -1,
-          580
+          590
         ],
         "'ATCHECK": [
           -1,
-          580
+          590
         ],
         "'ASSERTEQUALS": [
           -1,
-          580
+          590
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          580
+          590
         ],
         "'ASSERTTRUE": [
           -1,
-          580
+          590
         ],
         "'ASSERTFALSE": [
           -1,
-          580
+          590
         ],
         "'ASSERTSATISFIES": [
           -1,
-          580
+          590
         ],
         "'ASSERTRAISES": [
           -1,
-          580
+          590
         ],
         "'SWITCH": [
           -1,
-          580
+          590
         ],
         "'YIELD": [
           -1,
-          580
+          590
         ],
         "'DASH": [
           -1,
-          580
+          590
         ],
         "'BANG": [
           -1,
-          580
+          590
         ],
         "'LBRACK": [
           -1,
-          580
+          590
         ],
         "'NUMBER": [
           -1,
-          580
+          590
         ],
         "'TRUE": [
           -1,
-          580
+          590
         ],
         "'FALSE": [
           -1,
-          580
+          590
         ],
         "'NULL": [
           -1,
-          580
+          590
         ],
         "'PARENAFTERBRACE": [
           -1,
-          580
+          590
+        ],
+        "'BLOCK": [
+          -1,
+          590
         ],
         "'TABLE": [
           -1,
-          580
+          590
         ],
         "'ASK": [
           -1,
-          580
+          590
         ],
         "'NEW": [
           -1,
-          580
+          590
         ]
       },
       {
         "'RPAREN": [
           -1,
-          582
+          592
         ],
         "'COMMA": [
           -1,
-          582
+          592
         ]
       },
       {
         "if-stmt_I6?": [
-          459
-        ],
-        "if-stmt_I5": [
-          460
-        ],
-        "'ELSE": [
-          461
-        ],
-        "if-stmt_I6": [
-          462
-        ],
-        "'NAME": [
-          -1,
-          584,
-          586
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          584,
-          586
-        ],
-        "'STRING": [
-          -1,
-          584,
-          586
-        ],
-        "'LBRACE": [
-          -1,
-          584,
-          586
-        ],
-        "'RBRACE": [
-          -1,
-          584,
-          586
-        ],
-        "'SPY": [
-          -1,
-          584,
-          586
-        ],
-        "'PARENSPACE": [
-          -1,
-          584,
-          586
-        ],
-        "'INT": [
-          -1,
-          584,
-          586
-        ],
-        "'LONG": [
-          -1,
-          584,
-          586
-        ],
-        "'DOUBLE": [
-          -1,
-          584,
-          586
-        ],
-        "'FLOAT": [
-          -1,
-          584,
-          586
-        ],
-        "'BOOLEAN": [
-          -1,
-          584,
-          586
-        ],
-        "'VOID": [
-          -1,
-          584,
-          586
-        ],
-        "'DATA": [
-          -1,
-          584,
-          586
-        ],
-        "'IF": [
-          -1,
-          584,
-          586
-        ],
-        "'FOR": [
-          -1,
-          584,
-          586
-        ],
-        "'RETURN": [
-          -1,
-          584,
-          586
-        ],
-        "'VAR": [
-          -1,
-          584,
-          586
-        ],
-        "'REC": [
-          -1,
-          584,
-          586
-        ],
-        "'ATCHECK": [
-          -1,
-          584,
-          586
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          584,
-          586
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          584,
-          586
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          584,
-          586
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          584,
-          586
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          584,
-          586
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          584,
-          586
-        ],
-        "'SWITCH": [
-          -1,
-          584,
-          586
-        ],
-        "'YIELD": [
-          -1,
-          584,
-          586
-        ],
-        "'DASH": [
-          -1,
-          584,
-          586
-        ],
-        "'BANG": [
-          -1,
-          584,
-          586
-        ],
-        "'LBRACK": [
-          -1,
-          584,
-          586
-        ],
-        "'NUMBER": [
-          -1,
-          584,
-          586
-        ],
-        "'TRUE": [
-          -1,
-          584,
-          586
-        ],
-        "'FALSE": [
-          -1,
-          584,
-          586
-        ],
-        "'NULL": [
-          -1,
-          584,
-          586
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          584,
-          586
-        ],
-        "'TABLE": [
-          -1,
-          584,
-          586
-        ],
-        "'ASK": [
-          -1,
-          584,
-          586
-        ],
-        "'NEW": [
-          -1,
-          584,
-          586
-        ]
-      },
-      {
-        "'RPAREN": [
-          463
-        ]
-      },
-      {
-        "'SEMI": [
-          464
-        ],
-        "assert-stmt_A0_I6?": [
-          465
-        ],
-        "assert-stmt_A0_I6": [
           466
         ],
-        "'NAME": [
-          -1,
-          588,
-          590
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          588,
-          590
-        ],
-        "'STRING": [
-          -1,
-          588,
-          590
-        ],
-        "'LBRACE": [
-          -1,
-          588,
-          590
-        ],
-        "'RBRACE": [
-          -1,
-          588,
-          590
-        ],
-        "'SPY": [
-          -1,
-          588,
-          590
-        ],
-        "'PARENSPACE": [
-          -1,
-          588,
-          590
-        ],
-        "'INT": [
-          -1,
-          588,
-          590
-        ],
-        "'LONG": [
-          -1,
-          588,
-          590
-        ],
-        "'DOUBLE": [
-          -1,
-          588,
-          590
-        ],
-        "'FLOAT": [
-          -1,
-          588,
-          590
-        ],
-        "'BOOLEAN": [
-          -1,
-          588,
-          590
-        ],
-        "'VOID": [
-          -1,
-          588,
-          590
-        ],
-        "'DATA": [
-          -1,
-          588,
-          590
-        ],
-        "'IF": [
-          -1,
-          588,
-          590
-        ],
-        "'FOR": [
-          -1,
-          588,
-          590
-        ],
-        "'RETURN": [
-          -1,
-          588,
-          590
-        ],
-        "'VAR": [
-          -1,
-          588,
-          590
-        ],
-        "'REC": [
-          -1,
-          588,
-          590
-        ],
-        "'ATCHECK": [
-          -1,
-          588,
-          590
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          588,
-          590
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          588,
-          590
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          588,
-          590
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          588,
-          590
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          588,
-          590
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          588,
-          590
-        ],
-        "'SWITCH": [
-          -1,
-          588,
-          590
-        ],
-        "'YIELD": [
-          -1,
-          588,
-          590
-        ],
-        "'DASH": [
-          -1,
-          588,
-          590
-        ],
-        "'BANG": [
-          -1,
-          588,
-          590
-        ],
-        "'LBRACK": [
-          -1,
-          588,
-          590
-        ],
-        "'NUMBER": [
-          -1,
-          588,
-          590
-        ],
-        "'TRUE": [
-          -1,
-          588,
-          590
-        ],
-        "'FALSE": [
-          -1,
-          588,
-          590
-        ],
-        "'NULL": [
-          -1,
-          588,
-          590
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          588,
-          590
-        ],
-        "'TABLE": [
-          -1,
-          588,
-          590
-        ],
-        "'ASK": [
-          -1,
-          588,
-          590
-        ],
-        "'NEW": [
-          -1,
-          588,
-          590
-        ]
-      },
-      {
-        "'SEMI": [
+        "if-stmt_I5": [
           467
         ],
-        "assert-stmt_A1_I6?": [
+        "'ELSE": [
           468
         ],
-        "assert-stmt_A1_I6": [
+        "if-stmt_I6": [
           469
         ],
         "'NAME": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'PARENNOSPACE": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'STRING": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'LBRACE": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'RBRACE": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'SPY": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'PARENSPACE": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'INT": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'LONG": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'DOUBLE": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'FLOAT": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'BOOLEAN": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'VOID": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'DATA": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'IF": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'FOR": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'RETURN": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'VAR": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'REC": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'ATCHECK": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'ASSERTEQUALS": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'ASSERTTRUE": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'ASSERTFALSE": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'ASSERTSATISFIES": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'ASSERTRAISES": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'SWITCH": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'YIELD": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'DASH": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'BANG": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'LBRACK": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'NUMBER": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'TRUE": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'FALSE": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'NULL": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'PARENAFTERBRACE": [
           -1,
-          592,
-          594
+          594,
+          596
+        ],
+        "'BLOCK": [
+          -1,
+          594,
+          596
         ],
         "'TABLE": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'ASK": [
           -1,
-          592,
-          594
+          594,
+          596
         ],
         "'NEW": [
           -1,
-          592,
-          594
+          594,
+          596
+        ]
+      },
+      {
+        "'RPAREN": [
+          470
         ]
       },
       {
         "'SEMI": [
-          470
-        ],
-        "assert-stmt_A4_I6?": [
           471
         ],
-        "assert-stmt_A4_I6": [
+        "assert-stmt_A0_I6?": [
           472
+        ],
+        "assert-stmt_A0_I6": [
+          473
         ],
         "'NAME": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'PARENNOSPACE": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'STRING": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'LBRACE": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'RBRACE": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'SPY": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'PARENSPACE": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'INT": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'LONG": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'DOUBLE": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'FLOAT": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'BOOLEAN": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'VOID": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'DATA": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'IF": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'FOR": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'RETURN": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'VAR": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'REC": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'ATCHECK": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'ASSERTEQUALS": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'ASSERTTRUE": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'ASSERTFALSE": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'ASSERTSATISFIES": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'ASSERTRAISES": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'SWITCH": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'YIELD": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'DASH": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'BANG": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'LBRACK": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'NUMBER": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'TRUE": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'FALSE": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'NULL": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'PARENAFTERBRACE": [
           -1,
-          596,
-          598
+          598,
+          600
+        ],
+        "'BLOCK": [
+          -1,
+          598,
+          600
         ],
         "'TABLE": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'ASK": [
           -1,
-          596,
-          598
+          598,
+          600
         ],
         "'NEW": [
           -1,
-          596,
-          598
+          598,
+          600
         ]
       },
       {
         "'SEMI": [
-          473
-        ],
-        "assert-stmt_A5_I6?": [
           474
         ],
-        "assert-stmt_A5_I6": [
+        "assert-stmt_A1_I6?": [
           475
+        ],
+        "assert-stmt_A1_I6": [
+          476
         ],
         "'NAME": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'PARENNOSPACE": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'STRING": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'LBRACE": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'RBRACE": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'SPY": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'PARENSPACE": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'INT": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'LONG": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'DOUBLE": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'FLOAT": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'BOOLEAN": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'VOID": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'DATA": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'IF": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'FOR": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'RETURN": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'VAR": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'REC": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'ATCHECK": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'ASSERTEQUALS": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'ASSERTTRUE": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'ASSERTFALSE": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'ASSERTSATISFIES": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'ASSERTRAISES": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'SWITCH": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'YIELD": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'DASH": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'BANG": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'LBRACK": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'NUMBER": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'TRUE": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'FALSE": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'NULL": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'PARENAFTERBRACE": [
           -1,
-          600,
-          602
+          602,
+          604
+        ],
+        "'BLOCK": [
+          -1,
+          602,
+          604
         ],
         "'TABLE": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'ASK": [
           -1,
-          600,
-          602
+          602,
+          604
         ],
         "'NEW": [
           -1,
-          600,
-          602
-        ]
-      },
-      {
-        "'NAME": [
-          476
-        ],
-        "case-branch_A0_I3?": [
-          477
-        ],
-        "case-branch_A0_I3": [
-          478
-        ],
-        "'RPAREN": [
-          -1,
+          602,
           604
         ]
       },
       {
-        "switch-body": [
-          479
+        "'SEMI": [
+          477
         ],
-        "switch-body_I0*": [
-          452
+        "assert-stmt_A4_I6?": [
+          478
+        ],
+        "assert-stmt_A4_I6": [
+          479
         ],
         "'NAME": [
           -1,
-          570
+          606,
+          608
         ],
         "'PARENNOSPACE": [
           -1,
-          570
+          606,
+          608
         ],
         "'STRING": [
           -1,
-          570
+          606,
+          608
         ],
         "'LBRACE": [
           -1,
-          570
+          606,
+          608
+        ],
+        "'RBRACE": [
+          -1,
+          606,
+          608
         ],
         "'SPY": [
           -1,
-          570
+          606,
+          608
         ],
         "'PARENSPACE": [
           -1,
-          570
+          606,
+          608
         ],
         "'INT": [
           -1,
-          570
+          606,
+          608
         ],
         "'LONG": [
           -1,
-          570
+          606,
+          608
         ],
         "'DOUBLE": [
           -1,
-          570
+          606,
+          608
         ],
         "'FLOAT": [
           -1,
-          570
+          606,
+          608
         ],
         "'BOOLEAN": [
           -1,
-          570
+          606,
+          608
         ],
         "'VOID": [
           -1,
-          570
+          606,
+          608
         ],
         "'DATA": [
           -1,
-          570
+          606,
+          608
         ],
         "'IF": [
           -1,
-          570
+          606,
+          608
         ],
         "'FOR": [
           -1,
-          570
+          606,
+          608
         ],
         "'RETURN": [
           -1,
-          570
+          606,
+          608
         ],
         "'VAR": [
           -1,
-          570
+          606,
+          608
         ],
         "'REC": [
           -1,
-          570
+          606,
+          608
         ],
         "'ATCHECK": [
           -1,
-          570
+          606,
+          608
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          606,
+          608
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          606,
+          608
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          606,
+          608
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          606,
+          608
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          606,
+          608
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          606,
+          608
         ],
         "'SWITCH": [
           -1,
-          570
+          606,
+          608
         ],
         "'YIELD": [
           -1,
-          570
+          606,
+          608
         ],
         "'DASH": [
           -1,
-          570
+          606,
+          608
         ],
         "'BANG": [
           -1,
-          570
+          606,
+          608
         ],
         "'LBRACK": [
           -1,
-          570
+          606,
+          608
         ],
         "'NUMBER": [
           -1,
-          570
+          606,
+          608
         ],
         "'TRUE": [
           -1,
-          570
+          606,
+          608
         ],
         "'FALSE": [
           -1,
-          570
+          606,
+          608
         ],
         "'NULL": [
           -1,
-          570
+          606,
+          608
         ],
         "'PARENAFTERBRACE": [
           -1,
-          570
+          606,
+          608
+        ],
+        "'BLOCK": [
+          -1,
+          606,
+          608
         ],
         "'TABLE": [
           -1,
-          570
+          606,
+          608
         ],
         "'ASK": [
           -1,
-          570
+          606,
+          608
         ],
         "'NEW": [
           -1,
-          570
+          606,
+          608
+        ]
+      },
+      {
+        "'SEMI": [
+          480
+        ],
+        "assert-stmt_A5_I6?": [
+          481
+        ],
+        "assert-stmt_A5_I6": [
+          482
+        ],
+        "'NAME": [
+          -1,
+          610,
+          612
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          610,
+          612
+        ],
+        "'STRING": [
+          -1,
+          610,
+          612
+        ],
+        "'LBRACE": [
+          -1,
+          610,
+          612
+        ],
+        "'RBRACE": [
+          -1,
+          610,
+          612
+        ],
+        "'SPY": [
+          -1,
+          610,
+          612
+        ],
+        "'PARENSPACE": [
+          -1,
+          610,
+          612
+        ],
+        "'INT": [
+          -1,
+          610,
+          612
+        ],
+        "'LONG": [
+          -1,
+          610,
+          612
+        ],
+        "'DOUBLE": [
+          -1,
+          610,
+          612
+        ],
+        "'FLOAT": [
+          -1,
+          610,
+          612
+        ],
+        "'BOOLEAN": [
+          -1,
+          610,
+          612
+        ],
+        "'VOID": [
+          -1,
+          610,
+          612
+        ],
+        "'DATA": [
+          -1,
+          610,
+          612
+        ],
+        "'IF": [
+          -1,
+          610,
+          612
+        ],
+        "'FOR": [
+          -1,
+          610,
+          612
+        ],
+        "'RETURN": [
+          -1,
+          610,
+          612
+        ],
+        "'VAR": [
+          -1,
+          610,
+          612
+        ],
+        "'REC": [
+          -1,
+          610,
+          612
+        ],
+        "'ATCHECK": [
+          -1,
+          610,
+          612
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          610,
+          612
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          610,
+          612
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          610,
+          612
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          610,
+          612
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          610,
+          612
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          610,
+          612
+        ],
+        "'SWITCH": [
+          -1,
+          610,
+          612
+        ],
+        "'YIELD": [
+          -1,
+          610,
+          612
+        ],
+        "'DASH": [
+          -1,
+          610,
+          612
+        ],
+        "'BANG": [
+          -1,
+          610,
+          612
+        ],
+        "'LBRACK": [
+          -1,
+          610,
+          612
+        ],
+        "'NUMBER": [
+          -1,
+          610,
+          612
+        ],
+        "'TRUE": [
+          -1,
+          610,
+          612
+        ],
+        "'FALSE": [
+          -1,
+          610,
+          612
+        ],
+        "'NULL": [
+          -1,
+          610,
+          612
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          610,
+          612
+        ],
+        "'BLOCK": [
+          -1,
+          610,
+          612
+        ],
+        "'TABLE": [
+          -1,
+          610,
+          612
+        ],
+        "'ASK": [
+          -1,
+          610,
+          612
+        ],
+        "'NEW": [
+          -1,
+          610,
+          612
+        ]
+      },
+      {
+        "'NAME": [
+          483
+        ],
+        "case-branch_A0_I3?": [
+          484
+        ],
+        "case-branch_A0_I3": [
+          485
+        ],
+        "'RPAREN": [
+          -1,
+          614
+        ]
+      },
+      {
+        "switch-body": [
+          486
+        ],
+        "switch-body_I0*": [
+          459
+        ],
+        "'NAME": [
+          -1,
+          580
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          580
+        ],
+        "'STRING": [
+          -1,
+          580
+        ],
+        "'LBRACE": [
+          -1,
+          580
+        ],
+        "'SPY": [
+          -1,
+          580
+        ],
+        "'PARENSPACE": [
+          -1,
+          580
+        ],
+        "'INT": [
+          -1,
+          580
+        ],
+        "'LONG": [
+          -1,
+          580
+        ],
+        "'DOUBLE": [
+          -1,
+          580
+        ],
+        "'FLOAT": [
+          -1,
+          580
+        ],
+        "'BOOLEAN": [
+          -1,
+          580
+        ],
+        "'VOID": [
+          -1,
+          580
+        ],
+        "'DATA": [
+          -1,
+          580
+        ],
+        "'IF": [
+          -1,
+          580
+        ],
+        "'FOR": [
+          -1,
+          580
+        ],
+        "'RETURN": [
+          -1,
+          580
+        ],
+        "'VAR": [
+          -1,
+          580
+        ],
+        "'REC": [
+          -1,
+          580
+        ],
+        "'ATCHECK": [
+          -1,
+          580
+        ],
+        "'SWITCH": [
+          -1,
+          580
+        ],
+        "'YIELD": [
+          -1,
+          580
+        ],
+        "'DASH": [
+          -1,
+          580
+        ],
+        "'BANG": [
+          -1,
+          580
+        ],
+        "'LBRACK": [
+          -1,
+          580
+        ],
+        "'NUMBER": [
+          -1,
+          580
+        ],
+        "'TRUE": [
+          -1,
+          580
+        ],
+        "'FALSE": [
+          -1,
+          580
+        ],
+        "'NULL": [
+          -1,
+          580
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          580
+        ],
+        "'BLOCK": [
+          -1,
+          580
+        ],
+        "'TABLE": [
+          -1,
+          580
+        ],
+        "'ASK": [
+          -1,
+          580
+        ],
+        "'NEW": [
+          -1,
+          580
         ]
       },
       {
         "'RBRACE": [
           -1,
-          606
+          616
         ]
       },
       {
@@ -42192,52 +44432,52 @@ function(E) {
           12
         ],
         "fun-decl": [
-          196
-        ],
-        "data-decl": [
-          197
-        ],
-        "check-block": [
-          198
-        ],
-        "let-stmt": [
-          199
-        ],
-        "var-stmt": [
           200
         ],
-        "rec-stmt": [
+        "data-decl": [
           201
         ],
-        "assign-stmt": [
+        "check-block": [
           202
         ],
-        "expr-stmt": [
+        "let-stmt": [
           203
+        ],
+        "var-stmt": [
+          204
+        ],
+        "rec-stmt": [
+          205
+        ],
+        "assign-stmt": [
+          206
+        ],
+        "expr-stmt": [
+          207
         ],
         "'LBRACE": [
           23
         ],
         "block-stmt": [
-          480
+          487
         ],
         "if-stmt": [
-          206
-        ],
-        "for-stmt": [
-          207
-        ],
-        "return-stmt": [
-          208
-        ],
-        "yield-stmt": [
-          481
-        ],
-        "spy-stmt": [
           210
         ],
-        "'SPY": [
+        "for-stmt": [
           211
+        ],
+        "return-stmt": [
+          212
+        ],
+        "yield-stmt": [
+          488
+        ],
+        "spy-stmt": [
+          214
+        ],
+        "'SPY": [
+          215
         ],
         "'PARENSPACE": [
           24
@@ -42267,16 +44507,16 @@ function(E) {
           32
         ],
         "'IF": [
-          213
+          217
         ],
         "full-expr": [
           33
         ],
         "'FOR": [
-          215
+          219
         ],
         "'RETURN": [
-          216
+          220
         ],
         "'VAR": [
           34
@@ -42294,10 +44534,10 @@ function(E) {
           38
         ],
         "switch-body_I0": [
-          482
+          489
         ],
         "'YIELD": [
-          224
+          228
         ],
         "lambda-expr": [
           39
@@ -42356,1956 +44596,1200 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'RBRACK": [
-          483
+          490
         ]
       },
       {
         "table-row_I3*": [
-          484
+          491
         ],
         "'SEMI": [
           -1,
-          608,
-          610
+          618,
+          620
         ],
         "'COMMA": [
           -1,
-          610
+          620
         ]
       },
       {
         "$": [
           -1,
-          612
+          622
         ],
         "'NAME": [
           -1,
-          612
+          622
         ],
         "'PARENNOSPACE": [
           -1,
-          612
+          622
         ],
         "'STRING": [
           -1,
-          612
+          622
         ],
         "'LBRACE": [
           -1,
-          612
+          622
         ],
         "'RBRACE": [
           -1,
-          612
+          622
         ],
         "'SPY": [
           -1,
-          612
+          622
         ],
         "'PARENSPACE": [
           -1,
-          612
+          622
         ],
         "'INT": [
           -1,
-          612
+          622
         ],
         "'LONG": [
           -1,
-          612
+          622
         ],
         "'DOUBLE": [
           -1,
-          612
+          622
         ],
         "'FLOAT": [
           -1,
-          612
+          622
         ],
         "'BOOLEAN": [
           -1,
-          612
+          622
         ],
         "'VOID": [
           -1,
-          612
+          622
         ],
         "'DATA": [
           -1,
-          612
+          622
         ],
         "'IF": [
           -1,
-          612
+          622
         ],
         "'FOR": [
           -1,
-          612
+          622
         ],
         "'RETURN": [
           -1,
-          612
+          622
         ],
         "'VAR": [
           -1,
-          612
+          622
         ],
         "'REC": [
           -1,
-          612
+          622
         ],
         "'ATCHECK": [
           -1,
-          612
+          622
         ],
         "'ASSERTEQUALS": [
           -1,
-          612
+          622
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          612
+          622
         ],
         "'ASSERTTRUE": [
           -1,
-          612
+          622
         ],
         "'ASSERTFALSE": [
           -1,
-          612
+          622
         ],
         "'ASSERTSATISFIES": [
           -1,
-          612
+          622
         ],
         "'ASSERTRAISES": [
           -1,
-          612
+          622
         ],
         "'SWITCH": [
           -1,
-          612
+          622
         ],
         "'YIELD": [
           -1,
-          612
+          622
         ],
         "'DASH": [
           -1,
-          612
+          622
         ],
         "'BANG": [
           -1,
-          612
+          622
         ],
         "'LBRACK": [
           -1,
-          612
+          622
         ],
         "'NUMBER": [
           -1,
-          612
+          622
         ],
         "'TRUE": [
           -1,
-          612
+          622
         ],
         "'FALSE": [
           -1,
-          612
+          622
         ],
         "'NULL": [
           -1,
-          612
+          622
         ],
         "'PARENAFTERBRACE": [
           -1,
-          612
+          622
+        ],
+        "'BLOCK": [
+          -1,
+          622
         ],
         "'TABLE": [
           -1,
-          612
+          622
         ],
         "'ASK": [
           -1,
-          612
+          622
         ],
         "'NEW": [
           -1,
-          612
+          622
         ]
       },
       {
         "'NAME": [
           -1,
-          614
+          624
         ],
         "'PARENNOSPACE": [
           -1,
-          614
+          624
         ],
         "'STRING": [
           -1,
-          614
+          624
         ],
         "'LBRACE": [
           -1,
-          614
+          624
         ],
         "'RBRACE": [
           -1,
-          614
+          624
         ],
         "'SPY": [
           -1,
-          614
+          624
         ],
         "'PARENSPACE": [
           -1,
-          614
+          624
         ],
         "'INT": [
           -1,
-          614
+          624
         ],
         "'LONG": [
           -1,
-          614
+          624
         ],
         "'DOUBLE": [
           -1,
-          614
+          624
         ],
         "'FLOAT": [
           -1,
-          614
+          624
         ],
         "'BOOLEAN": [
           -1,
-          614
+          624
         ],
         "'VOID": [
           -1,
-          614
+          624
         ],
         "'DATA": [
           -1,
-          614
+          624
         ],
         "'IF": [
           -1,
-          614
+          624
         ],
         "'FOR": [
           -1,
-          614
+          624
         ],
         "'RETURN": [
           -1,
-          614
+          624
         ],
         "'VAR": [
           -1,
-          614
+          624
         ],
         "'REC": [
           -1,
-          614
+          624
         ],
         "'ATCHECK": [
           -1,
-          614
+          624
         ],
         "'ASSERTEQUALS": [
           -1,
-          614
+          624
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          614
+          624
         ],
         "'ASSERTTRUE": [
           -1,
-          614
+          624
         ],
         "'ASSERTFALSE": [
           -1,
-          614
+          624
         ],
         "'ASSERTSATISFIES": [
           -1,
-          614
+          624
         ],
         "'ASSERTRAISES": [
           -1,
-          614
+          624
         ],
         "'SWITCH": [
           -1,
-          614
+          624
         ],
         "'YIELD": [
           -1,
-          614
+          624
         ],
         "'DASH": [
           -1,
-          614
+          624
         ],
         "'BANG": [
           -1,
-          614
+          624
         ],
         "'LBRACK": [
           -1,
-          614
+          624
         ],
         "'NUMBER": [
           -1,
-          614
+          624
         ],
         "'TRUE": [
           -1,
-          614
+          624
         ],
         "'FALSE": [
           -1,
-          614
+          624
         ],
         "'NULL": [
           -1,
-          614
+          624
         ],
         "'PARENAFTERBRACE": [
           -1,
-          614
+          624
+        ],
+        "'BLOCK": [
+          -1,
+          624
         ],
         "'TABLE": [
           -1,
-          614
+          624
         ],
         "'ASK": [
           -1,
-          614
+          624
         ],
         "'NEW": [
           -1,
-          614
+          624
         ]
       },
       {
         "'NAME": [
           -1,
-          616
+          626
         ],
         "'PARENNOSPACE": [
           -1,
-          616
+          626
         ],
         "'STRING": [
           -1,
-          616
+          626
         ],
         "'LBRACE": [
           -1,
-          616
+          626
         ],
         "'RBRACE": [
           -1,
-          616
+          626
         ],
         "'SPY": [
           -1,
-          616
+          626
         ],
         "'PARENSPACE": [
           -1,
-          616
+          626
         ],
         "'INT": [
           -1,
-          616
+          626
         ],
         "'LONG": [
           -1,
-          616
+          626
         ],
         "'DOUBLE": [
           -1,
-          616
+          626
         ],
         "'FLOAT": [
           -1,
-          616
+          626
         ],
         "'BOOLEAN": [
           -1,
-          616
+          626
         ],
         "'VOID": [
           -1,
-          616
+          626
         ],
         "'DATA": [
           -1,
-          616
+          626
         ],
         "'IF": [
           -1,
-          616
+          626
         ],
         "'FOR": [
           -1,
-          616
+          626
         ],
         "'RETURN": [
           -1,
-          616
+          626
         ],
         "'VAR": [
           -1,
-          616
+          626
         ],
         "'REC": [
           -1,
-          616
+          626
         ],
         "'ATCHECK": [
           -1,
-          616
+          626
         ],
         "'ASSERTEQUALS": [
           -1,
-          616
+          626
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          616
+          626
         ],
         "'ASSERTTRUE": [
           -1,
-          616
+          626
         ],
         "'ASSERTFALSE": [
           -1,
-          616
+          626
         ],
         "'ASSERTSATISFIES": [
           -1,
-          616
+          626
         ],
         "'ASSERTRAISES": [
           -1,
-          616
+          626
         ],
         "'SWITCH": [
           -1,
-          616
+          626
         ],
         "'YIELD": [
           -1,
-          616
+          626
         ],
         "'DASH": [
           -1,
-          616
+          626
         ],
         "'BANG": [
           -1,
-          616
+          626
         ],
         "'LBRACK": [
           -1,
-          616
+          626
         ],
         "'NUMBER": [
           -1,
-          616
+          626
         ],
         "'TRUE": [
           -1,
-          616
+          626
         ],
         "'FALSE": [
           -1,
-          616
+          626
         ],
         "'NULL": [
           -1,
-          616
+          626
         ],
         "'PARENAFTERBRACE": [
           -1,
-          616
+          626
+        ],
+        "'BLOCK": [
+          -1,
+          626
         ],
         "'TABLE": [
           -1,
-          616
+          626
         ],
         "'ASK": [
           -1,
-          616
+          626
         ],
         "'NEW": [
           -1,
-          616
+          626
         ]
       },
       {
         "'NAME": [
           -1,
-          618
+          628
         ],
         "'PARENNOSPACE": [
           -1,
-          618
+          628
         ],
         "'STRING": [
           -1,
-          618
+          628
         ],
         "'LBRACE": [
           -1,
-          618
+          628
         ],
         "'RBRACE": [
           -1,
-          618
+          628
         ],
         "'SPY": [
           -1,
-          618
+          628
         ],
         "'PARENSPACE": [
           -1,
-          618
+          628
         ],
         "'INT": [
           -1,
-          618
+          628
         ],
         "'LONG": [
           -1,
-          618
+          628
         ],
         "'DOUBLE": [
           -1,
-          618
+          628
         ],
         "'FLOAT": [
           -1,
-          618
+          628
         ],
         "'BOOLEAN": [
           -1,
-          618
+          628
         ],
         "'VOID": [
           -1,
-          618
+          628
         ],
         "'DATA": [
           -1,
-          618
+          628
         ],
         "'IF": [
           -1,
-          618
+          628
         ],
         "'FOR": [
           -1,
-          618
+          628
         ],
         "'RETURN": [
           -1,
-          618
+          628
         ],
         "'VAR": [
           -1,
-          618
+          628
         ],
         "'REC": [
           -1,
-          618
+          628
         ],
         "'ATCHECK": [
           -1,
-          618
+          628
         ],
         "'ASSERTEQUALS": [
           -1,
-          618
+          628
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          618
+          628
         ],
         "'ASSERTTRUE": [
           -1,
-          618
+          628
         ],
         "'ASSERTFALSE": [
           -1,
-          618
+          628
         ],
         "'ASSERTSATISFIES": [
           -1,
-          618
+          628
         ],
         "'ASSERTRAISES": [
           -1,
-          618
+          628
         ],
         "'SWITCH": [
           -1,
-          618
+          628
         ],
         "'YIELD": [
           -1,
-          618
+          628
         ],
         "'DASH": [
           -1,
-          618
+          628
         ],
         "'BANG": [
           -1,
-          618
+          628
         ],
         "'LBRACK": [
           -1,
-          618
+          628
         ],
         "'NUMBER": [
           -1,
-          618
+          628
         ],
         "'TRUE": [
           -1,
-          618
+          628
         ],
         "'FALSE": [
           -1,
-          618
+          628
         ],
         "'NULL": [
           -1,
-          618
+          628
         ],
         "'PARENAFTERBRACE": [
           -1,
-          618
+          628
+        ],
+        "'BLOCK": [
+          -1,
+          628
         ],
         "'TABLE": [
           -1,
-          618
+          628
         ],
         "'ASK": [
           -1,
-          618
+          628
         ],
         "'NEW": [
           -1,
-          618
+          628
         ]
       },
       {
         "'NAME": [
           -1,
-          620
+          630
         ],
         "'PARENNOSPACE": [
           -1,
-          620
+          630
         ],
         "'STRING": [
           -1,
-          620
+          630
         ],
         "'LBRACE": [
           -1,
-          620
+          630
         ],
         "'RBRACE": [
           -1,
-          620
+          630
         ],
         "'SPY": [
           -1,
-          620
+          630
         ],
         "'PARENSPACE": [
           -1,
-          620
+          630
         ],
         "'INT": [
           -1,
-          620
+          630
         ],
         "'LONG": [
           -1,
-          620
+          630
         ],
         "'DOUBLE": [
           -1,
-          620
+          630
         ],
         "'FLOAT": [
           -1,
-          620
+          630
         ],
         "'BOOLEAN": [
           -1,
-          620
+          630
         ],
         "'VOID": [
           -1,
-          620
+          630
         ],
         "'DATA": [
           -1,
-          620
+          630
         ],
         "'IF": [
           -1,
-          620
+          630
         ],
         "'FOR": [
           -1,
-          620
+          630
         ],
         "'RETURN": [
           -1,
-          620
+          630
         ],
         "'VAR": [
           -1,
-          620
+          630
         ],
         "'REC": [
           -1,
-          620
+          630
         ],
         "'ATCHECK": [
           -1,
-          620
+          630
         ],
         "'ASSERTEQUALS": [
           -1,
-          620
+          630
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          620
+          630
         ],
         "'ASSERTTRUE": [
           -1,
-          620
+          630
         ],
         "'ASSERTFALSE": [
           -1,
-          620
+          630
         ],
         "'ASSERTSATISFIES": [
           -1,
-          620
+          630
         ],
         "'ASSERTRAISES": [
           -1,
-          620
+          630
         ],
         "'SWITCH": [
           -1,
-          620
+          630
         ],
         "'YIELD": [
           -1,
-          620
+          630
         ],
         "'DASH": [
           -1,
-          620
+          630
         ],
         "'BANG": [
           -1,
-          620
+          630
         ],
         "'LBRACK": [
           -1,
-          620
+          630
         ],
         "'NUMBER": [
           -1,
-          620
+          630
         ],
         "'TRUE": [
           -1,
-          620
+          630
         ],
         "'FALSE": [
           -1,
-          620
+          630
         ],
         "'NULL": [
           -1,
-          620
+          630
         ],
         "'PARENAFTERBRACE": [
           -1,
-          620
+          630
+        ],
+        "'BLOCK": [
+          -1,
+          630
         ],
         "'TABLE": [
           -1,
-          620
+          630
         ],
         "'ASK": [
           -1,
-          620
+          630
         ],
         "'NEW": [
           -1,
-          620
+          630
         ]
       },
       {
         "'NAME": [
           -1,
-          622
+          632
         ],
         "'PARENNOSPACE": [
           -1,
-          622
+          632
         ],
         "'STRING": [
           -1,
-          622
+          632
         ],
         "'LBRACE": [
           -1,
-          622
+          632
         ],
         "'RBRACE": [
           -1,
-          622
+          632
         ],
         "'SPY": [
           -1,
-          622
+          632
         ],
         "'PARENSPACE": [
           -1,
-          622
+          632
         ],
         "'INT": [
           -1,
-          622
+          632
         ],
         "'LONG": [
           -1,
-          622
+          632
         ],
         "'DOUBLE": [
           -1,
-          622
+          632
         ],
         "'FLOAT": [
           -1,
-          622
+          632
         ],
         "'BOOLEAN": [
           -1,
-          622
+          632
         ],
         "'VOID": [
           -1,
-          622
+          632
         ],
         "'DATA": [
           -1,
-          622
+          632
         ],
         "'IF": [
           -1,
-          622
+          632
         ],
         "'ELSE": [
           -1,
-          622
+          632
         ],
         "'FOR": [
           -1,
-          622
+          632
         ],
         "'RETURN": [
           -1,
-          622
+          632
         ],
         "'VAR": [
           -1,
-          622
+          632
         ],
         "'REC": [
           -1,
-          622
+          632
         ],
         "'ATCHECK": [
           -1,
-          622
+          632
         ],
         "'ASSERTEQUALS": [
           -1,
-          622
+          632
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          622
+          632
         ],
         "'ASSERTTRUE": [
           -1,
-          622
+          632
         ],
         "'ASSERTFALSE": [
           -1,
-          622
+          632
         ],
         "'ASSERTSATISFIES": [
           -1,
-          622
+          632
         ],
         "'ASSERTRAISES": [
           -1,
-          622
+          632
         ],
         "'SWITCH": [
           -1,
-          622
+          632
         ],
         "'YIELD": [
           -1,
-          622
+          632
         ],
         "'DASH": [
           -1,
-          622
+          632
         ],
         "'BANG": [
           -1,
-          622
+          632
         ],
         "'LBRACK": [
           -1,
-          622
+          632
         ],
         "'NUMBER": [
           -1,
-          622
+          632
         ],
         "'TRUE": [
           -1,
-          622
+          632
         ],
         "'FALSE": [
           -1,
-          622
+          632
         ],
         "'NULL": [
           -1,
-          622
+          632
         ],
         "'PARENAFTERBRACE": [
           -1,
-          622
+          632
+        ],
+        "'BLOCK": [
+          -1,
+          632
         ],
         "'TABLE": [
           -1,
-          622
+          632
         ],
         "'ASK": [
           -1,
-          622
+          632
         ],
         "'NEW": [
           -1,
-          622
+          632
         ]
       },
       {
         "block": [
-          485
+          492
         ],
         "'LBRACE": [
-          302
+          309
         ],
         "'IF": [
-          486
+          493
         ]
       },
       {
         "'NAME": [
           -1,
-          624
+          634
         ],
         "'PARENNOSPACE": [
           -1,
-          624
+          634
         ],
         "'STRING": [
           -1,
-          624
+          634
         ],
         "'LBRACE": [
           -1,
-          624
+          634
         ],
         "'RBRACE": [
           -1,
-          624
+          634
         ],
         "'SPY": [
           -1,
-          624
+          634
         ],
         "'PARENSPACE": [
           -1,
-          624
+          634
         ],
         "'INT": [
           -1,
-          624
+          634
         ],
         "'LONG": [
           -1,
-          624
+          634
         ],
         "'DOUBLE": [
           -1,
-          624
+          634
         ],
         "'FLOAT": [
           -1,
-          624
+          634
         ],
         "'BOOLEAN": [
           -1,
-          624
+          634
         ],
         "'VOID": [
           -1,
-          624
+          634
         ],
         "'DATA": [
           -1,
-          624
+          634
         ],
         "'IF": [
           -1,
-          624
+          634
         ],
         "'FOR": [
           -1,
-          624
+          634
         ],
         "'RETURN": [
           -1,
-          624
+          634
         ],
         "'VAR": [
           -1,
-          624
+          634
         ],
         "'REC": [
           -1,
-          624
+          634
         ],
         "'ATCHECK": [
           -1,
-          624
+          634
         ],
         "'ASSERTEQUALS": [
           -1,
-          624
+          634
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          624
+          634
         ],
         "'ASSERTTRUE": [
           -1,
-          624
+          634
         ],
         "'ASSERTFALSE": [
           -1,
-          624
+          634
         ],
         "'ASSERTSATISFIES": [
           -1,
-          624
+          634
         ],
         "'ASSERTRAISES": [
           -1,
-          624
+          634
         ],
         "'SWITCH": [
           -1,
-          624
+          634
         ],
         "'YIELD": [
           -1,
-          624
+          634
         ],
         "'DASH": [
           -1,
-          624
+          634
         ],
         "'BANG": [
           -1,
-          624
+          634
         ],
         "'LBRACK": [
           -1,
-          624
+          634
         ],
         "'NUMBER": [
           -1,
-          624
+          634
         ],
         "'TRUE": [
           -1,
-          624
+          634
         ],
         "'FALSE": [
           -1,
-          624
+          634
         ],
         "'NULL": [
           -1,
-          624
+          634
         ],
         "'PARENAFTERBRACE": [
           -1,
-          624
+          634
+        ],
+        "'BLOCK": [
+          -1,
+          634
         ],
         "'TABLE": [
           -1,
-          624
+          634
         ],
         "'ASK": [
           -1,
-          624
+          634
         ],
         "'NEW": [
           -1,
-          624
+          634
         ]
       },
       {
         "block": [
-          487
+          494
         ],
         "'LBRACE": [
-          302
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          626
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          626
-        ],
-        "'STRING": [
-          -1,
-          626
-        ],
-        "'LBRACE": [
-          -1,
-          626
-        ],
-        "'RBRACE": [
-          -1,
-          626
-        ],
-        "'SPY": [
-          -1,
-          626
-        ],
-        "'PARENSPACE": [
-          -1,
-          626
-        ],
-        "'INT": [
-          -1,
-          626
-        ],
-        "'LONG": [
-          -1,
-          626
-        ],
-        "'DOUBLE": [
-          -1,
-          626
-        ],
-        "'FLOAT": [
-          -1,
-          626
-        ],
-        "'BOOLEAN": [
-          -1,
-          626
-        ],
-        "'VOID": [
-          -1,
-          626
-        ],
-        "'DATA": [
-          -1,
-          626
-        ],
-        "'IF": [
-          -1,
-          626
-        ],
-        "'FOR": [
-          -1,
-          626
-        ],
-        "'RETURN": [
-          -1,
-          626
-        ],
-        "'VAR": [
-          -1,
-          626
-        ],
-        "'REC": [
-          -1,
-          626
-        ],
-        "'ATCHECK": [
-          -1,
-          626
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          626
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          626
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          626
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          626
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          626
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          626
-        ],
-        "'SWITCH": [
-          -1,
-          626
-        ],
-        "'YIELD": [
-          -1,
-          626
-        ],
-        "'DASH": [
-          -1,
-          626
-        ],
-        "'BANG": [
-          -1,
-          626
-        ],
-        "'LBRACK": [
-          -1,
-          626
-        ],
-        "'NUMBER": [
-          -1,
-          626
-        ],
-        "'TRUE": [
-          -1,
-          626
-        ],
-        "'FALSE": [
-          -1,
-          626
-        ],
-        "'NULL": [
-          -1,
-          626
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          626
-        ],
-        "'TABLE": [
-          -1,
-          626
-        ],
-        "'ASK": [
-          -1,
-          626
-        ],
-        "'NEW": [
-          -1,
-          626
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          628
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          628
-        ],
-        "'STRING": [
-          -1,
-          628
-        ],
-        "'LBRACE": [
-          -1,
-          628
-        ],
-        "'RBRACE": [
-          -1,
-          628
-        ],
-        "'SPY": [
-          -1,
-          628
-        ],
-        "'PARENSPACE": [
-          -1,
-          628
-        ],
-        "'INT": [
-          -1,
-          628
-        ],
-        "'LONG": [
-          -1,
-          628
-        ],
-        "'DOUBLE": [
-          -1,
-          628
-        ],
-        "'FLOAT": [
-          -1,
-          628
-        ],
-        "'BOOLEAN": [
-          -1,
-          628
-        ],
-        "'VOID": [
-          -1,
-          628
-        ],
-        "'DATA": [
-          -1,
-          628
-        ],
-        "'IF": [
-          -1,
-          628
-        ],
-        "'FOR": [
-          -1,
-          628
-        ],
-        "'RETURN": [
-          -1,
-          628
-        ],
-        "'VAR": [
-          -1,
-          628
-        ],
-        "'REC": [
-          -1,
-          628
-        ],
-        "'ATCHECK": [
-          -1,
-          628
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          628
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          628
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          628
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          628
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          628
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          628
-        ],
-        "'SWITCH": [
-          -1,
-          628
-        ],
-        "'YIELD": [
-          -1,
-          628
-        ],
-        "'DASH": [
-          -1,
-          628
-        ],
-        "'BANG": [
-          -1,
-          628
-        ],
-        "'LBRACK": [
-          -1,
-          628
-        ],
-        "'NUMBER": [
-          -1,
-          628
-        ],
-        "'TRUE": [
-          -1,
-          628
-        ],
-        "'FALSE": [
-          -1,
-          628
-        ],
-        "'NULL": [
-          -1,
-          628
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          628
-        ],
-        "'TABLE": [
-          -1,
-          628
-        ],
-        "'ASK": [
-          -1,
-          628
-        ],
-        "'NEW": [
-          -1,
-          628
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          630
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          630
-        ],
-        "'STRING": [
-          -1,
-          630
-        ],
-        "'LBRACE": [
-          -1,
-          630
-        ],
-        "'RBRACE": [
-          -1,
-          630
-        ],
-        "'SPY": [
-          -1,
-          630
-        ],
-        "'PARENSPACE": [
-          -1,
-          630
-        ],
-        "'INT": [
-          -1,
-          630
-        ],
-        "'LONG": [
-          -1,
-          630
-        ],
-        "'DOUBLE": [
-          -1,
-          630
-        ],
-        "'FLOAT": [
-          -1,
-          630
-        ],
-        "'BOOLEAN": [
-          -1,
-          630
-        ],
-        "'VOID": [
-          -1,
-          630
-        ],
-        "'DATA": [
-          -1,
-          630
-        ],
-        "'IF": [
-          -1,
-          630
-        ],
-        "'FOR": [
-          -1,
-          630
-        ],
-        "'RETURN": [
-          -1,
-          630
-        ],
-        "'VAR": [
-          -1,
-          630
-        ],
-        "'REC": [
-          -1,
-          630
-        ],
-        "'ATCHECK": [
-          -1,
-          630
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          630
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          630
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          630
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          630
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          630
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          630
-        ],
-        "'SWITCH": [
-          -1,
-          630
-        ],
-        "'YIELD": [
-          -1,
-          630
-        ],
-        "'DASH": [
-          -1,
-          630
-        ],
-        "'BANG": [
-          -1,
-          630
-        ],
-        "'LBRACK": [
-          -1,
-          630
-        ],
-        "'NUMBER": [
-          -1,
-          630
-        ],
-        "'TRUE": [
-          -1,
-          630
-        ],
-        "'FALSE": [
-          -1,
-          630
-        ],
-        "'NULL": [
-          -1,
-          630
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          630
-        ],
-        "'TABLE": [
-          -1,
-          630
-        ],
-        "'ASK": [
-          -1,
-          630
-        ],
-        "'NEW": [
-          -1,
-          630
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          632
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          632
-        ],
-        "'STRING": [
-          -1,
-          632
-        ],
-        "'LBRACE": [
-          -1,
-          632
-        ],
-        "'RBRACE": [
-          -1,
-          632
-        ],
-        "'SPY": [
-          -1,
-          632
-        ],
-        "'PARENSPACE": [
-          -1,
-          632
-        ],
-        "'INT": [
-          -1,
-          632
-        ],
-        "'LONG": [
-          -1,
-          632
-        ],
-        "'DOUBLE": [
-          -1,
-          632
-        ],
-        "'FLOAT": [
-          -1,
-          632
-        ],
-        "'BOOLEAN": [
-          -1,
-          632
-        ],
-        "'VOID": [
-          -1,
-          632
-        ],
-        "'DATA": [
-          -1,
-          632
-        ],
-        "'IF": [
-          -1,
-          632
-        ],
-        "'FOR": [
-          -1,
-          632
-        ],
-        "'RETURN": [
-          -1,
-          632
-        ],
-        "'VAR": [
-          -1,
-          632
-        ],
-        "'REC": [
-          -1,
-          632
-        ],
-        "'ATCHECK": [
-          -1,
-          632
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          632
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          632
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          632
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          632
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          632
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          632
-        ],
-        "'SWITCH": [
-          -1,
-          632
-        ],
-        "'YIELD": [
-          -1,
-          632
-        ],
-        "'DASH": [
-          -1,
-          632
-        ],
-        "'BANG": [
-          -1,
-          632
-        ],
-        "'LBRACK": [
-          -1,
-          632
-        ],
-        "'NUMBER": [
-          -1,
-          632
-        ],
-        "'TRUE": [
-          -1,
-          632
-        ],
-        "'FALSE": [
-          -1,
-          632
-        ],
-        "'NULL": [
-          -1,
-          632
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          632
-        ],
-        "'TABLE": [
-          -1,
-          632
-        ],
-        "'ASK": [
-          -1,
-          632
-        ],
-        "'NEW": [
-          -1,
-          632
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          634
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          634
-        ],
-        "'STRING": [
-          -1,
-          634
-        ],
-        "'LBRACE": [
-          -1,
-          634
-        ],
-        "'RBRACE": [
-          -1,
-          634
-        ],
-        "'SPY": [
-          -1,
-          634
-        ],
-        "'PARENSPACE": [
-          -1,
-          634
-        ],
-        "'INT": [
-          -1,
-          634
-        ],
-        "'LONG": [
-          -1,
-          634
-        ],
-        "'DOUBLE": [
-          -1,
-          634
-        ],
-        "'FLOAT": [
-          -1,
-          634
-        ],
-        "'BOOLEAN": [
-          -1,
-          634
-        ],
-        "'VOID": [
-          -1,
-          634
-        ],
-        "'DATA": [
-          -1,
-          634
-        ],
-        "'IF": [
-          -1,
-          634
-        ],
-        "'FOR": [
-          -1,
-          634
-        ],
-        "'RETURN": [
-          -1,
-          634
-        ],
-        "'VAR": [
-          -1,
-          634
-        ],
-        "'REC": [
-          -1,
-          634
-        ],
-        "'ATCHECK": [
-          -1,
-          634
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          634
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          634
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          634
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          634
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          634
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          634
-        ],
-        "'SWITCH": [
-          -1,
-          634
-        ],
-        "'YIELD": [
-          -1,
-          634
-        ],
-        "'DASH": [
-          -1,
-          634
-        ],
-        "'BANG": [
-          -1,
-          634
-        ],
-        "'LBRACK": [
-          -1,
-          634
-        ],
-        "'NUMBER": [
-          -1,
-          634
-        ],
-        "'TRUE": [
-          -1,
-          634
-        ],
-        "'FALSE": [
-          -1,
-          634
-        ],
-        "'NULL": [
-          -1,
-          634
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          634
-        ],
-        "'TABLE": [
-          -1,
-          634
-        ],
-        "'ASK": [
-          -1,
-          634
-        ],
-        "'NEW": [
-          -1,
-          634
+          309
         ]
       },
       {
@@ -44450,6 +45934,10 @@ function(E) {
           636
         ],
         "'PARENAFTERBRACE": [
+          -1,
+          636
+        ],
+        "'BLOCK": [
           -1,
           636
         ],
@@ -44611,6 +46099,10 @@ function(E) {
           -1,
           638
         ],
+        "'BLOCK": [
+          -1,
+          638
+        ],
         "'TABLE": [
           -1,
           638
@@ -44769,6 +46261,10 @@ function(E) {
           -1,
           640
         ],
+        "'BLOCK": [
+          -1,
+          640
+        ],
         "'TABLE": [
           -1,
           640
@@ -44927,6 +46423,10 @@ function(E) {
           -1,
           642
         ],
+        "'BLOCK": [
+          -1,
+          642
+        ],
         "'TABLE": [
           -1,
           642
@@ -45085,6 +46585,10 @@ function(E) {
           -1,
           644
         ],
+        "'BLOCK": [
+          -1,
+          644
+        ],
         "'TABLE": [
           -1,
           644
@@ -45243,6 +46747,10 @@ function(E) {
           -1,
           646
         ],
+        "'BLOCK": [
+          -1,
+          646
+        ],
         "'TABLE": [
           -1,
           646
@@ -45401,6 +46909,10 @@ function(E) {
           -1,
           648
         ],
+        "'BLOCK": [
+          -1,
+          648
+        ],
         "'TABLE": [
           -1,
           648
@@ -45415,712 +46927,850 @@ function(E) {
         ]
       },
       {
-        "case-branch_A0_I3_I1*": [
-          488
-        ],
-        "'RPAREN": [
+        "'NAME": [
           -1,
-          650,
+          650
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          650
+        ],
+        "'STRING": [
+          -1,
+          650
+        ],
+        "'LBRACE": [
+          -1,
+          650
+        ],
+        "'RBRACE": [
+          -1,
+          650
+        ],
+        "'SPY": [
+          -1,
+          650
+        ],
+        "'PARENSPACE": [
+          -1,
+          650
+        ],
+        "'INT": [
+          -1,
+          650
+        ],
+        "'LONG": [
+          -1,
+          650
+        ],
+        "'DOUBLE": [
+          -1,
+          650
+        ],
+        "'FLOAT": [
+          -1,
+          650
+        ],
+        "'BOOLEAN": [
+          -1,
+          650
+        ],
+        "'VOID": [
+          -1,
+          650
+        ],
+        "'DATA": [
+          -1,
+          650
+        ],
+        "'IF": [
+          -1,
+          650
+        ],
+        "'FOR": [
+          -1,
+          650
+        ],
+        "'RETURN": [
+          -1,
+          650
+        ],
+        "'VAR": [
+          -1,
+          650
+        ],
+        "'REC": [
+          -1,
+          650
+        ],
+        "'ATCHECK": [
+          -1,
+          650
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          650
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          650
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          650
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          650
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          650
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          650
+        ],
+        "'SWITCH": [
+          -1,
+          650
+        ],
+        "'YIELD": [
+          -1,
+          650
+        ],
+        "'DASH": [
+          -1,
+          650
+        ],
+        "'BANG": [
+          -1,
+          650
+        ],
+        "'LBRACK": [
+          -1,
+          650
+        ],
+        "'NUMBER": [
+          -1,
+          650
+        ],
+        "'TRUE": [
+          -1,
+          650
+        ],
+        "'FALSE": [
+          -1,
+          650
+        ],
+        "'NULL": [
+          -1,
+          650
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          650
+        ],
+        "'BLOCK": [
+          -1,
+          650
+        ],
+        "'TABLE": [
+          -1,
+          650
+        ],
+        "'ASK": [
+          -1,
+          650
+        ],
+        "'NEW": [
+          -1,
+          650
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
           652
         ],
-        "'COMMA": [
+        "'PARENNOSPACE": [
+          -1,
+          652
+        ],
+        "'STRING": [
+          -1,
+          652
+        ],
+        "'LBRACE": [
+          -1,
+          652
+        ],
+        "'RBRACE": [
+          -1,
+          652
+        ],
+        "'SPY": [
+          -1,
+          652
+        ],
+        "'PARENSPACE": [
+          -1,
+          652
+        ],
+        "'INT": [
+          -1,
+          652
+        ],
+        "'LONG": [
+          -1,
+          652
+        ],
+        "'DOUBLE": [
+          -1,
+          652
+        ],
+        "'FLOAT": [
+          -1,
+          652
+        ],
+        "'BOOLEAN": [
+          -1,
+          652
+        ],
+        "'VOID": [
+          -1,
+          652
+        ],
+        "'DATA": [
+          -1,
+          652
+        ],
+        "'IF": [
+          -1,
+          652
+        ],
+        "'FOR": [
+          -1,
+          652
+        ],
+        "'RETURN": [
+          -1,
+          652
+        ],
+        "'VAR": [
+          -1,
+          652
+        ],
+        "'REC": [
+          -1,
+          652
+        ],
+        "'ATCHECK": [
+          -1,
+          652
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          652
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          652
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          652
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          652
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          652
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          652
+        ],
+        "'SWITCH": [
+          -1,
+          652
+        ],
+        "'YIELD": [
+          -1,
+          652
+        ],
+        "'DASH": [
+          -1,
+          652
+        ],
+        "'BANG": [
+          -1,
+          652
+        ],
+        "'LBRACK": [
+          -1,
+          652
+        ],
+        "'NUMBER": [
+          -1,
+          652
+        ],
+        "'TRUE": [
+          -1,
+          652
+        ],
+        "'FALSE": [
+          -1,
+          652
+        ],
+        "'NULL": [
+          -1,
+          652
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          652
+        ],
+        "'BLOCK": [
+          -1,
+          652
+        ],
+        "'TABLE": [
+          -1,
+          652
+        ],
+        "'ASK": [
+          -1,
+          652
+        ],
+        "'NEW": [
           -1,
           652
         ]
       },
       {
-        "'RPAREN": [
-          489
-        ]
-      },
-      {
-        "'RPAREN": [
+        "'NAME": [
+          -1,
+          654
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          654
+        ],
+        "'STRING": [
+          -1,
+          654
+        ],
+        "'LBRACE": [
+          -1,
+          654
+        ],
+        "'RBRACE": [
+          -1,
+          654
+        ],
+        "'SPY": [
+          -1,
+          654
+        ],
+        "'PARENSPACE": [
+          -1,
+          654
+        ],
+        "'INT": [
+          -1,
+          654
+        ],
+        "'LONG": [
+          -1,
+          654
+        ],
+        "'DOUBLE": [
+          -1,
+          654
+        ],
+        "'FLOAT": [
+          -1,
+          654
+        ],
+        "'BOOLEAN": [
+          -1,
+          654
+        ],
+        "'VOID": [
+          -1,
+          654
+        ],
+        "'DATA": [
+          -1,
+          654
+        ],
+        "'IF": [
+          -1,
+          654
+        ],
+        "'FOR": [
+          -1,
+          654
+        ],
+        "'RETURN": [
+          -1,
+          654
+        ],
+        "'VAR": [
+          -1,
+          654
+        ],
+        "'REC": [
+          -1,
+          654
+        ],
+        "'ATCHECK": [
+          -1,
+          654
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          654
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          654
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          654
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          654
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          654
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          654
+        ],
+        "'SWITCH": [
+          -1,
+          654
+        ],
+        "'YIELD": [
+          -1,
+          654
+        ],
+        "'DASH": [
+          -1,
+          654
+        ],
+        "'BANG": [
+          -1,
+          654
+        ],
+        "'LBRACK": [
+          -1,
+          654
+        ],
+        "'NUMBER": [
+          -1,
+          654
+        ],
+        "'TRUE": [
+          -1,
+          654
+        ],
+        "'FALSE": [
+          -1,
+          654
+        ],
+        "'NULL": [
+          -1,
+          654
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          654
+        ],
+        "'BLOCK": [
+          -1,
+          654
+        ],
+        "'TABLE": [
+          -1,
+          654
+        ],
+        "'ASK": [
+          -1,
+          654
+        ],
+        "'NEW": [
           -1,
           654
         ]
       },
       {
+        "'NAME": [
+          -1,
+          656
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          656
+        ],
+        "'STRING": [
+          -1,
+          656
+        ],
+        "'LBRACE": [
+          -1,
+          656
+        ],
         "'RBRACE": [
           -1,
           656
         ],
-        "'CASE": [
+        "'SPY": [
           -1,
           656
         ],
-        "'DEFAULT": [
+        "'PARENSPACE": [
           -1,
           656
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          658
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          658
-        ],
-        "'STRING": [
-          -1,
-          658
-        ],
-        "'LBRACE": [
-          -1,
-          658
-        ],
-        "'SPY": [
-          -1,
-          658
-        ],
-        "'PARENSPACE": [
-          -1,
-          658
         ],
         "'INT": [
           -1,
-          658
+          656
         ],
         "'LONG": [
           -1,
-          658
+          656
         ],
         "'DOUBLE": [
           -1,
-          658
+          656
         ],
         "'FLOAT": [
           -1,
-          658
+          656
         ],
         "'BOOLEAN": [
           -1,
-          658
+          656
         ],
         "'VOID": [
           -1,
-          658
+          656
         ],
         "'DATA": [
           -1,
-          658
+          656
         ],
         "'IF": [
           -1,
-          658
+          656
         ],
         "'FOR": [
           -1,
-          658
+          656
         ],
         "'RETURN": [
           -1,
-          658
+          656
         ],
         "'VAR": [
           -1,
-          658
+          656
         ],
         "'REC": [
           -1,
-          658
+          656
         ],
         "'ATCHECK": [
           -1,
-          658
-        ],
-        "'SWITCH": [
-          -1,
-          658
-        ],
-        "'YIELD": [
-          -1,
-          658
-        ],
-        "'DASH": [
-          -1,
-          658
-        ],
-        "'BANG": [
-          -1,
-          658
-        ],
-        "'LBRACK": [
-          -1,
-          658
-        ],
-        "'NUMBER": [
-          -1,
-          658
-        ],
-        "'TRUE": [
-          -1,
-          658
-        ],
-        "'FALSE": [
-          -1,
-          658
-        ],
-        "'NULL": [
-          -1,
-          658
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          658
-        ],
-        "'TABLE": [
-          -1,
-          658
-        ],
-        "'ASK": [
-          -1,
-          658
-        ],
-        "'NEW": [
-          -1,
-          658
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          276
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          276
-        ],
-        "'STRING": [
-          -1,
-          276
-        ],
-        "'LBRACE": [
-          -1,
-          276
-        ],
-        "'RBRACE": [
-          -1,
-          660
-        ],
-        "'SPY": [
-          -1,
-          276
-        ],
-        "'PARENSPACE": [
-          -1,
-          276
-        ],
-        "'INT": [
-          -1,
-          276
-        ],
-        "'LONG": [
-          -1,
-          276
-        ],
-        "'DOUBLE": [
-          -1,
-          276
-        ],
-        "'FLOAT": [
-          -1,
-          276
-        ],
-        "'BOOLEAN": [
-          -1,
-          276
-        ],
-        "'VOID": [
-          -1,
-          276
-        ],
-        "'DATA": [
-          -1,
-          276
-        ],
-        "'IF": [
-          -1,
-          276
-        ],
-        "'FOR": [
-          -1,
-          276
-        ],
-        "'RETURN": [
-          -1,
-          276
-        ],
-        "'VAR": [
-          -1,
-          276
-        ],
-        "'REC": [
-          -1,
-          276
-        ],
-        "'ATCHECK": [
-          -1,
-          276
-        ],
-        "'SWITCH": [
-          -1,
-          276
-        ],
-        "'CASE": [
-          -1,
-          660
-        ],
-        "'DEFAULT": [
-          -1,
-          660
-        ],
-        "'YIELD": [
-          -1,
-          276
-        ],
-        "'DASH": [
-          -1,
-          276
-        ],
-        "'BANG": [
-          -1,
-          276
-        ],
-        "'LBRACK": [
-          -1,
-          276
-        ],
-        "'NUMBER": [
-          -1,
-          276
-        ],
-        "'TRUE": [
-          -1,
-          276
-        ],
-        "'FALSE": [
-          -1,
-          276
-        ],
-        "'NULL": [
-          -1,
-          276
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          276
-        ],
-        "'TABLE": [
-          -1,
-          276
-        ],
-        "'ASK": [
-          -1,
-          276
-        ],
-        "'NEW": [
-          -1,
-          276
-        ]
-      },
-      {
-        "'NAME": [
-          -1,
-          662
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          662
-        ],
-        "'STRING": [
-          -1,
-          662
-        ],
-        "'LBRACE": [
-          -1,
-          662
-        ],
-        "'SPY": [
-          -1,
-          662
-        ],
-        "'PARENSPACE": [
-          -1,
-          662
-        ],
-        "'INT": [
-          -1,
-          662
-        ],
-        "'LONG": [
-          -1,
-          662
-        ],
-        "'DOUBLE": [
-          -1,
-          662
-        ],
-        "'FLOAT": [
-          -1,
-          662
-        ],
-        "'BOOLEAN": [
-          -1,
-          662
-        ],
-        "'VOID": [
-          -1,
-          662
-        ],
-        "'DATA": [
-          -1,
-          662
-        ],
-        "'IF": [
-          -1,
-          662
-        ],
-        "'FOR": [
-          -1,
-          662
-        ],
-        "'RETURN": [
-          -1,
-          662
-        ],
-        "'VAR": [
-          -1,
-          662
-        ],
-        "'REC": [
-          -1,
-          662
-        ],
-        "'ATCHECK": [
-          -1,
-          662
-        ],
-        "'SWITCH": [
-          -1,
-          662
-        ],
-        "'YIELD": [
-          -1,
-          662
-        ],
-        "'DASH": [
-          -1,
-          662
-        ],
-        "'BANG": [
-          -1,
-          662
-        ],
-        "'LBRACK": [
-          -1,
-          662
-        ],
-        "'NUMBER": [
-          -1,
-          662
-        ],
-        "'TRUE": [
-          -1,
-          662
-        ],
-        "'FALSE": [
-          -1,
-          662
-        ],
-        "'NULL": [
-          -1,
-          662
-        ],
-        "'PARENAFTERBRACE": [
-          -1,
-          662
-        ],
-        "'TABLE": [
-          -1,
-          662
-        ],
-        "'ASK": [
-          -1,
-          662
-        ],
-        "'NEW": [
-          -1,
-          662
-        ]
-      },
-      {
-        "$": [
-          -1,
-          664
-        ],
-        "'NAME": [
-          -1,
-          664
-        ],
-        "'SEMI": [
-          -1,
-          664
-        ],
-        "'PARENNOSPACE": [
-          -1,
-          664
-        ],
-        "'STRING": [
-          -1,
-          664
-        ],
-        "'RPAREN": [
-          -1,
-          664
-        ],
-        "'LBRACE": [
-          -1,
-          664
-        ],
-        "'RBRACE": [
-          -1,
-          664
-        ],
-        "'SPY": [
-          -1,
-          664
-        ],
-        "'PARENSPACE": [
-          -1,
-          664
-        ],
-        "'COMMA": [
-          -1,
-          664
-        ],
-        "'INT": [
-          -1,
-          664
-        ],
-        "'LONG": [
-          -1,
-          664
-        ],
-        "'DOUBLE": [
-          -1,
-          664
-        ],
-        "'FLOAT": [
-          -1,
-          664
-        ],
-        "'BOOLEAN": [
-          -1,
-          664
-        ],
-        "'VOID": [
-          -1,
-          664
-        ],
-        "'LT": [
-          -1,
-          664
-        ],
-        "'GT": [
-          -1,
-          664
-        ],
-        "'THINARROW": [
-          -1,
-          664
-        ],
-        "'DATA": [
-          -1,
-          664
-        ],
-        "'IF": [
-          -1,
-          664
-        ],
-        "'FOR": [
-          -1,
-          664
-        ],
-        "'RETURN": [
-          -1,
-          664
-        ],
-        "'VAR": [
-          -1,
-          664
-        ],
-        "'REC": [
-          -1,
-          664
-        ],
-        "'ATCHECK": [
-          -1,
-          664
+          656
         ],
         "'ASSERTEQUALS": [
           -1,
-          664
+          656
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          664
+          656
         ],
         "'ASSERTTRUE": [
           -1,
-          664
+          656
         ],
         "'ASSERTFALSE": [
           -1,
-          664
+          656
         ],
         "'ASSERTSATISFIES": [
           -1,
-          664
+          656
         ],
         "'ASSERTRAISES": [
           -1,
-          664
-        ],
-        "'IS": [
-          -1,
-          664
-        ],
-        "'ISNOT": [
-          -1,
-          664
-        ],
-        "'SATISFIES": [
-          -1,
-          664
-        ],
-        "'RAISES": [
-          -1,
-          664
+          656
         ],
         "'SWITCH": [
           -1,
-          664
-        ],
-        "'CASE": [
-          -1,
-          664
-        ],
-        "'DEFAULT": [
-          -1,
-          664
+          656
         ],
         "'YIELD": [
           -1,
-          664
-        ],
-        "'PLUS": [
-          -1,
-          664
+          656
         ],
         "'DASH": [
           -1,
-          664
-        ],
-        "'TIMES": [
-          -1,
-          664
-        ],
-        "'SLASH": [
-          -1,
-          664
-        ],
-        "'PERCENT": [
-          -1,
-          664
-        ],
-        "'EQUALEQUAL": [
-          -1,
-          664
-        ],
-        "'NEQ": [
-          -1,
-          664
-        ],
-        "'LEQ": [
-          -1,
-          664
-        ],
-        "'GEQ": [
-          -1,
-          664
-        ],
-        "'AND": [
-          -1,
-          664
-        ],
-        "'OR": [
-          -1,
-          664
+          656
         ],
         "'BANG": [
           -1,
-          664
-        ],
-        "'DOT": [
-          -1,
-          664
+          656
         ],
         "'LBRACK": [
           -1,
-          664
-        ],
-        "'RBRACK": [
-          -1,
-          664
+          656
         ],
         "'NUMBER": [
           -1,
-          664
+          656
         ],
         "'TRUE": [
           -1,
-          664
+          656
         ],
         "'FALSE": [
           -1,
-          664
+          656
         ],
         "'NULL": [
           -1,
-          664
+          656
         ],
         "'PARENAFTERBRACE": [
           -1,
-          664
+          656
+        ],
+        "'BLOCK": [
+          -1,
+          656
         ],
         "'TABLE": [
           -1,
-          664
+          656
         ],
         "'ASK": [
           -1,
-          664
+          656
         ],
         "'NEW": [
+          -1,
+          656
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          658
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          658
+        ],
+        "'STRING": [
+          -1,
+          658
+        ],
+        "'LBRACE": [
+          -1,
+          658
+        ],
+        "'RBRACE": [
+          -1,
+          658
+        ],
+        "'SPY": [
+          -1,
+          658
+        ],
+        "'PARENSPACE": [
+          -1,
+          658
+        ],
+        "'INT": [
+          -1,
+          658
+        ],
+        "'LONG": [
+          -1,
+          658
+        ],
+        "'DOUBLE": [
+          -1,
+          658
+        ],
+        "'FLOAT": [
+          -1,
+          658
+        ],
+        "'BOOLEAN": [
+          -1,
+          658
+        ],
+        "'VOID": [
+          -1,
+          658
+        ],
+        "'DATA": [
+          -1,
+          658
+        ],
+        "'IF": [
+          -1,
+          658
+        ],
+        "'FOR": [
+          -1,
+          658
+        ],
+        "'RETURN": [
+          -1,
+          658
+        ],
+        "'VAR": [
+          -1,
+          658
+        ],
+        "'REC": [
+          -1,
+          658
+        ],
+        "'ATCHECK": [
+          -1,
+          658
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          658
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          658
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          658
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          658
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          658
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          658
+        ],
+        "'SWITCH": [
+          -1,
+          658
+        ],
+        "'YIELD": [
+          -1,
+          658
+        ],
+        "'DASH": [
+          -1,
+          658
+        ],
+        "'BANG": [
+          -1,
+          658
+        ],
+        "'LBRACK": [
+          -1,
+          658
+        ],
+        "'NUMBER": [
+          -1,
+          658
+        ],
+        "'TRUE": [
+          -1,
+          658
+        ],
+        "'FALSE": [
+          -1,
+          658
+        ],
+        "'NULL": [
+          -1,
+          658
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          658
+        ],
+        "'BLOCK": [
+          -1,
+          658
+        ],
+        "'TABLE": [
+          -1,
+          658
+        ],
+        "'ASK": [
+          -1,
+          658
+        ],
+        "'NEW": [
+          -1,
+          658
+        ]
+      },
+      {
+        "case-branch_A0_I3_I1*": [
+          495
+        ],
+        "'RPAREN": [
+          -1,
+          660,
+          662
+        ],
+        "'COMMA": [
+          -1,
+          662
+        ]
+      },
+      {
+        "'RPAREN": [
+          496
+        ]
+      },
+      {
+        "'RPAREN": [
           -1,
           664
         ]
       },
       {
-        "'COMMA": [
-          490
+        "'RBRACE": [
+          -1,
+          666
         ],
-        "table-row_I3": [
-          491
+        "'CASE": [
+          -1,
+          666
         ],
-        "'SEMI": [
+        "'DEFAULT": [
           -1,
           666
         ]
@@ -46142,10 +47792,6 @@ function(E) {
           -1,
           668
         ],
-        "'RBRACE": [
-          -1,
-          668
-        ],
         "'SPY": [
           -1,
           668
@@ -46206,30 +47852,6 @@ function(E) {
           -1,
           668
         ],
-        "'ASSERTEQUALS": [
-          -1,
-          668
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          668
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          668
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          668
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          668
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          668
-        ],
         "'SWITCH": [
           -1,
           668
@@ -46270,6 +47892,10 @@ function(E) {
           -1,
           668
         ],
+        "'BLOCK": [
+          -1,
+          668
+        ],
         "'TABLE": [
           -1,
           668
@@ -46281,29 +47907,24 @@ function(E) {
         "'NEW": [
           -1,
           668
-        ]
-      },
-      {
-        "'PARENSPACE": [
-          492
         ]
       },
       {
         "'NAME": [
           -1,
-          670
+          280
         ],
         "'PARENNOSPACE": [
           -1,
-          670
+          280
         ],
         "'STRING": [
           -1,
-          670
+          280
         ],
         "'LBRACE": [
           -1,
-          670
+          280
         ],
         "'RBRACE": [
           -1,
@@ -46311,161 +47932,886 @@ function(E) {
         ],
         "'SPY": [
           -1,
-          670
+          280
         ],
         "'PARENSPACE": [
           -1,
-          670
+          280
         ],
         "'INT": [
           -1,
-          670
+          280
         ],
         "'LONG": [
           -1,
-          670
+          280
         ],
         "'DOUBLE": [
           -1,
-          670
+          280
         ],
         "'FLOAT": [
           -1,
-          670
+          280
         ],
         "'BOOLEAN": [
           -1,
-          670
+          280
         ],
         "'VOID": [
           -1,
-          670
+          280
         ],
         "'DATA": [
           -1,
-          670
+          280
         ],
         "'IF": [
           -1,
-          670
+          280
         ],
         "'FOR": [
           -1,
-          670
+          280
         ],
         "'RETURN": [
           -1,
-          670
+          280
         ],
         "'VAR": [
           -1,
-          670
+          280
         ],
         "'REC": [
           -1,
-          670
+          280
         ],
         "'ATCHECK": [
           -1,
-          670
-        ],
-        "'ASSERTEQUALS": [
-          -1,
-          670
-        ],
-        "'ASSERTNOTEQUALS": [
-          -1,
-          670
-        ],
-        "'ASSERTTRUE": [
-          -1,
-          670
-        ],
-        "'ASSERTFALSE": [
-          -1,
-          670
-        ],
-        "'ASSERTSATISFIES": [
-          -1,
-          670
-        ],
-        "'ASSERTRAISES": [
-          -1,
-          670
+          280
         ],
         "'SWITCH": [
+          -1,
+          280
+        ],
+        "'CASE": [
+          -1,
+          670
+        ],
+        "'DEFAULT": [
           -1,
           670
         ],
         "'YIELD": [
           -1,
-          670
+          280
         ],
         "'DASH": [
           -1,
-          670
+          280
         ],
         "'BANG": [
           -1,
-          670
+          280
         ],
         "'LBRACK": [
           -1,
-          670
+          280
         ],
         "'NUMBER": [
           -1,
-          670
+          280
         ],
         "'TRUE": [
           -1,
-          670
+          280
         ],
         "'FALSE": [
           -1,
-          670
+          280
         ],
         "'NULL": [
           -1,
-          670
+          280
         ],
         "'PARENAFTERBRACE": [
           -1,
-          670
+          280
+        ],
+        "'BLOCK": [
+          -1,
+          280
         ],
         "'TABLE": [
           -1,
-          670
+          280
         ],
         "'ASK": [
           -1,
-          670
+          280
         ],
         "'NEW": [
           -1,
-          670
+          280
         ]
       },
       {
-        "'COMMA": [
-          493
+        "'NAME": [
+          -1,
+          672
         ],
-        "case-branch_A0_I3_I1": [
-          494
+        "'PARENNOSPACE": [
+          -1,
+          672
         ],
-        "'RPAREN": [
+        "'STRING": [
+          -1,
+          672
+        ],
+        "'LBRACE": [
+          -1,
+          672
+        ],
+        "'SPY": [
+          -1,
+          672
+        ],
+        "'PARENSPACE": [
+          -1,
+          672
+        ],
+        "'INT": [
+          -1,
+          672
+        ],
+        "'LONG": [
+          -1,
+          672
+        ],
+        "'DOUBLE": [
+          -1,
+          672
+        ],
+        "'FLOAT": [
+          -1,
+          672
+        ],
+        "'BOOLEAN": [
+          -1,
+          672
+        ],
+        "'VOID": [
+          -1,
+          672
+        ],
+        "'DATA": [
+          -1,
+          672
+        ],
+        "'IF": [
+          -1,
+          672
+        ],
+        "'FOR": [
+          -1,
+          672
+        ],
+        "'RETURN": [
+          -1,
+          672
+        ],
+        "'VAR": [
+          -1,
+          672
+        ],
+        "'REC": [
+          -1,
+          672
+        ],
+        "'ATCHECK": [
+          -1,
+          672
+        ],
+        "'SWITCH": [
+          -1,
+          672
+        ],
+        "'YIELD": [
+          -1,
+          672
+        ],
+        "'DASH": [
+          -1,
+          672
+        ],
+        "'BANG": [
+          -1,
+          672
+        ],
+        "'LBRACK": [
+          -1,
+          672
+        ],
+        "'NUMBER": [
+          -1,
+          672
+        ],
+        "'TRUE": [
+          -1,
+          672
+        ],
+        "'FALSE": [
+          -1,
+          672
+        ],
+        "'NULL": [
+          -1,
+          672
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          672
+        ],
+        "'BLOCK": [
+          -1,
+          672
+        ],
+        "'TABLE": [
+          -1,
+          672
+        ],
+        "'ASK": [
+          -1,
+          672
+        ],
+        "'NEW": [
           -1,
           672
         ]
       },
       {
-        "'COLON": [
-          495
+        "$": [
+          -1,
+          674
+        ],
+        "'NAME": [
+          -1,
+          674
+        ],
+        "'SEMI": [
+          -1,
+          674
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          674
+        ],
+        "'STRING": [
+          -1,
+          674
+        ],
+        "'RPAREN": [
+          -1,
+          674
+        ],
+        "'LBRACE": [
+          -1,
+          674
+        ],
+        "'RBRACE": [
+          -1,
+          674
+        ],
+        "'SPY": [
+          -1,
+          674
+        ],
+        "'PARENSPACE": [
+          -1,
+          674
+        ],
+        "'COMMA": [
+          -1,
+          674
+        ],
+        "'INT": [
+          -1,
+          674
+        ],
+        "'LONG": [
+          -1,
+          674
+        ],
+        "'DOUBLE": [
+          -1,
+          674
+        ],
+        "'FLOAT": [
+          -1,
+          674
+        ],
+        "'BOOLEAN": [
+          -1,
+          674
+        ],
+        "'VOID": [
+          -1,
+          674
+        ],
+        "'LT": [
+          -1,
+          674
+        ],
+        "'GT": [
+          -1,
+          674
+        ],
+        "'THINARROW": [
+          -1,
+          674
+        ],
+        "'DATA": [
+          -1,
+          674
+        ],
+        "'IF": [
+          -1,
+          674
+        ],
+        "'FOR": [
+          -1,
+          674
+        ],
+        "'RETURN": [
+          -1,
+          674
+        ],
+        "'VAR": [
+          -1,
+          674
+        ],
+        "'REC": [
+          -1,
+          674
+        ],
+        "'ATCHECK": [
+          -1,
+          674
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          674
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          674
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          674
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          674
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          674
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          674
+        ],
+        "'IS": [
+          -1,
+          674
+        ],
+        "'ISNOT": [
+          -1,
+          674
+        ],
+        "'SATISFIES": [
+          -1,
+          674
+        ],
+        "'RAISES": [
+          -1,
+          674
+        ],
+        "'SWITCH": [
+          -1,
+          674
+        ],
+        "'CASE": [
+          -1,
+          674
+        ],
+        "'DEFAULT": [
+          -1,
+          674
+        ],
+        "'YIELD": [
+          -1,
+          674
+        ],
+        "'PLUS": [
+          -1,
+          674
+        ],
+        "'DASH": [
+          -1,
+          674
+        ],
+        "'TIMES": [
+          -1,
+          674
+        ],
+        "'SLASH": [
+          -1,
+          674
+        ],
+        "'PERCENT": [
+          -1,
+          674
+        ],
+        "'EQUALEQUAL": [
+          -1,
+          674
+        ],
+        "'NEQ": [
+          -1,
+          674
+        ],
+        "'LEQ": [
+          -1,
+          674
+        ],
+        "'GEQ": [
+          -1,
+          674
+        ],
+        "'AND": [
+          -1,
+          674
+        ],
+        "'OR": [
+          -1,
+          674
+        ],
+        "'BANG": [
+          -1,
+          674
+        ],
+        "'DOT": [
+          -1,
+          674
+        ],
+        "'LBRACK": [
+          -1,
+          674
+        ],
+        "'RBRACK": [
+          -1,
+          674
+        ],
+        "'NUMBER": [
+          -1,
+          674
+        ],
+        "'TRUE": [
+          -1,
+          674
+        ],
+        "'FALSE": [
+          -1,
+          674
+        ],
+        "'NULL": [
+          -1,
+          674
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          674
+        ],
+        "'BLOCK": [
+          -1,
+          674
+        ],
+        "'TABLE": [
+          -1,
+          674
+        ],
+        "'ASK": [
+          -1,
+          674
+        ],
+        "'NEW": [
+          -1,
+          674
+        ]
+      },
+      {
+        "'COMMA": [
+          497
+        ],
+        "table-row_I3": [
+          498
+        ],
+        "'SEMI": [
+          -1,
+          676
         ]
       },
       {
         "'NAME": [
-          96
+          -1,
+          678
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          678
+        ],
+        "'STRING": [
+          -1,
+          678
+        ],
+        "'LBRACE": [
+          -1,
+          678
+        ],
+        "'RBRACE": [
+          -1,
+          678
+        ],
+        "'SPY": [
+          -1,
+          678
+        ],
+        "'PARENSPACE": [
+          -1,
+          678
+        ],
+        "'INT": [
+          -1,
+          678
+        ],
+        "'LONG": [
+          -1,
+          678
+        ],
+        "'DOUBLE": [
+          -1,
+          678
+        ],
+        "'FLOAT": [
+          -1,
+          678
+        ],
+        "'BOOLEAN": [
+          -1,
+          678
+        ],
+        "'VOID": [
+          -1,
+          678
+        ],
+        "'DATA": [
+          -1,
+          678
+        ],
+        "'IF": [
+          -1,
+          678
+        ],
+        "'FOR": [
+          -1,
+          678
+        ],
+        "'RETURN": [
+          -1,
+          678
+        ],
+        "'VAR": [
+          -1,
+          678
+        ],
+        "'REC": [
+          -1,
+          678
+        ],
+        "'ATCHECK": [
+          -1,
+          678
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          678
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          678
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          678
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          678
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          678
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          678
+        ],
+        "'SWITCH": [
+          -1,
+          678
+        ],
+        "'YIELD": [
+          -1,
+          678
+        ],
+        "'DASH": [
+          -1,
+          678
+        ],
+        "'BANG": [
+          -1,
+          678
+        ],
+        "'LBRACK": [
+          -1,
+          678
+        ],
+        "'NUMBER": [
+          -1,
+          678
+        ],
+        "'TRUE": [
+          -1,
+          678
+        ],
+        "'FALSE": [
+          -1,
+          678
+        ],
+        "'NULL": [
+          -1,
+          678
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          678
+        ],
+        "'BLOCK": [
+          -1,
+          678
+        ],
+        "'TABLE": [
+          -1,
+          678
+        ],
+        "'ASK": [
+          -1,
+          678
+        ],
+        "'NEW": [
+          -1,
+          678
+        ]
+      },
+      {
+        "'PARENSPACE": [
+          499
+        ]
+      },
+      {
+        "'NAME": [
+          -1,
+          680
+        ],
+        "'PARENNOSPACE": [
+          -1,
+          680
+        ],
+        "'STRING": [
+          -1,
+          680
+        ],
+        "'LBRACE": [
+          -1,
+          680
+        ],
+        "'RBRACE": [
+          -1,
+          680
+        ],
+        "'SPY": [
+          -1,
+          680
+        ],
+        "'PARENSPACE": [
+          -1,
+          680
+        ],
+        "'INT": [
+          -1,
+          680
+        ],
+        "'LONG": [
+          -1,
+          680
+        ],
+        "'DOUBLE": [
+          -1,
+          680
+        ],
+        "'FLOAT": [
+          -1,
+          680
+        ],
+        "'BOOLEAN": [
+          -1,
+          680
+        ],
+        "'VOID": [
+          -1,
+          680
+        ],
+        "'DATA": [
+          -1,
+          680
+        ],
+        "'IF": [
+          -1,
+          680
+        ],
+        "'FOR": [
+          -1,
+          680
+        ],
+        "'RETURN": [
+          -1,
+          680
+        ],
+        "'VAR": [
+          -1,
+          680
+        ],
+        "'REC": [
+          -1,
+          680
+        ],
+        "'ATCHECK": [
+          -1,
+          680
+        ],
+        "'ASSERTEQUALS": [
+          -1,
+          680
+        ],
+        "'ASSERTNOTEQUALS": [
+          -1,
+          680
+        ],
+        "'ASSERTTRUE": [
+          -1,
+          680
+        ],
+        "'ASSERTFALSE": [
+          -1,
+          680
+        ],
+        "'ASSERTSATISFIES": [
+          -1,
+          680
+        ],
+        "'ASSERTRAISES": [
+          -1,
+          680
+        ],
+        "'SWITCH": [
+          -1,
+          680
+        ],
+        "'YIELD": [
+          -1,
+          680
+        ],
+        "'DASH": [
+          -1,
+          680
+        ],
+        "'BANG": [
+          -1,
+          680
+        ],
+        "'LBRACK": [
+          -1,
+          680
+        ],
+        "'NUMBER": [
+          -1,
+          680
+        ],
+        "'TRUE": [
+          -1,
+          680
+        ],
+        "'FALSE": [
+          -1,
+          680
+        ],
+        "'NULL": [
+          -1,
+          680
+        ],
+        "'PARENAFTERBRACE": [
+          -1,
+          680
+        ],
+        "'BLOCK": [
+          -1,
+          680
+        ],
+        "'TABLE": [
+          -1,
+          680
+        ],
+        "'ASK": [
+          -1,
+          680
+        ],
+        "'NEW": [
+          -1,
+          680
+        ]
+      },
+      {
+        "'COMMA": [
+          500
+        ],
+        "case-branch_A0_I3_I1": [
+          501
+        ],
+        "'RPAREN": [
+          -1,
+          682
+        ]
+      },
+      {
+        "'COLON": [
+          502
+        ]
+      },
+      {
+        "'NAME": [
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -46477,10 +48823,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          496
+          503
         ],
         "switch-expr": [
           37
@@ -46545,29 +48891,35 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'SEMI": [
           -1,
-          674
+          684
         ],
         "'COMMA": [
           -1,
-          674
+          684
         ]
       },
       {
         "'NAME": [
-          96
+          98
         ],
         "'PARENNOSPACE": [
           11
@@ -46579,10 +48931,10 @@ function(E) {
           23
         ],
         "'PARENSPACE": [
-          106
+          108
         ],
         "full-expr": [
-          497
+          504
         ],
         "switch-expr": [
           37
@@ -46647,374 +48999,388 @@ function(E) {
         "record-expr": [
           57
         ],
-        "'TABLE": [
+        "block-expr": [
           58
         ],
-        "'ASK": [
+        "'BLOCK": [
           59
         ],
-        "'NEW": [
+        "'TABLE": [
           60
+        ],
+        "'ASK": [
+          61
+        ],
+        "'NEW": [
+          62
         ]
       },
       {
         "'NAME": [
-          498
+          505
         ]
       },
       {
         "'RPAREN": [
           -1,
-          676
+          686
         ],
         "'COMMA": [
           -1,
-          676
+          686
         ]
       },
       {
         "switch-body": [
-          499
+          506
         ],
         "switch-body_I0*": [
-          452
+          459
         ],
         "'NAME": [
           -1,
-          570
+          580
         ],
         "'PARENNOSPACE": [
           -1,
-          570
+          580
         ],
         "'STRING": [
           -1,
-          570
+          580
         ],
         "'LBRACE": [
           -1,
-          570
+          580
         ],
         "'SPY": [
           -1,
-          570
+          580
         ],
         "'PARENSPACE": [
           -1,
-          570
+          580
         ],
         "'INT": [
           -1,
-          570
+          580
         ],
         "'LONG": [
           -1,
-          570
+          580
         ],
         "'DOUBLE": [
           -1,
-          570
+          580
         ],
         "'FLOAT": [
           -1,
-          570
+          580
         ],
         "'BOOLEAN": [
           -1,
-          570
+          580
         ],
         "'VOID": [
           -1,
-          570
+          580
         ],
         "'DATA": [
           -1,
-          570
+          580
         ],
         "'IF": [
           -1,
-          570
+          580
         ],
         "'FOR": [
           -1,
-          570
+          580
         ],
         "'RETURN": [
           -1,
-          570
+          580
         ],
         "'VAR": [
           -1,
-          570
+          580
         ],
         "'REC": [
           -1,
-          570
+          580
         ],
         "'ATCHECK": [
           -1,
-          570
+          580
         ],
         "'SWITCH": [
           -1,
-          570
+          580
         ],
         "'YIELD": [
           -1,
-          570
+          580
         ],
         "'DASH": [
           -1,
-          570
+          580
         ],
         "'BANG": [
           -1,
-          570
+          580
         ],
         "'LBRACK": [
           -1,
-          570
+          580
         ],
         "'NUMBER": [
           -1,
-          570
+          580
         ],
         "'TRUE": [
           -1,
-          570
+          580
         ],
         "'FALSE": [
           -1,
-          570
+          580
         ],
         "'NULL": [
           -1,
-          570
+          580
         ],
         "'PARENAFTERBRACE": [
           -1,
-          570
+          580
+        ],
+        "'BLOCK": [
+          -1,
+          580
         ],
         "'TABLE": [
           -1,
-          570
+          580
         ],
         "'ASK": [
           -1,
-          570
+          580
         ],
         "'NEW": [
           -1,
-          570
+          580
         ]
       },
       {
         "'SEMI": [
           -1,
-          678
+          688
         ],
         "'COMMA": [
           -1,
-          678
+          688
         ]
       },
       {
         "'RPAREN": [
-          500
+          507
         ]
       },
       {
         "'RPAREN": [
           -1,
-          680
+          690
         ],
         "'COMMA": [
           -1,
-          680
+          690
         ]
       },
       {
         "'RBRACE": [
           -1,
-          682
+          692
         ],
         "'CASE": [
           -1,
-          682
+          692
         ],
         "'DEFAULT": [
           -1,
-          682
+          692
         ]
       },
       {
         "block": [
-          501
+          508
         ],
         "'LBRACE": [
-          302
+          309
         ]
       },
       {
         "'NAME": [
           -1,
-          684
+          694
         ],
         "'PARENNOSPACE": [
           -1,
-          684
+          694
         ],
         "'STRING": [
           -1,
-          684
+          694
         ],
         "'LBRACE": [
           -1,
-          684
+          694
         ],
         "'RBRACE": [
           -1,
-          684
+          694
         ],
         "'SPY": [
           -1,
-          684
+          694
         ],
         "'PARENSPACE": [
           -1,
-          684
+          694
         ],
         "'INT": [
           -1,
-          684
+          694
         ],
         "'LONG": [
           -1,
-          684
+          694
         ],
         "'DOUBLE": [
           -1,
-          684
+          694
         ],
         "'FLOAT": [
           -1,
-          684
+          694
         ],
         "'BOOLEAN": [
           -1,
-          684
+          694
         ],
         "'VOID": [
           -1,
-          684
+          694
         ],
         "'DATA": [
           -1,
-          684
+          694
         ],
         "'IF": [
           -1,
-          684
+          694
         ],
         "'ELSE": [
           -1,
-          684
+          694
         ],
         "'FOR": [
           -1,
-          684
+          694
         ],
         "'RETURN": [
           -1,
-          684
+          694
         ],
         "'VAR": [
           -1,
-          684
+          694
         ],
         "'REC": [
           -1,
-          684
+          694
         ],
         "'ATCHECK": [
           -1,
-          684
+          694
         ],
         "'ASSERTEQUALS": [
           -1,
-          684
+          694
         ],
         "'ASSERTNOTEQUALS": [
           -1,
-          684
+          694
         ],
         "'ASSERTTRUE": [
           -1,
-          684
+          694
         ],
         "'ASSERTFALSE": [
           -1,
-          684
+          694
         ],
         "'ASSERTSATISFIES": [
           -1,
-          684
+          694
         ],
         "'ASSERTRAISES": [
           -1,
-          684
+          694
         ],
         "'SWITCH": [
           -1,
-          684
+          694
         ],
         "'YIELD": [
           -1,
-          684
+          694
         ],
         "'DASH": [
           -1,
-          684
+          694
         ],
         "'BANG": [
           -1,
-          684
+          694
         ],
         "'LBRACK": [
           -1,
-          684
+          694
         ],
         "'NUMBER": [
           -1,
-          684
+          694
         ],
         "'TRUE": [
           -1,
-          684
+          694
         ],
         "'FALSE": [
           -1,
-          684
+          694
         ],
         "'NULL": [
           -1,
-          684
+          694
         ],
         "'PARENAFTERBRACE": [
           -1,
-          684
+          694
+        ],
+        "'BLOCK": [
+          -1,
+          694
         ],
         "'TABLE": [
           -1,
-          684
+          694
         ],
         "'ASK": [
           -1,
-          684
+          694
         ],
         "'NEW": [
           -1,
-          684
+          694
         ]
       }
     ],
@@ -47071,18 +49437,19 @@ function(E) {
       "binop-expr_I1*": 49,
       "app-or-access_A0_I2?": 50,
       "app-or-access_A0_I2_I1*": 51,
-      "record-expr_A0_I2*": 52,
-      "table-expr_I3*": 53,
-      "table-expr_I5*": 54,
-      "table-row_I3*": 55,
-      "ask-expr_A0_I4*": 56,
-      "ask-expr_A1_I4*": 57,
-      "new-expr_I3?": 58,
-      "new-expr_I3_I1*": 59,
-      "construct-expr_A0_I3?": 60,
-      "construct-expr_A0_I3_I1*": 61,
-      "START": 62,
-      "if-stmt_I5*,if-stmt_I6?": 63
+      "block-expr_I2*": 52,
+      "record-expr_A0_I2*": 53,
+      "table-expr_I3*": 54,
+      "table-expr_I5*": 55,
+      "table-row_I3*": 56,
+      "ask-expr_A0_I4*": 57,
+      "ask-expr_A1_I4*": 58,
+      "new-expr_I3?": 59,
+      "new-expr_I3_I1*": 60,
+      "construct-expr_A0_I3?": 61,
+      "construct-expr_A0_I3_I1*": 62,
+      "START": 63,
+      "if-stmt_I5*,if-stmt_I6?": 64
     },
     "eSPPFs": [
       {
@@ -47351,61 +49718,66 @@ function(E) {
         "rule": 243
       },
       {
+        "label": "block-expr_I2*",
+        "kids": [],
+        "rule": 266
+      },
+      {
         "label": "record-expr_A0_I2*",
         "kids": [],
-        "rule": 265
+        "rule": 270
       },
       {
         "label": "table-expr_I3*",
         "kids": [],
-        "rule": 271
+        "rule": 276
       },
       {
         "label": "table-expr_I5*",
         "kids": [],
-        "rule": 274
+        "rule": 279
       },
       {
         "label": "table-row_I3*",
         "kids": [],
-        "rule": 279
+        "rule": 284
       },
       {
         "label": "ask-expr_A0_I4*",
         "kids": [],
-        "rule": 283
+        "rule": 288
       },
       {
         "label": "ask-expr_A1_I4*",
         "kids": [],
-        "rule": 287
+        "rule": 292
       },
       {
         "label": "new-expr_I3?",
         "kids": [],
-        "rule": 293
+        "rule": 298
       },
       {
         "label": "new-expr_I3_I1*",
         "kids": [],
-        "rule": 296
+        "rule": 301
       },
       {
         "label": "construct-expr_A0_I3?",
         "kids": [],
-        "rule": 300
+        "rule": 305
       },
       {
         "label": "construct-expr_A0_I3_I1*",
         "kids": [],
-        "rule": 303
+        "rule": 308
       },
       {
         "label": "START",
         "kids": [
           1
         ],
-        "rule": 308
+        "rule": 313
       },
       {
         "label": "if-stmt_I5*,if-stmt_I6?",

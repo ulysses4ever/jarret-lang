@@ -1,0 +1,51 @@
+// block-demo.jrt - `block { ... }` expression form.
+//
+// A `block` expression evaluates a sequence of statements and produces
+// the value of the last statement. Useful when you need to bind a few
+// locals on the right-hand side of a binding without extracting a
+// helper function. Matches Pyret's `block: ... end`.
+
+// Basic use: bind a couple of locals, then return their combination.
+Object pair = block {
+    int a = 3 + 4;
+    int b = a * 2;
+    {sum: a, product: b};
+};
+
+// Block as an argument; useful when the value being built needs
+// scratch bindings that shouldn't leak to the surrounding scope.
+int describe(int n) {
+    return block {
+        int doubled = n * 2;
+        int squared = n * n;
+        doubled + squared;
+    };
+}
+
+// Empty block evaluates to nothing -- useful as a do-nothing
+// expression placeholder. We don't bind it to a typed local because
+// `nothing` doesn't satisfy any common annotation; just assert.
+@Check void testEmpty() {
+    assertEquals(block {}, nothing);
+}
+
+@Check void testBasic() {
+    assertEquals(pair.sum, 7);
+    assertEquals(pair.product, 14);
+}
+
+@Check void testNested() {
+    int outer = block {
+        int x = block {
+            int y = 5;
+            y + 1;
+        };
+        x * 10;
+    };
+    assertEquals(outer, 60);
+}
+
+@Check void testInFunction() {
+    assertEquals(describe(3), 6 + 9);
+    assertEquals(describe(5), 10 + 25);
+}

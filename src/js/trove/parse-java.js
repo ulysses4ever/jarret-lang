@@ -692,6 +692,23 @@
           }
         },
 
+        'block-expr': function(node) {
+          // block { stmt; stmt; finalExpr; } — evaluate stmts in order; the
+          // last stmt's value is the value of the block. Uses the same
+          // return-lifting machinery as function bodies, wrapped in
+          // s-user-block so the well-formedness checker treats it as an
+          // explicit `block:` form rather than an implicit body.
+          var p = pos(node.pos);
+          var rawStmts = getBlockStmts(node).map(unwrapStmt);
+          var inner;
+          if (rawStmts.length === 0) {
+            inner = sblock(p, [sid(p, "nothing")]);
+          } else {
+            inner = sblock(p, [liftReturns(rawStmts, p)]);
+          }
+          return RUNTIME.getField(ast, 's-user-block').app(p, inner);
+        },
+
         'record-expr': function(node) {
           // {name: expr, name: expr} → s-obj(loc, [s-data-field(loc, name, expr), ...])
           // {} → s-obj(loc, [])

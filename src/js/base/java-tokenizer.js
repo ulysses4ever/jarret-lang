@@ -122,6 +122,8 @@ define("pyret-base/js/java-tokenizer", ["jglr/jglr"], function(E) {
     {name: "RAISES",  val: "raises",  parenIsForExp: true},
     // Debugging
     {name: "SPY",     val: "spy",     parenIsForExp: true},
+    // Block expression (Pyret's `block:`)
+    {name: "BLOCK",   val: "block",   parenIsForExp: true},
     // Multi-branch conditional (Pyret's ask:)
     {name: "ASK",       val: "ask",       parenIsForExp: true},
     {name: "OTHERWISE", val: "otherwise", parenIsForExp: true},

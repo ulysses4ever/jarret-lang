@@ -288,6 +288,24 @@ Equivalent Pyret: `{name: "Alice", age: 30}` and `nested.p.x`. The empty
 record `{}` is allowed and useful as a placeholder. Updating a field
 (`{...r, age: 31}`) is deferred.
 
+### Block expression
+
+`block { stmt; stmt; finalExpr; }` evaluates a sequence of statements and
+produces the value of the *last* statement. The intermediate bindings are
+scoped to the block. Useful where you need scratch locals on the right-hand
+side of a binding without extracting a helper function.
+
+```java
+Object pair = block {
+    int a = 3 + 4;
+    int b = a * 2;
+    {sum: a, product: b};
+};
+```
+
+Equivalent Pyret: `block: a = 3 + 4 b = a * 2 {sum: a, product: b} end`.
+Empty `block {}` evaluates to `nothing`.
+
 ---
 
 ## 8. Conditionals

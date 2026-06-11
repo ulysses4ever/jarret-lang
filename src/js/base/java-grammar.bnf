@@ -182,6 +182,14 @@ prim-expr: NUMBER
          | ask-expr
          | table-expr
          | record-expr
+         | block-expr
+
+# Block expression: `block { stmt1; stmt2; finalExpr; }` evaluates each
+# stmt in order, with the *last* statement's value becoming the value
+# of the whole block. Lets the user write expression-position
+# sequencing without extracting a helper function. Pyret's `block:`
+# form. Empty `block {}` evaluates to nothing.
+block-expr: BLOCK LBRACE (block-stmt)* RBRACE
 
 # Record / object literal: `{name: "Joe", age: 30}`. Anonymous, structurally
 # typed -- the same shape as Pyret's `{name: "Joe", age: 30}`. Use DOT to
