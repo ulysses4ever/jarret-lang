@@ -441,8 +441,54 @@ Table targets = sieve employees using age, salary {
 
 Equivalent Pyret: `sieve t using age: age >= 30 end`.
 
-The other column-scoped ops (`order`, `extend`, `select`, `extract`) and the
-external `load-table` form are still deferred.
+#### order (sort by columns)
+
+Each column has a direction (`ascending` / `descending`); rows are compared in
+the listed order so later columns act as tie-breakers.
+
+```java
+Table byPay = order employees {
+    salary descending;
+    name ascending;
+};
+```
+
+Equivalent Pyret: `order t: salary descending, name ascending end`.
+
+#### extend (compute new columns)
+
+Each let-statement in the body declares a new column whose value is the RHS
+expression evaluated *per row*. The original columns named after `using` are
+in scope inside the body.
+
+```java
+Table summary = extend employees using name, age, salary {
+    String label = name + " " + tostring(age);
+    double monthly = salary / 12;
+};
+```
+
+Equivalent Pyret: `extend t using name, age, salary: label: ..., monthly: ... end`.
+
+#### select (subset of columns)
+
+```java
+Table contact = select name, age from employees;
+```
+
+Equivalent Pyret: `select name, age from t end`.
+
+#### extract (single column → list)
+
+Extracts a single column out of the table as a list value (not a table).
+
+```java
+List<String> allNames = extract name from employees;
+```
+
+Equivalent Pyret: `extract name from t end`.
+
+The external `load-table` form is still deferred.
 
 ---
 
@@ -683,7 +729,7 @@ The following Pyret features have no Jarret syntax yet and are planned for futur
 
 | Feature | Pyret construct | Notes |
 |---------|----------------|-------|
-| `load-table` / remaining column ops | `load-table:` / `order` / `extend` / `select` / `extract` | Literal `table { ... }` and `sieve` are supported; the rest are deferred |
+| `load-table` external loader | `load-table:` | Literal `table { ... }` and all column ops (`sieve`/`order`/`extend`/`select`/`extract`) are supported; only the external loader form is deferred |
 | Reactors | `reactor:` | Domain-specific; deferred |
 | `while` loops | _(none in Pyret)_ | Deferred; use recursion |
 | `sharing:` on data | `sharing:` | Deferred |

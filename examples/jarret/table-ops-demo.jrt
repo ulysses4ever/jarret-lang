@@ -1,0 +1,100 @@
+// table-ops-demo.jrt - column operations: order, extend, select, extract.
+//
+// Together with `sieve` (see sieve-demo.jrt), these are the column-scoped
+// table operations. The column names listed after `using` or named directly
+// in `order` / `select` / `extract` refer to that row's value in the
+// corresponding column; the compiler handles the lookup.
+
+Table employees = table {
+    String name, int age, double salary;
+    row: "Alice",   30, 75000;
+    row: "Bob",     25, 50000;
+    row: "Carol",   45, 90000;
+    row: "Dave",    28, 60000;
+    row: "Eve",     55, 110000;
+};
+
+// order: sort by columns; each column has a sort direction.
+Table byAge = order employees {
+    age ascending;
+};
+
+Table byAgeDescending = order employees {
+    age descending;
+};
+
+// Multi-key sort: by salary descending, breaking ties by name ascending.
+Table byPay = order employees {
+    salary descending;
+    name ascending;
+};
+
+// extend: add a computed column. Each let-stmt in the body declares a
+// new column whose value is the RHS evaluated per row.
+Table withBonus = extend employees using salary {
+    double bonus = salary / 10;
+};
+
+// extend with multi-column dependencies.
+Table summary = extend employees using name, age, salary {
+    String label = name + " " + tostring(age);
+    double monthly = salary / 12;
+};
+
+// select: pick a subset of columns.
+Table justNames = select name from employees;
+Table contact = select name, age from employees;
+
+// extract: pull a single column out as a list (not a table).
+List<String> allNames = extract name from employees;
+List<Number> allAges = extract age from employees;
+
+@Check void testOrderAscending() {
+    assertEquals(byAge.row-n(0).get-value("name"), "Bob");        // 25
+    assertEquals(byAge.row-n(1).get-value("name"), "Dave");       // 28
+    assertEquals(byAge.row-n(2).get-value("name"), "Alice");      // 30
+    assertEquals(byAge.row-n(3).get-value("name"), "Carol");      // 45
+    assertEquals(byAge.row-n(4).get-value("name"), "Eve");        // 55
+}
+
+@Check void testOrderDescending() {
+    assertEquals(byAgeDescending.row-n(0).get-value("name"), "Eve");
+    assertEquals(byAgeDescending.row-n(4).get-value("name"), "Bob");
+}
+
+@Check void testMultiKeyOrder() {
+    // No ties on salary in this dataset, so just verify the order.
+    assertEquals(byPay.row-n(0).get-value("name"), "Eve");        // 110000
+    assertEquals(byPay.row-n(1).get-value("name"), "Carol");      // 90000
+    assertEquals(byPay.row-n(2).get-value("name"), "Alice");      // 75000
+}
+
+@Check void testExtend() {
+    assertEquals(withBonus.row-n(0).get-value("bonus"), 7500);    // 75000 / 10
+    assertEquals(withBonus.row-n(1).get-value("bonus"), 5000);
+    // Original columns are still present.
+    assertEquals(withBonus.row-n(0).get-value("name"), "Alice");
+}
+
+@Check void testExtendMulti() {
+    assertEquals(summary.row-n(0).get-value("label"), "Alice 30");
+    // Monthly = annual / 12; floats so check structurally.
+    assertEquals(summary.row-n(0).get-value("monthly"), 75000 / 12);
+}
+
+@Check void testSelect() {
+    assertEquals(justNames.length(), 5);
+    // get-value still works; just the only column.
+    assertEquals(justNames.row-n(0).get-value("name"), "Alice");
+}
+
+@Check void testSelectMulti() {
+    assertEquals(contact.length(), 5);
+    assertEquals(contact.row-n(2).get-value("name"), "Carol");
+    assertEquals(contact.row-n(2).get-value("age"), 45);
+}
+
+@Check void testExtract() {
+    assertEquals(allNames, [list: "Alice", "Bob", "Carol", "Dave", "Eve"]);
+    assertEquals(allAges, [list: 30, 25, 45, 28, 55]);
+}

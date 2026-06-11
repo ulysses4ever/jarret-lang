@@ -692,6 +692,91 @@
           }
         },
 
+        'order-expr': function(node) {
+          // order t { c1 ascending; c2 descending; }
+          //   → s-table-order(p, t, [s-column-sort(p, s-name(c1), ASCENDING), ...])
+          var k = node.kids;
+          var p = pos(node.pos);
+          var tableExpr = tr(k[1]);
+          var sorts = [];
+          for (var i = 0; i < k.length; i++) {
+            if (k[i].name === 'column-sort') {
+              var csk = k[i].kids;
+              var colName = sname(csk[0]);
+              var direction = csk[1].name === 'ASCENDING'
+                ? RUNTIME.getField(ast, 'ASCENDING')
+                : RUNTIME.getField(ast, 'DESCENDING');
+              sorts.push(RUNTIME.getField(ast, 's-column-sort')
+                .app(pos(k[i].pos), colName, direction));
+            }
+          }
+          return RUNTIME.getField(ast, 's-table-order')
+            .app(p, tableExpr, makeList(sorts));
+        },
+
+        'extend-expr': function(node) {
+          // extend t using c1, c2 { String new1 = expr; double new2 = expr; }
+          //   → s-table-extend(p, s-column-binds(p, [bind(c1), bind(c2)], t),
+          //                     [s-table-extend-field(p, "new1", expr, ann), ...])
+          var k = node.kids;
+          var p = pos(node.pos);
+          var tableExpr = tr(k[1]);
+          // Collect column names between USING and LBRACE.
+          var colBinds = [];
+          var i = 3;
+          while (i < k.length && k[i].name !== 'LBRACE') {
+            if (k[i].name === 'NAME') {
+              colBinds.push(sbind(pos(k[i].pos), k[i], sblank()));
+            }
+            i++;
+          }
+          // Each let-stmt inside becomes one extend-field.
+          var fields = [];
+          for (; i < k.length; i++) {
+            if (k[i].name === 'let-stmt') {
+              // let-stmt kids: [type-ann, NAME, EQUALS, full-expr, [SEMI]]
+              var lk    = k[i].kids;
+              var lp    = pos(k[i].pos);
+              var fAnn  = trTypeAnn(lk[0]);
+              var fName = lk[1].value;
+              var fVal  = tr(lk[3]);
+              fields.push(RUNTIME.getField(ast, 's-table-extend-field')
+                .app(lp, RUNTIME.makeString(fName), fVal, fAnn));
+            }
+          }
+          var columnBinds = RUNTIME.getField(ast, 's-column-binds')
+            .app(p, makeList(colBinds), tableExpr);
+          return RUNTIME.getField(ast, 's-table-extend')
+            .app(p, columnBinds, makeList(fields));
+        },
+
+        'select-expr': function(node) {
+          // select c1, c2 from t
+          //   → s-table-select(p, [s-name(c1), s-name(c2)], t)
+          var k = node.kids;
+          var p = pos(node.pos);
+          // Collect NAMEs between SELECT and FROM.
+          var cols = [];
+          var fromIdx = -1;
+          for (var i = 1; i < k.length; i++) {
+            if (k[i].name === 'FROM') { fromIdx = i; break; }
+            if (k[i].name === 'NAME') cols.push(sname(k[i]));
+          }
+          var tableExpr = tr(k[fromIdx + 1]);
+          return RUNTIME.getField(ast, 's-table-select')
+            .app(p, makeList(cols), tableExpr);
+        },
+
+        'extract-expr': function(node) {
+          // extract col from t   → s-table-extract(p, s-name(col), t)
+          var k = node.kids;
+          var p = pos(node.pos);
+          var colName = sname(k[1]);   // k = [EXTRACT, NAME, FROM, full-expr]
+          var tableExpr = tr(k[3]);
+          return RUNTIME.getField(ast, 's-table-extract')
+            .app(p, colName, tableExpr);
+        },
+
         'sieve-expr': function(node) {
           // sieve t using c1, c2 { body }
           //   → s-table-filter(p, s-column-binds(p, [bind(c1), bind(c2)], t), body)

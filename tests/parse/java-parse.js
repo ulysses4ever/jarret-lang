@@ -220,6 +220,39 @@ R(["pyret-base/js/java-tokenizer", "pyret-base/js/java-parser"], function(T, G) 
       });
     });
 
+    describe("order (table sort)", function() {
+      it("should parse a single-column order", function() {
+        parsesOk("void f() { Object x = order t { age ascending; }; }");
+      });
+      it("should parse a multi-column order", function() {
+        parsesOk("void f() { Object x = order t { salary descending; name ascending; }; }");
+      });
+    });
+
+    describe("extend (compute new columns)", function() {
+      it("should parse a single-column extend", function() {
+        parsesOk("void f() { Object x = extend t using salary { double bonus = salary / 10; }; }");
+      });
+      it("should parse a multi-column extend", function() {
+        parsesOk("void f() { Object x = extend t using name, age { String label = name; double a = age; }; }");
+      });
+    });
+
+    describe("select (keep columns)", function() {
+      it("should parse a single-column select", function() {
+        parsesOk("void f() { Object x = select name from t; }");
+      });
+      it("should parse a multi-column select", function() {
+        parsesOk("void f() { Object x = select name, age from t; }");
+      });
+    });
+
+    describe("extract (column to list)", function() {
+      it("should parse an extract", function() {
+        parsesOk("void f() { List<Number> ages = extract age from t; }");
+      });
+    });
+
     describe("sieve (table filter)", function() {
       it("should parse a single-column sieve", function() {
         parsesOk("void f() { Object x = sieve t using age { age > 25; }; }");

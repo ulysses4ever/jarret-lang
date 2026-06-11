@@ -184,12 +184,36 @@ prim-expr: NUMBER
          | record-expr
          | block-expr
          | sieve-expr
+         | order-expr
+         | extend-expr
+         | select-expr
+         | extract-expr
 
 # Table column filter (Pyret's `sieve t using cols: pred end`). The
 # column names listed after `using` are brought into scope inside the
 # brace body, where they refer to that row's value in the corresponding
 # column. Body is an expression-returning block.
 sieve-expr: SIEVE full-expr USING NAME (COMMA NAME)* LBRACE (block-stmt)* RBRACE
+
+# Table sort by columns (Pyret's `order t: c1 ascending, c2 descending end`).
+# Each column line declares a column name and its sort direction; rows
+# are compared in the listed order.
+order-expr: ORDER full-expr LBRACE column-sort (SEMI column-sort)* [SEMI] RBRACE
+
+column-sort: NAME ASCENDING
+           | NAME DESCENDING
+
+# Add computed columns to a table (Pyret's `extend t using cols: name: expr
+# end`). Like sieve, the existing columns named after `using` are brought
+# into scope; each let-stmt in the body declares a new column whose value
+# is the RHS expression evaluated per-row.
+extend-expr: EXTEND full-expr USING NAME (COMMA NAME)* LBRACE let-stmt (let-stmt)* RBRACE
+
+# Pick a subset of columns (Pyret's `select c1, c2 from t end`).
+select-expr: SELECT NAME (COMMA NAME)* FROM full-expr
+
+# Extract a single column as a list (Pyret's `extract col from t end`).
+extract-expr: EXTRACT NAME FROM full-expr
 
 # Block expression: `block { stmt1; stmt2; finalExpr; }` evaluates each
 # stmt in order, with the *last* statement's value becoming the value

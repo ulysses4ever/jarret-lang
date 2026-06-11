@@ -275,6 +275,10 @@ R(['fs', 'jglr/jglr'], function(fs, E) {
   g.addRule("prim-expr", [new Nonterm("record-expr")])
   g.addRule("prim-expr", [new Nonterm("block-expr")])
   g.addRule("prim-expr", [new Nonterm("sieve-expr")])
+  g.addRule("prim-expr", [new Nonterm("order-expr")])
+  g.addRule("prim-expr", [new Nonterm("extend-expr")])
+  g.addRule("prim-expr", [new Nonterm("select-expr")])
+  g.addRule("prim-expr", [new Nonterm("extract-expr")])
   g.addRule("sieve-expr", [new Token("SIEVE"), new Nonterm("full-expr"), new Token("USING"), new Token("NAME"), new Nonterm("sieve-expr_I4*"), new Token("LBRACE"), new Nonterm("sieve-expr_I6*"), new Token("RBRACE")])
   g.addRule("sieve-expr_I4*", [], E.Rule.Inline);
   g.addRule("sieve-expr_I4*", [new Nonterm("sieve-expr_I4*"), new Nonterm("sieve-expr_I4")], E.Rule.ListSnoc("sieve-expr_I4*", "sieve-expr_I4", true));
@@ -282,6 +286,27 @@ R(['fs', 'jglr/jglr'], function(fs, E) {
   g.addRule("sieve-expr_I6*", [], E.Rule.Inline);
   g.addRule("sieve-expr_I6*", [new Nonterm("sieve-expr_I6*"), new Nonterm("sieve-expr_I6")], E.Rule.ListSnoc("sieve-expr_I6*", "sieve-expr_I6", true));
   g.addRule("sieve-expr_I6", [new Nonterm("block-stmt")], E.Rule.Inline)
+  g.addRule("order-expr", [new Token("ORDER"), new Nonterm("full-expr"), new Token("LBRACE"), new Nonterm("column-sort"), new Nonterm("order-expr_I4*"), new Nonterm("order-expr_I5?"), new Token("RBRACE")])
+  g.addRule("order-expr_I4*", [], E.Rule.Inline);
+  g.addRule("order-expr_I4*", [new Nonterm("order-expr_I4*"), new Nonterm("order-expr_I4")], E.Rule.ListSnoc("order-expr_I4*", "order-expr_I4", true));
+  g.addRule("order-expr_I4", [new Token("SEMI"), new Nonterm("column-sort")], E.Rule.Inline)
+  g.addRule("order-expr_I5?", [], E.Rule.Inline);
+  g.addRule("order-expr_I5?", [new Nonterm("order-expr_I5")], E.Rule.Inline);
+  g.addRule("order-expr_I5", [new Token("SEMI")], E.Rule.Inline)
+  g.addRule("column-sort", [new Token("NAME"), new Token("ASCENDING")])
+  g.addRule("column-sort", [new Token("NAME"), new Token("DESCENDING")])
+  g.addRule("extend-expr", [new Token("EXTEND"), new Nonterm("full-expr"), new Token("USING"), new Token("NAME"), new Nonterm("extend-expr_I4*"), new Token("LBRACE"), new Nonterm("let-stmt"), new Nonterm("extend-expr_I7*"), new Token("RBRACE")])
+  g.addRule("extend-expr_I4*", [], E.Rule.Inline);
+  g.addRule("extend-expr_I4*", [new Nonterm("extend-expr_I4*"), new Nonterm("extend-expr_I4")], E.Rule.ListSnoc("extend-expr_I4*", "extend-expr_I4", true));
+  g.addRule("extend-expr_I4", [new Token("COMMA"), new Token("NAME")], E.Rule.Inline)
+  g.addRule("extend-expr_I7*", [], E.Rule.Inline);
+  g.addRule("extend-expr_I7*", [new Nonterm("extend-expr_I7*"), new Nonterm("extend-expr_I7")], E.Rule.ListSnoc("extend-expr_I7*", "extend-expr_I7", true));
+  g.addRule("extend-expr_I7", [new Nonterm("let-stmt")], E.Rule.Inline)
+  g.addRule("select-expr", [new Token("SELECT"), new Token("NAME"), new Nonterm("select-expr_I2*"), new Token("FROM"), new Nonterm("full-expr")])
+  g.addRule("select-expr_I2*", [], E.Rule.Inline);
+  g.addRule("select-expr_I2*", [new Nonterm("select-expr_I2*"), new Nonterm("select-expr_I2")], E.Rule.ListSnoc("select-expr_I2*", "select-expr_I2", true));
+  g.addRule("select-expr_I2", [new Token("COMMA"), new Token("NAME")], E.Rule.Inline)
+  g.addRule("extract-expr", [new Token("EXTRACT"), new Token("NAME"), new Token("FROM"), new Nonterm("full-expr")])
   g.addRule("block-expr", [new Token("BLOCK"), new Token("LBRACE"), new Nonterm("block-expr_I2*"), new Token("RBRACE")])
   g.addRule("block-expr_I2*", [], E.Rule.Inline);
   g.addRule("block-expr_I2*", [new Nonterm("block-expr_I2*"), new Nonterm("block-expr_I2")], E.Rule.ListSnoc("block-expr_I2*", "block-expr_I2", true));
